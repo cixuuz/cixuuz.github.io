@@ -7,23 +7,47 @@
     </url>
 
     <url>
-        <loc>http://cixuuz.github.io/2017/03/26/How-to-remote-connect-to-PostgreSQL/</loc>
-        <lastmod>2017-03-30T15:45:49.000Z</lastmod>
+        <loc>http://cixuuz.github.io/python-tips/</loc>
+        <lastmod>2017-03-31T22:02:20.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
     </url>
 
     <url>
-        <loc>http://cixuuz.github.io/2017/03/28/All-about-hardware/</loc>
-        <lastmod>2017-03-28T22:17:31.000Z</lastmod>
+        <loc>http://cixuuz.github.io/json/</loc>
+        <lastmod>2017-03-31T01:30:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
     </url>
 
     <url>
-        <loc>http://cixuuz.github.io/2017/03/21/how-to-set-up-admin-and-user-account-on-mongodb/</loc>
+        <loc>http://cixuuz.github.io/python-profiling/</loc>
+        <lastmod>2017-03-31T00:58:07.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://cixuuz.github.io/All-about-hardware/</loc>
+        <lastmod>2017-03-30T19:44:19.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://cixuuz.github.io/How-to-remote-connect-to-PostgreSQL/</loc>
+        <lastmod>2017-03-30T19:43:02.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://cixuuz.github.io/how-to-set-up-admin-and-user-account-on-mongodb/</loc>
         <lastmod>2017-03-27T00:22:29.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -31,7 +55,7 @@
     </url>
 
     <url>
-        <loc>http://cixuuz.github.io/2017/03/19/AI-notes/</loc>
+        <loc>http://cixuuz.github.io/AI-notes/</loc>
         <lastmod>2017-03-19T22:35:06.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -39,7 +63,7 @@
     </url>
 
     <url>
-        <loc>http://cixuuz.github.io/2016/03/31/precision-recall-fmeasure/</loc>
+        <loc>http://cixuuz.github.io/precision-recall-fmeasure/</loc>
         <lastmod>2017-03-19T21:16:10.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>

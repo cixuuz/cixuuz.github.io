@@ -132,14 +132,14 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">about</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/about/">about</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -209,20 +209,149 @@
 
 <div class="post-preview">
 
-    <a href="/2017/03/28/All-about-hardware/">
+    <a href="/python-tips/">
         <h2 class="post-title">
-            All about hardware
+            python tips
         </h2>
         <h3 class="post-subtitle">
             
         </h3>
         <div class="post-content-preview">
-            SSD vs HDD的性能对比。讲解了为什么SSD的读写性能高于HDD。
+            https://zhuanlan.zhihu.com/p/26099601
+2).函数的传值到底是值传递还是引用传递，要分情况
+a.不可变参数用值传递：
+像整数和字符串这样的不可变对象，是通过拷贝进行传递的，因为你无论如何都不可能在原处改变不可变对象
+b.可变参数是用引用传递的
+比如像列表，字典这样的对象是通过引用传递，和C语言里面的用指针传递数组很相似，可变对象能在函数内部改变.
+quic......
+        </div>
+    </a>
+    
+        <p class="post-meta">
+            Posted by Chet on
+            2017-03-31
+        </p>
+    
 
-http://oserror.com/backend/ssd-principle/
-http://www.pcgamer.com/hard-drive-vs-ssd-performance/2/
+</div>
+<hr>
 
-...
+<div class="post-preview">
+
+    <a href="/python-profiling/">
+        <h2 class="post-title">
+            python profiling and optimize
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            profiling python
+commandline profiling1python -m cProfile -s tottime your_program.py
+优化
+
+np random 比原生函数快四倍
+
+
+
+
+需要记住的延迟数据
+
+123456789101112131415 Latency Comparison NumbersL1 cache reference        ......
+        </div>
+    </a>
+    
+        <p class="post-meta">
+            Posted by Chet on
+            2017-03-30
+        </p>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/json/">
+        <h2 class="post-title">
+            JSON是一种格式，基于文本，优于轻量，用于交换数据
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            
+
+JSON是一种格式，基于文本，优于轻量，用于交换数据
+
+
+规范 http://json.org/
+
+
+object
+
+{}
+{ members }
+
+
+
+members
+
+pair
+pair , members
+
+
+
+pair
+
+string : value
+
+
+
+array
+
+[]
+[ elements ]
+
+
+
+elements
+
+value
+value , elements
+
+
+
+......
+        </div>
+    </a>
+    
+        <p class="post-meta">
+            Posted by Chet on
+            2017-03-30
+        </p>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/All-about-hardware/">
+        <h2 class="post-title">
+            SSD vs HDD的性能对比.讲解了为什么SSD的读写性能高于HDD
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            SSD vs HDD的性能对比.讲解了为什么SSD的读写性能高于HDD.
+
+NAND一个重要的特性是，其只能是读或写单个page，但不能覆盖写如某个page，必须先要清空里面的内容，再写入。
+由于清空内容的电压较高，必须是以block为单位。因此，没有空闲的page时，必须要找到没有有效内容的block，先擦写，然后再选择空闲的page写入。
+主要问题：写放大
+
+SSD读写是以page为单位......
         </div>
     </a>
     
@@ -237,7 +366,7 @@ http://www.pcgamer.com/hard-drive-vs-ssd-performance/2/
 
 <div class="post-preview">
 
-    <a href="/2017/03/26/How-to-remote-connect-to-PostgreSQL/">
+    <a href="/How-to-remote-connect-to-PostgreSQL/">
         <h2 class="post-title">
             How to remote connect to PostgreSQL
         </h2>
@@ -269,7 +398,7 @@ Open i......
 
 <div class="post-preview">
 
-    <a href="/2017/03/21/how-to-set-up-admin-and-user-account-on-mongodb/">
+    <a href="/how-to-set-up-admin-and-user-account-on-mongodb/">
         <h2 class="post-title">
             how to set up admin and user account on mongodb
         </h2>
@@ -295,7 +424,7 @@ https://zhuanlan.zhihu.com/p/24709042
 
 <div class="post-preview">
 
-    <a href="/2017/03/19/AI-notes/">
+    <a href="/AI-notes/">
         <h2 class="post-title">
             AI-notes
         </h2>
@@ -332,7 +461,7 @@ State ......
 
 <div class="post-preview">
 
-    <a href="/2016/03/31/precision-recall-fmeasure/">
+    <a href="/precision-recall-fmeasure/">
         <h2 class="post-title">
             Preicision, Recall, and F-Measure
         </h2>
@@ -384,6 +513,12 @@ State ......
     <!-- no hr -->
     <h5><a href="/tags/">FEATURED TAGS</a></h5>
     <div class="tags">
+        
+            
+            <a href="/tags/#Python" title="Python" rel="2">Python</a>
+            
+        
+            
         
     </div>
 </section>
@@ -453,23 +588,23 @@ State ......
     <ul>
       
         <li>
-          <a href="/2017/03/28/All-about-hardware/">All about hardware</a>
+          <a href="/python-tips/">python tips</a>
         </li>
       
         <li>
-          <a href="/2017/03/26/How-to-remote-connect-to-PostgreSQL/">How to remote connect to PostgreSQL</a>
+          <a href="/python-profiling/">python profiling and optimize</a>
         </li>
       
         <li>
-          <a href="/2017/03/21/how-to-set-up-admin-and-user-account-on-mongodb/">how to set up admin and user account on mongodb</a>
+          <a href="/json/">JSON是一种格式，基于文本，优于轻量，用于交换数据</a>
         </li>
       
         <li>
-          <a href="/2017/03/19/AI-notes/">AI-notes</a>
+          <a href="/All-about-hardware/">SSD vs HDD的性能对比.讲解了为什么SSD的读写性能高于HDD</a>
         </li>
       
         <li>
-          <a href="/2016/03/31/precision-recall-fmeasure/">Preicision, Recall, and F-Measure</a>
+          <a href="/How-to-remote-connect-to-PostgreSQL/">How to remote connect to PostgreSQL</a>
         </li>
       
     </ul>
