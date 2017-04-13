@@ -247,12 +247,29 @@ Python 中字符串格式化可以使用以下语法：</p>
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;</span>&gt; <span class="string">"%(protocol)s://%(server)s:%(port)s/"</span> % &#123;<span class="string">"protocol"</span>: <span class="string">"http"</span>, <span class="string">"server"</span>: <span class="string">"example.com"</span>, <span class="string">"port"</span>: <span class="number">1080</span>&#125;</div><div class="line"><span class="string">"http://example.com:1080/"</span></div></pre></td></tr></table></figure>
 <p>其实 ConfigParser 支持类似的用法，所以在配置文件中可以使用。如，有如下配置选项：</p>
 <figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># format.conf</span></div><div class="line"><span class="section">[DEFAULT]</span></div><div class="line"><span class="attr">conn_str</span> = %(dbn)s://%(user)s:%(pw)s@%(host)s:%(port)s/%(db)s</div><div class="line"><span class="attr">dbn</span> = mysql</div><div class="line"><span class="attr">user</span> = root</div><div class="line"><span class="attr">host</span> = localhost</div><div class="line"><span class="attr">port</span> = <span class="number">3306</span></div><div class="line"><span class="section">[db1]</span></div><div class="line"><span class="attr">user</span> = aaa</div><div class="line"><span class="attr">pw</span> = ppp</div><div class="line"><span class="attr">db</span> = example</div><div class="line"><span class="section">[db2]</span></div><div class="line"><span class="attr">host</span> = <span class="number">192.168</span>.<span class="number">0.110</span></div><div class="line"><span class="attr">pw</span> = www</div><div class="line"><span class="attr">db</span> = example</div></pre></td></tr></table></figure>
+<h2 id="57为什么需要-self-参数">57：为什么需要 self 参数</h2>
+<p>在类中当定义实例方法的时候需要将第一个参数显式声明为 self，而调用的时候并不需要传入该参数。<br>
+self 表示的就是实例对象本身，即类的对象在内存中的地址。self 是对对象本身的引用。我们在调用实例方法的时候也可以直接传入实例对象。其实 self 本身并不是 Python 的关键字（cls 也不是），可以将 self 替换成任何你喜欢的名称，如 this、obj 等，实际效果和 self 是一样的（但并不推荐，因为 self 更符合约定俗成的原则）<br>
+在方法声明的时候需要定义 self 作为第一个参数，而调用方法的时候却不用传入这个参数。虽然这并不影响语言本身的使用，而且也很容易遵循这个规则，但既然如此，为什么必须在定义方法的时候声明 self 参数？原因如下：<br>
+Python 在当初设计的时候借鉴了其他语言的一些特征，如 Moudla-3 中方法会显式地在参数列表中传入 self。Python 起源于 20 世纪 80 年代末，那个时候的很多语言都有 self，如 Smalltalk、Modula-3 等。Python 在最开始设计的时候受到了其他语言的影响，因此借鉴了其中的一些理念。<br>
+Python 语言本身的动态性决定了使用 self 能够带来一定便利。<br>
+Python 属于一级对象语言（first class object)，如果 m 是类 A 的一个方法，有好几种方式都可以引用该方法：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;</span>&gt; <span class="class"><span class="keyword">class</span> <span class="title">A</span>:</span></div><div class="line">        <span class="function"><span class="keyword">def</span> <span class="title">m</span><span class="params">(<span class="keyword">self</span>, value)</span></span>:</div><div class="line">            pass</div><div class="line"><span class="meta">&gt;&gt;</span>&gt; A.__dict_<span class="number">_</span>[<span class="string">"m"</span>]</div><div class="line"><span class="meta">&gt;&gt;</span>&gt; A.m.__func_<span class="number">_</span></div></pre></td></tr></table></figure>
+<p>实例方法是作用于对象的，最简单的方式就是将对象本身传递到该方法中去，self 的存在保证了 A.<strong>dict</strong>[‘m’](a, 2) 的使用和 a.(2) 一致。同时当子类覆盖了父类中的方法但仍然想调用该父类的方法的时候，可以方便地使用 baseclass.methodname(self, <argument list="">) 或 super(childclass, self).methodname(<argument list="">) 来实现。<br>
+在存在同名的局部变量以及实例变量的情况下使用 self 使得实例变量更容易被区分</argument></argument></p>
+<ul>
+<li>Guido 认为，基于 Python 目前的一些特性（如类中动态添加方法，在类风格的装饰器中没有 self 无法确认是返回一个静态方法还是类方法等）保留其原有设计是个更好的选择，更何况 Python 的哲学是：显示优于隐式（Explicit is better than implicit）。</li>
+</ul>
 
                 
 
                 <hr>
                 <!-- Pager -->
                 <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/AI-Logical-Agents/" data-toggle="tooltip" data-placement="top" title="AI: Logical Agents">&larr; Previous Post</a>
+                        </li>
                     
                     
                         <li class="next">
@@ -286,7 +303,7 @@ Python 中字符串格式化可以使用以下语法：</p>
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#编写高质量代码改善python程序的91个建议-的读书笔记"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">编写高质量代码：改善Python程序的91个建议 的读书笔记</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#10-充分利用-lazy-evaluation-的特性"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">10 充分利用 Lazy evaluation 的特性</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#isinstance支持多类型检查"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">isinstance支持多类型检查</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#join-方法的效率要高于-操作符"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">join() 方法的效率要高于 + 操作符。</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#31记住函数传参既不是传值也不是传引用"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">31：记住函数传参既不是传值也不是传引用</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#40深入掌握-configparser"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">40：深入掌握 ConfigParser</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#编写高质量代码改善python程序的91个建议-的读书笔记"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">编写高质量代码：改善Python程序的91个建议 的读书笔记</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#10-充分利用-lazy-evaluation-的特性"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">10 充分利用 Lazy evaluation 的特性</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#isinstance支持多类型检查"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">isinstance支持多类型检查</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#join-方法的效率要高于-操作符"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">join() 方法的效率要高于 + 操作符。</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#31记住函数传参既不是传值也不是传引用"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">31：记住函数传参既不是传值也不是传引用</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#40深入掌握-configparser"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">40：深入掌握 ConfigParser</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#57为什么需要-self-参数"><span class="toc-nav-number">1.6.</span> <span class="toc-nav-text">57：为什么需要 self 参数</span></a></li></ol></li></ol>
         
         </div>
       </aside>

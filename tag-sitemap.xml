@@ -17,7 +17,14 @@
 
     <url>
         <loc>http://cixuuz.github.io/tags/Python/</loc>
-        <lastmod>2017-04-11T23:36:13.000Z</lastmod>
+        <lastmod>2017-04-12T03:50:11.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://cixuuz.github.io/tags/AI/</loc>
+        <lastmod>2017-04-13T17:02:19.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
