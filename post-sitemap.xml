@@ -7,16 +7,24 @@
     </url>
 
     <url>
-        <loc>http://cixuuz.github.io/intro-to-xpath/</loc>
-        <lastmod>2017-04-18T20:54:49.000Z</lastmod>
+        <loc>http://cixuuz.github.io/ai-first-order-logic/</loc>
+        <lastmod>2017-04-18T21:59:02.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
     </url>
 
     <url>
-        <loc>http://cixuuz.github.io/AI-Logical-Agents/</loc>
-        <lastmod>2017-04-17T22:22:11.000Z</lastmod>
+        <loc>http://cixuuz.github.io/ai-logical-agents/</loc>
+        <lastmod>2017-04-18T21:54:10.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://cixuuz.github.io/intro-to-xpath/</loc>
+        <lastmod>2017-04-18T21:21:42.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
