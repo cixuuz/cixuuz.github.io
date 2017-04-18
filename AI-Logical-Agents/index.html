@@ -280,12 +280,20 @@ alpha |= beta if and only if M(alpha) belongs to M(beta)</p>
 </table>
 <h2 id="resolution-algorithm">Resolution Algorithm</h2>
 <figure class="highlight livescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> PL-Resolution(KB, a) returns <span class="literal">true</span> <span class="keyword">or</span> <span class="literal">false</span></div><div class="line">  clauses = the set <span class="keyword">of</span> clauses <span class="keyword">in</span> the CNF representation <span class="keyword">of</span> KB <span class="keyword">and</span> <span class="keyword">not</span> a</div><div class="line">  <span class="keyword">new</span> = &#123;&#125;</div><div class="line">  <span class="keyword">loop</span> <span class="keyword">do</span> </div><div class="line">    <span class="keyword">for</span> each Ci, Cj <span class="keyword">in</span> clauses <span class="keyword">do</span> </div><div class="line">      resolvents = PL-Resolution(Ci, Cj)</div><div class="line">      If resolvents contains the empty clause <span class="keyword">return</span> <span class="literal">true</span></div><div class="line">      <span class="keyword">new</span> = <span class="keyword">new</span> U resolvents</div><div class="line">    <span class="keyword">if</span> <span class="keyword">new</span> belongs <span class="keyword">to</span> clauses <span class="keyword">then</span> <span class="keyword">return</span> <span class="literal">false</span></div><div class="line">    clauses = clauses U <span class="keyword">new</span></div></pre></td></tr></table></figure>
+<p>If you need Python to find bindings for this keg-only formula, run:<br>
+echo /usr/local/opt/opencv3/lib/python2.7/site-packages &gt;&gt; /usr/local/lib/python2.7/site-packages/opencv3.pth<br>
+mkdir -p /Users/chet/.local/lib/python3.5/site-packages<br>
+echo ‘import site; site.addsitedir(&quot;/usr/local/lib/python2.7/site-packages&quot;)’ &gt;&gt; /Users/chet/.local/lib/python3.5/site-packages/homebrew.pth</p>
 
                 
 
                 <hr>
                 <!-- Pager -->
                 <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/intro-to-xpath/" data-toggle="tooltip" data-placement="top" title="Intro to xpath">&larr; Previous Post</a>
+                        </li>
                     
                     
                         <li class="next">
