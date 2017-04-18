@@ -142,14 +142,14 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">about</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/about/">about</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -212,22 +212,18 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <p>发现一个很好的<a href="http://plasmasturm.org/log/xpath101/" target="_blank" rel="external">xpath入门教程</a></p>
-<h1 id="xpath有三种记号分别是-和">xpath有三种记号，分别是 /, [] 和 ::</h1>
+                <p>&#x53D1;&#x73B0;&#x4E00;&#x4E2A;&#x5F88;&#x597D;&#x7684;<a href="http://plasmasturm.org/log/xpath101/" target="_blank" rel="external">xpath&#x5165;&#x95E8;&#x6559;&#x7A0B;</a> # xpath&#x6709;&#x4E09;&#x79CD;&#x8BB0;&#x53F7;&#xFF0C;&#x5206;&#x522B;&#x662F; /, [] &#x548C; ::</p>
 <h2 id="">/</h2>
-<p>/foo/bar 指的是从根结点开始，/foo 对于每个节点，也就是根结点，得到它的子节点（只有一个）。把节点为foo的都放在一起。<br>
-接着/bar 对于每个节点, 得到bar的子节点的集合。这种记号叫做steps.</p>
+<p>/foo/bar &#x6307;&#x7684;&#x662F;&#x4ECE;&#x6839;&#x7ED3;&#x70B9;&#x5F00;&#x59CB;&#xFF0C;/foo &#x5BF9;&#x4E8E;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x6839;&#x7ED3;&#x70B9;&#xFF0C;&#x5F97;&#x5230;&#x5B83;&#x7684;&#x5B50;&#x8282;&#x70B9;&#xFF08;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#xFF09;&#x3002;&#x628A;&#x8282;&#x70B9;&#x4E3A;foo&#x7684;&#x90FD;&#x653E;&#x5728;&#x4E00;&#x8D77;&#x3002; &#x63A5;&#x7740;/bar &#x5BF9;&#x4E8E;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;, &#x5F97;&#x5230;bar&#x7684;&#x5B50;&#x8282;&#x70B9;&#x7684;&#x96C6;&#x5408;&#x3002;&#x8FD9;&#x79CD;&#x8BB0;&#x53F7;&#x53EB;&#x505A;steps.</p>
 <h2 id="">[]</h2>
-<p>/foo[bar] 是从根结点开始，/foo 同上。然后 [bar] 对于每个节点得到为bar的子节点集合。[]里的条件叫做 predicate.</p>
+<p>/foo[bar] &#x662F;&#x4ECE;&#x6839;&#x7ED3;&#x70B9;&#x5F00;&#x59CB;&#xFF0C;/foo &#x540C;&#x4E0A;&#x3002;&#x7136;&#x540E; [bar] &#x5BF9;&#x4E8E;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x5F97;&#x5230;&#x4E3A;bar&#x7684;&#x5B50;&#x8282;&#x70B9;&#x96C6;&#x5408;&#x3002;[]&#x91CC;&#x7684;&#x6761;&#x4EF6;&#x53EB;&#x505A; predicate.</p>
 <h2 id="">::</h2>
-<p>axes 也就是 :: 表示查询条件之前选择那些节点。<br>
-/foo/following-sibling::bar 前面相同，接着/following-sibling::bar 对于每个节点，得到它的兄弟节点，查看他们是否为bar。<br>
-因此 /foo/bar 和 /foo[bar] 实际上是 /child::foo/child::bar 和 /child::foo[child::bar]。</p>
-<p>其他的用法都是一些语法糖，如attribute::foo 可以写成 @foo, /descendant-or-self::foo 可以是 //foo</p>
-<h1 id="其他有用的链接">其他有用的链接</h1>
-<ol>
-<li>官方文档 <a href="https://www.w3.org/TR/xpath/" target="_blank" rel="external">https://www.w3.org/TR/xpath/</a></li>
-<li><a href="http://zvon.org/comp/r/tut-XPath_1.html#intro" target="_blank" rel="external">http://zvon.org/comp/r/tut-XPath_1.html#intro</a></li>
+<p>axes &#x4E5F;&#x5C31;&#x662F; :: &#x8868;&#x793A;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;&#x4E4B;&#x524D;&#x9009;&#x62E9;&#x90A3;&#x4E9B;&#x8282;&#x70B9;&#x3002; /foo/following-sibling::bar &#x524D;&#x9762;&#x76F8;&#x540C;&#xFF0C;&#x63A5;&#x7740;/following-sibling::bar &#x5BF9;&#x4E8E;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#xFF0C;&#x5F97;&#x5230;&#x5B83;&#x7684;&#x5144;&#x5F1F;&#x8282;&#x70B9;&#xFF0C;&#x67E5;&#x770B;&#x4ED6;&#x4EEC;&#x662F;&#x5426;&#x4E3A;bar&#x3002; &#x56E0;&#x6B64; /foo/bar &#x548C; /foo[bar] &#x5B9E;&#x9645;&#x4E0A;&#x662F; /child::foo/child::bar &#x548C; /child::foo[child::bar]&#x3002;</p>
+<p>&#x5176;&#x4ED6;&#x7684;&#x7528;&#x6CD5;&#x90FD;&#x662F;&#x4E00;&#x4E9B;&#x8BED;&#x6CD5;&#x7CD6;&#xFF0C;&#x5982;attribute::foo &#x53EF;&#x4EE5;&#x5199;&#x6210; <span class="citation">@foo</span>, /descendant-or-self::foo &#x53EF;&#x4EE5;&#x662F; //foo</p>
+<h1 id="x5176x4ed6x6709x7528x7684x94fex63a5">&#x5176;&#x4ED6;&#x6709;&#x7528;&#x7684;&#x94FE;&#x63A5;</h1>
+<ol style="list-style-type: decimal">
+<li>&#x5B98;&#x65B9;&#x6587;&#x6863; https://www.w3.org/TR/xpath/</li>
+<li>http://zvon.org/comp/r/tut-XPath_1.html#intro</li>
 </ol>
 
                 
@@ -272,7 +268,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#xpath有三种记号分别是-和"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">xpath有三种记号，分别是 /, [] 和 ::</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">/</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">[]</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">::</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#其他有用的链接"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">其他有用的链接</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">/</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">[]</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">::</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#x5176x4ed6x6709x7528x7684x94fex63a5"><span class="toc-nav-number"></span> <span class="toc-nav-text">其他有用的链接</span></a>
         
         </div>
       </aside>

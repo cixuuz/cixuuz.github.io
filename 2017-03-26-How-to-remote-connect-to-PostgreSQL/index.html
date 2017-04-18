@@ -138,14 +138,14 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">about</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/about/">about</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -208,40 +208,31 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <h1 id="如何远程连接postgresql">如何远程连接Postgresql</h1>
-<p>默认情况下，PostgreSQL 是配制成绑定 “localhost”.</p>
+                <h1 id="x5982x4f55x8fdcx7a0bx8fdex63a5postgresql">&#x5982;&#x4F55;&#x8FDC;&#x7A0B;&#x8FDE;&#x63A5;Postgresql</h1>
+<p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;PostgreSQL &#x662F;&#x914D;&#x5236;&#x6210;&#x7ED1;&#x5B9A; &#x201C;localhost&#x201D;.</p>
 
-<p>上图可以看出端口5432是绑定在 127.0.0.1. 这说明任何外部连接postgresql server的请求都会被拒绝. 这一点我们可以通过telnet来确认：</p>
+<p>&#x4E0A;&#x56FE;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#x7AEF;&#x53E3;5432&#x662F;&#x7ED1;&#x5B9A;&#x5728; 127.0.0.1. &#x8FD9;&#x8BF4;&#x660E;&#x4EFB;&#x4F55;&#x5916;&#x90E8;&#x8FDE;&#x63A5;postgresql server&#x7684;&#x8BF7;&#x6C42;&#x90FD;&#x4F1A;&#x88AB;&#x62D2;&#x7EDD;. &#x8FD9;&#x4E00;&#x70B9;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;telnet&#x6765;&#x786E;&#x8BA4;&#xFF1A;</p>
 
-<h1 id="修改psql配置文件">修改psql配置文件</h1>
-<p>解决连接问题，我们需要修改配置文件。一个通用的方法是在数据库里查看<br>
-<a href="http://stackoverflow.com/questions/3602450/where-are-my-postgres-conf-files" target="_blank" rel="external">参考链接</a></p>
+<h1 id="x4feex6539psqlx914dx7f6ex6587x4ef6">&#x4FEE;&#x6539;psql&#x914D;&#x7F6E;&#x6587;&#x4EF6;</h1>
+<p>&#x89E3;&#x51B3;&#x8FDE;&#x63A5;&#x95EE;&#x9898;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x3002;&#x4E00;&#x4E2A;&#x901A;&#x7528;&#x7684;&#x65B9;&#x6CD5;&#x662F;&#x5728;&#x6570;&#x636E;&#x5E93;&#x91CC;&#x67E5;&#x770B; <a href="http://stackoverflow.com/questions/3602450/where-are-my-postgres-conf-files" target="_blank" rel="external">&#x53C2;&#x8003;&#x94FE;&#x63A5;</a></p>
 
-<p>Open it and change it。</p>
+<p>Open it and change it&#x3002; </p>
 
-
-<p>查询psql状态使用</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="regexp">/etc/i</span>nit.d<span class="regexp">/postgresql status </span></div></pre></td></tr></table></figure>
-<p>启动，停止，重启psql</p>
-<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo service postgresql <span class="literal">start</span>/<span class="literal">stop</span>/restart </div></pre></td></tr></table></figure>
-<p>重启psql之后，用netstat查看连接。我们可以看到port 5432的本地地址已经变成了0.0.0.0.</p>
-
-<p>让我们试着连接一下数据库</p>
-
-<p>为了得到pg_hba.conf</p>
-
-<p>加上host文件</p>
-
+<p>&#x67E5;&#x8BE2;psql&#x72B6;&#x6001;&#x4F7F;&#x7528; <figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="regexp">/etc/i</span>nit.d<span class="regexp">/postgresql status </span></div></pre></td></tr></table></figure></p>
+<p>&#x542F;&#x52A8;&#xFF0C;&#x505C;&#x6B62;&#xFF0C;&#x91CD;&#x542F;psql <figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo service postgresql <span class="literal">start</span>/<span class="literal">stop</span>/restart </div></pre></td></tr></table></figure></p>
+<p>&#x91CD;&#x542F;psql&#x4E4B;&#x540E;&#xFF0C;&#x7528;netstat&#x67E5;&#x770B;&#x8FDE;&#x63A5;&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x770B;&#x5230;port 5432&#x7684;&#x672C;&#x5730;&#x5730;&#x5740;&#x5DF2;&#x7ECF;&#x53D8;&#x6210;&#x4E86;0.0.0.0. </p>
+<p>&#x8BA9;&#x6211;&#x4EEC;&#x8BD5;&#x7740;&#x8FDE;&#x63A5;&#x4E00;&#x4E0B;&#x6570;&#x636E;&#x5E93; </p>
+<p>&#x4E3A;&#x4E86;&#x5F97;&#x5230;pg_hba.conf </p>
+<p>&#x52A0;&#x4E0A;host&#x6587;&#x4EF6; </p>
 <ul>
-<li>第二行是ipv6</li>
-<li>md5 表示连接需要输入密码。如果是trust，那么就是不需要密码。</li>
+<li>&#x7B2C;&#x4E8C;&#x884C;&#x662F;ipv6</li>
+<li>md5 &#x8868;&#x793A;&#x8FDE;&#x63A5;&#x9700;&#x8981;&#x8F93;&#x5165;&#x5BC6;&#x7801;&#x3002;&#x5982;&#x679C;&#x662F;trust&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x662F;&#x4E0D;&#x9700;&#x8981;&#x5BC6;&#x7801;&#x3002;</li>
 </ul>
-<p>最后重启psql</p>
-
-<p>现在我们就可以远程连接psql。</p>
-<p>另外，实际使用中可以用iptables再加一个安全层。</p>
+<p>&#x6700;&#x540E;&#x91CD;&#x542F;psql </p>
+<p>&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x8FDC;&#x7A0B;&#x8FDE;&#x63A5;psql&#x3002;</p>
+<p>&#x53E6;&#x5916;&#xFF0C;&#x5B9E;&#x9645;&#x4F7F;&#x7528;&#x4E2D;&#x53EF;&#x4EE5;&#x7528;iptables&#x518D;&#x52A0;&#x4E00;&#x4E2A;&#x5B89;&#x5168;&#x5C42;&#x3002;</p>
 <h1 id="reference">Reference</h1>
-<ol>
+<ol style="list-style-type: decimal">
 <li><a href="https://bosnadev.com/2015/12/15/allow-remote-connections-postgresql-database-server/" target="_blank" rel="external">Configure PostgreSQL to allow remote connection</a></li>
 <li><a href="http://www.thegeekstuff.com/2014/02/enable-remote-postgresql-connection/" target="_blank" rel="external">How to Allow Remote Connection to PostgreSQL Database using psql</a></li>
 </ol>
@@ -288,7 +279,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#如何远程连接postgresql"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">如何远程连接Postgresql</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#修改psql配置文件"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">修改psql配置文件</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#reference"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Reference</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#x5982x4f55x8fdcx7a0bx8fdex63a5postgresql"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">如何远程连接Postgresql</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#x4feex6539psqlx914dx7f6ex6587x4ef6"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">修改psql配置文件</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#reference"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Reference</span></a></li></ol>
         
         </div>
       </aside>

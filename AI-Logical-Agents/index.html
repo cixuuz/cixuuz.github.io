@@ -140,14 +140,14 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">about</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/about/">about</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -211,79 +211,17 @@
                 post-container">
 
                 <h1 id="generic-kb-based-agent">Generic KB-Based Agent</h1>
-<p>Similar to agents with internal states.</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">KB</span>-<span class="title">Agent</span><span class="params">(percept)</span> <span class="title">returns</span> <span class="title">an</span> <span class="title">action</span></span></div><div class="line">  <span class="title">static</span> <span class="title">KB</span> = <span class="title">a</span> <span class="title">knowledge</span> <span class="title">base</span>, </div><div class="line">         <span class="title">t</span> = 0 // <span class="title">a</span> <span class="title">counter</span> <span class="title">indicating</span> <span class="title">time</span></div><div class="line">  <span class="title">tell</span><span class="params">(KB, make_percept_sentence<span class="params">(percept, t)</span>)</span></div><div class="line">  <span class="title">action</span> = <span class="title">ask</span><span class="params">(KB, make_action_query<span class="params">(t)</span>)</span></div><div class="line">  <span class="title">tell</span><span class="params">(KB, make_action_sentence<span class="params">(action, t)</span>)</span></div><div class="line">  <span class="title">t</span>++</div><div class="line">  <span class="title">return</span> <span class="title">action</span></div></pre></td></tr></table></figure>
-<p>Agent must be able to:</p>
-<ul>
-<li>Represent stats and actions;</li>
-<li>Incorporate new percepts;</li>
-<li>Update internal representation of the world;</li>
-<li>Deduce hidden properties of the world;</li>
-<li>Deduce appropriate actions.</li>
-</ul>
+<p>Similar to agents with internal states. <figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">KB</span>-<span class="title">Agent</span><span class="params">(percept)</span> <span class="title">returns</span> <span class="title">an</span> <span class="title">action</span></span></div><div class="line">  <span class="title">static</span> <span class="title">KB</span> = <span class="title">a</span> <span class="title">knowledge</span> <span class="title">base</span>, </div><div class="line">         <span class="title">t</span> = 0 // <span class="title">a</span> <span class="title">counter</span> <span class="title">indicating</span> <span class="title">time</span></div><div class="line">  <span class="title">tell</span><span class="params">(KB, make_percept_sentence<span class="params">(percept, t)</span>)</span></div><div class="line">  <span class="title">action</span> = <span class="title">ask</span><span class="params">(KB, make_action_query<span class="params">(t)</span>)</span></div><div class="line">  <span class="title">tell</span><span class="params">(KB, make_action_sentence<span class="params">(action, t)</span>)</span></div><div class="line">  <span class="title">t</span>++</div><div class="line">  <span class="title">return</span> <span class="title">action</span></div></pre></td></tr></table></figure></p>
+<p>Agent must be able to: - Represent stats and actions; - Incorporate new percepts; - Update internal representation of the world; - Deduce hidden properties of the world; - Deduce appropriate actions.</p>
 <p>Syntax: what expressions are legal<br>
 Semantics: what legal expression mean</p>
 <p>Models: M(alpha) = set of all models of alpha:<br>
 alpha |= beta if and only if M(alpha) belongs to M(beta)</p>
 <p>Propositional logic: Syntax</p>
-<p>Truth tables for connectives:</p>
-<table>
-<thead>
-<tr>
-<th>P</th>
-<th>Q</th>
-<th>-P</th>
-<th>P&amp;Q</th>
-<th>PorQ</th>
-<th>P=&gt;Q</th>
-<th>P&lt;=&gt;Q</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>f</td>
-<td>f</td>
-<td>t</td>
-<td>t</td>
-<td>f</td>
-<td>t</td>
-<td>t</td>
-</tr>
-<tr>
-<td>f</td>
-<td>t</td>
-<td>t</td>
-<td>f</td>
-<td>t</td>
-<td>t</td>
-<td>f</td>
-</tr>
-<tr>
-<td>t</td>
-<td>f</td>
-<td>f</td>
-<td>f</td>
-<td>t</td>
-<td>f</td>
-<td>f</td>
-</tr>
-<tr>
-<td>t</td>
-<td>t</td>
-<td>f</td>
-<td>t</td>
-<td>t</td>
-<td>t</td>
-<td>t</td>
-</tr>
-</tbody>
-</table>
+<p>Truth tables for connectives: |P|Q|-P|P&amp;Q|PorQ|P=&gt;Q|P&lt;=&gt;Q| |&#x2014;|&#x2014;|&#x2014;|&#x2014;|&#x2014;|&#x2014;|&#x2014;| |f|f|t|t|f|t|t| |f|t|t|f|t|t|f| |t|f|f|f|t|f|f| |t|t|f|t|t|t|t|</p>
 <h2 id="resolution-algorithm">Resolution Algorithm</h2>
-<figure class="highlight livescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> PL-Resolution(KB, a) returns <span class="literal">true</span> <span class="keyword">or</span> <span class="literal">false</span></div><div class="line">  clauses = the set <span class="keyword">of</span> clauses <span class="keyword">in</span> the CNF representation <span class="keyword">of</span> KB <span class="keyword">and</span> <span class="keyword">not</span> a</div><div class="line">  <span class="keyword">new</span> = &#123;&#125;</div><div class="line">  <span class="keyword">loop</span> <span class="keyword">do</span> </div><div class="line">    <span class="keyword">for</span> each Ci, Cj <span class="keyword">in</span> clauses <span class="keyword">do</span> </div><div class="line">      resolvents = PL-Resolution(Ci, Cj)</div><div class="line">      If resolvents contains the empty clause <span class="keyword">return</span> <span class="literal">true</span></div><div class="line">      <span class="keyword">new</span> = <span class="keyword">new</span> U resolvents</div><div class="line">    <span class="keyword">if</span> <span class="keyword">new</span> belongs <span class="keyword">to</span> clauses <span class="keyword">then</span> <span class="keyword">return</span> <span class="literal">false</span></div><div class="line">    clauses = clauses U <span class="keyword">new</span></div></pre></td></tr></table></figure>
-<p>If you need Python to find bindings for this keg-only formula, run:<br>
-echo /usr/local/opt/opencv3/lib/python2.7/site-packages &gt;&gt; /usr/local/lib/python2.7/site-packages/opencv3.pth<br>
-mkdir -p /Users/chet/.local/lib/python3.5/site-packages<br>
-echo ‘import site; site.addsitedir(&quot;/usr/local/lib/python2.7/site-packages&quot;)’ &gt;&gt; /Users/chet/.local/lib/python3.5/site-packages/homebrew.pth</p>
+<figure class="highlight livescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> PL-Resolution(KB, a) returns <span class="literal">true</span> <span class="keyword">or</span> <span class="literal">false</span></div><div class="line">  clauses = the set <span class="keyword">of</span> clauses <span class="keyword">in</span> the CNF representation <span class="keyword">of</span> KB <span class="keyword">and</span> <span class="keyword">not</span> a</div><div class="line">  <span class="keyword">new</span> = {}</div><div class="line">  <span class="keyword">loop</span> <span class="keyword">do</span> </div><div class="line">    <span class="keyword">for</span> each Ci, Cj <span class="keyword">in</span> clauses <span class="keyword">do</span> </div><div class="line">      resolvents = PL-Resolution(Ci, Cj)</div><div class="line">      If resolvents contains the empty clause <span class="keyword">return</span> <span class="literal">true</span></div><div class="line">      <span class="keyword">new</span> = <span class="keyword">new</span> U resolvents</div><div class="line">    <span class="keyword">if</span> <span class="keyword">new</span> belongs <span class="keyword">to</span> clauses <span class="keyword">then</span> <span class="keyword">return</span> <span class="literal">false</span></div><div class="line">    clauses = clauses U <span class="keyword">new</span></div></pre></td></tr></table></figure>
+<p>If you need Python to find bindings for this keg-only formula, run: echo /usr/local/opt/opencv3/lib/python2.7/site-packages &gt;&gt; /usr/local/lib/python2.7/site-packages/opencv3.pth mkdir -p /Users/chet/.local/lib/python3.5/site-packages echo &#x2018;import site; site.addsitedir(&#x201C;/usr/local/lib/python2.7/site-packages&#x201D;)&#x2019; &gt;&gt; /Users/chet/.local/lib/python3.5/site-packages/homebrew.pth</p>
 
                 
 

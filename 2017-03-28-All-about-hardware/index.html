@@ -140,14 +140,14 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">about</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/about/">about</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -210,28 +210,26 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <h1 id="ssd-vs-hdd的性能对比讲解了为什么ssd的读写性能高于hdd"><a href="http://oserror.com/backend/ssd-principle/" target="_blank" rel="external">SSD vs HDD的性能对比.讲解了为什么SSD的读写性能高于HDD.</a></h1>
+                <h1 id="ssd-vs-hddx7684x6027x80fdx5bf9x6bd4x8bb2x89e3x4e86x4e3ax4ec0x4e48ssdx7684x8bfbx5199x6027x80fdx9ad8x4e8ehdd"><a href="http://oserror.com/backend/ssd-principle/" target="_blank" rel="external">SSD vs HDD&#x7684;&#x6027;&#x80FD;&#x5BF9;&#x6BD4;.&#x8BB2;&#x89E3;&#x4E86;&#x4E3A;&#x4EC0;&#x4E48;SSD&#x7684;&#x8BFB;&#x5199;&#x6027;&#x80FD;&#x9AD8;&#x4E8E;HDD.</a></h1>
 <ul>
-<li>NAND一个重要的特性是，其只能是读或写单个page，但不能覆盖写如某个page，必须先要清空里面的内容，再写入。</li>
-<li>由于清空内容的电压较高，必须是以block为单位。因此，没有空闲的page时，必须要找到没有有效内容的block，先擦写，然后再选择空闲的page写入。</li>
-<li>主要问题：写放大
+<li>NAND&#x4E00;&#x4E2A;&#x91CD;&#x8981;&#x7684;&#x7279;&#x6027;&#x662F;&#xFF0C;&#x5176;&#x53EA;&#x80FD;&#x662F;&#x8BFB;&#x6216;&#x5199;&#x5355;&#x4E2A;page&#xFF0C;&#x4F46;&#x4E0D;&#x80FD;&#x8986;&#x76D6;&#x5199;&#x5982;&#x67D0;&#x4E2A;page&#xFF0C;&#x5FC5;&#x987B;&#x5148;&#x8981;&#x6E05;&#x7A7A;&#x91CC;&#x9762;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x518D;&#x5199;&#x5165;&#x3002;</li>
+<li>&#x7531;&#x4E8E;&#x6E05;&#x7A7A;&#x5185;&#x5BB9;&#x7684;&#x7535;&#x538B;&#x8F83;&#x9AD8;&#xFF0C;&#x5FC5;&#x987B;&#x662F;&#x4EE5;block&#x4E3A;&#x5355;&#x4F4D;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x6CA1;&#x6709;&#x7A7A;&#x95F2;&#x7684;page&#x65F6;&#xFF0C;&#x5FC5;&#x987B;&#x8981;&#x627E;&#x5230;&#x6CA1;&#x6709;&#x6709;&#x6548;&#x5185;&#x5BB9;&#x7684;block&#xFF0C;&#x5148;&#x64E6;&#x5199;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x9009;&#x62E9;&#x7A7A;&#x95F2;&#x7684;page&#x5199;&#x5165;&#x3002;</li>
+<li>&#x4E3B;&#x8981;&#x95EE;&#x9898;&#xFF1A;&#x5199;&#x653E;&#x5927;
 <ul>
-<li>SSD读写是以page为单位的，如果更新page中的部分数据，也需要写整个page</li>
-<li>SSD的garbage collection中，会在block间移动数据</li>
-<li>SSD的wear leveing中，可能也会在block间交换数据，导致写放大</li>
-</ul>
-</li>
-<li>总结
+<li>SSD&#x8BFB;&#x5199;&#x662F;&#x4EE5;page&#x4E3A;&#x5355;&#x4F4D;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x66F4;&#x65B0;page&#x4E2D;&#x7684;&#x90E8;&#x5206;&#x6570;&#x636E;&#xFF0C;&#x4E5F;&#x9700;&#x8981;&#x5199;&#x6574;&#x4E2A;page</li>
+<li>SSD&#x7684;garbage collection&#x4E2D;&#xFF0C;&#x4F1A;&#x5728;block&#x95F4;&#x79FB;&#x52A8;&#x6570;&#x636E;</li>
+<li>SSD&#x7684;wear leveing&#x4E2D;&#xFF0C;&#x53EF;&#x80FD;&#x4E5F;&#x4F1A;&#x5728;block&#x95F4;&#x4EA4;&#x6362;&#x6570;&#x636E;&#xFF0C;&#x5BFC;&#x81F4;&#x5199;&#x653E;&#x5927;</li>
+</ul></li>
+<li>&#x603B;&#x7ED3;
 <ul>
-<li>需要充分利用其随机读写快的特性</li>
-<li>尽可能在软件层面更新小块数据，减轻SSD写放大问题</li>
-<li>避免频繁的更新数据，减轻SSD写放大及寿命减少的问题，尽可能使用追加的方式写数据</li>
-</ul>
-</li>
+<li>&#x9700;&#x8981;&#x5145;&#x5206;&#x5229;&#x7528;&#x5176;&#x968F;&#x673A;&#x8BFB;&#x5199;&#x5FEB;&#x7684;&#x7279;&#x6027;</li>
+<li>&#x5C3D;&#x53EF;&#x80FD;&#x5728;&#x8F6F;&#x4EF6;&#x5C42;&#x9762;&#x66F4;&#x65B0;&#x5C0F;&#x5757;&#x6570;&#x636E;&#xFF0C;&#x51CF;&#x8F7B;SSD&#x5199;&#x653E;&#x5927;&#x95EE;&#x9898;</li>
+<li>&#x907F;&#x514D;&#x9891;&#x7E41;&#x7684;&#x66F4;&#x65B0;&#x6570;&#x636E;&#xFF0C;&#x51CF;&#x8F7B;SSD&#x5199;&#x653E;&#x5927;&#x53CA;&#x5BFF;&#x547D;&#x51CF;&#x5C11;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x5C3D;&#x53EF;&#x80FD;&#x4F7F;&#x7528;&#x8FFD;&#x52A0;&#x7684;&#x65B9;&#x5F0F;&#x5199;&#x6570;&#x636E;</li>
+</ul></li>
 </ul>
 <h1 id="reference">Reference</h1>
-<ol>
-<li><a href="http://www.pcgamer.com/hard-drive-vs-ssd-performance/2/" target="_blank" rel="external">http://www.pcgamer.com/hard-drive-vs-ssd-performance/2/</a></li>
+<ol style="list-style-type: decimal">
+<li>http://www.pcgamer.com/hard-drive-vs-ssd-performance/2/</li>
 </ol>
 
                 
@@ -276,7 +274,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#ssd-vs-hdd的性能对比讲解了为什么ssd的读写性能高于hdd"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">SSD vs HDD的性能对比.讲解了为什么SSD的读写性能高于HDD.</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#reference"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Reference</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#ssd-vs-hddx7684x6027x80fdx5bf9x6bd4x8bb2x89e3x4e86x4e3ax4ec0x4e48ssdx7684x8bfbx5199x6027x80fdx9ad8x4e8ehdd"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">SSD vs HDD的性能对比.讲解了为什么SSD的读写性能高于HDD.</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#reference"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Reference</span></a></li></ol>
         
         </div>
       </aside>
