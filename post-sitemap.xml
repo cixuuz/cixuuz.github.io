@@ -7,8 +7,24 @@
     </url>
 
     <url>
+        <loc>http://cixuuz.github.io/ai-logical-agents/</loc>
+        <lastmod>2017-04-20T17:31:32.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://cixuuz.github.io/ai-first-order-logic/</loc>
-        <lastmod>2017-04-19T02:16:11.000Z</lastmod>
+        <lastmod>2017-04-20T13:49:08.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://cixuuz.github.io/notes-for-advices-pythonic-programming/</loc>
+        <lastmod>2017-04-20T05:13:46.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -23,24 +39,8 @@
     </url>
 
     <url>
-        <loc>http://cixuuz.github.io/ai-logical-agents/</loc>
-        <lastmod>2017-04-18T21:54:10.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>http://cixuuz.github.io/intro-to-xpath/</loc>
         <lastmod>2017-04-18T21:21:42.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://cixuuz.github.io/notes-for-advices-pythonic-programming/</loc>
-        <lastmod>2017-04-12T03:50:11.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

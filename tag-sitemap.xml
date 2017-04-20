@@ -16,13 +16,6 @@
     </url>
 
     <url>
-        <loc>http://cixuuz.github.io/tags/Python/</loc>
-        <lastmod>2017-04-12T03:50:11.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://cixuuz.github.io/tags/data/</loc>
         <lastmod>2017-04-18T21:21:42.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -44,8 +37,15 @@
     </url>
 
     <url>
+        <loc>http://cixuuz.github.io/tags/Python/</loc>
+        <lastmod>2017-04-20T05:13:46.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://cixuuz.github.io/tags/AI/</loc>
-        <lastmod>2017-04-19T02:16:11.000Z</lastmod>
+        <lastmod>2017-04-20T17:31:32.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
