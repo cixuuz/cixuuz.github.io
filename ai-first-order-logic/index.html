@@ -213,13 +213,40 @@
                 <p>While propositional logic assumes the world contains facts, first-order logic assumes the world contains <strong>objects, relations, functions</strong>, like natural language.</p>
 <h1 id="syntax">Syntax</h1>
 <ul>
-<li>Constants: Poly, 2</li>
-<li>Predicates: brother, larger than</li>
-<li>functions: sqrt</li>
+<li>Constants: Poly, 2, refer to objects</li>
+<li>Predicates: brother, larger than, refer to relations</li>
+<li>functions: sqrt, refer to functional relations</li>
 <li>variables: x, y</li>
-<li>connectives: ^ =&gt;</li>
+<li>connectives: ^ $\Rightarrow$</li>
 <li>equality: =</li>
-<li>quantifiers: exists, any</li>
+<li>quantifiers: $\exists$, $\forall$</li>
+</ul>
+<h1 id="sentences">Sentences</h1>
+<ul>
+<li>atomic sentence = predicate(term1, &#x2026;, termN) or term1 = term2. where term = function(term1, &#x2026;, termN) or constant or variable</li>
+<li>complex sentences are made from atomic sentences using connectives</li>
+</ul>
+<h1 id="universal-quantification">Universal quantification</h1>
+<p>$\forall <variables> <sentence>$<br>
+Typically, $\Rightarrow$ is the main connective with $\forall$, avoid $\wedge$.</sentence></variables></p>
+<h1 id="existential-quantification">Existential quantification</h1>
+<p>$\exists <variables> <sentence>$<br>
+Typically, $\wedge$ is the main connective with $\forall$, avoid $\Rightarrow$.</sentence></variables></p>
+<h1 id="properties-of-quantifiers">Properties of quantifiers</h1>
+<ul>
+<li>$\forall x \forall y$ is same as $\forall y \forall x$</li>
+<li>$\exists x \exists y$ is same as $\exists y \exists x$</li>
+<li>duality:
+<ul>
+<li>$\forall x Relation(object)$ is same as $\neg\forall x \neg Relation(object)$</li>
+</ul>
+</li>
+</ul>
+<h1 id="universal-instantiation">Universal instantiation</h1>
+<h1 id="summary">Summary</h1>
+<ul>
+<li>objects and relations are semantic primitives</li>
+<li>increase expressive power</li>
 </ul>
 
                 
@@ -260,7 +287,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#syntax"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Syntax</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#syntax"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Syntax</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#sentences"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Sentences</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#universal-quantification"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Universal quantification</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#existential-quantification"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Existential quantification</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#properties-of-quantifiers"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">Properties of quantifiers</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#universal-instantiation"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">Universal instantiation</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#summary"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">Summary</span></a></li></ol>
         
         </div>
       </aside>
