@@ -163,7 +163,7 @@ function AIPlayer() {
         }
 
         if (oppSeedN === 4) {
-            return -10000;
+            return -1000;
         } else if (oppSeedN === 3 && emptyN === 1) {
             return -100;
         } else if (oppSeedN === 2 && emptyN === 2) {

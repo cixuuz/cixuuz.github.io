@@ -67,7 +67,7 @@ function MenuState(name) {
     }
 }
 
-var EASY = 1, MID = 3, HARD = 6;
+var EASY = 1, MID = 4, HARD = 7;
 
 function GameState(name) {
 
