@@ -6,6 +6,7 @@
 
     <script src="game.js"></script>
     <script src="state.js"></script>
+    <script src="algo_v2.js"></script>
 
     <style>
         canvas {
@@ -31,7 +32,8 @@
         ctx = canvas.getContext("2d");
 
         state = new StateManager();
-        state.add(new MenuState("menu"), new GameState("game"), new AboutState("about"));
+        state.add(new MenuState("menu"), new MenuState("level"),
+            new GameState("game"), new AboutState("about"));
         state.set("menu");
 
         document.body.appendChild(canvas);
@@ -40,7 +42,7 @@
 
         init();
         tick();
-    }
+    };
 
     function init() {
         state.get("game").init(EASY);
@@ -56,11 +58,11 @@
 
     function mouseMove(evt) {
         var el = evt.target;
-        var ox = oy = 0;
+        var ox = 0, oy = 0;
         do {
             ox += el.offsetLeft;
             oy += el.offsetTop;
-        } while (el.parentOffset)
+        } while (el.parentOffset);
 
         mouse.x = evt.clientX - ox;
         mouse.y = evt.clientY - oy;

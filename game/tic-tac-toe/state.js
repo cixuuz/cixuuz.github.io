@@ -7,26 +7,41 @@ function MenuState(name) {
     var btns = [], angle = 0, frames = 0;
 
     var _yPos = 150;
-    btns.push(new MenuButton("Easy", 80, _yPos, function () {
-        state.get("game").init(EASY);
-        state.change("game");
-    }));
-    btns.push(new MenuButton("Intermediate", 80, _yPos + 80, function () {
-        state.get("game").init(MID);
-        state.change("game");
-    }));
-    btns.push(new MenuButton("Difficult", 80, _yPos + 160, function () {
-        state.get("game").init(HARD);
-        state.change("game");
-    }));
-    btns.push(new MenuButton("About", 80, _yPos + 240, function () {
-        state.change("about", true);
-    }));
+
+    if (name === "menu") {
+        btns.push(new MenuButton("You first", 80, _yPos, function () {
+            _is_first = false;
+            state.change("level");
+        }, name));
+        btns.push(new MenuButton("AI first", 80, _yPos + 80, function () {
+            _is_first = true;
+            state.change("level");
+        }, name));
+        btns.push(new MenuButton("About", 80, _yPos + 160, function () {
+            state.change("about", true);
+        }, name));
+    }
+
+    if (name === "level") {
+        btns.push(new MenuButton("Easy", 80, _yPos, function () {
+            state.get("game").init(EASY, _is_first);
+            state.change("game");
+        }, name));
+        btns.push(new MenuButton("Intermediate", 80, _yPos + 80, function () {
+            state.get("game").init(MID, _is_first);
+            state.change("game");
+        }, name));
+        btns.push(new MenuButton("Difficult", 80, _yPos + 160, function () {
+            state.get("game").init(HARD, _is_first);
+            state.change("game");
+        }, name));
+    }
 
     this.update = function () {
         frames++;
         angle = 0.2 * Math.cos(frames * 0.02);
-    }
+        state.pre_name = null;
+    };
 
     this.render = function (_ctx) {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -52,9 +67,7 @@ function MenuState(name) {
     }
 }
 
-var EASY = 1;
-var MID = 2;
-var HARD = 3;
+var EASY = 1, MID = 3, HARD = 6;
 
 function GameState(name) {
 
@@ -62,9 +75,9 @@ function GameState(name) {
     var scene = new Scene(canvas.width, canvas.height),
         ctx = scene.getContext();
 
-    var data, player, ai, isPlayer, aiMoved, mode, winner, winnerMsg, hastick;
+    var data, player, ai, isPlayer, aiMoved, mode, winner, winnerMsg, hastick, sample;
 
-    canvas.addEventListener("mousedown", function (evt) {
+    canvas.addEventListener("mousedown", function () {
         if (winnerMsg && state.active_name === "game") {
             state.change("menu", true);
             return;
@@ -86,12 +99,13 @@ function GameState(name) {
             }
             // flip the chosen tile
             data[idx].flip(player);
+
             // player has played
             isPlayer = false;
         }
     }, false);
 
-    this.init = function (_mode) {
+    this.init = function (_mode, _is_ai) {
 
         mode = _mode;
         data = [];
@@ -102,17 +116,36 @@ function GameState(name) {
             data.push(new Tile(x, y));
         }
         // player use cross tile
-        player = Tile.CROSS;
-
-        isPlayer = true;
+        player = Tile.NOUGHT;
+        isPlayer = player === Tile.NOUGHT;
         aiMoved = false;
         winner = false;
         winnerMsg = false;
         hastick = false;
-        stats = [0, 0, 0, 0, 0, 0, 0, 0];
+        sample = [0, 0, 0, 0, 0, 0, 0, 0];
+        // initial AI
+        ai = new AIPlayer();
+        ai.setSeed(player === Tile.NOUGHT ? Tile.CROSS : Tile.NOUGHT);
 
-        ai = new AIPlayer(data);
-    }
+        if (_is_ai) {
+            // start time
+            var start = new Date().getTime();
+            // get best move
+            var res = ai.move(data, mode);
+            // end time
+            var end = new Date().getTime();
+            var m = res[1];
+            sample = res.slice(2, res.length);
+            sample[5] = res[0];
+            sample[6] = (end-start)/1000;
+
+            data[m].flip(ai.getSeed());
+
+            isPlayer = true;
+            aiMoved = true;
+        }
+
+    };
 
     this.update = function () {
         // if someone wins, then stop update 
@@ -120,7 +153,7 @@ function GameState(name) {
 
         // update each tile
         var activeAnim = false;
-        for (var i = data.length; i--;) {
+        for (var i = 0; i < data.length; i++) {
             data[i].update();
             activeAnim = activeAnim || data[i].active();
         }
@@ -132,18 +165,20 @@ function GameState(name) {
                 // start time
                 var start = new Date().getTime();
                 // get best move 
-                var res = ai.move(mode);
-                var m = res[0];
-                stats = res.slice(1, res.length);
+                var res = ai.move(data, mode);
                 // end time
                 var end = new Date().getTime();
-                console.log("time cost " + (end - start) / 1000 + "s");
-                console.log("winner" + winner);
-                if (m == -1) {
-                    winner = ai.hasWinner();
-                } else {
-                    data[m].flip(Tile.NOUGHT);
+                var m = res[1];
+                sample = res.slice(2, res.length);
+                sample[5] = res[0];
+                sample[6] = (end-start)/1000;
+                winner = ai.hasWinner(data);
+                sample[7] = winner;
+
+                if (!winner) {
+                    data[m].flip(ai.getSeed());
                 }
+
                 isPlayer = true;
             }
 
@@ -152,57 +187,54 @@ function GameState(name) {
                 if (winner === true) {
                     winnerMsg = "The game was a draw!";
                 } else if (winner === Tile.NOUGHT) {
-                    winnerMsg = "You Lose!";
+                    winnerMsg = "You win!";
                 } else {
-                    winnerMsg = "You won!";
+                    winnerMsg = "You lose!";
                 }
             }
 
             aiMoved = true;
         } else {
             if (aiMoved) {
-                winner = ai.hasWinner();
+                winner = ai.hasWinner(data);
             }
             aiMoved = false;
         }
         hastick = true;
-    }
+    };
 
     this.render = function (_ctx) {
 
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-        for (var i = data.length; i--;) {
+        for (var i = 0; i < data.length; i++) {
             data[i].draw(ctx);
         }
 
-        if (stats) {
-            var s = stats, x = 0, y = 50, lineHeight = 20;
-            ;
+        if (sample) {
+            var x = 0, y = 50, lineHeight = 20;
 
             ctx.save();
             ctx.translate(500, 0);
 
-            ctx.font = "14px Helvetica";
+            ctx.font = "18px Helvetica";
             ctx.fillStyle = "skyblue";
 
             ctx.fillText('Alpha Beta Algorithm', x, y);
             ctx.fillText('Cutoff occur?:', x, y + lineHeight);
-            ctx.fillText(s[0], x, y + 2 * lineHeight);
+            ctx.fillText(sample[0], x, y + 2 * lineHeight);
             ctx.fillText('Max depth:', x, y + 3 * lineHeight);
-            ctx.fillText(s[1], x, y + 4 * lineHeight);
+            ctx.fillText(sample[1], x, y + 4 * lineHeight);
             ctx.fillText('Node generated:', x, y + 5 * lineHeight);
-            ctx.fillText(s[2], x, y + 6 * lineHeight);
+            ctx.fillText(sample[2], x, y + 6 * lineHeight);
             ctx.fillText('# of times max pruning:', x, y + 7 * lineHeight);
-            ctx.fillText(s[3], x, y + 8 * lineHeight);
+            ctx.fillText(sample[3], x, y + 8 * lineHeight);
             ctx.fillText('# of times min pruning:', x, y + 9 * lineHeight);
-            ctx.fillText(s[4], x, y + 10 * lineHeight);
-            ctx.fillText('# of times enter max :', x, y + 11 * lineHeight);
-            ctx.fillText(s[5], x, y + 12 * lineHeight);
-            ctx.fillText('# of times enter min :', x, y + 13 * lineHeight);
-            ctx.fillText(s[6], x, y + 14 * lineHeight);
-            ctx.fillText('current depth :', x, y + 15 * lineHeight);
-            ctx.fillText(s[7], x, y + 16 * lineHeight);
+            ctx.fillText(sample[4], x, y + 10 * lineHeight);
+            ctx.fillText("v: ", x, y + 11*lineHeight);
+            ctx.fillText(sample[5], x, y + 12*lineHeight);
+            ctx.fillText("time cost: ", x, y + 13*lineHeight);
+            ctx.fillText(sample[6], x, y + 14*lineHeight);
             ctx.restore();
         }
 
@@ -250,10 +282,14 @@ function AboutState(name) {
     var scene = new Scene(canvas.width, canvas.height),
         ctx = scene.getContext();
 
-    var text = "Tic Tac Toe is a game for a player(X) to play against a computer(O), who take turns marking the spaces in a 4×4 grid. The player who succeeds in placing four respective marks in a horizontal, vertical, or diagonal row wins the game. The AI player is based on alpha-beta search. There are three levels. In paticluar, you cannot win in the hard mode. Not believe? Try!";
+    var text = "Tic Tac Toe is a game for a player(X) to play against a computer(O), " +
+        "who take turns marking the spaces in a 4×4 grid. The player who succeeds in " +
+        "placing four respective marks in a horizontal, vertical, or diagonal row wins " +
+        "the game. The AI player is based on alpha-beta search. There are three levels. " +
+        "In paticluar, you cannot win in the hard mode. Not believe? Try!";
     var hastick = false;
 
-    canvas.addEventListener("mousedown", function (evt) {
+    canvas.addEventListener("mousedown", function () {
         if (hastick && state.active_name === "about") {
             state.change("menu");
         }
@@ -307,7 +343,7 @@ function AboutState(name) {
 
     this.update = function () {
         hastick = true;
-    }
+    };
 
     this.render = function (_ctx) {
 
