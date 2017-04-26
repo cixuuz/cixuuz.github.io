@@ -93,6 +93,7 @@ function StateManager() {
     };
 }
 
+// tile object
 function Tile(x, y) {
 
     var x = x, y = y;
@@ -196,6 +197,7 @@ function Tile(x, y) {
 
 }
 
+// menu object
 function MenuButton(text, x, y, cb, _name) {
     var text = text, x = x, y = y, callback = cb;
     var hover, normal, rect = {};

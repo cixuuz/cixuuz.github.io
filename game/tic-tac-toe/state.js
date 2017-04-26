@@ -67,8 +67,10 @@ function MenuState(name) {
     }
 }
 
+// the constant control the depth of search, which controls the level of game
 var EASY = 1, MID = 4, HARD = 7;
 
+// game status must init before update
 function GameState(name) {
 
     this.name = name;

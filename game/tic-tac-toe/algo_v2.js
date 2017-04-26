@@ -1,3 +1,7 @@
+// ai player object
+// the main function is move
+// evaluation function controls is cut off test
+
 function AIPlayer() {
 
     var seed, oppSeed;
@@ -153,23 +157,23 @@ function AIPlayer() {
         }
 
         if (seedN === 4) {
-            return 1000;
+            return 8;
         } else if (seedN === 3 && emptyN === 1) {
-            return 100;
+            return 4;
         } else if (seedN === 2 && emptyN === 2) {
-            return 10;
+            return 2;
         } else if (seedN === 1 && emptyN === 3) {
             return 1;
         }
 
         if (oppSeedN === 4) {
-            return -1000;
+            return -8;
         } else if (oppSeedN === 3 && emptyN === 1) {
-            return -100;
+            return -4;
         } else if (oppSeedN === 2 && emptyN === 2) {
-            return  10;
+            return  -2;
         } else if (oppSeedN === 1 && emptyN === 3) {
-            return  1;
+            return  -1;
         }
 
         return 0;

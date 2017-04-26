@@ -1,3 +1,7 @@
+// ai player object
+// the main function is move
+// evaluation function controls is cut off test
+
 function AIPlayer() {
 
     var seed, oppSeed;

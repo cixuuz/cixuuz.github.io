@@ -23,7 +23,7 @@
 <script>
 
     var canvas, ctx, state, mouse = {x: 0, y: 0}, _is_first = -1;
-
+    // main function
     window.onload = function main() {
 
         canvas = document.createElement("canvas");
@@ -45,10 +45,12 @@
         tick();
     };
 
+    // initial game state
     function init() {
         state.get("game").init(EASY);
     }
 
+    // render all objects and control behaviors
     function tick() {
         window.requestAnimationFrame(tick);
 
@@ -57,6 +59,7 @@
         state.tick(ctx);
     }
 
+    // record mouse move
     function mouseMove(evt) {
         var el = evt.target;
         var ox = 0, oy = 0;
