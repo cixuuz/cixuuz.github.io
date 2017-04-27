@@ -7,6 +7,22 @@
     </url>
 
     <url>
+        <loc>http://cixuuz.github.io/four-types-financial-statements/</loc>
+        <lastmod>2017-04-27T17:39:46.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://cixuuz.github.io/deep_learning_behind_tensorflow_distribute_principles_and_framework/</loc>
+        <lastmod>2017-04-23T03:28:59.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://cixuuz.github.io/ai-logical-agents/</loc>
         <lastmod>2017-04-20T17:31:32.000Z</lastmod>
         <changefreq>weekly</changefreq>
