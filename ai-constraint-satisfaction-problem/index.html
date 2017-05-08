@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          Types of Financial Statements - cixuuz
+          AI: Constraint Satisfaction Problems - cixuuz
         
     </title>
 
-    <link rel="canonical" href="http://cixuuz.github.io/four-types-financial-statements/">
+    <link rel="canonical" href="http://cixuuz.github.io/ai-constraint-satisfaction-problem/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -86,14 +86,14 @@
                     <div class="post-heading">
                         <div class="tags">
                             
-                              <a class="tag" href="/tags/#finance" title="finance">finance</a>
+                              <a class="tag" href="/tags/#AI" title="AI">AI</a>
                             
                         </div>
-                        <h1>Types of Financial Statements</h1>
+                        <h1>AI: Constraint Satisfaction Problems</h1>
                         <h2 class="subheading"></h2>
                         <span class="meta">
                             Posted by Chet on
-                            2017-04-25
+                            2017-05-07
                         </span>
                     </div>
                 
@@ -210,23 +210,34 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <p><a href="http://accounting-simplified.com/financial/statements/types.html" target="_blank" rel="external">From</a></p>
-<h1 id="statement-of-financial-position">Statement of Financial Position</h1>
-<p>Statement of Financial Position, also known as the Balance Sheet, presents the financial position of an entity at a given date. It is comprised of the following three elements:</p>
-<p>Assets: Something a business owns or controls (e.g.&#xA0;cash, inventory, plant and machinery, etc) Liabilities: Something a business owes to someone (e.g.&#xA0;creditors, bank loans, etc) Equity: What the business owes to its owners. This represents the amount of capital that remains in the business after its assets are used to pay off its outstanding liabilities. Equity therefore represents the difference between the assets and liabilities. View detailed explanation and Example of Statement of Financial Position</p>
-<h1 id="income-statement">Income Statement</h1>
-<p>Income Statement, also known as the Profit and Loss Statement, reports the company&#x2019;s financial performance in terms of net profit or loss over a specified period. Income Statement is composed of the following two elements:</p>
-<p>Income: What the business has earned over a period (e.g.&#xA0;sales revenue, dividend income, etc) Expense: The cost incurred by the business over a period (e.g.&#xA0;salaries and wages, depreciation, rental charges, etc) Net profit or loss is arrived by deducting expenses from income.</p>
-<p>View detailed explanation and Example of Income Statement</p>
-<h1 id="cash-flow-statement">Cash Flow Statement</h1>
-<p>Cash Flow Statement, presents the movement in cash and bank balances over a period. The movement in cash flows is classified into the following segments:</p>
-<p>Operating Activities: Represents the cash flow from primary activities of a business. Investing Activities: Represents cash flow from the purchase and sale of assets other than inventories (e.g.&#xA0;purchase of a factory plant) Financing Activities: Represents cash flow generated or spent on raising and repaying share capital and debt together with the payments of interest and dividends. View detailed explanation and Example of Cash Flow Statement</p>
-<h1 id="statement-of-changes-in-equity">Statement of Changes in Equity</h1>
-<p>Statement of Changes in Equity, also known as the Statement of Retained Earnings, details the movement in owners&#x2019; equity over a period. The movement in owners&#x2019; equity is derived from the following components:</p>
-<p>Net Profit or loss during the period as reported in the income statement Share capital issued or repaid during the period Dividend payments Gains or losses recognized directly in equity (e.g.&#xA0;revaluation surpluses) Effects of a change in accounting policy or correction of accounting error View detailed explanation and Example of Statement of Changes in Equity</p>
-<p>Link between Financial Statements</p>
-<p>The following diagram summarizes the link between financial statements.</p>
-<p>Relationship between financial statements</p>
+                <h1 id="csps-are-a-special-kind-of-search-problem">CSPs are a special kind of search problem</h1>
+<ol style="list-style-type: decimal">
+<li>States defined by values of a fixed set of variables from domain</li>
+<li>Goal test defined by constraints on variable values</li>
+<li>acceptable solutions are complete and consistent</li>
+<li>binary CSP: relates two variables; constraint graph: nodes are variables, arc are constraits.</li>
+<li>Discrete variable(n) with finit domain(d): O(d^n) complete assignments</li>
+<li>Discrete variable with infinit domain need a constraint</li>
+<li>Varieties of constraints: involve one varible(unary), two(binary), three(higher-order)</li>
+</ol>
+<h1 id="backtracking">Backtracking</h1>
+<ol style="list-style-type: decimal">
+<li>depth-first search with one variable assigned at each level</li>
+<li>the basic uninformed algorithm for CSP</li>
+</ol>
+<figure class="highlight livescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> BacktrackingSearch(csp) <span class="keyword">return</span> solution <span class="keyword">or</span> failure</div><div class="line">    <span class="keyword">return</span> Backtrack({}, csp)</div><div class="line"></div><div class="line"><span class="keyword">function</span> Backtrack(assignment, csp) <span class="keyword">return</span> solution <span class="keyword">or</span> failure</div><div class="line">    <span class="comment"># goal test</span></div><div class="line">    <span class="keyword">if</span> assignment <span class="keyword">is</span> complete <span class="keyword">then</span> <span class="keyword">return</span> assignment</div><div class="line">    <span class="comment"># variable ordering/selection</span></div><div class="line">    <span class="keyword">var</span> =  SelectUnassignedVariable(csp)</div><div class="line">    <span class="comment"># value ordering</span></div><div class="line">    <span class="keyword">for</span> each value <span class="keyword">in</span> OrderDomainValues(<span class="keyword">var</span>, assignment, csp) <span class="keyword">do</span></div><div class="line">        <span class="keyword">if</span> value <span class="keyword">is</span> consistent <span class="keyword">with</span> assignment <span class="keyword">then</span></div><div class="line">            add {<span class="keyword">var</span>=value} <span class="keyword">to</span> assignment</div><div class="line">            <span class="comment"># inferences from current state</span></div><div class="line">            inferences = Inference(csp, <span class="keyword">var</span>, value)</div><div class="line">            <span class="keyword">if</span> inferences != failure <span class="keyword">then</span></div><div class="line">                add inferences <span class="keyword">to</span> assginment</div><div class="line">                result = Backtrack(assignment, csp)</div><div class="line">                <span class="keyword">if</span> result != failture <span class="keyword">then</span></div><div class="line">                    <span class="keyword">return</span> result</div><div class="line">            remove {<span class="keyword">var</span>=value} <span class="keyword">and</span> inferences <span class="keyword">from</span> assignment</div><div class="line">    <span class="keyword">return</span> failure</div></pre></td></tr></table></figure>
+<h1 id="improve-serach-efficiency">improve serach efficiency</h1>
+<ul>
+<li>Variable ordering</li>
+<li>Most constrained variable or Minimum remaining values (MRV): choose the variable with the fewest legal values</li>
+<li>Degree heuristic: has the most number of unassigned neighbors</li>
+<li>Value ordering</li>
+<li>Least-constraining-value: the one that rules out the fewest values in the remaining variables</li>
+<li>Constraint propagation(inferences in code)</li>
+<li>Forward checking prevents assignments that lead to later failures</li>
+<li>Constraint propagation (e.g., arc consistency) does additional work to constrain values and detect inconsistencies early. based on X -&gt; Y is consistent iff for every value x in X there is some allowed y in Y.</li>
+</ul>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">AC-3</span>(<span class="title">csp</span>) <span class="title">return</span> <span class="title">boolean</span></span></div><div class="line">    inputs: csp, <span class="keyword">a</span> binary csp <span class="keyword">with</span> components(X, D, C)</div><div class="line">    <span class="built_in">local</span> varibales: queue, <span class="keyword">a</span> queue <span class="keyword">of</span> arcs, initially all <span class="keyword">the</span> arcs <span class="keyword">in</span> csp</div><div class="line"></div><div class="line">    <span class="keyword">while</span> queue is <span class="keyword">not</span> <span class="literal">empty</span> <span class="built_in">do</span> </div><div class="line">        (xi, xj) = RemoveFirst(queue)</div><div class="line">        <span class="keyword">if</span> Revise(csp, xi, xj) <span class="keyword">then</span></div><div class="line">            <span class="keyword">if</span> Di is <span class="literal">empty</span> <span class="keyword">then</span> <span class="literal">return</span> <span class="literal">false</span></div><div class="line">            <span class="keyword">for</span> <span class="keyword">each</span> Xk <span class="keyword">in</span> Xi.neighbours - Xi <span class="built_in">do</span> </div><div class="line">                <span class="built_in">add</span> (Xk, Xi) <span class="built_in">to</span> queue</div><div class="line">    <span class="literal">return</span> <span class="literal">true</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Revise</span>(<span class="title">csp</span>, <span class="title">xi</span>, <span class="title">xj</span>) <span class="title">return</span> <span class="title">true</span> <span class="title">iff</span> <span class="title">revise</span> <span class="title">domain</span></span></div><div class="line">    revised = <span class="literal">false</span></div><div class="line">    <span class="keyword">for</span> <span class="keyword">each</span> x <span class="keyword">in</span> Dj <span class="built_in">do</span></div><div class="line">        <span class="keyword">if</span> no <span class="built_in">value</span> y <span class="keyword">in</span> Dj allows(X, y) <span class="keyword">then</span></div><div class="line">            <span class="built_in">delete</span> x <span class="built_in">from</span> Di</div><div class="line">            revised = <span class="literal">true</span></div><div class="line">    <span class="literal">return</span> revised</div></pre></td></tr></table></figure>
 
                 
 
@@ -235,12 +246,12 @@
                 <ul class="pager">
                     
                         <li class="previous">
-                            <a href="/ai-constraint-satisfaction-problem/" data-toggle="tooltip" data-placement="top" title="AI: Constraint Satisfaction Problems">&larr; Previous Post</a>
+                            <a href="/ai-learning-from-obs/" data-toggle="tooltip" data-placement="top" title="AI: Learning from observations">&larr; Previous Post</a>
                         </li>
                     
                     
                         <li class="next">
-                            <a href="/deep_learning_behind_tensorflow_distribute_principles_and_framework/" data-toggle="tooltip" data-placement="top" title="Deep Learning behind Tensorflow">Next Post &rarr;</a>
+                            <a href="/four-types-financial-statements/" data-toggle="tooltip" data-placement="top" title="Types of Financial Statements">Next Post &rarr;</a>
                         </li>
                     
                 </ul>
@@ -270,7 +281,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#statement-of-financial-position"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Statement of Financial Position</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#income-statement"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Income Statement</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#cash-flow-statement"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Cash Flow Statement</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#statement-of-changes-in-equity"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Statement of Changes in Equity</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#csps-are-a-special-kind-of-search-problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">CSPs are a special kind of search problem</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#backtracking"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Backtracking</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#improve-serach-efficiency"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">improve serach efficiency</span></a></li></ol>
         
         </div>
       </aside>
@@ -290,7 +301,7 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
-                          <a class="tag" href="/tags/#finance" title="finance">finance</a>
+                          <a class="tag" href="/tags/#AI" title="AI">AI</a>
                         
                     </div>
                 </section>
@@ -319,8 +330,8 @@
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = "cixuuz";
-    var disqus_identifier = "http://cixuuz.github.io/four-types-financial-statements/";
-    var disqus_url = "http://cixuuz.github.io/four-types-financial-statements/";
+    var disqus_identifier = "http://cixuuz.github.io/ai-constraint-satisfaction-problem/";
+    var disqus_url = "http://cixuuz.github.io/ai-constraint-satisfaction-problem/";
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
