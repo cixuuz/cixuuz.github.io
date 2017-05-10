@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          Types of Financial Statements - cixuuz
+          RAID基本原理 - cixuuz
         
     </title>
 
-    <link rel="canonical" href="http://cixuuz.github.io/four-types-financial-statements/">
+    <link rel="canonical" href="http://cixuuz.github.io/hardware-raid-principles/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -86,14 +86,14 @@
                     <div class="post-heading">
                         <div class="tags">
                             
-                              <a class="tag" href="/tags/#finance" title="finance">finance</a>
+                              <a class="tag" href="/tags/#hardware" title="hardware">hardware</a>
                             
                         </div>
-                        <h1>Types of Financial Statements</h1>
+                        <h1>RAID基本原理</h1>
                         <h2 class="subheading"></h2>
                         <span class="meta">
                             Posted by Chet on
-                            2017-04-25
+                            2017-05-07
                         </span>
                     </div>
                 
@@ -210,23 +210,74 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <p><a href="http://accounting-simplified.com/financial/statements/types.html" target="_blank" rel="external">From</a></p>
-<h1 id="statement-of-financial-position">Statement of Financial Position</h1>
-<p>Statement of Financial Position, also known as the Balance Sheet, presents the financial position of an entity at a given date. It is comprised of the following three elements:</p>
-<p>Assets: Something a business owns or controls (e.g.&#xA0;cash, inventory, plant and machinery, etc) Liabilities: Something a business owes to someone (e.g.&#xA0;creditors, bank loans, etc) Equity: What the business owes to its owners. This represents the amount of capital that remains in the business after its assets are used to pay off its outstanding liabilities. Equity therefore represents the difference between the assets and liabilities. View detailed explanation and Example of Statement of Financial Position</p>
-<h1 id="income-statement">Income Statement</h1>
-<p>Income Statement, also known as the Profit and Loss Statement, reports the company&#x2019;s financial performance in terms of net profit or loss over a specified period. Income Statement is composed of the following two elements:</p>
-<p>Income: What the business has earned over a period (e.g.&#xA0;sales revenue, dividend income, etc) Expense: The cost incurred by the business over a period (e.g.&#xA0;salaries and wages, depreciation, rental charges, etc) Net profit or loss is arrived by deducting expenses from income.</p>
-<p>View detailed explanation and Example of Income Statement</p>
-<h1 id="cash-flow-statement">Cash Flow Statement</h1>
-<p>Cash Flow Statement, presents the movement in cash and bank balances over a period. The movement in cash flows is classified into the following segments:</p>
-<p>Operating Activities: Represents the cash flow from primary activities of a business. Investing Activities: Represents cash flow from the purchase and sale of assets other than inventories (e.g.&#xA0;purchase of a factory plant) Financing Activities: Represents cash flow generated or spent on raising and repaying share capital and debt together with the payments of interest and dividends. View detailed explanation and Example of Cash Flow Statement</p>
-<h1 id="statement-of-changes-in-equity">Statement of Changes in Equity</h1>
-<p>Statement of Changes in Equity, also known as the Statement of Retained Earnings, details the movement in owners&#x2019; equity over a period. The movement in owners&#x2019; equity is derived from the following components:</p>
-<p>Net Profit or loss during the period as reported in the income statement Share capital issued or repaid during the period Dividend payments Gains or losses recognized directly in equity (e.g.&#xA0;revaluation surpluses) Effects of a change in accounting policy or correction of accounting error View detailed explanation and Example of Statement of Changes in Equity</p>
-<p>Link between Financial Statements</p>
-<p>The following diagram summarizes the link between financial statements.</p>
-<p>Relationship between financial statements</p>
+                <h1 id="raidx57fax672cx539fx7406"><a href="http://oserror.com/backend/raid-principle/" target="_blank" rel="external">RAID&#x57FA;&#x672C;&#x539F;&#x7406;</a></h1>
+<table>
+<thead>
+<tr class="header">
+<th>RAID&#x7EA7;&#x522B;</th>
+<th>&#x8BFB;&#x6027;&#x80FD;</th>
+<th>&#x5199;&#x6027;&#x80FD;</th>
+<th>&#x7A7A;&#x95F4;&#x5229;&#x7528;&#x7387;</th>
+<th>&#x6700;&#x5927;&#x80FD;&#x5BB9;&#x5FCD;&#x7684;&#x574F;&#x76D8;&#x6570;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>RAID0</td>
+<td>&#x5355;&#x5757;&#x76D8;&#x7684;N&#x500D;</td>
+<td>&#x5355;&#x5757;&#x76D8;&#x7684;N&#x500D;</td>
+<td>100%</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>RAID1</td>
+<td>&#x5355;&#x5757;&#x76D8;&#x7684;N&#x500D;</td>
+<td>&#x6700;&#x6162;&#x78C1;&#x76D8;&#x7684;&#x6027;&#x80FD;</td>
+<td>1/N</td>
+<td>N-1</td>
+</tr>
+<tr class="odd">
+<td>RAID2</td>
+<td>&#x4E0D;&#x5230;&#x5355;&#x5757;&#x76D8;&#x7684;N&#x500D;</td>
+<td>&#x5355;&#x76D8;&#x7684;&#x5199;&#x5165;&#x901F;&#x5EA6; * &#x6821;&#x9A8C;&#x76D8;&#x7684;&#x6570;&#x91CF;</td>
+<td>&#x4E0D;&#x5230;100%</td>
+<td>&#x53D6;&#x51B3;&#x4E8E;&#x6D77;&#x660E;&#x7EA0;&#x9519;&#x7801;&#x4F4D;&#x6570;</td>
+</tr>
+<tr class="even">
+<td>RAID3</td>
+<td>&#x5355;&#x5757;&#x76D8;&#x7684;N-1&#x500D;</td>
+<td>&#x6821;&#x9A8C;&#x76D8;&#x7684;&#x5199;&#x5165;&#x901F;&#x5EA6;</td>
+<td>(N-1)/N</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>RAID4</td>
+<td>&#x5355;&#x5757;&#x76D8;&#x7684;N-1&#x500D;</td>
+<td>&#x6821;&#x9A8C;&#x76D8;&#x7684;&#x5199;&#x5165;&#x901F;&#x5EA6;</td>
+<td>(N-1)/N</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>RAID5</td>
+<td>&#x5355;&#x5757;&#x76D8;&#x7684;N&#x500D;</td>
+<td>&#x7565;&#x5FAE;&#x5F31;&#x4E8E;&#x5355;&#x5757;&#x76D8;&#x7684;N&#x500D;</td>
+<td>(N-1)/N</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>RAID6</td>
+<td>&#x5355;&#x5757;&#x76D8;&#x7684;N&#x500D;</td>
+<td>&#x7565;&#x5FAE;&#x5F31;&#x4E8E;&#x5355;&#x5757;&#x76D8;&#x7684;N&#x500D;&#xFF0C;&#x5DEE;&#x4E8E;RAID5</td>
+<td>(N-2)/N</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<h1 id="reference">Reference</h1>
+<ol style="list-style-type: decimal">
+<li>https://en.wikipedia.org/wiki/Hamming_code</li>
+<li>https://en.wikipedia.org/wiki/RAID</li>
+</ol>
 
                 
 
@@ -235,12 +286,12 @@
                 <ul class="pager">
                     
                         <li class="previous">
-                            <a href="/Java-path/" data-toggle="tooltip" data-placement="top" title="Java path">&larr; Previous Post</a>
+                            <a href="/ai-constraint-satisfaction-problem/" data-toggle="tooltip" data-placement="top" title="AI: Constraint Satisfaction Problems">&larr; Previous Post</a>
                         </li>
                     
                     
                         <li class="next">
-                            <a href="/deep_learning_behind_tensorflow_distribute_principles_and_framework/" data-toggle="tooltip" data-placement="top" title="Deep Learning behind Tensorflow">Next Post &rarr;</a>
+                            <a href="/Java-path/" data-toggle="tooltip" data-placement="top" title="Java path">Next Post &rarr;</a>
                         </li>
                     
                 </ul>
@@ -270,7 +321,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#statement-of-financial-position"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Statement of Financial Position</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#income-statement"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Income Statement</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#cash-flow-statement"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Cash Flow Statement</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#statement-of-changes-in-equity"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Statement of Changes in Equity</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#raidx57fax672cx539fx7406"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">RAID基本原理</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#reference"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Reference</span></a></li></ol>
         
         </div>
       </aside>
@@ -290,7 +341,7 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
-                          <a class="tag" href="/tags/#finance" title="finance">finance</a>
+                          <a class="tag" href="/tags/#hardware" title="hardware">hardware</a>
                         
                     </div>
                 </section>
@@ -319,8 +370,8 @@
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = "cixuuz";
-    var disqus_identifier = "http://cixuuz.github.io/four-types-financial-statements/";
-    var disqus_url = "http://cixuuz.github.io/four-types-financial-statements/";
+    var disqus_identifier = "http://cixuuz.github.io/hardware-raid-principles/";
+    var disqus_url = "http://cixuuz.github.io/hardware-raid-principles/";
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
