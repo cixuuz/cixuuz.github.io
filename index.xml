@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CIXUUZ </title>
+    <link>http://example.org/index.xml</link>
+    <language>en-us</language>
+    <author></author>
+    <rights>(C) 2017</rights>
+    <updated>2017-06-25 00:00:00 &#43;0000 UTC</updated>
+
+    
+      
+        <item>
+          <title>175. Combine Two Tables</title>
+          <link>http://example.org/post/lc_175/</link>
+          <pubDate>Sun, 25 Jun 2017 00:00:00 UTC</pubDate>
+          <author></author>
+          <guid>http://example.org/post/lc_175/</guid>
+          <description>
+
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/combine-two-tables/&#34;&gt;175. Combine Two Tables&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;solution&#34;&gt;Solution&lt;/h1&gt;
+
+&lt;p&gt;select FirstName, LastName, City, State
+from person left join address
+on person.personid = address.personid;&lt;/p&gt;
+
+&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>176. Second Highest Salary</title>
+          <link>http://example.org/post/lc_176/</link>
+          <pubDate>Sun, 25 Jun 2017 00:00:00 UTC</pubDate>
+          <author></author>
+          <guid>http://example.org/post/lc_176/</guid>
+          <description>
+
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/second-highest-salary/&#34;&gt;176. Second Highest Salary&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;solution&#34;&gt;Solution&lt;/h1&gt;
+
+&lt;p&gt;select FirstName, LastName, City, State
+from person left join address
+on person.personid = address.personid;&lt;/p&gt;
+
+&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
+</description>
+        </item>
+      
+    
+
+  </channel>
+</rss>
