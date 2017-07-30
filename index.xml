@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>CIXUUZ </title>
-    <link>http://example.org/index.xml</link>
+    <title>Minimal</title>
+    <link>http://example.com/index.xml</link>
+    <description>Recent content on Minimal</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <author></author>
-    <rights>(C) 2017</rights>
-    <updated>2017-06-25 00:00:00 &#43;0000 UTC</updated>
-
+    <lastBuildDate>Sun, 25 Jun 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://example.com/index.xml" rel="self" type="application/rss+xml" />
     
+    <item>
+      <title>175. Combine Two Tables</title>
+      <link>http://example.com/post/lc_175/</link>
+      <pubDate>Sun, 25 Jun 2017 00:00:00 +0000</pubDate>
       
-        <item>
-          <title>175. Combine Two Tables</title>
-          <link>http://example.org/post/lc_175/</link>
-          <pubDate>Sun, 25 Jun 2017 00:00:00 UTC</pubDate>
-          <author></author>
-          <guid>http://example.org/post/lc_175/</guid>
-          <description>
+      <guid>http://example.com/post/lc_175/</guid>
+      <description>
 
 &lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/combine-two-tables/&#34;&gt;175. Combine Two Tables&lt;/a&gt;&lt;/p&gt;
 
@@ -28,31 +27,270 @@ on person.personid = address.personid;&lt;/p&gt;
 
 &lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
 </description>
-        </item>
-      
+    </item>
     
+    <item>
+      <title>176. Second Highest Salary</title>
+      <link>http://example.com/post/lc_176/</link>
+      <pubDate>Sun, 25 Jun 2017 00:00:00 +0000</pubDate>
       
-        <item>
-          <title>176. Second Highest Salary</title>
-          <link>http://example.org/post/lc_176/</link>
-          <pubDate>Sun, 25 Jun 2017 00:00:00 UTC</pubDate>
-          <author></author>
-          <guid>http://example.org/post/lc_176/</guid>
-          <description>
+      <guid>http://example.com/post/lc_176/</guid>
+      <description>
 
 &lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/second-highest-salary/&#34;&gt;176. Second Highest Salary&lt;/a&gt;&lt;/p&gt;
 
 &lt;h1 id=&#34;solution&#34;&gt;Solution&lt;/h1&gt;
 
-&lt;p&gt;select FirstName, LastName, City, State
-from person left join address
-on person.personid = address.personid;&lt;/p&gt;
+&lt;p&gt;select
+(select salary
+from employee
+group by salary
+order by salary desc
+limit 1 offset 1)
+as SecondHighestSalary;&lt;/p&gt;
+
+&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
+
+&lt;p&gt;There is a trick to print null when result is empty.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>177. Nth Highest Salary</title>
+      <link>http://example.com/post/lc_177/</link>
+      <pubDate>Sun, 25 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.com/post/lc_177/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/nth-highest-salary&#34;&gt;177. Nth Highest Salary&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;solution&#34;&gt;Solution&lt;/h1&gt;
+
+&lt;p&gt;CREATE FUNCTION getNthHighestSalary(N INT) RETURNS INT
+BEGIN
+declare m int;
+set m = N - 1;
+  RETURN (
+      # Write your MySQL query statement below.
+      select distinct salary
+      from Employee
+      order by salary desc
+      limit 1
+      offset m
+  );
+END&lt;/p&gt;
+
+&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
+
+&lt;p&gt;The LIMIT clause can be used to constrain the number of rows returned by the SELECT statement. LIMIT takes one or two numeric arguments, which must both be nonnegative integer constants (except when using prepared statements).&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>178. Rank Scores</title>
+      <link>http://example.com/post/lc_178/</link>
+      <pubDate>Sun, 25 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.com/post/lc_178/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/rank-scores/#/description&#34;&gt;178. Rank Scores&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;solution-1&#34;&gt;Solution 1&lt;/h1&gt;
+
+&lt;p&gt;SELECT
+  Score,
+  @rank := @rank + (@prev &amp;lt;&amp;gt; (@prev := Score)) Rank
+FROM
+  Scores,
+  (SELECT @rank := 0, @prev := -1) init
+ORDER BY Score desc&lt;/p&gt;
+
+&lt;h1 id=&#34;solution-2&#34;&gt;solution 2&lt;/h1&gt;
+
+&lt;p&gt;SELECT
+  Score,
+  (SELECT COUNT(DISTINCT Score) FROM Scores as s1 WHERE s1.Score &amp;gt;= s2.Score) As rank
+FROM
+  Scores as s2
+ORDER BY rank;&lt;/p&gt;
+
+&lt;p&gt;一直不知道还能这么嵌套写法&lt;/p&gt;
 
 &lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
 </description>
-        </item>
-      
+    </item>
     
+    <item>
+      <title>178. Rank Scores</title>
+      <link>http://example.com/post/lc_180/</link>
+      <pubDate>Sun, 25 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.com/post/lc_180/</guid>
+      <description>
 
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/rank-scores/#/description&#34;&gt;178. Rank Scores&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;solution-1&#34;&gt;Solution 1&lt;/h1&gt;
+
+&lt;p&gt;SELECT
+  Score,
+  @rank := @rank + (@prev &amp;lt;&amp;gt; (@prev := Score)) Rank
+FROM
+  Scores,
+  (SELECT @rank := 0, @prev := -1) init
+ORDER BY Score desc&lt;/p&gt;
+
+&lt;h1 id=&#34;solution-2&#34;&gt;solution 2&lt;/h1&gt;
+
+&lt;p&gt;SELECT
+  Score,
+  (SELECT COUNT(DISTINCT Score) FROM Scores as s1 WHERE s1.Score &amp;gt;= s2.Score) As rank
+FROM
+  Scores as s2
+ORDER BY rank;&lt;/p&gt;
+
+&lt;p&gt;一直不知道还能这么嵌套写法&lt;/p&gt;
+
+&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.com/post/airflow_config/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.com/post/airflow_config/</guid>
+      <description>
+
+&lt;h1 id=&#34;enter-instance&#34;&gt;enter instance&lt;/h1&gt;
+
+&lt;h1 id=&#34;setting-up-python-environment-https-www-digitalocean-com-community-tutorials-how-to-install-python-3-and-set-up-a-local-programming-environment-on-ubuntu-16-04&#34;&gt;&lt;a href=&#34;https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set-up-a-local-programming-environment-on-ubuntu-16-04&#34;&gt;setting up python environment&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;sudo apt-get update&lt;/p&gt;
+
+&lt;p&gt;sudo apt-get install python3-pip&lt;/p&gt;
+
+&lt;p&gt;sudo apt-get install build-essential libssl-dev libffi-dev python-dev&lt;/p&gt;
+
+&lt;p&gt;sudo apt-get install -y python3-venv&lt;/p&gt;
+
+&lt;p&gt;alias py3=&amp;lsquo;source /home/ubuntu/py_envs/py3/bin/activate&amp;rsquo;&lt;/p&gt;
+
+&lt;h1 id=&#34;setting-airflow&#34;&gt;setting airflow&lt;/h1&gt;
+
+&lt;p&gt;export AIRFLOW_HOME=~/nfs/airflow&lt;/p&gt;
+
+&lt;p&gt;python3 -m venv py_envs/py3
+pip install &amp;ldquo;airflow[celery, crypto, mysql, password, s3, postgres, slack]&amp;rdquo;&lt;/p&gt;
+
+&lt;h1 id=&#34;call-this-command-many-times-until-it-says-it-s-not-installed&#34;&gt;call this command many times, until it says it&amp;rsquo;s not installed&lt;/h1&gt;
+
+&lt;p&gt;pip uninstall librabbitmq&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/celery/celery/issues/3675&#34;&gt;https://github.com/celery/celery/issues/3675&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;rabbitmq&#34;&gt;rabbitmq&lt;/h1&gt;
+
+&lt;h1 id=&#34;slack&#34;&gt;slack&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://slack.com/api/oauth.access?client_id=4b39e9-752c4&amp;amp;client_secret=33fea0113f5b1&amp;amp;code=ccdaa72ad&#34;&gt;https://slack.com/api/oauth.access?client_id=4b39e9-752c4&amp;amp;client_secret=33fea0113f5b1&amp;amp;code=ccdaa72ad&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.com/post/lc_262/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.com/post/lc_262/</guid>
+      <description>&lt;p&gt;select t2.day, round(ifnull(t1.c, 0) / t2.c, 2) as &amp;lsquo;cancellation rate&amp;rsquo;
+from
+(select request_at as day, count(status) as c
+from trips join (
+    select *
+    from users
+    where not (banned = &amp;lsquo;Yes&amp;rsquo; and role = &amp;lsquo;client&amp;rsquo;)
+) as u
+on trips.client_id = u.users_id
+where request_at &amp;gt;= &amp;lsquo;2013-10-01&amp;rsquo; and
+  request_at &amp;lt;= &amp;lsquo;2013-10-03&amp;rsquo;
+group by request_at) t2
+left join
+(select request_at as day, count(status) as c
+from trips join (
+    select *
+    from users
+    where not (banned = &amp;lsquo;Yes&amp;rsquo; and role = &amp;lsquo;client&amp;rsquo;)
+) as u
+on trips.client_id = u.users_id
+where request_at &amp;gt;= &amp;lsquo;2013-10-01&amp;rsquo; and
+  request_at &amp;lt;= &amp;lsquo;2013-10-03&amp;rsquo; and
+  status != &amp;lsquo;completed&amp;rsquo;
+group by request_at) t1
+on t1.day = t2.day&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.com/post/lc_574/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.com/post/lc_574/</guid>
+      <description>&lt;p&gt;select c2.name
+from
+(
+select candidateid id
+from vote
+group by candidateid
+order by count(candidateid)
+limit 1
+) c1 join candidate c2
+on c1.id = c2.id;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.com/post/lc_577/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.com/post/lc_577/</guid>
+      <description>&lt;p&gt;select e.name, b.bonus
+from employee e left join bonus b
+on e.empid = b.empid
+where b.bonus &amp;lt; 1000&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.com/post/lc_580/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.com/post/lc_580/</guid>
+      <description>&lt;p&gt;select d.dept_name, count(s.student_id) as student_number
+from department d left join student s
+on d.dept_id = s.dept_id
+group by d.dept_name
+order by count(s.student_id), d.dept_name&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.com/post/lc_584/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.com/post/lc_584/</guid>
+      <description>&lt;p&gt;select distinct name
+from customer
+where referee_id != 2&lt;/p&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>

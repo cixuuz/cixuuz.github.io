@@ -3,7 +3,7 @@
 
     <head>
 
-        <title>Posts</title>
+        <title>178. Rank Scores</title>
 
         <style>
 
@@ -71,7 +71,7 @@
 
                 <div class="navbar-header">
 
-                    <a class="navbar-brand visible-xs" href="#">Posts</a>
+                    <a class="navbar-brand visible-xs" href="#">178. Rank Scores</a>
 
                     <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
                         <span class="icon-bar"></span>
@@ -120,48 +120,7 @@
 
 <main>
 
-    <h2>Posts</h2>
-
-     <div class="item">
-
-    
-
-        <h4><a href="/post/lc_175/">175. Combine Two Tables</a></h4>
-
-        <h5>June 25, 2017</h5>
-
-        
-
-    
-
-</div>
-  <div class="item">
-
-    
-
-        <h4><a href="/post/lc_176/">176. Second Highest Salary</a></h4>
-
-        <h5>June 25, 2017</h5>
-
-        
-
-    
-
-</div>
-  <div class="item">
-
-    
-
-        <h4><a href="/post/lc_177/">177. Nth Highest Salary</a></h4>
-
-        <h5>June 25, 2017</h5>
-
-        
-
-    
-
-</div>
-  <div class="item">
+    <div class="item">
 
     
 
@@ -174,38 +133,42 @@
     
 
 </div>
-  <div class="item">
 
-    
 
-        <h4><a href="/post/lc_180/">178. Rank Scores</a></h4>
+    <br> <div class="text-justify">
 
-        <h5>June 25, 2017</h5>
+<p><a href="https://leetcode.com/problems/rank-scores/#/description">178. Rank Scores</a></p>
 
-        
+<h1 id="solution-1">Solution 1</h1>
 
-    
+<p>SELECT
+  Score,
+  @rank := @rank + (@prev &lt;&gt; (@prev := Score)) Rank
+FROM
+  Scores,
+  (SELECT @rank := 0, @prev := -1) init
+ORDER BY Score desc</p>
 
+<h1 id="solution-2">solution 2</h1>
+
+<p>SELECT
+  Score,
+  (SELECT COUNT(DISTINCT Score) FROM Scores as s1 WHERE s1.Score &gt;= s2.Score) As rank
+FROM
+  Scores as s2
+ORDER BY rank;</p>
+
+<p>一直不知道还能这么嵌套写法</p>
+
+<h1 id="summary">Summary</h1>
 </div>
- 
+
+    
+    
+
+    
 
 </main>
-
-
-
-    <div class="pages">
-
-        
-
-        
-            <a class="icon pages-icon" href="/post/page/2/" rel="next">
-                <i class="fa fa-arrow-right"></i>
-            </a>
-        
-
-    </div>
-
-
 
         <footer>
 

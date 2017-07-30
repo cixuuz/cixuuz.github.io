@@ -2,23 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.org/post/lc_175/</loc>
+    <loc>http://example.com/post/lc_175/</loc>
     <lastmod>2017-06-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/post/lc_176/</loc>
+    <loc>http://example.com/post/lc_176/</loc>
     <lastmod>2017-06-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/</loc>
+    <loc>http://example.com/post/lc_177/</loc>
+    <lastmod>2017-06-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.com/post/lc_178/</loc>
+    <lastmod>2017-06-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.com/post/lc_180/</loc>
+    <lastmod>2017-06-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.com/post/airflow_config/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.com/post/lc_262/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.com/post/lc_574/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.com/post/lc_577/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.com/post/lc_580/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.com/post/lc_584/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.com/</loc>
     <lastmod>2017-06-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/post/</loc>
+    <loc>http://example.com/post/</loc>
     <lastmod>2017-06-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
