@@ -6,8 +6,73 @@
     <description>Recent content on Minimal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 25 Jun 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 08 Aug 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://example.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>leetcode总结</title>
+      <link>http://example.com/post/summary_leetcode_1/</link>
+      <pubDate>Tue, 08 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.com/post/summary_leetcode_1/</guid>
+      <description>
+
+&lt;h1 id=&#34;4-median-of-two-sorted-arrays&#34;&gt;4. Median of Two Sorted Arrays&lt;/h1&gt;
+
+&lt;p&gt;Pure math. Median definition is the median is used for dividing a set into two equal length subsets, that one subset is always greater than the other.&lt;/p&gt;
+
+&lt;h1 id=&#34;102-binary-tree-level-order-traversal&#34;&gt;102. Binary Tree Level Order Traversal&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The best way to to iterate tree level by level is to use for loop in Java. (BFS)&lt;/li&gt;
+&lt;li&gt;return null is not same as return; (empty)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;public class Solution {
+    public List&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt; levelOrder(TreeNode root) {
+        List&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt; res = new LinkedList&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt;();
+        Queue&amp;lt;TreeNode&amp;gt; q = new LinkedList&amp;lt;TreeNode&amp;gt;();
+        
+        if (root == null) return res;
+        
+        q.offer(root);
+        while (!q.isEmpty()) {
+            Integer levelLength = q.size();
+            List&amp;lt;Integer&amp;gt; list = new LinkedList&amp;lt;Integer&amp;gt;();
+            
+            for (int i = 0; i &amp;lt; levelLength; i++) {
+                TreeNode node = q.poll();
+                list.add(node.val);
+                if (node.left != null) q.offer(node.left);
+                if (node.right != null) q.offer(node.right);
+            }
+            res.add(list);
+        }
+        
+        return res;
+    }
+}
+// recursive
+public class Solution1 {
+    List&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt; res = new ArrayList&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt;();
+        
+    public List&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt; levelOrder(TreeNode root) {
+        helper(root, 0);
+        return res;
+    }
+    
+    private void helper(TreeNode root, Integer depth) {
+        if (root == null) return;
+        if (res.size() == depth) res.add(new LinkedList&amp;lt;Integer&amp;gt;());
+        
+        res.get(depth).add(root.val);
+        helper(root.left, depth+1);
+        helper(root.right, depth+1);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>175. Combine Two Tables</title>

@@ -3,7 +3,7 @@
 
     <head>
 
-        <title>Posts</title>
+        <title>leetcode总结</title>
 
         <style>
 
@@ -71,7 +71,7 @@
 
                 <div class="navbar-header">
 
-                    <a class="navbar-brand visible-xs" href="#">Posts</a>
+                    <a class="navbar-brand visible-xs" href="#">leetcode总结</a>
 
                     <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
                         <span class="icon-bar"></span>
@@ -120,9 +120,7 @@
 
 <main>
 
-    <h2>Posts</h2>
-
-     <div class="item">
+    <div class="item">
 
     
 
@@ -135,77 +133,72 @@
     
 
 </div>
-  <div class="item">
 
-    
 
-        <h4><a href="/post/lc_175/">175. Combine Two Tables</a></h4>
+    <br> <div class="text-justify">
 
-        <h5>June 25, 2017</h5>
+<h1 id="4-median-of-two-sorted-arrays">4. Median of Two Sorted Arrays</h1>
 
+<p>Pure math. Median definition is the median is used for dividing a set into two equal length subsets, that one subset is always greater than the other.</p>
+
+<h1 id="102-binary-tree-level-order-traversal">102. Binary Tree Level Order Traversal</h1>
+
+<ul>
+<li>The best way to to iterate tree level by level is to use for loop in Java. (BFS)</li>
+<li>return null is not same as return; (empty)</li>
+</ul>
+
+<pre><code>public class Solution {
+    public List&lt;List&lt;Integer&gt;&gt; levelOrder(TreeNode root) {
+        List&lt;List&lt;Integer&gt;&gt; res = new LinkedList&lt;List&lt;Integer&gt;&gt;();
+        Queue&lt;TreeNode&gt; q = new LinkedList&lt;TreeNode&gt;();
         
-
-    
-
-</div>
-  <div class="item">
-
-    
-
-        <h4><a href="/post/lc_176/">176. Second Highest Salary</a></h4>
-
-        <h5>June 25, 2017</h5>
-
+        if (root == null) return res;
         
-
-    
-
-</div>
-  <div class="item">
-
-    
-
-        <h4><a href="/post/lc_177/">177. Nth Highest Salary</a></h4>
-
-        <h5>June 25, 2017</h5>
-
+        q.offer(root);
+        while (!q.isEmpty()) {
+            Integer levelLength = q.size();
+            List&lt;Integer&gt; list = new LinkedList&lt;Integer&gt;();
+            
+            for (int i = 0; i &lt; levelLength; i++) {
+                TreeNode node = q.poll();
+                list.add(node.val);
+                if (node.left != null) q.offer(node.left);
+                if (node.right != null) q.offer(node.right);
+            }
+            res.add(list);
+        }
         
-
-    
-
-</div>
-  <div class="item">
-
-    
-
-        <h4><a href="/post/lc_178/">178. Rank Scores</a></h4>
-
-        <h5>June 25, 2017</h5>
-
+        return res;
+    }
+}
+// recursive
+public class Solution1 {
+    List&lt;List&lt;Integer&gt;&gt; res = new ArrayList&lt;List&lt;Integer&gt;&gt;();
         
+    public List&lt;List&lt;Integer&gt;&gt; levelOrder(TreeNode root) {
+        helper(root, 0);
+        return res;
+    }
+    
+    private void helper(TreeNode root, Integer depth) {
+        if (root == null) return;
+        if (res.size() == depth) res.add(new LinkedList&lt;Integer&gt;());
+        
+        res.get(depth).add(root.val);
+        helper(root.left, depth+1);
+        helper(root.right, depth+1);
+    }
+}
+</code></pre>
+</div>
 
     
+    
 
-</div>
- 
+    
 
 </main>
-
-
-
-    <div class="pages">
-
-        
-
-        
-            <a class="icon pages-icon" href="/post/page/2/" rel="next">
-                <i class="fa fa-arrow-right"></i>
-            </a>
-        
-
-    </div>
-
-
 
         <footer>
 
