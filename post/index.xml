@@ -6,8 +6,18 @@
     <description>Recent content in Posts on Chen Tong</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 08 Aug 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 12 Aug 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://cixuuz.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>lcs 08/12</title>
+      <link>https://cixuuz.github.io/post/lcs_0812/</link>
+      <pubDate>Sat, 12 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_0812/</guid>
+      <description>&lt;script src=&#34;//gist.github.com/cixuuz/64758636be98a3caa1adc2d6a518ebd9.js&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
     
     <item>
       <title>leetcode 102</title>
