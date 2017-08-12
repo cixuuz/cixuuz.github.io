@@ -15,7 +15,23 @@
       <pubDate>Sat, 12 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://cixuuz.github.io/post/lcs_0812/</guid>
-      <description>&lt;script src=&#34;//gist.github.com/cixuuz/64758636be98a3caa1adc2d6a518ebd9.js&#34;&gt;&lt;/script&gt;
+      <description>
+
+&lt;h1 id=&#34;297-serialize-and-deserialize-binary-tree&#34;&gt;297. Serialize and Deserialize Binary Tree&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;deque inherits from linkedlist(collection).&lt;/li&gt;
+&lt;li&gt;represent separator and null as a String.&lt;/li&gt;
+&lt;li&gt;string and char are not same.&lt;/li&gt;
+&lt;li&gt;append complete subtree ex &amp;ldquo;1,null,null,&amp;rdquo;
+&lt;script src=&#34;//gist.github.com/cixuuz/3b9dea5218a98f7eb7334d6c4df36562.js&#34;&gt;&lt;/script&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;105-construct-binary-tree-from-preorder-and-inorder-traversal&#34;&gt;105. Construct Binary Tree from Preorder and Inorder Traversal&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
