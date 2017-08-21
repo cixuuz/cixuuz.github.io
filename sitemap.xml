@@ -2,6 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://cixuuz.github.io/post/kafka-message-format/</loc>
+    <lastmod>2017-08-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cixuuz.github.io/post/kafka-stream/</loc>
+    <lastmod>2017-08-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cixuuz.github.io/post/mysql-high-availability/</loc>
+    <lastmod>2017-08-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cixuuz.github.io/post/database-index/</loc>
+    <lastmod>2017-08-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cixuuz.github.io/post/js-es6/</loc>
+    <lastmod>2017-08-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cixuuz.github.io/post/spark-memory-management/</loc>
+    <lastmod>2017-08-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cixuuz.github.io/post/statistical-learning/</loc>
+    <lastmod>2017-08-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cixuuz.github.io/post/lcs_0815/</loc>
+    <lastmod>2017-08-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cixuuz.github.io/post/lcs_0813/</loc>
+    <lastmod>2017-08-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://cixuuz.github.io/post/lcs_0812/</loc>
     <lastmod>2017-08-12T00:00:00+00:00</lastmod>
   </url>
@@ -62,13 +107,13 @@
   
   <url>
     <loc>https://cixuuz.github.io/</loc>
-    <lastmod>2017-08-12T00:00:00+00:00</lastmod>
+    <lastmod>2017-08-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://cixuuz.github.io/post/</loc>
-    <lastmod>2017-08-12T00:00:00+00:00</lastmod>
+    <lastmod>2017-08-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

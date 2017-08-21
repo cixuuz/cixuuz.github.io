@@ -6,8 +6,199 @@
     <description>Recent content on Chen Tong</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 12 Aug 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 20 Aug 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://cixuuz.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Kafka message format</title>
+      <link>https://cixuuz.github.io/post/kafka-message-format/</link>
+      <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/kafka-message-format/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.iteblog.com/archives/2232.html&#34;&gt;Apache Kafka消息格式&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Kafka stream</title>
+      <link>https://cixuuz.github.io/post/kafka-stream/</link>
+      <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/kafka-stream/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.jasongj.com/kafka/kafka_stream/&#34;&gt;kafka stream&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>MySQL 架构</title>
+      <link>https://cixuuz.github.io/post/mysql-high-availability/</link>
+      <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/mysql-high-availability/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://mp.weixin.qq.com/s/0frrH09-zFjdFYZalatb8A&#34;&gt;refer&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;高可用架构&#34;&gt;高可用架构&lt;/h1&gt;
+
+&lt;p&gt;MySQL高可用方面，目前业界主流依然是基于异步复制的技术，例如Keepalived、MHA、ZooKeeper等，要求数据强一致的场景逐步开始使用分布式协议，这方面的典型代表有PXC、Group Replication、TiDB。下面我们就重点来说说keepalived、MHA和PXC这几种大家用得比较多的架构。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;脑裂 （ 一种常见的脑裂情况可以描述如下）比如正常情况下，（集群中的）NodeA 和 NodeB 会通过心跳检测以确认对方存在，在通过心跳检测确认不到对方存在时，就接管对应的（共享） resource 。如果突然间，NodeA 和 NodeB 之间的心跳不存在了（如网络断开），而 NodeA 和 NodeB 事实上却都处于 Active 状态，此时 NodeA 要接管 NodeB 的 resource ，同时 NodeB 要接管 NodeA 的 resource ，这时就是脑裂（split-brain）。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+&lt;li&gt;双Master架构：非常成熟，使用很普遍，要注意延迟和数据的一致性。&lt;/li&gt;
+&lt;li&gt;PXC: 分布式协议，数据强一致性，并发效率略低，可用性好&lt;/li&gt;
+&lt;li&gt;MHA：各项指标介于M-M和PXC之间，性能无损失，适合读写分离架构。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;mysql-sharding拆分&#34;&gt;MySQL sharding拆分&lt;/h1&gt;
+
+&lt;p&gt;分库(垂直),　分表(水平)的取舍&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>database index</title>
+      <link>https://cixuuz.github.io/post/database-index/</link>
+      <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/database-index/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;http://blog.liuhongnan.com/2017/08/11/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B4%A2%E5%BC%95&amp;amp;&amp;amp;%E4%BA%8B%E5%8A%A1%E7%AE%A1%E7%90%86&amp;amp;&amp;amp;%E7%AD%89%E5%AD%A6%E4%B9%A0%E6%B1%87%E6%80%BB&#34;&gt;数据库索引与事务管理&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;b-tree&#34;&gt;B+ tree&lt;/h1&gt;
+
+&lt;p&gt;B+树是n叉排序树&lt;/p&gt;
+
+&lt;h1 id=&#34;hash-index&#34;&gt;hash index&lt;/h1&gt;
+
+&lt;p&gt;MySQL: innoDB以及MyISAM引擎，均不支持Hash索引&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>javascript es6</title>
+      <link>https://cixuuz.github.io/post/js-es6/</link>
+      <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/js-es6/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.w3cvip.org/topics/47&#34;&gt;ES6&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;let则实际上为JavaScript新增了块级作用域。用它所声明的变量，只在let命令所在的代码块内有效。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var a = [];
+for (let i = 0; i &amp;lt; 10; i++) {
+a[i] = function () {
+console.log(i);
+};
+}
+a[6](); // 6
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;const用来声明常量。一旦声明，常量的值就不能改变。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;const monent = require(&#39;moment&#39;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;arrow function&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;class Animal {
+constructor(){
+    this.type = &#39;animal&#39;
+}
+says(say){
+    setTimeout( () =&amp;gt; {
+        console.log(this.type + &#39; says &#39; + say)
+    }, 1000)
+}
+}
+var animal = new Animal()
+animal.says(&#39;hi&#39;)  //animal says hi
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>spark 内存管理</title>
+      <link>https://cixuuz.github.io/post/spark-memory-management/</link>
+      <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/spark-memory-management/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.jianshu.com/p/999ef21dffe8&#34;&gt;Spark 内存管理的前世今生（上）&lt;/a&gt;
+&lt;a href=&#34;http://www.jianshu.com/p/211505ae3fb3&#34;&gt;Spark 内存管理的前世今生（下）&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>statistical learning</title>
+      <link>https://cixuuz.github.io/post/statistical-learning/</link>
+      <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/statistical-learning/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.r-bloggers.com/in-depth-introduction-to-machine-learning-in-15-hours-of-expert-videos/&#34;&gt;Statistical Learning&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>lcs 08/15</title>
+      <link>https://cixuuz.github.io/post/lcs_0815/</link>
+      <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_0815/</guid>
+      <description>
+
+&lt;h1 id=&#34;99-recover-binary-search-tree&#34;&gt;99. Recover Binary Search Tree&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;travese in order. The result should be sorted ascending. The misplaced larger element will be close to head, while the smaller one will be close to end. For example, 1 2 3 is the in order. But the wrong seq is like 3 2 1. Apparently, 3 &amp;gt; 2 so 3 is the first node. 2 &amp;gt; 1, so 1 is the second one.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;iterative solution using &lt;a href=&#34;http://www.cnblogs.com/AnnieKim/archive/2013/06/15/MorrisTraversal.html&#34;&gt;morris traverse&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script src=&#34;//gist.github.com/cixuuz/b7fcdba6d90e6a5f509b9429268fba09.js&#34;&gt;&lt;/script&gt;
+
+&lt;h1 id=&#34;257-binary-tree-paths&#34;&gt;257. Binary Tree Paths&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;string is immutable.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script src=&#34;//gist.github.com/cixuuz/c172b271cf8a56cc1224320a497cec1a.js&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>lcs 08/13</title>
+      <link>https://cixuuz.github.io/post/lcs_0813/</link>
+      <pubDate>Sun, 13 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_0813/</guid>
+      <description>
+
+&lt;h1 id=&#34;99-recover-binary-search-tree&#34;&gt;99. Recover Binary Search Tree&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;travese in order. The result should be sorted ascending. The misplaced larger element will be close to head, while the smaller one will be close to end. For example, 1 2 3 is the in order. But the wrong seq is like 3 2 1. Apparently, 3 &amp;gt; 2 so 3 is the first node. 2 &amp;gt; 1, so 1 is the second one.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;iterative solution using &lt;a href=&#34;http://www.cnblogs.com/AnnieKim/archive/2013/06/15/MorrisTraversal.html&#34;&gt;morris traverse&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script src=&#34;//gist.github.com/cixuuz/b7fcdba6d90e6a5f509b9429268fba09.js&#34;&gt;&lt;/script&gt;
+
+&lt;h1 id=&#34;257-binary-tree-paths&#34;&gt;257. Binary Tree Paths&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;string is immutable.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script src=&#34;//gist.github.com/cixuuz/c172b271cf8a56cc1224320a497cec1a.js&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
     
     <item>
       <title>lcs 08/12</title>
@@ -23,15 +214,20 @@
 &lt;li&gt;deque inherits from linkedlist(collection).&lt;/li&gt;
 &lt;li&gt;represent separator and null as a String.&lt;/li&gt;
 &lt;li&gt;string and char are not same.&lt;/li&gt;
-&lt;li&gt;append complete subtree ex &amp;ldquo;1,null,null,&amp;rdquo;
-&lt;script src=&#34;//gist.github.com/cixuuz/3b9dea5218a98f7eb7334d6c4df36562.js&#34;&gt;&lt;/script&gt;&lt;/li&gt;
+&lt;li&gt;append complete subtree ex &amp;ldquo;1,null,null,&amp;rdquo;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;script src=&#34;//gist.github.com/cixuuz/3b9dea5218a98f7eb7334d6c4df36562.js&#34;&gt;&lt;/script&gt;
 
 &lt;h1 id=&#34;105-construct-binary-tree-from-preorder-and-inorder-traversal&#34;&gt;105. Construct Binary Tree from Preorder and Inorder Traversal&lt;/h1&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;recursive solution is straightforward. The only thing is that jump idx to find right start in inorder array. To speed up, we can cache inorder and index in the front.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;iterative not understand&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;script src=&#34;//gist.github.com/cixuuz/81d7ebee8833b156dde1753bcb5b23b3.js&#34;&gt;&lt;/script&gt;
 </description>
     </item>
     
@@ -210,176 +406,6 @@ ORDER BY rank;&lt;/p&gt;
 &lt;p&gt;一直不知道还能这么嵌套写法&lt;/p&gt;
 
 &lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>178. Rank Scores</title>
-      <link>https://cixuuz.github.io/post/lc_180/</link>
-      <pubDate>Sun, 25 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://cixuuz.github.io/post/lc_180/</guid>
-      <description>
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/rank-scores/#/description&#34;&gt;178. Rank Scores&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;solution-1&#34;&gt;Solution 1&lt;/h1&gt;
-
-&lt;p&gt;SELECT
-  Score,
-  @rank := @rank + (@prev &amp;lt;&amp;gt; (@prev := Score)) Rank
-FROM
-  Scores,
-  (SELECT @rank := 0, @prev := -1) init
-ORDER BY Score desc&lt;/p&gt;
-
-&lt;h1 id=&#34;solution-2&#34;&gt;solution 2&lt;/h1&gt;
-
-&lt;p&gt;SELECT
-  Score,
-  (SELECT COUNT(DISTINCT Score) FROM Scores as s1 WHERE s1.Score &amp;gt;= s2.Score) As rank
-FROM
-  Scores as s2
-ORDER BY rank;&lt;/p&gt;
-
-&lt;p&gt;一直不知道还能这么嵌套写法&lt;/p&gt;
-
-&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://cixuuz.github.io/post/airflow_config/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cixuuz.github.io/post/airflow_config/</guid>
-      <description>
-
-&lt;h1 id=&#34;enter-instance&#34;&gt;enter instance&lt;/h1&gt;
-
-&lt;h1 id=&#34;setting-up-python-environment-https-www-digitalocean-com-community-tutorials-how-to-install-python-3-and-set-up-a-local-programming-environment-on-ubuntu-16-04&#34;&gt;&lt;a href=&#34;https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set-up-a-local-programming-environment-on-ubuntu-16-04&#34;&gt;setting up python environment&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;sudo apt-get update&lt;/p&gt;
-
-&lt;p&gt;sudo apt-get install python3-pip&lt;/p&gt;
-
-&lt;p&gt;sudo apt-get install build-essential libssl-dev libffi-dev python-dev&lt;/p&gt;
-
-&lt;p&gt;sudo apt-get install -y python3-venv&lt;/p&gt;
-
-&lt;p&gt;alias py3=&amp;lsquo;source /home/ubuntu/py_envs/py3/bin/activate&amp;rsquo;&lt;/p&gt;
-
-&lt;h1 id=&#34;setting-airflow&#34;&gt;setting airflow&lt;/h1&gt;
-
-&lt;p&gt;export AIRFLOW_HOME=~/nfs/airflow&lt;/p&gt;
-
-&lt;p&gt;python3 -m venv py_envs/py3
-pip install &amp;ldquo;airflow[celery, crypto, mysql, password, s3, postgres, slack]&amp;rdquo;&lt;/p&gt;
-
-&lt;h1 id=&#34;call-this-command-many-times-until-it-says-it-s-not-installed&#34;&gt;call this command many times, until it says it&amp;rsquo;s not installed&lt;/h1&gt;
-
-&lt;p&gt;pip uninstall librabbitmq&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/celery/celery/issues/3675&#34;&gt;https://github.com/celery/celery/issues/3675&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;rabbitmq&#34;&gt;rabbitmq&lt;/h1&gt;
-
-&lt;h1 id=&#34;slack&#34;&gt;slack&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://slack.com/api/oauth.access?client_id=4b39e9-752c4&amp;amp;client_secret=33fea0113f5b1&amp;amp;code=ccdaa72ad&#34;&gt;https://slack.com/api/oauth.access?client_id=4b39e9-752c4&amp;amp;client_secret=33fea0113f5b1&amp;amp;code=ccdaa72ad&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://cixuuz.github.io/post/lc_262/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cixuuz.github.io/post/lc_262/</guid>
-      <description>&lt;p&gt;select t2.day, round(ifnull(t1.c, 0) / t2.c, 2) as &amp;lsquo;cancellation rate&amp;rsquo;
-from
-(select request_at as day, count(status) as c
-from trips join (
-    select *
-    from users
-    where not (banned = &amp;lsquo;Yes&amp;rsquo; and role = &amp;lsquo;client&amp;rsquo;)
-) as u
-on trips.client_id = u.users_id
-where request_at &amp;gt;= &amp;lsquo;2013-10-01&amp;rsquo; and
-  request_at &amp;lt;= &amp;lsquo;2013-10-03&amp;rsquo;
-group by request_at) t2
-left join
-(select request_at as day, count(status) as c
-from trips join (
-    select *
-    from users
-    where not (banned = &amp;lsquo;Yes&amp;rsquo; and role = &amp;lsquo;client&amp;rsquo;)
-) as u
-on trips.client_id = u.users_id
-where request_at &amp;gt;= &amp;lsquo;2013-10-01&amp;rsquo; and
-  request_at &amp;lt;= &amp;lsquo;2013-10-03&amp;rsquo; and
-  status != &amp;lsquo;completed&amp;rsquo;
-group by request_at) t1
-on t1.day = t2.day&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://cixuuz.github.io/post/lc_574/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cixuuz.github.io/post/lc_574/</guid>
-      <description>&lt;p&gt;select c2.name
-from
-(
-select candidateid id
-from vote
-group by candidateid
-order by count(candidateid)
-limit 1
-) c1 join candidate c2
-on c1.id = c2.id;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://cixuuz.github.io/post/lc_577/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cixuuz.github.io/post/lc_577/</guid>
-      <description>&lt;p&gt;select e.name, b.bonus
-from employee e left join bonus b
-on e.empid = b.empid
-where b.bonus &amp;lt; 1000&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://cixuuz.github.io/post/lc_580/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cixuuz.github.io/post/lc_580/</guid>
-      <description>&lt;p&gt;select d.dept_name, count(s.student_id) as student_number
-from department d left join student s
-on d.dept_id = s.dept_id
-group by d.dept_name
-order by count(s.student_id), d.dept_name&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://cixuuz.github.io/post/lc_584/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cixuuz.github.io/post/lc_584/</guid>
-      <description>&lt;p&gt;select distinct name
-from customer
-where referee_id != 2&lt;/p&gt;
 </description>
     </item>
     
