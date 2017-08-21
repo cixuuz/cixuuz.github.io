@@ -6,8 +6,26 @@
     <description>Recent content in Posts on Chen Tong</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 20 Aug 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 21 Aug 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://cixuuz.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Python Numpy</title>
+      <link>https://cixuuz.github.io/post/python-numpy/</link>
+      <pubDate>Mon, 21 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/python-numpy/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;在 Numpy 中, 创建 2D Array 的默认方式是 &amp;ldquo;C-type&amp;rdquo; 以 row 为主在内存中排列, 而如果是 &amp;ldquo;Fortran&amp;rdquo; 的方式创建的, 就是以 column 为主在内存中排列.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;col_major = np.zeros((10,10), order=&#39;C&#39;)    # C-type
+row_major = np.zeros((10,10), order=&#39;F&#39;)    # Fortran
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;copy慢 view快 same as &lt;code&gt;np.flatten()&lt;/code&gt; return new copy 或者 &lt;code&gt;np.ravel()&lt;/code&gt; return new view&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Kafka message format</title>
@@ -371,41 +389,6 @@ END&lt;/p&gt;
 &lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
 
 &lt;p&gt;The LIMIT clause can be used to constrain the number of rows returned by the SELECT statement. LIMIT takes one or two numeric arguments, which must both be nonnegative integer constants (except when using prepared statements).&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>178. Rank Scores</title>
-      <link>https://cixuuz.github.io/post/lc_178/</link>
-      <pubDate>Sun, 25 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://cixuuz.github.io/post/lc_178/</guid>
-      <description>
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/rank-scores/#/description&#34;&gt;178. Rank Scores&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;solution-1&#34;&gt;Solution 1&lt;/h1&gt;
-
-&lt;p&gt;SELECT
-  Score,
-  @rank := @rank + (@prev &amp;lt;&amp;gt; (@prev := Score)) Rank
-FROM
-  Scores,
-  (SELECT @rank := 0, @prev := -1) init
-ORDER BY Score desc&lt;/p&gt;
-
-&lt;h1 id=&#34;solution-2&#34;&gt;solution 2&lt;/h1&gt;
-
-&lt;p&gt;SELECT
-  Score,
-  (SELECT COUNT(DISTINCT Score) FROM Scores as s1 WHERE s1.Score &amp;gt;= s2.Score) As rank
-FROM
-  Scores as s2
-ORDER BY rank;&lt;/p&gt;
-
-&lt;p&gt;一直不知道还能这么嵌套写法&lt;/p&gt;
-
-&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
 </description>
     </item>
     
