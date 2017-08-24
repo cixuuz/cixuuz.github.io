@@ -6,8 +6,152 @@
     <description>Recent content on Chen Tong</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 21 Aug 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 23 Aug 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://cixuuz.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>leetcode summary 08/23</title>
+      <link>https://cixuuz.github.io/post/lcs_0823/</link>
+      <pubDate>Wed, 23 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_0823/</guid>
+      <description>
+
+&lt;h1 id=&#34;337-house-robber-iii&#34;&gt;337. House Robber III&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;basic: for each node, you can choose rob or not, based on the parent&amp;rsquo;s status. return max amount of each choice.&lt;/li&gt;
+&lt;li&gt;dp: keep previous rob information.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script src=&#34;//gist.github.com/cixuuz/9b100eab6e3f5915b5b8d30fbb81bb94.js&#34;&gt;&lt;/script&gt;
+
+&lt;h1 id=&#34;95-unique-binary-search-trees-ii&#34;&gt;95. Unique Binary Search Trees II&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;foreach 1 to n, generate left and right subtree and combine with current node.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script src=&#34;//gist.github.com/cixuuz/50b2b496c413d01111ba719e66159bdb.js&#34;&gt;&lt;/script&gt;
+
+&lt;h1 id=&#34;111-minimum-depth-of-binary-tree&#34;&gt;111. Minimum Depth of Binary Tree&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;its root to leaf, not to other node. For example (1, 2), the only path is 1-&amp;gt;2.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script src=&#34;//gist.github.com/cixuuz/922711cdaab7615d8c0d9f47b4bac4f8.js&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>resume</title>
+      <link>https://cixuuz.github.io/post/resume/</link>
+      <pubDate>Wed, 23 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/resume/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>title</title>
+      <link>https://cixuuz.github.io/post/java-pass-by-value/</link>
+      <pubDate>Wed, 23 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/java-pass-by-value/</guid>
+      <description>&lt;p&gt;java 传值还是引用
+&lt;a href=&#34;https://stackoverflow.com/questions/40480/is-java-pass-by-reference-or-pass-by-value&#34;&gt;refer&lt;/a&gt;
+Java is always pass-by-value. Unfortunately, they decided to call the location of an object a &amp;ldquo;reference&amp;rdquo;. When we pass the value of an object, we are passing the reference to it.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>leetcode summary 08/22</title>
+      <link>https://cixuuz.github.io/post/lcs_0822/</link>
+      <pubDate>Tue, 22 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_0822/</guid>
+      <description>
+
+&lt;h1 id=&#34;114-flatten-binary-tree-to-linked-list&#34;&gt;114. Flatten Binary Tree to Linked List&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;iterative: set left tree to the right child, left child is null, then go to next right node.&lt;/li&gt;
+&lt;li&gt;recursive: use post order get successor of each node, set successor to each node&amp;rsquo;r right child
+&lt;script src=&#34;//gist.github.com/cixuuz/2a59c851a4f106fb5f985bac4d158dfb.js&#34;&gt;&lt;/script&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;199-binary-tree-right-side-view&#34;&gt;199. Binary Tree Right Side View&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;iterative: BFS, always pop rightmost node. It&amp;rsquo;s better using queue, and loop N times. N is the size of queue.&lt;/li&gt;
+&lt;li&gt;recursive: post order, and pop the first node with depth N&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script src=&#34;//gist.github.com/cixuuz/37838460dfdf970add184ef68dec5c96.js&#34;&gt;&lt;/script&gt;
+
+&lt;h1 id=&#34;230-kth-smallest-element-in-a-bst&#34;&gt;230. Kth Smallest Element in a BST&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;recursive: in order traverse with a counter&lt;/li&gt;
+&lt;li&gt;iterative: use stack, first push current node, move to left, next do sth, then move to right;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script src=&#34;//gist.github.com/cixuuz/fed292dbf3384825b73b9bdc2698a28d.js&#34;&gt;&lt;/script&gt;
+
+&lt;h1 id=&#34;94-binary-tree-inorder-traversal&#34;&gt;94. Binary Tree Inorder Traversal&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;iterative: always left first, then right&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script src=&#34;//gist.github.com/cixuuz/3927083fc3ec44bcb0c70c07ada06b09.js&#34;&gt;&lt;/script&gt;
+
+&lt;h1 id=&#34;144-binary-tree-preorder-traversal&#34;&gt;144. Binary Tree Preorder Traversal&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;iterative: always go down and up, so stack is best way to do&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script src=&#34;//gist.github.com/cixuuz/43c39efc9a0359076bda51319758c09d.js&#34;&gt;&lt;/script&gt;
+
+&lt;h1 id=&#34;145-binary-tree-postorder-traversal&#34;&gt;145. Binary Tree Postorder Traversal&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;just reverse of preorder
+&lt;script src=&#34;//gist.github.com/cixuuz/1f6a9aee36b07cd889ee8ceb3bde7cd5.js&#34;&gt;&lt;/script&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Notes of Readings in Database Systems</title>
+      <link>https://cixuuz.github.io/post/readings_in_database_systems/</link>
+      <pubDate>Mon, 21 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/readings_in_database_systems/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;http://www.redbook.io/&#34;&gt;redbook&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;preface&#34;&gt;Preface&lt;/h1&gt;
+
+&lt;p&gt;Background introduced by Michael Stonebraker
+Traditional RDBMS Systems introduced by Michael Stonebraker
+Techniques Everyone Should Know introduced by Peter Bailis
+New DBMS Architectures introduced by Michael Stonebraker [HTML] [PDF]
+Large-Scale Dataflow Engines introduced by Peter Bailis [HTML] [PDF]
+Weak Isolation and Distribution introduced by Peter Bailis [HTML] [PDF]
+Query Optimization introduced by Joe Hellerstein [HTML] [PDF]
+Interactive Analytics introduced by Joe Hellerstein [HTML] [PDF]
+Languages introduced by Joe Hellerstein [HTML] [PDF]
+Web Data introduced by Peter Bailis [HTML] [PDF]
+A Biased Take on a Moving Target: Complex Analytics
+by Michael Stonebraker [HTML] [PDF]
+A Biased Take on a Moving Target: Data Integration
+by Michael Stonebraker&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Python Numpy</title>
@@ -24,6 +168,16 @@ row_major = np.zeros((10,10), order=&#39;F&#39;)    # Fortran
 
 &lt;li&gt;&lt;p&gt;copy慢 view快 same as &lt;code&gt;np.flatten()&lt;/code&gt; return new copy 或者 &lt;code&gt;np.ravel()&lt;/code&gt; return new view&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>bigtable and leveldb</title>
+      <link>https://cixuuz.github.io/post/database-bigtable-leveldb/</link>
+      <pubDate>Mon, 21 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/database-bigtable-leveldb/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://draveness.me/bigtable-leveldb.html&#34;&gt;浅析 Bigtable 和 LevelDB 的实现&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -158,7 +312,18 @@ animal.says(&#39;hi&#39;)  //animal says hi
       <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://cixuuz.github.io/post/statistical-learning/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://www.r-bloggers.com/in-depth-introduction-to-machine-learning-in-15-hours-of-expert-videos/&#34;&gt;Statistical Learning&lt;/a&gt;&lt;/p&gt;
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://www.r-bloggers.com/in-depth-introduction-to-machine-learning-in-15-hours-of-expert-videos/&#34;&gt;Statistical Learning&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;supervised-learning&#34;&gt;Supervised Learning&lt;/h1&gt;
+
+&lt;p&gt;Regression and classification is classified by its output types. Regression when we predict quantitative outputs, and clas- siﬁcation when we predict qualitative outputs.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Least squares assumes f(x) is well approximated by a globally linear function.&lt;/li&gt;
+&lt;li&gt;k-nearest neighbors assumes f(x) is well approximated by a locally constant function.&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
@@ -187,208 +352,6 @@ animal.says(&#39;hi&#39;)  //animal says hi
 &lt;/ul&gt;
 
 &lt;script src=&#34;//gist.github.com/cixuuz/c172b271cf8a56cc1224320a497cec1a.js&#34;&gt;&lt;/script&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>lcs 08/13</title>
-      <link>https://cixuuz.github.io/post/lcs_0813/</link>
-      <pubDate>Sun, 13 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://cixuuz.github.io/post/lcs_0813/</guid>
-      <description>
-
-&lt;h1 id=&#34;99-recover-binary-search-tree&#34;&gt;99. Recover Binary Search Tree&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;travese in order. The result should be sorted ascending. The misplaced larger element will be close to head, while the smaller one will be close to end. For example, 1 2 3 is the in order. But the wrong seq is like 3 2 1. Apparently, 3 &amp;gt; 2 so 3 is the first node. 2 &amp;gt; 1, so 1 is the second one.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;iterative solution using &lt;a href=&#34;http://www.cnblogs.com/AnnieKim/archive/2013/06/15/MorrisTraversal.html&#34;&gt;morris traverse&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;script src=&#34;//gist.github.com/cixuuz/b7fcdba6d90e6a5f509b9429268fba09.js&#34;&gt;&lt;/script&gt;
-
-&lt;h1 id=&#34;257-binary-tree-paths&#34;&gt;257. Binary Tree Paths&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;string is immutable.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;script src=&#34;//gist.github.com/cixuuz/c172b271cf8a56cc1224320a497cec1a.js&#34;&gt;&lt;/script&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>lcs 08/12</title>
-      <link>https://cixuuz.github.io/post/lcs_0812/</link>
-      <pubDate>Sat, 12 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://cixuuz.github.io/post/lcs_0812/</guid>
-      <description>
-
-&lt;h1 id=&#34;297-serialize-and-deserialize-binary-tree&#34;&gt;297. Serialize and Deserialize Binary Tree&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;deque inherits from linkedlist(collection).&lt;/li&gt;
-&lt;li&gt;represent separator and null as a String.&lt;/li&gt;
-&lt;li&gt;string and char are not same.&lt;/li&gt;
-&lt;li&gt;append complete subtree ex &amp;ldquo;1,null,null,&amp;rdquo;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;script src=&#34;//gist.github.com/cixuuz/3b9dea5218a98f7eb7334d6c4df36562.js&#34;&gt;&lt;/script&gt;
-
-&lt;h1 id=&#34;105-construct-binary-tree-from-preorder-and-inorder-traversal&#34;&gt;105. Construct Binary Tree from Preorder and Inorder Traversal&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;recursive solution is straightforward. The only thing is that jump idx to find right start in inorder array. To speed up, we can cache inorder and index in the front.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;iterative not understand&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;script src=&#34;//gist.github.com/cixuuz/81d7ebee8833b156dde1753bcb5b23b3.js&#34;&gt;&lt;/script&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>leetcode 102</title>
-      <link>https://cixuuz.github.io/post/lc_102/</link>
-      <pubDate>Tue, 08 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://cixuuz.github.io/post/lc_102/</guid>
-      <description>
-
-&lt;h1 id=&#34;4-median-of-two-sorted-arrays&#34;&gt;4. Median of Two Sorted Arrays&lt;/h1&gt;
-
-&lt;p&gt;Pure math. Median definition is the median is used for dividing a set into two equal length subsets, that one subset is always greater than the other.&lt;/p&gt;
-
-&lt;h1 id=&#34;102-binary-tree-level-order-traversal&#34;&gt;102. Binary Tree Level Order Traversal&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;The best way to to iterate tree level by level is to use for loop in Java. (BFS)&lt;/li&gt;
-&lt;li&gt;return null is not same as return; (empty)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code&gt;public class Solution {
-    public List&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt; levelOrder(TreeNode root) {
-        List&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt; res = new LinkedList&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt;();
-        Queue&amp;lt;TreeNode&amp;gt; q = new LinkedList&amp;lt;TreeNode&amp;gt;();
-        
-        if (root == null) return res;
-        
-        q.offer(root);
-        while (!q.isEmpty()) {
-            Integer levelLength = q.size();
-            List&amp;lt;Integer&amp;gt; list = new LinkedList&amp;lt;Integer&amp;gt;();
-            
-            for (int i = 0; i &amp;lt; levelLength; i++) {
-                TreeNode node = q.poll();
-                list.add(node.val);
-                if (node.left != null) q.offer(node.left);
-                if (node.right != null) q.offer(node.right);
-            }
-            res.add(list);
-        }
-        
-        return res;
-    }
-}
-// recursive
-public class Solution1 {
-    List&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt; res = new ArrayList&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt;();
-        
-    public List&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt; levelOrder(TreeNode root) {
-        helper(root, 0);
-        return res;
-    }
-    
-    private void helper(TreeNode root, Integer depth) {
-        if (root == null) return;
-        if (res.size() == depth) res.add(new LinkedList&amp;lt;Integer&amp;gt;());
-        
-        res.get(depth).add(root.val);
-        helper(root.left, depth+1);
-        helper(root.right, depth+1);
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>175. Combine Two Tables</title>
-      <link>https://cixuuz.github.io/post/lc_175/</link>
-      <pubDate>Sun, 25 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://cixuuz.github.io/post/lc_175/</guid>
-      <description>
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/combine-two-tables/&#34;&gt;175. Combine Two Tables&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;solution&#34;&gt;Solution&lt;/h1&gt;
-
-&lt;p&gt;select FirstName, LastName, City, State
-from person left join address
-on person.personid = address.personid;&lt;/p&gt;
-
-&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>176. Second Highest Salary</title>
-      <link>https://cixuuz.github.io/post/lc_176/</link>
-      <pubDate>Sun, 25 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://cixuuz.github.io/post/lc_176/</guid>
-      <description>
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/second-highest-salary/&#34;&gt;176. Second Highest Salary&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;solution&#34;&gt;Solution&lt;/h1&gt;
-
-&lt;p&gt;select
-(select salary
-from employee
-group by salary
-order by salary desc
-limit 1 offset 1)
-as SecondHighestSalary;&lt;/p&gt;
-
-&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
-
-&lt;p&gt;There is a trick to print null when result is empty.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>177. Nth Highest Salary</title>
-      <link>https://cixuuz.github.io/post/lc_177/</link>
-      <pubDate>Sun, 25 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://cixuuz.github.io/post/lc_177/</guid>
-      <description>
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/nth-highest-salary&#34;&gt;177. Nth Highest Salary&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;solution&#34;&gt;Solution&lt;/h1&gt;
-
-&lt;p&gt;CREATE FUNCTION getNthHighestSalary(N INT) RETURNS INT
-BEGIN
-declare m int;
-set m = N - 1;
-  RETURN (
-      # Write your MySQL query statement below.
-      select distinct salary
-      from Employee
-      order by salary desc
-      limit 1
-      offset m
-  );
-END&lt;/p&gt;
-
-&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
-
-&lt;p&gt;The LIMIT clause can be used to constrain the number of rows returned by the SELECT statement. LIMIT takes one or two numeric arguments, which must both be nonnegative integer constants (except when using prepared statements).&lt;/p&gt;
 </description>
     </item>
     

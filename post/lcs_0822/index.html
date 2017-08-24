@@ -3,7 +3,7 @@
 
     <head>
 
-        <title>Posts</title>
+        <title>leetcode summary 08/22</title>
 
         <style>
 
@@ -71,7 +71,7 @@
 
                 <div class="navbar-header">
 
-                    <a class="navbar-brand visible-xs" href="#">Posts</a>
+                    <a class="navbar-brand visible-xs" href="#">leetcode summary 08/22</a>
 
                     <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
                         <span class="icon-bar"></span>
@@ -120,48 +120,7 @@
 
 <main>
 
-    <h2>Posts</h2>
-
-     <div class="item">
-
-    
-
-        <h4><a href="/post/lcs_0823/">leetcode summary 08/23</a></h4>
-
-        <h5>August 23, 2017</h5>
-
-        
-
-    
-
-</div>
-  <div class="item">
-
-    
-
-        <h4><a href="/post/resume/">resume</a></h4>
-
-        <h5>August 23, 2017</h5>
-
-        
-
-    
-
-</div>
-  <div class="item">
-
-    
-
-        <h4><a href="/post/java-pass-by-value/">title</a></h4>
-
-        <h5>August 23, 2017</h5>
-
-        
-
-    
-
-</div>
-  <div class="item">
+    <div class="item">
 
     
 
@@ -174,38 +133,66 @@
     
 
 </div>
-  <div class="item">
 
-    
 
-        <h4><a href="/post/readings_in_database_systems/">Notes of Readings in Database Systems</a></h4>
+    <br> <div class="text-justify">
 
-        <h5>August 21, 2017</h5>
+<h1 id="114-flatten-binary-tree-to-linked-list">114. Flatten Binary Tree to Linked List</h1>
 
-        
+<ul>
+<li>iterative: set left tree to the right child, left child is null, then go to next right node.</li>
+<li>recursive: use post order get successor of each node, set successor to each node&rsquo;r right child
+<script src="//gist.github.com/cixuuz/2a59c851a4f106fb5f985bac4d158dfb.js"></script></li>
+</ul>
 
-    
+<h1 id="199-binary-tree-right-side-view">199. Binary Tree Right Side View</h1>
 
+<ul>
+<li>iterative: BFS, always pop rightmost node. It&rsquo;s better using queue, and loop N times. N is the size of queue.</li>
+<li>recursive: post order, and pop the first node with depth N</li>
+</ul>
+
+<script src="//gist.github.com/cixuuz/37838460dfdf970add184ef68dec5c96.js"></script>
+
+<h1 id="230-kth-smallest-element-in-a-bst">230. Kth Smallest Element in a BST</h1>
+
+<ul>
+<li>recursive: in order traverse with a counter</li>
+<li>iterative: use stack, first push current node, move to left, next do sth, then move to right;</li>
+</ul>
+
+<script src="//gist.github.com/cixuuz/fed292dbf3384825b73b9bdc2698a28d.js"></script>
+
+<h1 id="94-binary-tree-inorder-traversal">94. Binary Tree Inorder Traversal</h1>
+
+<ul>
+<li>iterative: always left first, then right</li>
+</ul>
+
+<script src="//gist.github.com/cixuuz/3927083fc3ec44bcb0c70c07ada06b09.js"></script>
+
+<h1 id="144-binary-tree-preorder-traversal">144. Binary Tree Preorder Traversal</h1>
+
+<ul>
+<li>iterative: always go down and up, so stack is best way to do</li>
+</ul>
+
+<script src="//gist.github.com/cixuuz/43c39efc9a0359076bda51319758c09d.js"></script>
+
+<h1 id="145-binary-tree-postorder-traversal">145. Binary Tree Postorder Traversal</h1>
+
+<ul>
+<li>just reverse of preorder
+<script src="//gist.github.com/cixuuz/1f6a9aee36b07cd889ee8ceb3bde7cd5.js"></script></li>
+</ul>
 </div>
- 
+
+    
+    
+
+    
 
 </main>
-
-
-
-    <div class="pages">
-
-        
-
-        
-            <a class="icon pages-icon" href="/post/page/2/" rel="next">
-                <i class="fa fa-arrow-right"></i>
-            </a>
-        
-
-    </div>
-
-
 
         <footer>
 
