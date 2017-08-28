@@ -6,16 +6,74 @@
     <description>Recent content on Chen Tong</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 25 Aug 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 27 Aug 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://cixuuz.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>leetcode summary 08/25</title>
-      <link>https://cixuuz.github.io/post/lcs_0825/</link>
-      <pubDate>Fri, 25 Aug 2017 00:00:00 +0000</pubDate>
+      <title>leetcode summary 08/27</title>
+      <link>https://cixuuz.github.io/post/lcs_0827/</link>
+      <pubDate>Sun, 27 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://cixuuz.github.io/post/lcs_0825/</guid>
-      <description></description>
+      <guid>https://cixuuz.github.io/post/lcs_0827/</guid>
+      <description>
+
+&lt;h1 id=&#34;51-n-queens&#34;&gt;51. N-Queens&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;dfs: each recursion check with previous rows&lt;/li&gt;
+&lt;li&gt;quick check: using a boolean array to record if current location is conflicts with elements in col, \ and /&lt;/li&gt;
+&lt;li&gt;bit mask:
+
+&lt;ul&gt;
+&lt;li&gt;set i to 1: a |= (1 &amp;lt;&amp;lt; i)&lt;/li&gt;
+&lt;li&gt;set i to 0: a &amp;amp;= ~(1 &amp;lt;&amp;lt; i)&lt;/li&gt;
+&lt;li&gt;inverse i: a ^= (1 &amp;lt;&amp;lt; i)&lt;/li&gt;
+&lt;li&gt;get i: (a &amp;gt;&amp;gt; i) &amp;amp; 1&lt;/li&gt;
+&lt;li&gt;find last 1: a &amp;amp; -a&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script src=&#34;//gist.github.com/cixuuz/57613486c26cd7fc9ed07805b02e17bb.js&#34;&gt;&lt;/script&gt;
+
+&lt;h1 id=&#34;52-n-queens-ii&#34;&gt;52. N-Queens II&lt;/h1&gt;
+
+&lt;p&gt;same with #51
+&lt;script src=&#34;//gist.github.com/cixuuz/49163ba4ceadbe29b233b6774e026f19.js&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;98-validate-binary-search-tree&#34;&gt;98. Validate Binary Search Tree&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;recursive: check left and right bound&lt;/li&gt;
+&lt;li&gt;iterative: inorder traverse to see if ordered
+&lt;script src=&#34;//gist.github.com/cixuuz/c7bea3857fcbf20cdc9e4e2040847b35.js&#34;&gt;&lt;/script&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;106-construct-binary-tree-from-inorder-and-postorder-traversal&#34;&gt;106. Construct Binary Tree from Inorder and Postorder Traversal&lt;/h1&gt;
+
+&lt;script src=&#34;//gist.github.com/cixuuz/2eaa7c1745b77997a75175e0be66444e.js&#34;&gt;&lt;/script&gt;
+
+&lt;h1 id=&#34;113-path-sum-ii&#34;&gt;113. Path Sum II&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;remove added node before return&lt;/li&gt;
+&lt;li&gt;when add a linkedlist to a list, must create a new copy
+&lt;script src=&#34;//gist.github.com/cixuuz/cbc8b7a81a5d6150c51e760786734879.js&#34;&gt;&lt;/script&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;103-binary-tree-zigzag-level-order-traversal&#34;&gt;103. Binary Tree Zigzag Level Order Traversal&lt;/h1&gt;
+
+&lt;script src=&#34;//gist.github.com/cixuuz/53f519a7a066dd3bfd245b8f21a99070.js&#34;&gt;&lt;/script&gt;
+
+&lt;h1 id=&#34;663-equal-tree-partition&#34;&gt;663. Equal Tree Partition&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The idea is to use a hash table to record all the different sums of each subtree in the tree. If the total sum of the tree is sum, we just need to check if the hash table constains sum/2.&lt;/li&gt;
+&lt;li&gt;must check if the sum of the whole tree is even.&lt;/li&gt;
+&lt;li&gt;one special case is when sum equals to zero&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script src=&#34;//gist.github.com/cixuuz/7383d3a173c0c7e572158bbe4225055d.js&#34;&gt;&lt;/script&gt;
+</description>
     </item>
     
     <item>
