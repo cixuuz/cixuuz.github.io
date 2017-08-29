@@ -12,12 +12,23 @@
     
     
     <item>
+      <title>Java::Comparator</title>
+      <link>https://cixuuz.github.io/post/java-comparator/</link>
+      <pubDate>Tue, 29 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/java-comparator/</guid>
+      <description> 做题的时候遇到了sort，想试试Java 8的新语法。于是有了一些研究：
+Reference  Very confused by Java 8 Comparator type inference
+   </description>
+    </item>
+    
+    <item>
       <title>leetcode summary 08/29</title>
       <link>https://cixuuz.github.io/post/lcs_0829/</link>
       <pubDate>Tue, 29 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://cixuuz.github.io/post/lcs_0829/</guid>
-      <description> 107. Binary Tree Level Order Traversal II  use element as index to record whether visit   662 Maximum Width of Binary Tree 661 Image Smoother 646 Maximum Length of Pair Chain 645. Set Mismatch </description>
+      <description>107. Binary Tree Level Order Traversal II  use element as index to record whether visit   117. Populating Next Right Pointers in Each Node II  child connected and be used for next level   646 Maximum Length of Pair Chain  DP: pairs[i][0] &amp;gt; pairs[j][1]? dp[j] + 1 : dp[j] greedy: for end point z, if all intervals where end point &amp;lt; z, there is no possible to get a longer chain based on previous intervals.</description>
     </item>
     
     <item>
@@ -26,7 +37,7 @@
       <pubDate>Mon, 28 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://cixuuz.github.io/post/lcs_0828/</guid>
-      <description> 107. Binary Tree Level Order Traversal II  use element as index to record whether visit   </description>
+      <description> 107. Binary Tree Level Order Traversal II  645. Set Mismatch  use element as index to record whether visit   </description>
     </item>
     
     <item>
@@ -314,6 +325,28 @@ python3 -m venv py_envs/py3 pip install &amp;ldquo;airflow[celery, crypto, mysql
 call this command many times, until it says it&amp;rsquo;s not installed pip uninstall librabbitmq
 https://github.com/celery/celery/issues/3675
 rabbitmq slack https://slack.com/api/oauth.access?client_id=4b39e9-752c4&amp;amp;client_secret=33fea0113f5b1&amp;amp;code=ccdaa72ad</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://cixuuz.github.io/post/ds-summary/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/ds-summary/</guid>
+      <description>Strictly speaking, there is no such thing as &amp;ldquo;data science&amp;rdquo; (see What is data science and what is it not? ). See also: Vardi, Science has only two legs: http://portal.acm.org/ft_gateway...
+Here are some resources I&amp;rsquo;ve collected about working with data, I hope you find them useful (note: I&amp;rsquo;m an undergrad student, this is not an expert opinion in any way).
+1) Learn about matrix factorizations
+Take the Computational Linear Algebra course (it is sometimes called Applied Linear Algebra or Matrix Computations or Numerical Analysis or Matrix Analysis and it can be either CS or Applied Math course).</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://cixuuz.github.io/post/vis-summary/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/vis-summary/</guid>
+      <description>https://www.youtube.com/watch?v=QyhqzaMiFxk&amp;amp;list=PLQVvvaa0QuDfefDfXb9Yf0la1fPDKluPF&amp;amp;index=7
+d3: http://d3.decembercafe.org/pages/lessons/10.html</description>
     </item>
     
   </channel>

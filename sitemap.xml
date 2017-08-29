@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://cixuuz.github.io/post/java-comparator/</loc>
+    <lastmod>2017-08-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://cixuuz.github.io/post/lcs_0829/</loc>
     <lastmod>2017-08-29T00:00:00+00:00</lastmod>
   </url>
@@ -144,6 +149,14 @@
   
   <url>
     <loc>https://cixuuz.github.io/post/airflow_config/</loc>
+  </url>
+  
+  <url>
+    <loc>https://cixuuz.github.io/post/ds-summary/</loc>
+  </url>
+  
+  <url>
+    <loc>https://cixuuz.github.io/post/vis-summary/</loc>
   </url>
   
   <url>
