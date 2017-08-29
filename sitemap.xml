@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://cixuuz.github.io/post/lcs_0829/</loc>
+    <lastmod>2017-08-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cixuuz.github.io/post/lcs_0828/</loc>
+    <lastmod>2017-08-28T00:00:00+00:00</lastmod>
+  </url>
   
   <url>
     <loc>https://cixuuz.github.io/post/lcs_0827/</loc>
@@ -136,18 +147,24 @@
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/post/lcs_0828/</loc>
+    <loc>https://cixuuz.github.io/categories/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://cixuuz.github.io/</loc>
-    <lastmod>2017-08-27T00:00:00+00:00</lastmod>
+    <lastmod>2017-08-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://cixuuz.github.io/post/</loc>
-    <lastmod>2017-08-27T00:00:00+00:00</lastmod>
+    <lastmod>2017-08-29T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cixuuz.github.io/tags/</loc>
     <priority>0</priority>
   </url>
   

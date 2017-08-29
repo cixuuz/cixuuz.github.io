@@ -2,12 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Chen Tong</title>
-    <link>https://cixuuz.github.io/post/index.xml</link>
+    <link>https://cixuuz.github.io/post/</link>
     <description>Recent content in Posts on Chen Tong</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 27 Aug 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://cixuuz.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Aug 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://cixuuz.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>leetcode summary 08/29</title>
+      <link>https://cixuuz.github.io/post/lcs_0829/</link>
+      <pubDate>Tue, 29 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_0829/</guid>
+      <description> 107. Binary Tree Level Order Traversal II  use element as index to record whether visit   662 Maximum Width of Binary Tree 661 Image Smoother 646 Maximum Length of Pair Chain 645. Set Mismatch </description>
+    </item>
+    
+    <item>
+      <title>leetcode summary 08/28</title>
+      <link>https://cixuuz.github.io/post/lcs_0828/</link>
+      <pubDate>Mon, 28 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_0828/</guid>
+      <description> 107. Binary Tree Level Order Traversal II  use element as index to record whether visit   </description>
+    </item>
     
     <item>
       <title>leetcode summary 08/27</title>
@@ -15,75 +35,17 @@
       <pubDate>Sun, 27 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://cixuuz.github.io/post/lcs_0827/</guid>
-      <description>
-
-&lt;h1 id=&#34;51-n-queens&#34;&gt;51. N-Queens&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;dfs: each recursion check with previous rows&lt;/li&gt;
-&lt;li&gt;quick check: using a boolean array to record if current location is conflicts with elements in col, \ and /&lt;/li&gt;
-&lt;li&gt;bit mask:
-
-&lt;ul&gt;
-&lt;li&gt;set i to 1: a |= (1 &amp;lt;&amp;lt; i)&lt;/li&gt;
-&lt;li&gt;set i to 0: a &amp;amp;= ~(1 &amp;lt;&amp;lt; i)&lt;/li&gt;
-&lt;li&gt;inverse i: a ^= (1 &amp;lt;&amp;lt; i)&lt;/li&gt;
-&lt;li&gt;get i: (a &amp;gt;&amp;gt; i) &amp;amp; 1&lt;/li&gt;
-&lt;li&gt;find last 1: a &amp;amp; -a&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;script src=&#34;//gist.github.com/cixuuz/57613486c26cd7fc9ed07805b02e17bb.js&#34;&gt;&lt;/script&gt;
-
-&lt;h1 id=&#34;52-n-queens-ii&#34;&gt;52. N-Queens II&lt;/h1&gt;
-
-&lt;p&gt;same with #51
-&lt;script src=&#34;//gist.github.com/cixuuz/49163ba4ceadbe29b233b6774e026f19.js&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;98-validate-binary-search-tree&#34;&gt;98. Validate Binary Search Tree&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;recursive: check left and right bound&lt;/li&gt;
-&lt;li&gt;iterative: inorder traverse to see if ordered
-&lt;script src=&#34;//gist.github.com/cixuuz/c7bea3857fcbf20cdc9e4e2040847b35.js&#34;&gt;&lt;/script&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;106-construct-binary-tree-from-inorder-and-postorder-traversal&#34;&gt;106. Construct Binary Tree from Inorder and Postorder Traversal&lt;/h1&gt;
-
-&lt;script src=&#34;//gist.github.com/cixuuz/2eaa7c1745b77997a75175e0be66444e.js&#34;&gt;&lt;/script&gt;
-
-&lt;h1 id=&#34;113-path-sum-ii&#34;&gt;113. Path Sum II&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;remove added node before return&lt;/li&gt;
-&lt;li&gt;when add a linkedlist to a list, must create a new copy
-&lt;script src=&#34;//gist.github.com/cixuuz/cbc8b7a81a5d6150c51e760786734879.js&#34;&gt;&lt;/script&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;103-binary-tree-zigzag-level-order-traversal&#34;&gt;103. Binary Tree Zigzag Level Order Traversal&lt;/h1&gt;
-
-&lt;script src=&#34;//gist.github.com/cixuuz/53f519a7a066dd3bfd245b8f21a99070.js&#34;&gt;&lt;/script&gt;
-
-&lt;h1 id=&#34;663-equal-tree-partition&#34;&gt;663. Equal Tree Partition&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;The idea is to use a hash table to record all the different sums of each subtree in the tree. If the total sum of the tree is sum, we just need to check if the hash table constains sum/2.&lt;/li&gt;
-&lt;li&gt;must check if the sum of the whole tree is even.&lt;/li&gt;
-&lt;li&gt;one special case is when sum equals to zero&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;script src=&#34;//gist.github.com/cixuuz/7383d3a173c0c7e572158bbe4225055d.js&#34;&gt;&lt;/script&gt;
-</description>
+      <description>51. N-Queens  dfs: each recursion check with previous rows quick check: using a boolean array to record if current location is conflicts with elements in col, \ and / bit mask:  set i to 1: a |= (1 &amp;lt;&amp;lt; i) set i to 0: a &amp;amp;= ~(1 &amp;lt;&amp;lt; i) inverse i: a ^= (1 &amp;lt;&amp;lt; i) get i: (a &amp;gt;&amp;gt; i) &amp;amp; 1 find last 1: a &amp;amp; -a    52.</description>
     </item>
     
     <item>
-      <title>Learn Java</title>
+      <title>Core Java 读书笔记</title>
       <link>https://cixuuz.github.io/post/java-tutorial/</link>
       <pubDate>Thu, 24 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://cixuuz.github.io/post/java-tutorial/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://docs.oracle.com/javase/tutorial/&#34;&gt;http://docs.oracle.com/javase/tutorial/&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>http://docs.oracle.com/javase/tutorial/ Core Java
+Ch4 Objects and Classes 4.1 Introduction to Object-Oriented Programming  Encapsulation: The key to making encapsulation work is to have methods never directly access instance fields in a class other than their own.  4.2 Using Predefined Classes  an object variable doesn’t actually contain an object. It only refers to an object.  4.3 Defining Your Own Classes, page 145 4.4 Static Fields and Methods, page 158 4.</description>
     </item>
     
     <item>
@@ -92,19 +54,9 @@
       <pubDate>Thu, 24 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://cixuuz.github.io/post/lcs_0824/</guid>
-      <description>
-
-&lt;h1 id=&#34;250-count-univalue-subtrees&#34;&gt;250. Count Univalue Subtrees&lt;/h1&gt;
-
-&lt;p&gt;tc: O(n)
-sc: O(n)&lt;/p&gt;
-
-&lt;p&gt;terminal case: null -&amp;gt; True
-every node: whether left subtree equals val, and right subtree equals val. Only true, count + 1.
-&lt;a href=&#34;https://discuss.leetcode.com/topic/20757/java-11-lines-added&#34;&gt;refer&lt;/a&gt;&lt;/p&gt;
-
-&lt;script src=&#34;//gist.github.com/cixuuz/8e8ecf2b822dcf03d97ef31d6b33ce2d.js&#34;&gt;&lt;/script&gt;
-</description>
+      <description> 250. Count Univalue Subtrees tc: O(n) sc: O(n)
+terminal case: null -&amp;gt; True every node: whether left subtree equals val, and right subtree equals val. Only true, count + 1. refer
+ </description>
     </item>
     
     <item>
@@ -113,33 +65,7 @@ every node: whether left subtree equals val, and right subtree equals val. Only 
       <pubDate>Wed, 23 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://cixuuz.github.io/post/lcs_0823/</guid>
-      <description>
-
-&lt;h1 id=&#34;337-house-robber-iii&#34;&gt;337. House Robber III&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;basic: for each node, you can choose rob or not, based on the parent&amp;rsquo;s status. return max amount of each choice.&lt;/li&gt;
-&lt;li&gt;dp: keep previous rob information.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;script src=&#34;//gist.github.com/cixuuz/9b100eab6e3f5915b5b8d30fbb81bb94.js&#34;&gt;&lt;/script&gt;
-
-&lt;h1 id=&#34;95-unique-binary-search-trees-ii&#34;&gt;95. Unique Binary Search Trees II&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;foreach 1 to n, generate left and right subtree and combine with current node.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;script src=&#34;//gist.github.com/cixuuz/50b2b496c413d01111ba719e66159bdb.js&#34;&gt;&lt;/script&gt;
-
-&lt;h1 id=&#34;111-minimum-depth-of-binary-tree&#34;&gt;111. Minimum Depth of Binary Tree&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;its root to leaf, not to other node. For example (1, 2), the only path is 1-&amp;gt;2.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;script src=&#34;//gist.github.com/cixuuz/922711cdaab7615d8c0d9f47b4bac4f8.js&#34;&gt;&lt;/script&gt;
-</description>
+      <description>337. House Robber III  basic: for each node, you can choose rob or not, based on the parent&amp;rsquo;s status. return max amount of each choice. dp: keep previous rob information.   95. Unique Binary Search Trees II  foreach 1 to n, generate left and right subtree and combine with current node.   111. Minimum Depth of Binary Tree  its root to leaf, not to other node.</description>
     </item>
     
     <item>
@@ -148,48 +74,10 @@ every node: whether left subtree equals val, and right subtree equals val. Only 
       <pubDate>Wed, 23 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://cixuuz.github.io/post/resume/</guid>
-      <description>&lt;p&gt;你面试的时候可以解释说一下如何scale
-整个性能瓶颈会出现哪里？如何解决？&lt;/p&gt;
-
-&lt;p&gt;Professional Experience
-Data Engineer, 7Chord, New York Jan 2017 – Sep 2017
-•   Designed and built near real time data ETL pipeline scheduled by Airflow, which streams 10GB data from 10 different data source
-Distributed web crawler with Scrapy
-•   Predicted signal of bond trading by ensemble learning
-•   Visualized machine learning results by d3.js&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.confluent.io/blog/stream-data-platform-1/&#34;&gt;https://www.confluent.io/blog/stream-data-platform-1/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Data Analyst, Uber Beijing, China   Jan 2015 – Dec 2015
-• Optimized, and Maintained ETL pipelines
-• Detected drivers’ or customers’ fraud behaviors by PCA, which reduced detection time by 50%, and increased accuracy to 90%&lt;/p&gt;
-
-&lt;p&gt;Data Analyst, ICBC Beijing, China   Jun 2013 – Jan 2015
-•   Decreased workflow time by 10% through developing a growth development strategy with the help of business intelligence analysis
-•   Analyzed 100,000 customer surveys through DMAIC process in Six Sigma projects and then applied optimized service strategies, which resulted in a 20% improvement of custom satisfaction&lt;/p&gt;
-
-&lt;p&gt;Academic Research
-Re-rank web documents with Learning to Rank
-Director: Guoxiao Yang  Sep 2016 – Jan 2017
-• Optimized and implemented ranking model, LambdaMART to improve rerank quality, evaluated by NCDG, ERR, and P&lt;/p&gt;
-
-&lt;p&gt;• Retrieved documents from ClueWeb09 databases, built index, and ranked queries results by tf-idf with indri query language
-• Obtained important features, such as query likelihood, by NLP methods&lt;/p&gt;
-
-&lt;p&gt;Education
-New York University Brooklyn, NY    Jan 2018
-Master of Science in Computer Science    GPA: 3.&lt;sup&gt;9&lt;/sup&gt;&amp;frasl;&lt;sub&gt;4&lt;/sub&gt;.0
-Beijing Institute of Technology Beijing, China  Jun 2013
-Bachelor of Science in Mathematics &amp;amp; Applied Mathematics    GPA: 3.&lt;sup&gt;6&lt;/sup&gt;&amp;frasl;&lt;sub&gt;4&lt;/sub&gt;.0&lt;/p&gt;
-
-&lt;p&gt;Technical Skills
-Programming Language: Python, JavaScript, Java, Scala, Go
-Machine Learning: scikit-learn, MLlib
-Cluster Computing: Apache Spark, Apache Hadoop MapReduce
-Database: PostgreSQL, MongoDB, MySQL
-Message Broker: RabbitMQ, Apache Kafka
-Data Visualization: d3.js, React&lt;/p&gt;
-</description>
+      <description>你面试的时候可以解释说一下如何scale 整个性能瓶颈会出现哪里？如何解决？
+Professional Experience Data Engineer, 7Chord, New York Jan 2017 – Sep 2017 • Designed and built near real time data ETL pipeline scheduled by Airflow, which streams 10GB data from 10 different data source Distributed web crawler with Scrapy • Predicted signal of bond trading by ensemble learning • Visualized machine learning results by d3.js
+https://www.confluent.io/blog/stream-data-platform-1/
+Data Analyst, Uber Beijing, China Jan 2015 – Dec 2015 • Optimized, and Maintained ETL pipelines • Detected drivers’ or customers’ fraud behaviors by PCA, which reduced detection time by 50%, and increased accuracy to 90%</description>
     </item>
     
     <item>
@@ -198,10 +86,7 @@ Data Visualization: d3.js, React&lt;/p&gt;
       <pubDate>Wed, 23 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://cixuuz.github.io/post/java-pass-by-value/</guid>
-      <description>&lt;p&gt;java 传值还是引用
-&lt;a href=&#34;https://stackoverflow.com/questions/40480/is-java-pass-by-reference-or-pass-by-value&#34;&gt;refer&lt;/a&gt;
-Java is always pass-by-value. Unfortunately, they decided to call the location of an object a &amp;ldquo;reference&amp;rdquo;. When we pass the value of an object, we are passing the reference to it.&lt;/p&gt;
-</description>
+      <description>java 传值还是引用 refer Java is always pass-by-value. Unfortunately, they decided to call the location of an object a &amp;ldquo;reference&amp;rdquo;. When we pass the value of an object, we are passing the reference to it.</description>
     </item>
     
     <item>
@@ -210,57 +95,7 @@ Java is always pass-by-value. Unfortunately, they decided to call the location o
       <pubDate>Tue, 22 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://cixuuz.github.io/post/lcs_0822/</guid>
-      <description>
-
-&lt;h1 id=&#34;114-flatten-binary-tree-to-linked-list&#34;&gt;114. Flatten Binary Tree to Linked List&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;iterative: set left tree to the right child, left child is null, then go to next right node.&lt;/li&gt;
-&lt;li&gt;recursive: use post order get successor of each node, set successor to each node&amp;rsquo;r right child
-&lt;script src=&#34;//gist.github.com/cixuuz/2a59c851a4f106fb5f985bac4d158dfb.js&#34;&gt;&lt;/script&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;199-binary-tree-right-side-view&#34;&gt;199. Binary Tree Right Side View&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;iterative: BFS, always pop rightmost node. It&amp;rsquo;s better using queue, and loop N times. N is the size of queue.&lt;/li&gt;
-&lt;li&gt;recursive: post order, and pop the first node with depth N&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;script src=&#34;//gist.github.com/cixuuz/37838460dfdf970add184ef68dec5c96.js&#34;&gt;&lt;/script&gt;
-
-&lt;h1 id=&#34;230-kth-smallest-element-in-a-bst&#34;&gt;230. Kth Smallest Element in a BST&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;recursive: in order traverse with a counter&lt;/li&gt;
-&lt;li&gt;iterative: use stack, first push current node, move to left, next do sth, then move to right;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;script src=&#34;//gist.github.com/cixuuz/fed292dbf3384825b73b9bdc2698a28d.js&#34;&gt;&lt;/script&gt;
-
-&lt;h1 id=&#34;94-binary-tree-inorder-traversal&#34;&gt;94. Binary Tree Inorder Traversal&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;iterative: always left first, then right&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;script src=&#34;//gist.github.com/cixuuz/3927083fc3ec44bcb0c70c07ada06b09.js&#34;&gt;&lt;/script&gt;
-
-&lt;h1 id=&#34;144-binary-tree-preorder-traversal&#34;&gt;144. Binary Tree Preorder Traversal&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;iterative: always go down and up, so stack is best way to do&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;script src=&#34;//gist.github.com/cixuuz/43c39efc9a0359076bda51319758c09d.js&#34;&gt;&lt;/script&gt;
-
-&lt;h1 id=&#34;145-binary-tree-postorder-traversal&#34;&gt;145. Binary Tree Postorder Traversal&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;just reverse of preorder
-&lt;script src=&#34;//gist.github.com/cixuuz/1f6a9aee36b07cd889ee8ceb3bde7cd5.js&#34;&gt;&lt;/script&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>114. Flatten Binary Tree to Linked List  iterative: set left tree to the right child, left child is null, then go to next right node. recursive: use post order get successor of each node, set successor to each node&amp;rsquo;r right child   199. Binary Tree Right Side View  iterative: BFS, always pop rightmost node. It&amp;rsquo;s better using queue, and loop N times. N is the size of queue.</description>
     </item>
     
     <item>
@@ -269,27 +104,8 @@ Java is always pass-by-value. Unfortunately, they decided to call the location o
       <pubDate>Mon, 21 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://cixuuz.github.io/post/readings_in_database_systems/</guid>
-      <description>
-
-&lt;p&gt;&lt;a href=&#34;http://www.redbook.io/&#34;&gt;redbook&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;preface&#34;&gt;Preface&lt;/h1&gt;
-
-&lt;p&gt;Background introduced by Michael Stonebraker
-Traditional RDBMS Systems introduced by Michael Stonebraker
-Techniques Everyone Should Know introduced by Peter Bailis
-New DBMS Architectures introduced by Michael Stonebraker [HTML] [PDF]
-Large-Scale Dataflow Engines introduced by Peter Bailis [HTML] [PDF]
-Weak Isolation and Distribution introduced by Peter Bailis [HTML] [PDF]
-Query Optimization introduced by Joe Hellerstein [HTML] [PDF]
-Interactive Analytics introduced by Joe Hellerstein [HTML] [PDF]
-Languages introduced by Joe Hellerstein [HTML] [PDF]
-Web Data introduced by Peter Bailis [HTML] [PDF]
-A Biased Take on a Moving Target: Complex Analytics
-by Michael Stonebraker [HTML] [PDF]
-A Biased Take on a Moving Target: Data Integration
-by Michael Stonebraker&lt;/p&gt;
-</description>
+      <description>redbook
+Preface Background introduced by Michael Stonebraker Traditional RDBMS Systems introduced by Michael Stonebraker Techniques Everyone Should Know introduced by Peter Bailis New DBMS Architectures introduced by Michael Stonebraker [HTML] [PDF] Large-Scale Dataflow Engines introduced by Peter Bailis [HTML] [PDF] Weak Isolation and Distribution introduced by Peter Bailis [HTML] [PDF] Query Optimization introduced by Joe Hellerstein [HTML] [PDF] Interactive Analytics introduced by Joe Hellerstein [HTML] [PDF] Languages introduced by Joe Hellerstein [HTML] [PDF] Web Data introduced by Peter Bailis [HTML] [PDF] A Biased Take on a Moving Target: Complex Analytics by Michael Stonebraker [HTML] [PDF] A Biased Take on a Moving Target: Data Integration by Michael Stonebraker</description>
     </item>
     
     <item>
@@ -298,16 +114,9 @@ by Michael Stonebraker&lt;/p&gt;
       <pubDate>Mon, 21 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://cixuuz.github.io/post/python-numpy/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;在 Numpy 中, 创建 2D Array 的默认方式是 &amp;ldquo;C-type&amp;rdquo; 以 row 为主在内存中排列, 而如果是 &amp;ldquo;Fortran&amp;rdquo; 的方式创建的, 就是以 column 为主在内存中排列.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;col_major = np.zeros((10,10), order=&#39;C&#39;)    # C-type
-row_major = np.zeros((10,10), order=&#39;F&#39;)    # Fortran
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;copy慢 view快 same as &lt;code&gt;np.flatten()&lt;/code&gt; return new copy 或者 &lt;code&gt;np.ravel()&lt;/code&gt; return new view&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description> 在 Numpy 中, 创建 2D Array 的默认方式是 &amp;ldquo;C-type&amp;rdquo; 以 row 为主在内存中排列, 而如果是 &amp;ldquo;Fortran&amp;rdquo; 的方式创建的, 就是以 column 为主在内存中排列.
+col_major = np.zeros((10,10), order=&#39;C&#39;) # C-type row_major = np.zeros((10,10), order=&#39;F&#39;) # Fortran  copy慢 view快 same as np.flatten() return new copy 或者 np.ravel() return new view
+  </description>
     </item>
     
     <item>
@@ -316,8 +125,7 @@ row_major = np.zeros((10,10), order=&#39;F&#39;)    # Fortran
       <pubDate>Mon, 21 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://cixuuz.github.io/post/database-bigtable-leveldb/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://draveness.me/bigtable-leveldb.html&#34;&gt;浅析 Bigtable 和 LevelDB 的实现&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>浅析 Bigtable 和 LevelDB 的实现</description>
     </item>
     
     <item>
@@ -326,8 +134,7 @@ row_major = np.zeros((10,10), order=&#39;F&#39;)    # Fortran
       <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://cixuuz.github.io/post/kafka-message-format/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://www.iteblog.com/archives/2232.html&#34;&gt;Apache Kafka消息格式&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Apache Kafka消息格式</description>
     </item>
     
     <item>
@@ -336,8 +143,7 @@ row_major = np.zeros((10,10), order=&#39;F&#39;)    # Fortran
       <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://cixuuz.github.io/post/kafka-stream/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://www.jasongj.com/kafka/kafka_stream/&#34;&gt;kafka stream&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>kafka stream</description>
     </item>
     
     <item>
@@ -346,28 +152,9 @@ row_major = np.zeros((10,10), order=&#39;F&#39;)    # Fortran
       <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://cixuuz.github.io/post/mysql-high-availability/</guid>
-      <description>
-
-&lt;p&gt;&lt;a href=&#34;https://mp.weixin.qq.com/s/0frrH09-zFjdFYZalatb8A&#34;&gt;refer&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;高可用架构&#34;&gt;高可用架构&lt;/h1&gt;
-
-&lt;p&gt;MySQL高可用方面，目前业界主流依然是基于异步复制的技术，例如Keepalived、MHA、ZooKeeper等，要求数据强一致的场景逐步开始使用分布式协议，这方面的典型代表有PXC、Group Replication、TiDB。下面我们就重点来说说keepalived、MHA和PXC这几种大家用得比较多的架构。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;脑裂 （ 一种常见的脑裂情况可以描述如下）比如正常情况下，（集群中的）NodeA 和 NodeB 会通过心跳检测以确认对方存在，在通过心跳检测确认不到对方存在时，就接管对应的（共享） resource 。如果突然间，NodeA 和 NodeB 之间的心跳不存在了（如网络断开），而 NodeA 和 NodeB 事实上却都处于 Active 状态，此时 NodeA 要接管 NodeB 的 resource ，同时 NodeB 要接管 NodeA 的 resource ，这时就是脑裂（split-brain）。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;ol&gt;
-&lt;li&gt;双Master架构：非常成熟，使用很普遍，要注意延迟和数据的一致性。&lt;/li&gt;
-&lt;li&gt;PXC: 分布式协议，数据强一致性，并发效率略低，可用性好&lt;/li&gt;
-&lt;li&gt;MHA：各项指标介于M-M和PXC之间，性能无损失，适合读写分离架构。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&#34;mysql-sharding拆分&#34;&gt;MySQL sharding拆分&lt;/h1&gt;
-
-&lt;p&gt;分库(垂直),　分表(水平)的取舍&lt;/p&gt;
-</description>
+      <description>refer
+高可用架构 MySQL高可用方面，目前业界主流依然是基于异步复制的技术，例如Keepalived、MHA、ZooKeeper等，要求数据强一致的场景逐步开始使用分布式协议，这方面的典型代表有PXC、Group Replication、TiDB。下面我们就重点来说说keepalived、MHA和PXC这几种大家用得比较多的架构。
+ 脑裂 （ 一种常见的脑裂情况可以描述如下）比如正常情况下，（集群中的）NodeA 和 NodeB 会通过心跳检测以确认对方存在，在通过心跳检测确认不到对方存在时，就接管对应的（共享） resource 。如果突然间，NodeA 和 NodeB 之间的心跳不存在了（如网络断开），而 NodeA 和 NodeB 事实上却都处于 Active 状态，此时 NodeA 要接管 NodeB 的 resource ，同时 NodeB 要接管 NodeA 的 resource ，这时就是脑裂（split-brain）。   双Master架构：非常成熟，使用很普遍，要注意延迟和数据的一致性。 PXC: 分布式协议，数据强一致性，并发效率略低，可用性好 MHA：各项指标介于M-M和PXC之间，性能无损失，适合读写分离架构。  MySQL sharding拆分 分库(垂直),　分表(水平)的取舍</description>
     </item>
     
     <item>
@@ -376,18 +163,9 @@ row_major = np.zeros((10,10), order=&#39;F&#39;)    # Fortran
       <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://cixuuz.github.io/post/database-index/</guid>
-      <description>
-
-&lt;p&gt;&lt;a href=&#34;http://blog.liuhongnan.com/2017/08/11/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B4%A2%E5%BC%95&amp;amp;&amp;amp;%E4%BA%8B%E5%8A%A1%E7%AE%A1%E7%90%86&amp;amp;&amp;amp;%E7%AD%89%E5%AD%A6%E4%B9%A0%E6%B1%87%E6%80%BB&#34;&gt;数据库索引与事务管理&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;b-tree&#34;&gt;B+ tree&lt;/h1&gt;
-
-&lt;p&gt;B+树是n叉排序树&lt;/p&gt;
-
-&lt;h1 id=&#34;hash-index&#34;&gt;hash index&lt;/h1&gt;
-
-&lt;p&gt;MySQL: innoDB以及MyISAM引擎，均不支持Hash索引&lt;/p&gt;
-</description>
+      <description>数据库索引与事务管理
+B+ tree B+树是n叉排序树
+hash index MySQL: innoDB以及MyISAM引擎，均不支持Hash索引</description>
     </item>
     
     <item>
@@ -396,42 +174,146 @@ row_major = np.zeros((10,10), order=&#39;F&#39;)    # Fortran
       <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://cixuuz.github.io/post/js-es6/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://www.w3cvip.org/topics/47&#34;&gt;ES6&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;let则实际上为JavaScript新增了块级作用域。用它所声明的变量，只在let命令所在的代码块内有效。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;var a = [];
-for (let i = 0; i &amp;lt; 10; i++) {
-a[i] = function () {
-console.log(i);
-};
-}
-a[6](); // 6
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;const用来声明常量。一旦声明，常量的值就不能改变。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;const monent = require(&#39;moment&#39;)
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;arrow function&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;class Animal {
-constructor(){
-    this.type = &#39;animal&#39;
-}
-says(say){
-    setTimeout( () =&amp;gt; {
-        console.log(this.type + &#39; says &#39; + say)
-    }, 1000)
-}
-}
-var animal = new Animal()
-animal.says(&#39;hi&#39;)  //animal says hi
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>ES6
+ let则实际上为JavaScript新增了块级作用域。用它所声明的变量，只在let命令所在的代码块内有效。
+var a = []; for (let i = 0; i &amp;lt; 10; i++) { a[i] = function () { console.log(i); }; } a[6](); // 6  const用来声明常量。一旦声明，常量的值就不能改变。
+const monent = require(&#39;moment&#39;)  arrow function
+class Animal { constructor(){ this.type = &#39;animal&#39; } says(say){ setTimeout( () =&amp;gt; { console.log(this.type + &#39; says &#39; + say) }, 1000) } } var animal = new Animal() animal.says(&#39;hi&#39;) //animal says hi   </description>
+    </item>
+    
+    <item>
+      <title>spark 内存管理</title>
+      <link>https://cixuuz.github.io/post/spark-memory-management/</link>
+      <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/spark-memory-management/</guid>
+      <description>Spark 内存管理的前世今生（上） Spark 内存管理的前世今生（下）</description>
+    </item>
+    
+    <item>
+      <title>statistical learning</title>
+      <link>https://cixuuz.github.io/post/statistical-learning/</link>
+      <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/statistical-learning/</guid>
+      <description>Statistical Learning Videos Book: Fundamentals of Modern Statistical Methods: Substantially Improving Power and Accuracy
+Supervised Learning Regression and classification is classified by its output types. Regression when we predict quantitative outputs, and clas- siﬁcation when we predict qualitative outputs.
+ Least squares assumes f(x) is well approximated by a globally linear function. k-nearest neighbors assumes f(x) is well approximated by a locally constant function.
+ One fact should be clear by now.</description>
+    </item>
+    
+    <item>
+      <title>lcs 08/15</title>
+      <link>https://cixuuz.github.io/post/lcs_0815/</link>
+      <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_0815/</guid>
+      <description>99. Recover Binary Search Tree  travese in order. The result should be sorted ascending. The misplaced larger element will be close to head, while the smaller one will be close to end. For example, 1 2 3 is the in order. But the wrong seq is like 3 2 1. Apparently, 3 &amp;gt; 2 so 3 is the first node. 2 &amp;gt; 1, so 1 is the second one.</description>
+    </item>
+    
+    <item>
+      <title>lcs 08/13</title>
+      <link>https://cixuuz.github.io/post/lcs_0813/</link>
+      <pubDate>Sun, 13 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_0813/</guid>
+      <description>99. Recover Binary Search Tree  travese in order. The result should be sorted ascending. The misplaced larger element will be close to head, while the smaller one will be close to end. For example, 1 2 3 is the in order. But the wrong seq is like 3 2 1. Apparently, 3 &amp;gt; 2 so 3 is the first node. 2 &amp;gt; 1, so 1 is the second one.</description>
+    </item>
+    
+    <item>
+      <title>lcs 08/12</title>
+      <link>https://cixuuz.github.io/post/lcs_0812/</link>
+      <pubDate>Sat, 12 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_0812/</guid>
+      <description>297. Serialize and Deserialize Binary Tree  deque inherits from linkedlist(collection). represent separator and null as a String. string and char are not same. append complete subtree ex &amp;ldquo;1,null,null,&amp;rdquo;   105. Construct Binary Tree from Preorder and Inorder Traversal  recursive solution is straightforward. The only thing is that jump idx to find right start in inorder array. To speed up, we can cache inorder and index in the front.</description>
+    </item>
+    
+    <item>
+      <title>leetcode 102</title>
+      <link>https://cixuuz.github.io/post/lc_102/</link>
+      <pubDate>Tue, 08 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lc_102/</guid>
+      <description>4. Median of Two Sorted Arrays Pure math. Median definition is the median is used for dividing a set into two equal length subsets, that one subset is always greater than the other.
+102. Binary Tree Level Order Traversal  The best way to to iterate tree level by level is to use for loop in Java. (BFS) return null is not same as return; (empty)  public class Solution { public List&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt; levelOrder(TreeNode root) { List&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt; res = new LinkedList&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt;(); Queue&amp;lt;TreeNode&amp;gt; q = new LinkedList&amp;lt;TreeNode&amp;gt;(); if (root == null) return res; q.</description>
+    </item>
+    
+    <item>
+      <title>175. Combine Two Tables</title>
+      <link>https://cixuuz.github.io/post/lc_175/</link>
+      <pubDate>Sun, 25 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lc_175/</guid>
+      <description> 175. Combine Two Tables
+Solution select FirstName, LastName, City, State from person left join address on person.personid = address.personid;
+Summary </description>
+    </item>
+    
+    <item>
+      <title>176. Second Highest Salary</title>
+      <link>https://cixuuz.github.io/post/lc_176/</link>
+      <pubDate>Sun, 25 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lc_176/</guid>
+      <description>176. Second Highest Salary
+Solution select (select salary from employee group by salary order by salary desc limit 1 offset 1) as SecondHighestSalary;
+Summary There is a trick to print null when result is empty.</description>
+    </item>
+    
+    <item>
+      <title>177. Nth Highest Salary</title>
+      <link>https://cixuuz.github.io/post/lc_177/</link>
+      <pubDate>Sun, 25 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lc_177/</guid>
+      <description>177. Nth Highest Salary
+Solution CREATE FUNCTION getNthHighestSalary(N INT) RETURNS INT BEGIN declare m int; set m = N - 1; RETURN ( # Write your MySQL query statement below. select distinct salary from Employee order by salary desc limit 1 offset m ); END
+Summary The LIMIT clause can be used to constrain the number of rows returned by the SELECT statement. LIMIT takes one or two numeric arguments, which must both be nonnegative integer constants (except when using prepared statements).</description>
+    </item>
+    
+    <item>
+      <title>178. Rank Scores</title>
+      <link>https://cixuuz.github.io/post/lc_178/</link>
+      <pubDate>Sun, 25 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lc_178/</guid>
+      <description> 178. Rank Scores
+Solution 1 SELECT Score, @rank := @rank + (@prev &amp;lt;&amp;gt; (@prev := Score)) Rank FROM Scores, (SELECT @rank := 0, @prev := -1) init ORDER BY Score desc
+solution 2 SELECT Score, (SELECT COUNT(DISTINCT Score) FROM Scores as s1 WHERE s1.Score &amp;gt;= s2.Score) As rank FROM Scores as s2 ORDER BY rank;
+一直不知道还能这么嵌套写法
+Summary </description>
+    </item>
+    
+    <item>
+      <title>178. Rank Scores</title>
+      <link>https://cixuuz.github.io/post/lc_180/</link>
+      <pubDate>Sun, 25 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lc_180/</guid>
+      <description> 178. Rank Scores
+Solution 1 SELECT Score, @rank := @rank + (@prev &amp;lt;&amp;gt; (@prev := Score)) Rank FROM Scores, (SELECT @rank := 0, @prev := -1) init ORDER BY Score desc
+solution 2 SELECT Score, (SELECT COUNT(DISTINCT Score) FROM Scores as s1 WHERE s1.Score &amp;gt;= s2.Score) As rank FROM Scores as s2 ORDER BY rank;
+一直不知道还能这么嵌套写法
+Summary </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://cixuuz.github.io/post/airflow_config/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/airflow_config/</guid>
+      <description>enter instance setting up python environment sudo apt-get update
+sudo apt-get install python3-pip
+sudo apt-get install build-essential libssl-dev libffi-dev python-dev
+sudo apt-get install -y python3-venv
+alias py3=&amp;lsquo;source /home/ubuntu/py_envs/py3/bin/activate&amp;rsquo;
+setting airflow export AIRFLOW_HOME=~/nfs/airflow
+python3 -m venv py_envs/py3 pip install &amp;ldquo;airflow[celery, crypto, mysql, password, s3, postgres, slack]&amp;rdquo;
+call this command many times, until it says it&amp;rsquo;s not installed pip uninstall librabbitmq
+https://github.com/celery/celery/issues/3675
+rabbitmq slack https://slack.com/api/oauth.access?client_id=4b39e9-752c4&amp;amp;client_secret=33fea0113f5b1&amp;amp;code=ccdaa72ad</description>
     </item>
     
   </channel>
