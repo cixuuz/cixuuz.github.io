@@ -6,10 +6,28 @@
     <description>Recent content on Chen Tong</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 29 Aug 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 02 Sep 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://cixuuz.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>leetcode summary 09/02 (10)</title>
+      <link>https://cixuuz.github.io/post/lcs_0902/</link>
+      <pubDate>Sat, 02 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_0902/</guid>
+      <description>617. Merge Two Binary Trees  dfs   606. Construct String from Binary Tree  right can be omitted in some case   553. Optimal Division  math: x1 must be numerator and x2 must go to denominator.   545. Boundary of Binary Tree  wrong answer: [37,-34,-48,null,-100,-100,48,null,null,null,null,-54,null,-71,-22,null,null,null,8] [1] [0, null, 0, 0] neat solution of one traversal:  node.left is left bound if node is left bound; node.</description>
+    </item>
+    
+    <item>
+      <title>leetcode summary 09/01</title>
+      <link>https://cixuuz.github.io/post/lcs_0901/</link>
+      <pubDate>Fri, 01 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_0901/</guid>
+      <description> 662. Maximum Width of Binary Tree  iterative: save index of each node while queue nodes. recursive: dfs, keep a array of left most nodes.   640. Solve the Equation  corner cases:  &amp;ldquo;0x=0&amp;rdquo; &amp;ldquo;x=-x&amp;rdquo; &amp;ldquo;x=-1&amp;rdquo; &amp;ldquo;0x=-x&amp;rdquo;    </description>
+    </item>
     
     <item>
       <title>Java::Comparator</title>
@@ -325,6 +343,15 @@ python3 -m venv py_envs/py3 pip install &amp;ldquo;airflow[celery, crypto, mysql
 call this command many times, until it says it&amp;rsquo;s not installed pip uninstall librabbitmq
 https://github.com/celery/celery/issues/3675
 rabbitmq slack https://slack.com/api/oauth.access?client_id=4b39e9-752c4&amp;amp;client_secret=33fea0113f5b1&amp;amp;code=ccdaa72ad</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://cixuuz.github.io/post/ds-jd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/ds-jd/</guid>
+      <description>PhD in Computer Science, Computational Linguistics, or related field preferred, or Master’s degree with 2+ years’ of relevant industry experience Proficient programming skills in a high-level language (e.g. Java, Scala, Python, C/C++, Perl, Matlab, R) Experience with statistical data analysis, experimental design, and hypotheses validation Familiarity with probabilistic models and an understanding of the mathematical concepts underlying machine learning methods Project-based experience with some of the following tools: Applied machine learning (e.</description>
     </item>
     
     <item>

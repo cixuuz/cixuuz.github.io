@@ -3,7 +3,7 @@
 
     <head>
 
-        <title>statistical learning</title>
+        <title>leetcode summary 09/02 (10)</title>
 
         <style>
 
@@ -71,7 +71,7 @@
 
                 <div class="navbar-header">
 
-                    <a class="navbar-brand visible-xs" href="#">statistical learning</a>
+                    <a class="navbar-brand visible-xs" href="#">leetcode summary 09/02 (10)</a>
 
                     <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
                         <span class="icon-bar"></span>
@@ -124,9 +124,9 @@
 
     
 
-        <h4><a href="/post/statistical-learning/">statistical learning</a></h4>
+        <h4><a href="/post/lcs_0902/">leetcode summary 09/02 (10)</a></h4>
 
-        <h5>August 20, 2017</h5>
+        <h5>September 2, 2017</h5>
 
         
 
@@ -137,33 +137,82 @@
 
     <br> <div class="text-justify">
 
-<p><a href="https://www.r-bloggers.com/in-depth-introduction-to-machine-learning-in-15-hours-of-expert-videos/">Statistical Learning</a>
-<a href="https://www.r-bloggers.com/in-depth-introduction-to-machine-learning-in-15-hours-of-expert-videos/">Videos</a>
-Book: Fundamentals of Modern Statistical Methods: Substantially Improving Power and Accuracy</p>
-
-<h1 id="supervised-learning">Supervised Learning</h1>
-
-<p>Regression and classification is classified by its output types. Regression when we predict quantitative outputs, and clas- siﬁcation when we predict qualitative outputs.</p>
+<h1 id="617-merge-two-binary-trees">617. Merge Two Binary Trees</h1>
 
 <ul>
-<li>Least squares assumes f(x) is well approximated by a globally linear function.</li>
-
-<li><p>k-nearest neighbors assumes f(x) is well approximated by a locally constant function.</p></li>
-
-<li><p>One fact should be clear by now. Any method that attempts to pro- duce locally varying functions in small isotropic neighborhoods will run into problems in high dimensions—again the curse of dimensionality. And conversely, all methods that overcome the dimensionality problems have an associated—and often implicit or adaptive—metric for measuring neighbor- hoods, which basically does not allow the neighborhood to be simultane- ously small in all directions.</p></li>
+<li>dfs
+<script src="//gist.github.com/cixuuz/922ad14093f05c7f60fdbf358e5ed4a7.js"></script></li>
 </ul>
 
-<h1 id="linear-regression">Linear Regression</h1>
+<h1 id="606-construct-string-from-binary-tree">606. Construct String from Binary Tree</h1>
 
 <ul>
-<li>The linear model either assumes that the regression function E(Y |X) is linear, or that the linear model is a reasonable approximation.</li>
+<li>right can be omitted in some case
+<script src="//gist.github.com/cixuuz/a4df270691590fc1856d033045cca77f.js"></script></li>
 </ul>
 
-<p>Poisson Distribution</p>
+<h1 id="553-optimal-division">553. Optimal Division</h1>
 
-<p>test: (x^2)
-$$x^2$$
-[x^2]</p>
+<ul>
+<li>math: x1 must be numerator and x2 must go to denominator.
+<script src="//gist.github.com/cixuuz/786cb318ef08113a097d84b77ab2f478.js"></script></li>
+</ul>
+
+<h1 id="545-boundary-of-binary-tree">545. Boundary of Binary Tree</h1>
+
+<ul>
+<li>wrong answer:
+[37,-34,-48,null,-100,-100,48,null,null,null,null,-54,null,-71,-22,null,null,null,8]
+[1]
+[0, null, 0, 0]</li>
+<li>neat solution of one traversal:
+
+<ol>
+<li>node.left is left bound if node is left bound;</li>
+<li>node.right could also be left bound if node is left bound &amp;&amp; node has no right child;</li>
+<li>Same applys for right bound;</li>
+<li>if node is left bound, add it before 2 child - pre order;</li>
+<li>if node is right bound, add it after 2 child - post order;</li>
+<li>A leaf node that is neither left or right bound belongs to the bottom line;</li>
+</ol></li>
+</ul>
+
+<script src="//gist.github.com/cixuuz/7bb75cf07ba80d3bbd5e9300d08cfa2f.js"></script>
+
+<h1 id="538-convert-bst-to-greater-tree">538. Convert BST to Greater Tree</h1>
+
+<ul>
+<li>dfs: need to pass mutable int array</li>
+<li>iterative: stack
+<script src="//gist.github.com/cixuuz/0bf4b051ae70b672422594c09e39921e.js"></script></li>
+</ul>
+
+<h1 id="537-complex-number-multiplication">537. Complex Number Multiplication</h1>
+
+<ul>
+<li>parseInt and split and stream
+<script src="//gist.github.com/cixuuz/09f1d677a6e3c21d6fa08262e48d9515.js"></script></li>
+</ul>
+
+<h1 id="536-construct-binary-tree-from-string">536. Construct Binary Tree from String</h1>
+
+<ul>
+<li>split into three part
+<script src="//gist.github.com/cixuuz/8f3bdf4db4f33d43d4bb2f50eaacb587.js"></script></li>
+</ul>
+
+<h1 id="535-encode-and-decode-tinyurl">535. Encode and Decode TinyURL</h1>
+
+<h1 id="156-binary-tree-upside-down">156. Binary Tree Upside Down</h1>
+
+<script src="//gist.github.com/cixuuz/3c3a0d161eecbd19aef0b39111a1958b.js"></script>
+
+<h1 id="255-verify-preorder-sequence-in-binary-search-tree">255. Verify Preorder Sequence in Binary Search Tree</h1>
+
+<ul>
+<li>example, [4,2,3,1] cannot be bst.
+<script src="//gist.github.com/cixuuz/8b2352e26a80b7da6736ccc99f03408f.js"></script></li>
+</ul>
 </div>
 
     
