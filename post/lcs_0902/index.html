@@ -201,7 +201,28 @@
 <script src="//gist.github.com/cixuuz/8f3bdf4db4f33d43d4bb2f50eaacb587.js"></script></li>
 </ul>
 
-<h1 id="535-encode-and-decode-tinyurl">535. Encode and Decode TinyURL</h1>
+<h1 id="534-design-tinyurl-and-535-encode-and-decode-tinyurl">534. Design TinyURL and 535. Encode and Decode TinyURL</h1>
+
+<ol>
+<li>How many unique identifiers possible? Will you run out of unique URLs?</li>
+<li>Should the identifier be increment or not? Which is easier to design? Pros and cons?</li>
+<li>Mapping an identifier to an URL and its reversal - Does this problem ring a bell to you?</li>
+<li>How do you store the URLs? Does a simple flat file database work?</li>
+<li>What is the bottleneck of the system? Is it read-heavy or write-heavy?</li>
+<li>Estimate the maximum number of URLs a single machine can store.</li>
+<li>Estimate the maximum number of queries per second (QPS) for decoding a shortened URL in a single machine.</li>
+<li>How would you scale the service? For example, a viral link which is shared in social media could result in a peak QPS at a moment&rsquo;s notice.</li>
+<li>How could you handle redundancy? i,e, if a server is down, how could you ensure the service is still operational?</li>
+<li>Keep URLs forever or prune, pros/cons? How we do pruning?</li>
+<li>What API would you provide to a third-party developer?</li>
+<li>If you can enable caching, what would you cache and what&rsquo;s the expiry time?</li>
+</ol>
+
+<h2 id="reference">reference</h2>
+
+<ol>
+<li><a href="https://segmentfault.com/a/1190000006140476">https://segmentfault.com/a/1190000006140476</a></li>
+</ol>
 
 <h1 id="156-binary-tree-upside-down">156. Binary Tree Upside Down</h1>
 
@@ -213,6 +234,18 @@
 <li>example, [4,2,3,1] cannot be bst.
 <script src="//gist.github.com/cixuuz/8b2352e26a80b7da6736ccc99f03408f.js"></script></li>
 </ul>
+
+<h1 id="671-second-minimum-node-in-a-binary-tree">671. Second Minimum Node In a Binary Tree</h1>
+
+<script src="//gist.github.com/cixuuz/a675e3a3893a2d32accfff1386fe60bd.js"></script>
+
+<h1 id="669-trim-a-binary-search-tree">669. Trim a Binary Search Tree</h1>
+
+<script src="//gist.github.com/cixuuz/580bd4834118cd291913828e96d71180.js"></script>
+
+<h1 id="670-maximum-swap">670. Maximum Swap</h1>
+
+<script src="//gist.github.com/cixuuz/e6610f6f6f026c04bf15d22d3eff2aa9.js"></script>
 </div>
 
     
