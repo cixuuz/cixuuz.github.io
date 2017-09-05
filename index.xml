@@ -6,18 +6,47 @@
     <description>Recent content on Chen Tong</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 03 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 05 Sep 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://cixuuz.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>leetcode summary 09/03 (10)</title>
+      <title>Algorithm - leetcode</title>
+      <link>https://cixuuz.github.io/post/algorithm_leetcode/</link>
+      <pubDate>Tue, 05 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/algorithm_leetcode/</guid>
+      <description> 508 Most Frequent Subtree Sum
+516 Longest Palindromic Subsequence
+517 Super Washing Machines </description>
+    </item>
+    
+    <item>
+      <title>leetcode summary 09/05</title>
+      <link>https://cixuuz.github.io/post/lcs_0905/</link>
+      <pubDate>Tue, 05 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_0905/</guid>
+      <description> 517 Super Washing Machines 516 Longest Palindromic Subsequence 508 Most Frequent Subtree Sum  postOrder and check count   </description>
+    </item>
+    
+    <item>
+      <title>leetcode summary 09/04</title>
+      <link>https://cixuuz.github.io/post/lcs_0904/</link>
+      <pubDate>Mon, 04 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_0904/</guid>
+      <description> 532. K-diff Pairs in an Array  corner case, length less than 2 and negative k.  variant of two sum: O(1) space  529 Minesweeper  dfs and save all sum   </description>
+    </item>
+    
+    <item>
+      <title>leetcode summary 09/03</title>
       <link>https://cixuuz.github.io/post/lcs_0903/</link>
       <pubDate>Sun, 03 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://cixuuz.github.io/post/lcs_0903/</guid>
-      <description> 270. Closest Binary Search Tree Value  recursive: pass pre node value when null iterative: similar dfs   272. Closest Binary Search Tree Value II  inorder traverse all nodes and get k nearest   285. Inorder Successor in BST  read carefully   298. Binary Tree Longest Consecutive Sequence  dfs: pass parent value to children and compare values   333. Largest BST Subtree  construct a class to hold size, lower bound, upper bound go in bottom-up   </description>
+      <description> 270. Closest Binary Search Tree Value  recursive: pass pre node value when null iterative: similar dfs   272. Closest Binary Search Tree Value II  inorder traverse all nodes and get k nearest   285. Inorder Successor in BST  read carefully   298. Binary Tree Longest Consecutive Sequence  dfs: pass parent value to children and compare values   333. Largest BST Subtree  construct a class to hold size, lower bound, upper bound go in bottom-up deal with leaves carefully, better use infinit   </description>
     </item>
     
     <item>

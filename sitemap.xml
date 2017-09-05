@@ -3,6 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://cixuuz.github.io/post/algorithm_leetcode/</loc>
+    <lastmod>2017-09-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cixuuz.github.io/post/lcs_0905/</loc>
+    <lastmod>2017-09-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cixuuz.github.io/post/lcs_0904/</loc>
+    <lastmod>2017-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://cixuuz.github.io/post/lcs_0903/</loc>
     <lastmod>2017-09-03T00:00:00+00:00</lastmod>
   </url>
@@ -185,13 +200,13 @@
   
   <url>
     <loc>https://cixuuz.github.io/</loc>
-    <lastmod>2017-09-03T00:00:00+00:00</lastmod>
+    <lastmod>2017-09-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://cixuuz.github.io/post/</loc>
-    <lastmod>2017-09-03T00:00:00+00:00</lastmod>
+    <lastmod>2017-09-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
