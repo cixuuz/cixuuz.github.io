@@ -28,7 +28,7 @@
       <pubDate>Tue, 05 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://cixuuz.github.io/post/lcs_0905/</guid>
-      <description> 517 Super Washing Machines 516 Longest Palindromic Subsequence 508 Most Frequent Subtree Sum  postOrder and check count   </description>
+      <description> 517 Super Washing Machines 516 Longest Palindromic Subsequence  O(2^n) Brute force. If the two ends of a string are the same, then they must be included in the longest palindrome subsequence. Otherwise, both ends cannot be included in the longest palindrome subsequence.   508 Most Frequent Subtree Sum  postOrder and check count   </description>
     </item>
     
     <item>
