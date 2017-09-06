@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Chen Tong</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 05 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 06 Sep 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://cixuuz.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>leetcode summary 09/06</title>
+      <link>https://cixuuz.github.io/post/lcs_0906/</link>
+      <pubDate>Wed, 06 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_0906/</guid>
+      <description> 517 Super Washing Machines 529 Minesweepe  think carefully B and E   647. Palindromic Substrings  memo valid substring from i to j   </description>
+    </item>
     
     <item>
       <title>Algorithm - leetcode</title>
@@ -17,9 +26,13 @@
       <pubDate>Tue, 05 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://cixuuz.github.io/post/algorithm_leetcode/</guid>
-      <description>508 Most Frequent Subtree Sum
-516 Longest Palindromic Subsequence
-517 Super Washing Machines</description>
+      <description> Palindromic Substrings: 2017-09-06
+ K-diff Pairs in an Array: 2017-09-04
+ Minesweepe: 2017-09-06
+ Super Washing Machines: 2017-09-06
+ Longest Palindromic Subsequence: 2017-09-05
+ Most Frequent Subtree Sum: 2017-09-05
+  </description>
     </item>
     
     <item>
@@ -28,7 +41,9 @@
       <pubDate>Tue, 05 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://cixuuz.github.io/post/lcs_0905/</guid>
-      <description> 517 Super Washing Machines 516 Longest Palindromic Subsequence  O(2^n) Brute force. If the two ends of a string are the same, then they must be included in the longest palindrome subsequence. Otherwise, both ends cannot be included in the longest palindrome subsequence.   508 Most Frequent Subtree Sum  postOrder and check count   </description>
+      <description> 516 Longest Palindromic Subsequence  O(2^n) Brute force. If the two ends of a string are the same, then they must be included in the longest palindrome subsequence. Otherwise, both ends cannot be included in the longest palindrome subsequence.
+ O(n^2) memo the result from left to right. also rewrite in dp fashion 
+  508 Most Frequent Subtree Sum  postOrder and check count   </description>
     </item>
     
     <item>
@@ -37,7 +52,7 @@
       <pubDate>Mon, 04 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://cixuuz.github.io/post/lcs_0904/</guid>
-      <description> 532. K-diff Pairs in an Array  corner case, length less than 2 and negative k.  variant of two sum: O(1) space  529 Minesweeper  dfs and save all sum   </description>
+      <description> 532. K-diff Pairs in an Array  corner case, length less than 2 and negative k.  variant of two sum: O(1) space  </description>
     </item>
     
     <item>
