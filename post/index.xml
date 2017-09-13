@@ -37,7 +37,7 @@
       <pubDate>Wed, 13 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://cixuuz.github.io/post/lcs_0913/</guid>
-      <description> 409. Longest Palindrome  </description>
+      <description> 409. Longest Palindrome  use as many as char in odds add 1 if any odd exists   479. Largest Palindrome Product  enumerate all situation from max to min   266. Palindrome Permutation  only one odd count   267. Palindrome Permutation II </description>
     </item>
     
     <item>
@@ -64,7 +64,17 @@
       <pubDate>Tue, 05 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://cixuuz.github.io/post/algorithm_leetcode/</guid>
-      <description>  Palindromic Substrings: 2017-09-06   Find the Closest Palindrome: 2017-09-06   K-diff Pairs in an Array: 2017-09-04   Minesweepe: 2017-09-06   Super Washing Machines: 2017-09-06   Longest Palindromic Subsequence: 2017-09-05   Most Frequent Subtree Sum: 2017-09-05   Longest Palindrome: 2017-09-13   Palindrome Pairs: 2017-09-07   </description>
+      <description>647. Palindromic Substrings 2017-09-06
+564. Find the Closest Palindrome 2017-09-06
+532. K-diff Pairs in an Array 2017-09-04
+529. Minesweepe 2017-09-06
+517. Super Washing Machines 2017-09-06
+516. Longest Palindromic Subsequence 2017-09-05
+508. Most Frequent Subtree Sum 2017-09-05
+479. Largest Palindrome Product 2017-09-13
+409. Longest Palindrome 2017-09-13
+336. Palindrome Pairs 2017-09-07
+266. Palindrome Permutation 2017-09-13</description>
     </item>
     
     <item>
