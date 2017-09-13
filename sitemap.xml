@@ -3,12 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://cixuuz.github.io/post/ds_path/</loc>
+    <loc>https://cixuuz.github.io/post/ds_summary/</loc>
     <lastmod>2017-09-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/post/ml_metrics/</loc>
+    <loc>https://cixuuz.github.io/post/ds_metrics/</loc>
+    <lastmod>2017-09-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cixuuz.github.io/post/lcs_0913/</loc>
     <lastmod>2017-09-13T00:00:00+00:00</lastmod>
   </url>
   
@@ -206,7 +211,7 @@
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/post/ds-summary/</loc>
+    <loc>https://cixuuz.github.io/post/ds-suggest/</loc>
   </url>
   
   <url>

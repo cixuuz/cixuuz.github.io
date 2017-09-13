@@ -13,22 +13,31 @@
     
     <item>
       <title>Data Science Path</title>
-      <link>https://cixuuz.github.io/post/ds_path/</link>
+      <link>https://cixuuz.github.io/post/ds_summary/</link>
       <pubDate>Wed, 13 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://cixuuz.github.io/post/ds_path/</guid>
+      <guid>https://cixuuz.github.io/post/ds_summary/</guid>
       <description>Machine Learning Machine Learning Supervised Learning Classification (qualitative) K-NN Logistic Regression Neural Networks error analysis skewed data F1 score = 2PR/(P+R) accuracy precision recall learning curve SVM Kernal Parameters C sigma Regression (quantitative) Linear Regression validation sensitivity compactness Ensemble Learning decrease variance (bagging), bias (boosting), or improve predictions (stacking). The basic motivation of sequential methods is to exploit the dependence between the base learners. The basic motivation of parallel methods is to exploit independence between the base learners since the error can be reduced dramatically by averaging.</description>
     </item>
     
     <item>
       <title>Metrics selection</title>
-      <link>https://cixuuz.github.io/post/ml_metrics/</link>
+      <link>https://cixuuz.github.io/post/ds_metrics/</link>
       <pubDate>Wed, 13 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://cixuuz.github.io/post/ml_metrics/</guid>
+      <guid>https://cixuuz.github.io/post/ds_metrics/</guid>
       <description>Definitions  A type I error occurs when the null hypothesis (H0) is true, but is rejected. Also known as false positive, where positive means rejection of a null hypothesis.
  A type II error occurs when the null hypothesis is false, but erroneously fails to be rejected. Also called as false negative, where negative refers to retaining a null hypothesis.
- TPR (True Positive Rate) = \( # True positives \over # positives \) = Recall = \( TP \over (TP+FN) \)</description>
+ TPR (True Positive Rate) = # True positives / # positives = Recall = \( TP \over (TP+FN) \)</description>
+    </item>
+    
+    <item>
+      <title>leetcode summary 09/13</title>
+      <link>https://cixuuz.github.io/post/lcs_0913/</link>
+      <pubDate>Wed, 13 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_0913/</guid>
+      <description> 409. Longest Palindrome  </description>
     </item>
     
     <item>
@@ -55,15 +64,7 @@
       <pubDate>Tue, 05 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://cixuuz.github.io/post/algorithm_leetcode/</guid>
-      <description> Palindromic Substrings: 2017-09-06
- Find the Closest Palindrome: 2017-09-06
- K-diff Pairs in an Array: 2017-09-04
- Minesweepe: 2017-09-06
- Super Washing Machines: 2017-09-06
- Longest Palindromic Subsequence: 2017-09-05
- Most Frequent Subtree Sum: 2017-09-05
- Palindrome Pairs: 2017-09-07
-  </description>
+      <description>  Palindromic Substrings: 2017-09-06   Find the Closest Palindrome: 2017-09-06   K-diff Pairs in an Array: 2017-09-04   Minesweepe: 2017-09-06   Super Washing Machines: 2017-09-06   Longest Palindromic Subsequence: 2017-09-05   Most Frequent Subtree Sum: 2017-09-05   Longest Palindrome: 2017-09-13   Palindrome Pairs: 2017-09-07   </description>
     </item>
     
     <item>
@@ -440,10 +441,10 @@ rabbitmq slack https://slack.com/api/oauth.access?client_id=4b39e9-752c4&amp;amp
     
     <item>
       <title></title>
-      <link>https://cixuuz.github.io/post/ds-summary/</link>
+      <link>https://cixuuz.github.io/post/ds-suggest/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://cixuuz.github.io/post/ds-summary/</guid>
+      <guid>https://cixuuz.github.io/post/ds-suggest/</guid>
       <description>Strictly speaking, there is no such thing as &amp;ldquo;data science&amp;rdquo; (see What is data science and what is it not? ). See also: Vardi, Science has only two legs: http://portal.acm.org/ft_gateway...
 Here are some resources I&amp;rsquo;ve collected about working with data, I hope you find them useful (note: I&amp;rsquo;m an undergrad student, this is not an expert opinion in any way).
 1) Learn about matrix factorizations
