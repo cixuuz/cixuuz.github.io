@@ -26,9 +26,9 @@
       <pubDate>Wed, 13 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://cixuuz.github.io/post/ml_metrics/</guid>
-      <description> Definitions TPR (True Positive Rate) = \( {# True positives} \over {# positives} \) = Recall = \( TP \over (TP+FN) \)
-FPR (False Positive Rate) = \( {# False Positives} \over {# negatives} \) = \( FP \over (FP+TN) \)
-reference  What metrics should be used for evaluating a model on an imbalanced data set? (precision + recall or ROC=TPR+FPR)  </description>
+      <description>Definitions  A type I error occurs when the null hypothesis (H0) is true, but is rejected. Also known as false positive, where positive means rejection of a null hypothesis.
+ A type II error occurs when the null hypothesis is false, but erroneously fails to be rejected. Also called as false negative, where negative refers to retaining a null hypothesis.
+ TPR (True Positive Rate) = \( # True positives \over # positives \) = Recall = \( TP \over (TP+FN) \)</description>
     </item>
     
     <item>
