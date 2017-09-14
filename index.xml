@@ -6,10 +6,19 @@
     <description>Recent content on Chen Tong</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 13 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 14 Sep 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://cixuuz.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>leetcode summary 09/14</title>
+      <link>https://cixuuz.github.io/post/lcs_0914/</link>
+      <pubDate>Thu, 14 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_0914/</guid>
+      <description> 234. Palindrome Linked List  reverse half and compare then reverse back   </description>
+    </item>
     
     <item>
       <title>Data Science Path</title>
@@ -37,7 +46,7 @@
       <pubDate>Wed, 13 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://cixuuz.github.io/post/lcs_0913/</guid>
-      <description> 409. Longest Palindrome  use as many as char in odds add 1 if any odd exists   479. Largest Palindrome Product  enumerate all situation from max to min   266. Palindrome Permutation  only one odd count   267. Palindrome Permutation II </description>
+      <description> 409. Longest Palindrome  use as many as char in odds add 1 if any odd exists   479. Largest Palindrome Product  enumerate all situation from max to min   266. Palindrome Permutation  only one odd count   267. Palindrome Permutation II  </description>
     </item>
     
     <item>
@@ -74,7 +83,9 @@
 479. Largest Palindrome Product 2017-09-13
 409. Longest Palindrome 2017-09-13
 336. Palindrome Pairs 2017-09-07
-266. Palindrome Permutation 2017-09-13</description>
+267. Palindrome Permutation II 2017-09-13
+266. Palindrome Permutation 2017-09-13
+234. Palindrome Linked List 2017-09-14</description>
     </item>
     
     <item>
