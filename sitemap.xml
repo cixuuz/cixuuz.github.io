@@ -3,6 +3,46 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://cixuuz.github.io/post/python-pandas/</loc>
+    <lastmod>2017-09-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cixuuz.github.io/post/java-jvm/</loc>
+    <lastmod>2017-09-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cixuuz.github.io/post/distributed_system/</loc>
+    <lastmod>2017-09-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cixuuz.github.io/post/spark-install/</loc>
+    <lastmod>2017-09-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cixuuz.github.io/post/sql-newsql/</loc>
+    <lastmod>2017-09-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cixuuz.github.io/post/lcs_0918/</loc>
+    <lastmod>2017-09-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cixuuz.github.io/post/performance_reviews/</loc>
+    <lastmod>2017-09-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cixuuz.github.io/post/lcs_0915/</loc>
+    <lastmod>2017-09-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://cixuuz.github.io/post/lcs_0914/</loc>
     <lastmod>2017-09-14T00:00:00+00:00</lastmod>
   </url>
@@ -230,13 +270,13 @@
   
   <url>
     <loc>https://cixuuz.github.io/</loc>
-    <lastmod>2017-09-14T00:00:00+00:00</lastmod>
+    <lastmod>2017-09-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://cixuuz.github.io/post/</loc>
-    <lastmod>2017-09-14T00:00:00+00:00</lastmod>
+    <lastmod>2017-09-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

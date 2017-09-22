@@ -6,10 +6,85 @@
     <description>Recent content in Posts on Chen Tong</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 14 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 22 Sep 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://cixuuz.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>python pandas</title>
+      <link>https://cixuuz.github.io/post/python-pandas/</link>
+      <pubDate>Fri, 22 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/python-pandas/</guid>
+      <description>aggragate in pandas https://pythonforbiologists.com/when-to-use-aggregatefiltertransform-in-pandas/</description>
+    </item>
+    
+    <item>
+      <title>JVM</title>
+      <link>https://cixuuz.github.io/post/java-jvm/</link>
+      <pubDate>Thu, 21 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/java-jvm/</guid>
+      <description>make a JVM</description>
+    </item>
+    
+    <item>
+      <title>Path to Distributed System</title>
+      <link>https://cixuuz.github.io/post/distributed_system/</link>
+      <pubDate>Thu, 21 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/distributed_system/</guid>
+      <description>Google papers(GFS/BigTable/Spanner/F1)
+Consensus algorithms(Raft/Paxos)
+Distributed computing sys (spark/dremel/presto)
+newSql(tiDB)</description>
+    </item>
+    
+    <item>
+      <title>install spark</title>
+      <link>https://cixuuz.github.io/post/spark-install/</link>
+      <pubDate>Thu, 21 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/spark-install/</guid>
+      <description>install spark https://www.davidadrian.cc/posts/2017/08/how-to-spark-cluster/</description>
+    </item>
+    
+    <item>
+      <title>newSQL</title>
+      <link>https://cixuuz.github.io/post/sql-newsql/</link>
+      <pubDate>Thu, 21 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/sql-newsql/</guid>
+      <description>newSQL</description>
+    </item>
+    
+    <item>
+      <title>leetcode summary 09/18</title>
+      <link>https://cixuuz.github.io/post/lcs_0918/</link>
+      <pubDate>Mon, 18 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_0918/</guid>
+      <description> 132. Palindrome Partitioning II  dp: current status[j] depends on previous status[0, i-1] + isPalidrom[i, j]   459. Repeated Substring Pattern  </description>
+    </item>
+    
+    <item>
+      <title>Performance_reviews</title>
+      <link>https://cixuuz.github.io/post/performance_reviews/</link>
+      <pubDate>Fri, 15 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/performance_reviews/</guid>
+      <description>How do Individual Contributors Get Stuck?</description>
+    </item>
+    
+    <item>
+      <title>leetcode summary 09/15</title>
+      <link>https://cixuuz.github.io/post/lcs_0915/</link>
+      <pubDate>Fri, 15 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_0915/</guid>
+      <description> 131. Palindrome Partitioning  list all possible partitions and check can cache palindrome   </description>
+    </item>
     
     <item>
       <title>leetcode summary 09/14</title>
@@ -17,7 +92,7 @@
       <pubDate>Thu, 14 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://cixuuz.github.io/post/lcs_0914/</guid>
-      <description> 234. Palindrome Linked List  reverse half and compare then reverse back   </description>
+      <description> 234. Palindrome Linked List  reverse half and compare then reverse back   5. Longest Palindromic Substring  9. Palindrome Number  125. Valid Palindrome  Character.isLetterOrDigit() StringBuilder.reverse() is mutable   214. Shortest Palindrome  brute force LTE small range when compare   </description>
     </item>
     
     <item>
@@ -85,7 +160,9 @@
 336. Palindrome Pairs 2017-09-07
 267. Palindrome Permutation II 2017-09-13
 266. Palindrome Permutation 2017-09-13
-234. Palindrome Linked List 2017-09-14</description>
+234. Palindrome Linked List 2017-09-14
+214. Shortest Palindrome 2017-09-14
+125. Valid Palindrome 2017-09-14</description>
     </item>
     
     <item>
