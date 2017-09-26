@@ -6,10 +6,40 @@
     <description>Recent content in Posts on Chen Tong</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 22 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 26 Sep 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://cixuuz.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>machine learning xgboost</title>
+      <link>https://cixuuz.github.io/post/ml-xgboost/</link>
+      <pubDate>Tue, 26 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/ml-xgboost/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>leetcode summary 09/23</title>
+      <link>https://cixuuz.github.io/post/lcs_0923/</link>
+      <pubDate>Sat, 23 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_0923/</guid>
+      <description> 677. Map Sum Pairs  Trie   682. Baseball Game  </description>
+    </item>
+    
+    <item>
+      <title>interview ds</title>
+      <link>https://cixuuz.github.io/post/interview-ds/</link>
+      <pubDate>Fri, 22 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/interview-ds/</guid>
+      <description>Probability/Statistics Questions 1. conditional probability 如何判断独立性？ 2. bayes rule problem: base rate fallacy
+ sampling: bootstrap, reservoir
+ A/B test, p value
+ Poisson, Binomial以及Exponential queuing question: The most efficient way to queue is single line, multiple servers. It is efficient because: You don&amp;rsquo;t have servers being idle because their queue is empty even though others are full. You don&amp;rsquo;t have stalls in service due to a single customer being slow All customers wait approximately the same time.</description>
+    </item>
     
     <item>
       <title>python pandas</title>
@@ -144,11 +174,13 @@ newSql(tiDB)</description>
     
     <item>
       <title>Algorithm - leetcode</title>
-      <link>https://cixuuz.github.io/post/algorithm_leetcode/</link>
+      <link>https://cixuuz.github.io/post/algorithm-leetcode/</link>
       <pubDate>Tue, 05 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://cixuuz.github.io/post/algorithm_leetcode/</guid>
-      <description>647. Palindromic Substrings 2017-09-06
+      <guid>https://cixuuz.github.io/post/algorithm-leetcode/</guid>
+      <description>682. Baseball Game 2017-09-23
+677. Map Sum Pairs 2017-09-23
+647. Palindromic Substrings 2017-09-06
 564. Find the Closest Palindrome 2017-09-06
 532. K-diff Pairs in an Array 2017-09-04
 529. Minesweepe 2017-09-06
@@ -156,13 +188,11 @@ newSql(tiDB)</description>
 516. Longest Palindromic Subsequence 2017-09-05
 508. Most Frequent Subtree Sum 2017-09-05
 479. Largest Palindrome Product 2017-09-13
+459. Repeated Substring Pattern 2017-09-18
 409. Longest Palindrome 2017-09-13
 336. Palindrome Pairs 2017-09-07
 267. Palindrome Permutation II 2017-09-13
-266. Palindrome Permutation 2017-09-13
-234. Palindrome Linked List 2017-09-14
-214. Shortest Palindrome 2017-09-14
-125. Valid Palindrome 2017-09-14</description>
+266. Palindrome Permutation 2017-09-13</description>
     </item>
     
     <item>
