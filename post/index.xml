@@ -6,10 +6,38 @@
     <description>Recent content in Posts on Chen Tong</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 26 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 27 Sep 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://cixuuz.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>leetcode summary 09/27</title>
+      <link>https://cixuuz.github.io/post/lcs_0927/</link>
+      <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_0927/</guid>
+      <description> 451. Sort Characters By Frequency  bucket sort   </description>
+    </item>
+    
+    <item>
+      <title>leetcode summary 09/27</title>
+      <link>https://cixuuz.github.io/post/lcs_0928/</link>
+      <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_0928/</guid>
+      <description> 675. Cut Off Trees for Golf Event 153. Find Minimum in Rotated Sorted Array  bs   </description>
+    </item>
+    
+    <item>
+      <title>feature engineer</title>
+      <link>https://cixuuz.github.io/post/ds-feature-engineer/</link>
+      <pubDate>Tue, 26 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/ds-feature-engineer/</guid>
+      <description> Onehot encoding One of k encoding on an array of lenght k
+hash encoding label encoding  non-linear tree-based not increase dimensionality  count encoding </description>
+    </item>
     
     <item>
       <title>machine learning xgboost</title>
@@ -189,10 +217,9 @@ newSql(tiDB)</description>
 508. Most Frequent Subtree Sum 2017-09-05
 479. Largest Palindrome Product 2017-09-13
 459. Repeated Substring Pattern 2017-09-18
+451. Sort Characters By Frequency 2017-09-27
 409. Longest Palindrome 2017-09-13
-336. Palindrome Pairs 2017-09-07
-267. Palindrome Permutation II 2017-09-13
-266. Palindrome Permutation 2017-09-13</description>
+336. Palindrome Pairs 2017-09-07</description>
     </item>
     
     <item>
