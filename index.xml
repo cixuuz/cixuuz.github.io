@@ -6,10 +6,19 @@
     <description>Recent content on Chen Tong</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 27 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 28 Sep 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://cixuuz.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>leetcode summary 09/28</title>
+      <link>https://cixuuz.github.io/post/lcs_0928/</link>
+      <pubDate>Thu, 28 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_0928/</guid>
+      <description> 153. Find Minimum in Rotated Sorted Array  bs   </description>
+    </item>
     
     <item>
       <title>leetcode summary 09/27</title>
@@ -22,11 +31,11 @@
     
     <item>
       <title>leetcode summary 09/27</title>
-      <link>https://cixuuz.github.io/post/lcs_0928/</link>
+      <link>https://cixuuz.github.io/post/lcs_0929/</link>
       <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://cixuuz.github.io/post/lcs_0928/</guid>
-      <description> 675. Cut Off Trees for Golf Event 153. Find Minimum in Rotated Sorted Array  bs   </description>
+      <guid>https://cixuuz.github.io/post/lcs_0929/</guid>
+      <description> 675. Cut Off Trees for Golf Event  heap and bfs   </description>
     </item>
     
     <item>
