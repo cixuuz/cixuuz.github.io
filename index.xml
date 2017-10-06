@@ -6,10 +6,46 @@
     <description>Recent content on Chen Tong</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 28 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 05 Oct 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://cixuuz.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>leetcode summary 10/05</title>
+      <link>https://cixuuz.github.io/post/lcs_1005/</link>
+      <pubDate>Thu, 05 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_1005/</guid>
+      <description> 369. Plus One Linked List  reverse, add, reverse dfs return carry two points to the change part   </description>
+    </item>
+    
+    <item>
+      <title>leetcode summary 10/04</title>
+      <link>https://cixuuz.github.io/post/lcs_1004/</link>
+      <pubDate>Wed, 04 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_1004/</guid>
+      <description> 163. Missing Ranges  overflow   </description>
+    </item>
+    
+    <item>
+      <title>Programming multithreading</title>
+      <link>https://cixuuz.github.io/post/programming-multithreading/</link>
+      <pubDate>Mon, 02 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/programming-multithreading/</guid>
+      <description>Semaphores: It&amp;rsquo;s simply a way to limit the number of consumers for a specific resource. For example, to limit the number of simultaneous calls to a database in an application.</description>
+    </item>
+    
+    <item>
+      <title>leetcode summary 09/29</title>
+      <link>https://cixuuz.github.io/post/lcs_0929/</link>
+      <pubDate>Fri, 29 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_0929/</guid>
+      <description> 675. Cut Off Trees for Golf Event  heap and bfs   </description>
+    </item>
     
     <item>
       <title>leetcode summary 09/28</title>
@@ -30,22 +66,14 @@
     </item>
     
     <item>
-      <title>leetcode summary 09/27</title>
-      <link>https://cixuuz.github.io/post/lcs_0929/</link>
-      <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://cixuuz.github.io/post/lcs_0929/</guid>
-      <description> 675. Cut Off Trees for Golf Event  heap and bfs   </description>
-    </item>
-    
-    <item>
       <title>feature engineer</title>
       <link>https://cixuuz.github.io/post/ds-feature-engineer/</link>
       <pubDate>Tue, 26 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://cixuuz.github.io/post/ds-feature-engineer/</guid>
       <description> Onehot encoding One of k encoding on an array of lenght k
-hash encoding label encoding  non-linear tree-based not increase dimensionality  count encoding </description>
+hash encoding label encoding  non-linear tree-based not increase dimensionality  count encoding reducing dimensonality https://medium.com/towards-data-science/reducing-dimensionality-from-dimensionality-reduction-techniques-f658aec24dfe
+ PCA t-SNE Auto Encoders  </description>
     </item>
     
     <item>
