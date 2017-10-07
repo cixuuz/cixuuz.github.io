@@ -72,7 +72,8 @@
       
       <guid>https://cixuuz.github.io/post/ds-feature-engineer/</guid>
       <description> Onehot encoding One of k encoding on an array of lenght k
-hash encoding label encoding  non-linear tree-based not increase dimensionality  count encoding reducing dimensonality https://medium.com/towards-data-science/reducing-dimensionality-from-dimensionality-reduction-techniques-f658aec24dfe
+hash encoding label encoding  non-linear tree-based not increase dimensionality  count encoding target encoding encode categorical variables by their ratio of target
+reducing dimensonality https://medium.com/towards-data-science/reducing-dimensionality-from-dimensionality-reduction-techniques-f658aec24dfe
  PCA t-SNE Auto Encoders  </description>
     </item>
     
