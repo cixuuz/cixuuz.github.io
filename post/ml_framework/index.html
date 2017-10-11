@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+    <head>
+
+        <title>Machine Learning Framework</title>
+
+        <style>
+
+    html body {
+        font-family: Lato, sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: red;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+
+
+ <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+ <meta name="generator" content="Hugo 0.29" />
+
+        <meta charset="utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+
+    <body>
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Machine Learning Framework</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/project/">Projects</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:nychent@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/cixuuz/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/cixuuz/"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/chet/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.stackoverflow.com/username/"><i class="fa fa-stack-overflow"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+
+        <h4><a href="/post/ml_framework/">Machine Learning Framework</a></h4>
+
+        <h5>October 7, 2017</h5>
+
+        
+
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+<h1 id="机器学习架构">机器学习架构</h1>
+
+<p><a href="https://mp.weixin.qq.com/s/eQ4CcqhGd070BYSQdonO5g">https://mp.weixin.qq.com/s/eQ4CcqhGd070BYSQdonO5g</a></p>
+
+<p>境界 1：参数可单机存储和更新<br />
+此种境界较为简单，但仍可以使用参数服务器，通过数据并行来加速模型的训练。</p>
+
+<p>境界 2：参数不可单机存储，可以单机更新<br />
+此种情况对应的是一些简单模型，比如 sparse logistic regression；当 feature 的数量突破百亿的时候，LR 的权重参数不太可能在一台机器上完全存下，此时必须使用参数服务器架构对模型参数进行分片。但是注意一点，SGD 的更新公式：</p>
+
+<p>其中可以分开到单个维度进行计算，但是单个维度的 wi=f(w)xi，这里的 f(w) 表示是全部参数 w 的一个函数，具体推导比较简单，这里篇幅所限就不赘述了。只是想说明 worker 在计算梯度的时候可能需要使用到上一轮迭代的所有参数。
+而我们之所以对参数进行分片就是因为我们无法将所有参数存放到一台机器，现在单个 worker 有需要使用所有的参数才能计算某个参数分片的梯度，这不是矛盾吗？可能吗？
+答案是可能的，因为单个样本的 feature 具有很高的稀疏性（sparseness）。例如一个百亿 feature 的模型，单个训练样本往往只在其中很小一部分 feature 上有取值，其他都为 0（假设 feature 取值都已经离散化了）。因此计算 f(w) 的时候可以只拉取不为 0 的 feature 对应的那部分 w 即可。有文章统计，一般这个级别的系统，稀疏性往往在 0.1%（or 0.01%，记得不是很准，大致这样）以下。这样的稀疏性，可以让单机没有任何阻碍的计算 f(w)。
+目前公司开源的 Angel 和 AILab 正在做的系统都处于这个境界。而原生 Spark 还没有达到这个境界，只能在中小规模的圈子里厮混。Angel 改造的基于 Angel 的 Spark 则达到了这个境界。</p>
+
+<p>境界 3：参数不可单机存储，不可单机更新，但无需模型并行<br />
+境界 3 顺延境界 2 而来，当百亿级 feature 且 feature 比较稠密的时候，就需要计算框架进入到这层境界了，此时单个 worker 的能力有限，无法完整加载一个样本，也无法完整计算 f(w)。怎么办呢？其实很简单，学过线性代数的都知道，矩阵可以分块。向量是最简单的矩阵，自然可以切成一段一段的来计算。只是调度器需要支持算符分段而已了。</p>
+
+<p>境界 4：参数不可单机存储，不可单机更新，需要模型并行<br />
+进入到这个层次的计算框架，可以算是世界一流了。可以处理超大规模的神经网络。这也是最典型的应用场景。此时不仅模型的参数不能单机存储，而且同一个迭代内，模型参数之间还有强的依赖关系，可以参见姐夫对 distbelief 的介绍里的模型切分。
+此时首先需要增加一个 coordinator 组件来进行模型并行的 concurrent 控制。同时参数服务器框架需要支持 namespace 切分，coordinator 将依赖关系通过 namespace 来进行表示。
+一般参数间的依赖关系因模型而已，所以较难抽象出通用的 coordinator 来，而必须以某种形式通过脚本 parser 来生产整个计算任务的 DAG 图，然后通过 DAG 调度器来完成。对这个问题的介绍可以参考 Erix Xing 的分享 [5]。</p>
+
+<h1 id="reference">reference</h1>
+
+<p>Wide &amp; Deep Learning for Recommender Systems
+Deep Neural Networks for YouTube Recommendations
+<a href="https://www.zhihu.com/question/53851014">https://www.zhihu.com/question/53851014</a>
+TensorFlow: Large-Scale Machine Learning on Heterogeneous Distributed Systems
+<a href="http://www.jianshu.com/p/00736aa21dc8">http://www.jianshu.com/p/00736aa21dc8</a>
+Large Scale Distributed Deep Networks
+MapReduce: Simplified Data Processing on Large Clusters
+Resilient Distributed Datasets: A Fault-Tolerant Abstraction for In-Memory Cluster Computing
+<a href="https://www.zhihu.com/question/55119470">https://www.zhihu.com/question/55119470</a>
+KunPeng: Parameter Server based Distributed Learning Systems and Its Applications in Alibaba and Ant Financial
+An Architecture for Parallel Topic Models
+Scaling Distributed Machine Learning with the Parameter Server
+Piccolo: Building fast, distributed pro- grams with partitioned tables
+More Effective Distributed ML via a Stale Synchronous Parallel Parameter Server
+Angel-A Flexible and Powerful Parameter Server；黄明 ppt</p>
+</div>
+
+    
+    
+
+    
+
+</main>
+
+        <footer>
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+            </script>
+
+            <p class="copyright text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a>.</p>
+
+        </footer>
+
+    </body>
+
+</html>
+

@@ -6,10 +6,62 @@
     <description>Recent content in Posts on Chen Tong</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 05 Oct 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Oct 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://cixuuz.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>leetcode summary 10/11</title>
+      <link>https://cixuuz.github.io/post/lcs_1011/</link>
+      <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_1011/</guid>
+      <description> 76. Minimum Window Substring 4. Median of Two Sorted Arrays 232. Implement Queue using Stacks  </description>
+    </item>
+    
+    <item>
+      <title>leetcode summary 10/10</title>
+      <link>https://cixuuz.github.io/post/lcs_1010/</link>
+      <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_1010/</guid>
+      <description> 53. Maximum Subarray  </description>
+    </item>
+    
+    <item>
+      <title>leetcode summary 10/09</title>
+      <link>https://cixuuz.github.io/post/lcs_1009/</link>
+      <pubDate>Mon, 09 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_1009/</guid>
+      <description> 500. Keyboard Row  566. Reshape the Matrix  </description>
+    </item>
+    
+    <item>
+      <title>leetcode summary 10/08</title>
+      <link>https://cixuuz.github.io/post/lcs_1008/</link>
+      <pubDate>Sun, 08 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_1008/</guid>
+      <description> 146. LRU Cache  LinkedHashMap OrderedDict   412. Fizz Buzz  </description>
+    </item>
+    
+    <item>
+      <title>Machine Learning Framework</title>
+      <link>https://cixuuz.github.io/post/ml_framework/</link>
+      <pubDate>Sat, 07 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/ml_framework/</guid>
+      <description>机器学习架构 https://mp.weixin.qq.com/s/eQ4CcqhGd070BYSQdonO5g
+境界 1：参数可单机存储和更新
+此种境界较为简单，但仍可以使用参数服务器，通过数据并行来加速模型的训练。
+境界 2：参数不可单机存储，可以单机更新
+此种情况对应的是一些简单模型，比如 sparse logistic regression；当 feature 的数量突破百亿的时候，LR 的权重参数不太可能在一台机器上完全存下，此时必须使用参数服务器架构对模型参数进行分片。但是注意一点，SGD 的更新公式：
+其中可以分开到单个维度进行计算，但是单个维度的 wi=f(w)xi，这里的 f(w) 表示是全部参数 w 的一个函数，具体推导比较简单，这里篇幅所限就不赘述了。只是想说明 worker 在计算梯度的时候可能需要使用到上一轮迭代的所有参数。 而我们之所以对参数进行分片就是因为我们无法将所有参数存放到一台机器，现在单个 worker 有需要使用所有的参数才能计算某个参数分片的梯度，这不是矛盾吗？可能吗？ 答案是可能的，因为单个样本的 feature 具有很高的稀疏性（sparseness）。例如一个百亿 feature 的模型，单个训练样本往往只在其中很小一部分 feature 上有取值，其他都为 0（假设 feature 取值都已经离散化了）。因此计算 f(w) 的时候可以只拉取不为 0 的 feature 对应的那部分 w 即可。有文章统计，一般这个级别的系统，稀疏性往往在 0.1%（or 0.01%，记得不是很准，大致这样）以下。这样的稀疏性，可以让单机没有任何阻碍的计算 f(w)。 目前公司开源的 Angel 和 AILab 正在做的系统都处于这个境界。而原生 Spark 还没有达到这个境界，只能在中小规模的圈子里厮混。Angel 改造的基于 Angel 的 Spark 则达到了这个境界。
+境界 3：参数不可单机存储，不可单机更新，但无需模型并行
+境界 3 顺延境界 2 而来，当百亿级 feature 且 feature 比较稠密的时候，就需要计算框架进入到这层境界了，此时单个 worker 的能力有限，无法完整加载一个样本，也无法完整计算 f(w)。怎么办呢？其实很简单，学过线性代数的都知道，矩阵可以分块。向量是最简单的矩阵，自然可以切成一段一段的来计算。只是调度器需要支持算符分段而已了。</description>
+    </item>
     
     <item>
       <title>leetcode summary 10/05</title>
@@ -247,17 +299,17 @@ newSql(tiDB)</description>
       <description>682. Baseball Game 2017-09-23
 677. Map Sum Pairs 2017-09-23
 647. Palindromic Substrings 2017-09-06
+566. Reshape the Matrix 2017-10-06
 564. Find the Closest Palindrome 2017-09-06
 532. K-diff Pairs in an Array 2017-09-04
 529. Minesweepe 2017-09-06
 517. Super Washing Machines 2017-09-06
 516. Longest Palindromic Subsequence 2017-09-05
 508. Most Frequent Subtree Sum 2017-09-05
+500. Keyboard Row 2017-10-09
 479. Largest Palindrome Product 2017-09-13
 459. Repeated Substring Pattern 2017-09-18
-451. Sort Characters By Frequency 2017-09-27
-409. Longest Palindrome 2017-09-13
-336. Palindrome Pairs 2017-09-07</description>
+451. Sort Characters By Frequency 2017-09-27</description>
     </item>
     
     <item>

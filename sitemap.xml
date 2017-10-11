@@ -3,6 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://cixuuz.github.io/post/lcs_1011/</loc>
+    <lastmod>2017-10-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cixuuz.github.io/post/lcs_1010/</loc>
+    <lastmod>2017-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cixuuz.github.io/post/lcs_1009/</loc>
+    <lastmod>2017-10-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cixuuz.github.io/post/lcs_1008/</loc>
+    <lastmod>2017-10-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cixuuz.github.io/post/ml_framework/</loc>
+    <lastmod>2017-10-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://cixuuz.github.io/post/lcs_1005/</loc>
     <lastmod>2017-10-05T00:00:00+00:00</lastmod>
   </url>
@@ -320,13 +345,13 @@
   
   <url>
     <loc>https://cixuuz.github.io/</loc>
-    <lastmod>2017-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2017-10-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://cixuuz.github.io/post/</loc>
-    <lastmod>2017-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2017-10-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
