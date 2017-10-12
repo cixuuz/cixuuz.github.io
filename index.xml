@@ -308,7 +308,7 @@ newSql(tiDB)</description>
       <description>682. Baseball Game 2017-09-23
 677. Map Sum Pairs 2017-09-23
 647. Palindromic Substrings 2017-09-06
-566. Reshape the Matrix 2017-10-06
+566. Reshape the Matrix 2017-10-09
 564. Find the Closest Palindrome 2017-09-06
 532. K-diff Pairs in an Array 2017-09-04
 529. Minesweepe 2017-09-06
@@ -374,9 +374,13 @@ newSql(tiDB)</description>
       <pubDate>Tue, 29 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://cixuuz.github.io/post/java-comparator/</guid>
-      <description> 做题的时候遇到了sort，想试试Java 8的新语法。于是有了一些研究：
+      <description>做题的时候遇到了sort，想试试Java 8的新语法。于是有了一些研究：
 Reference  Very confused by Java 8 Comparator type inference
-   </description>
+ access field by lambda. intervals is a list of interval. intervals.sort(Comparator.comparingInt((Interval i) -&amp;gt; i.start));
+  Comparator.comparing((Person p)-&amp;gt;p.firstName) .thenComparing(p-&amp;gt;p.lastName) .thenComparingInt(p-&amp;gt;p.age);
+Comparator.comparing(Person::getFirstName) .thenComparing(Person::getLastName) .thenComparingInt(Person::getAge);
+@Override public int compareTo(Person o){ return Comparator.comparing(Person::getFirstName) .thenComparing(Person::getLastName) .thenComparingInt(Person::getAge) .compare(this, o); }
+reference: https://dzone.com/articles/java-8-comparator-how-to-sort-a-list</description>
     </item>
     
     <item>

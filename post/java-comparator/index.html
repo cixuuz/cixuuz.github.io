@@ -144,8 +144,30 @@
 <ol>
 <li><p><a href="https://stackoverflow.com/questions/24436871/very-confused-by-java-8-comparator-type-inference">Very confused by Java 8 Comparator type inference</a></p></li>
 
-<li></li>
+<li><p>access field by lambda.
+intervals is a list of interval.
+intervals.sort(Comparator.comparingInt((Interval i) -&gt; i.start));</p></li>
 </ol>
+
+<p>Comparator.comparing((Person p)-&gt;p.firstName)
+          .thenComparing(p-&gt;p.lastName)
+          .thenComparingInt(p-&gt;p.age);</p>
+
+<p>Comparator.comparing(Person::getFirstName)
+          .thenComparing(Person::getLastName)
+          .thenComparingInt(Person::getAge);</p>
+
+<p>@Override
+public int compareTo(Person o){
+    return Comparator.comparing(Person::getFirstName)
+              .thenComparing(Person::getLastName)
+              .thenComparingInt(Person::getAge)
+              .compare(this, o);
+}</p>
+
+<h1 id="reference-1">reference:</h1>
+
+<p><a href="https://dzone.com/articles/java-8-comparator-how-to-sort-a-list">https://dzone.com/articles/java-8-comparator-how-to-sort-a-list</a></p>
 </div>
 
     
