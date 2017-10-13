@@ -12,6 +12,19 @@
     
     
     <item>
+      <title>System Design - TinyURL</title>
+      <link>https://cixuuz.github.io/post/system_design_tinyurl/</link>
+      <pubDate>Thu, 12 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/system_design_tinyurl/</guid>
+      <description>Two methods Hash Function Pros: - use traditional hash function - randomly distributed - support url clean - hash functions cost time
+cons: - not short - collisions, start collisions from 2^(n/2). solution: url + timestamp
+Auto-increment index Base10, Base62
+Pros: - simple, good with rdb - can be short - no conflicts
+cons: - not support url clean</description>
+    </item>
+    
+    <item>
       <title>leetcode summary 10/12</title>
       <link>https://cixuuz.github.io/post/lcs_1012/</link>
       <pubDate>Thu, 12 Oct 2017 00:00:00 +0000</pubDate>
