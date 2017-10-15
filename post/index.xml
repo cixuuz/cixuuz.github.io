@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Chen Tong</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 14 Oct 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 15 Oct 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://cixuuz.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>leetcode summary 10/15</title>
+      <link>https://cixuuz.github.io/post/lcs_1015/</link>
+      <pubDate>Sun, 15 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_1015/</guid>
+      <description> 692. Top K Frequent Words  Python3 sorting using functools.total_ordering, implements eq and le   98. Validate Binary Search Tree  </description>
+    </item>
     
     <item>
       <title>leetcode summary 10/14</title>
@@ -17,7 +26,7 @@
       <pubDate>Sat, 14 Oct 2017 00:00:00 +0000</pubDate>
       
       <guid>https://cixuuz.github.io/post/lcs_1014/</guid>
-      <description> 76. Minimum Window Substring  242. Valid Anagram  sort hashmap   139. Word Break  memo s[i:]   </description>
+      <description> 76. Minimum Window Substring  242. Valid Anagram  sort hashmap   139. Word Break  memo s[i:] dp   49. Group Anagrams  387. First Unique Character in a String  283. Move Zeroes  </description>
     </item>
     
     <item>
@@ -327,7 +336,8 @@ newSql(tiDB)</description>
       <pubDate>Tue, 05 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://cixuuz.github.io/post/algorithm-leetcode/</guid>
-      <description>682. Baseball Game 2017-09-23
+      <description>692. Top K Frequent Words 2017-10-15
+682. Baseball Game 2017-09-23
 677. Map Sum Pairs 2017-09-23
 647. Palindromic Substrings 2017-09-06
 566. Reshape the Matrix 2017-10-09
@@ -339,8 +349,7 @@ newSql(tiDB)</description>
 508. Most Frequent Subtree Sum 2017-09-05
 500. Keyboard Row 2017-10-09
 479. Largest Palindrome Product 2017-09-13
-459. Repeated Substring Pattern 2017-09-18
-451. Sort Characters By Frequency 2017-09-27</description>
+459. Repeated Substring Pattern 2017-09-18</description>
     </item>
     
     <item>
