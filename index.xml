@@ -6,10 +6,38 @@
     <description>Recent content on Chen Tong</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 15 Oct 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 18 Oct 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://cixuuz.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>System Design - Web Crawler</title>
+      <link>https://cixuuz.github.io/post/system_design_web_crawler/</link>
+      <pubDate>Wed, 18 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/system_design_web_crawler/</guid>
+      <description>Guideline: The Crawler Service processes each page link by doing the following in a loop: 1. Takes the top ranked page link to crawl 2. Checks crawled_links in the NoSQL Database for an entry with a similar page signature 3. If we have a similar page, reduces the priority of the page link 1. This prevents us from getting into a cycle; Continue 2. Else, crawls the link - Adds a job to the Reverse Index Service queue to generate a reverse index - Adds a job to the Document Service queue to generate a static title and snippet - Generates the page signature - Removes the link from links_to_crawl in the NoSQL Database - Inserts the page link and signature to crawled_links in the NoSQL Database</description>
+    </item>
+    
+    <item>
+      <title>leetcode summary 10/17</title>
+      <link>https://cixuuz.github.io/post/lcs_1017/</link>
+      <pubDate>Tue, 17 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_1017/</guid>
+      <description>33. Search in Rotated Sorted Array https://leetcode.com/problems/search-in-rotated-sorted-array/discuss/ 
+341. Flatten Nested List Iterator  generator, sepecific to this question stack, interative https://leetcode.com/problems/flatten-nested-list-iterator/discuss/  155. Min Stack https://discuss.leetcode.com/topic/7020/java-accepted-solution-using-one-stack</description>
+    </item>
+    
+    <item>
+      <title>leetcode summary 10/16</title>
+      <link>https://cixuuz.github.io/post/lcs_1016/</link>
+      <pubDate>Mon, 16 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_1016/</guid>
+      <description> 138. Copy List with Random Pointer  301. Remove Invalid Parentheses  </description>
+    </item>
     
     <item>
       <title>leetcode summary 10/15</title>
@@ -17,7 +45,7 @@
       <pubDate>Sun, 15 Oct 2017 00:00:00 +0000</pubDate>
       
       <guid>https://cixuuz.github.io/post/lcs_1015/</guid>
-      <description> 692. Top K Frequent Words  Python3 sorting using functools.total_ordering, implements eq and le   98. Validate Binary Search Tree  </description>
+      <description> 692. Top K Frequent Words  Python3 sorting using functools.total_ordering, implements eq and le   98. Validate Binary Search Tree  121. Best Time to Buy and Sell Stock  get min price before current price   122. Best Time to Buy and Sell Stock II  123. Best Time to Buy and Sell Stock III 188. Best Time to Buy and Sell Stock IV  309. Best Time to Buy and Sell Stock with Cooldown  </description>
     </item>
     
     <item>

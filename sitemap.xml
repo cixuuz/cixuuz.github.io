@@ -3,6 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://cixuuz.github.io/post/system_design_web_crawler/</loc>
+    <lastmod>2017-10-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cixuuz.github.io/post/lcs_1017/</loc>
+    <lastmod>2017-10-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cixuuz.github.io/post/lcs_1016/</loc>
+    <lastmod>2017-10-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://cixuuz.github.io/post/lcs_1015/</loc>
     <lastmod>2017-10-15T00:00:00+00:00</lastmod>
   </url>
@@ -365,13 +380,13 @@
   
   <url>
     <loc>https://cixuuz.github.io/</loc>
-    <lastmod>2017-10-15T00:00:00+00:00</lastmod>
+    <lastmod>2017-10-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://cixuuz.github.io/post/</loc>
-    <lastmod>2017-10-15T00:00:00+00:00</lastmod>
+    <lastmod>2017-10-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
