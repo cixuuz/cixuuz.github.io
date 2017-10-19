@@ -6,10 +6,19 @@
     <description>Recent content on Chen Tong</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 18 Oct 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Oct 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://cixuuz.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>leetcode summary 10/19</title>
+      <link>https://cixuuz.github.io/post/lcs_1019/</link>
+      <pubDate>Thu, 19 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_1019/</guid>
+      <description>42. Trapping Rain Water https://gist.github.com/cd4159bf4d1b5d31fa27f13062e1681b</description>
+    </item>
     
     <item>
       <title>System Design - Web Crawler</title>
