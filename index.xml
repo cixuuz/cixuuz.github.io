@@ -17,7 +17,9 @@
       <pubDate>Thu, 19 Oct 2017 00:00:00 +0000</pubDate>
       
       <guid>https://cixuuz.github.io/post/lcs_1019/</guid>
-      <description>42. Trapping Rain Water https://gist.github.com/cd4159bf4d1b5d31fa27f13062e1681b</description>
+      <description>42. Trapping Rain Water https://gist.github.com/cd4159bf4d1b5d31fa27f13062e1681b
+322. Coin Change https://gist.github.com/e383d1c66294ddc044a77e1a8e3ca529
+518. Coin Change 2 https://gist.github.com/f4408eb706be4b337494af0dd0e24c47</description>
     </item>
     
     <item>
@@ -381,12 +383,12 @@ newSql(tiDB)</description>
 564. Find the Closest Palindrome 2017-09-06
 532. K-diff Pairs in an Array 2017-09-04
 529. Minesweepe 2017-09-06
+518. Coin Change 2 2017-10-19
 517. Super Washing Machines 2017-09-06
 516. Longest Palindromic Subsequence 2017-09-05
 508. Most Frequent Subtree Sum 2017-09-05
 500. Keyboard Row 2017-10-09
-479. Largest Palindrome Product 2017-09-13
-459. Repeated Substring Pattern 2017-09-18</description>
+479. Largest Palindrome Product 2017-09-13</description>
     </item>
     
     <item>
