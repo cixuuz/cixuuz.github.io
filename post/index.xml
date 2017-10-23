@@ -6,10 +6,28 @@
     <description>Recent content in Posts on Chen Tong</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 19 Oct 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 23 Oct 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://cixuuz.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>leetcode summary 10/23</title>
+      <link>https://cixuuz.github.io/post/lcs_1023/</link>
+      <pubDate>Mon, 23 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_1023/</guid>
+      <description> 79. Word Search </description>
+    </item>
+    
+    <item>
+      <title>leetcode summary 10/22</title>
+      <link>https://cixuuz.github.io/post/lcs_1022/</link>
+      <pubDate>Sun, 22 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_1022/</guid>
+      <description> 598. Range Addition II  592. Fraction Addition and Subtraction  </description>
+    </item>
     
     <item>
       <title>leetcode summary 10/19</title>
