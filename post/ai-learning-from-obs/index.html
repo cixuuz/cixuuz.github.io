@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>AI: Learning from observations - Chen Tong</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="cixuuz" />
+  <meta name="description" content="Decision tree learning Problem: decide whether to wait for a table at a restaurant, based on the following attributes:
+ Alternate: is there an alternative restaurant nearby? Bar: is there a comfortable bar area to wait in? Fri/Sat: is today Friday or Saturday? Hungry: are we hungry? Patrons: number of people in the restaurant (None, Some, Full) Price: price range ($, $$, $$$) Raining: is it raining outside? Reservation: have we made a reservation?" />
+
+  <meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.32.1" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/ai-learning-from-obs/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" href="/favicon.ico" />
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=2.7.0" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+<meta property="og:title" content="AI: Learning from observations" />
+<meta property="og:description" content="Decision tree learning Problem: decide whether to wait for a table at a restaurant, based on the following attributes:
+ Alternate: is there an alternative restaurant nearby? Bar: is there a comfortable bar area to wait in? Fri/Sat: is today Friday or Saturday? Hungry: are we hungry? Patrons: number of people in the restaurant (None, Some, Full) Price: price range ($, $$, $$$) Raining: is it raining outside? Reservation: have we made a reservation?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/ai-learning-from-obs/" />
+
+
+
+<meta property="article:published_time" content="2017-05-07T22:12:39&#43;00:00"/>
+
+<meta property="article:modified_time" content="2017-05-07T22:12:39&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="AI: Learning from observations">
+<meta itemprop="description" content="Decision tree learning Problem: decide whether to wait for a table at a restaurant, based on the following attributes:
+ Alternate: is there an alternative restaurant nearby? Bar: is there a comfortable bar area to wait in? Fri/Sat: is today Friday or Saturday? Hungry: are we hungry? Patrons: number of people in the restaurant (None, Some, Full) Price: price range ($, $$, $$$) Raining: is it raining outside? Reservation: have we made a reservation?">
+
+
+<meta itemprop="datePublished" content="2017-05-07T22:12:39&#43;00:00" />
+<meta itemprop="dateModified" content="2017-05-07T22:12:39&#43;00:00" />
+<meta itemprop="wordCount" content="304">
+
+
+
+<meta itemprop="keywords" content="AI," />
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="AI: Learning from observations"/>
+<meta name="twitter:description" content="Decision tree learning Problem: decide whether to wait for a table at a restaurant, based on the following attributes:
+ Alternate: is there an alternative restaurant nearby? Bar: is there a comfortable bar area to wait in? Fri/Sat: is today Friday or Saturday? Hungry: are we hungry? Patrons: number of people in the restaurant (None, Some, Full) Price: price range ($, $$, $$$) Raining: is it raining outside? Reservation: have we made a reservation?"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">AI: Learning from observations</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2017-05-07 </span>
+        
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#decision-tree-learning">Decision tree learning</a></li>
+<li><a href="#neural-networks">Neural networks</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      
+
+<h1 id="decision-tree-learning">Decision tree learning</h1>
+
+<p>Problem: decide whether to wait for a table at a restaurant, based on the following attributes:</p>
+
+<ol>
+<li>Alternate: is there an alternative restaurant nearby?</li>
+<li>Bar: is there a comfortable bar area to wait in?</li>
+<li>Fri/Sat: is today Friday or Saturday?</li>
+<li>Hungry: are we hungry?</li>
+<li>Patrons: number of people in the restaurant (None, Some, Full)</li>
+<li>Price: price range ($, $$, $$$)</li>
+<li>Raining: is it raining outside?</li>
+<li>Reservation: have we made a reservation?</li>
+<li>Type: kind of restaurant (French, Italian, Thai, Burger)</li>
+<li>WaitEstimate: estimated waiting time (0-10, 10-30, 30-60, &gt;60 minutes)</li>
+</ol>
+
+<p>Aim: find a small tree consistent with the training examples
+Idea: (recursively) choose &ldquo;most significant&rdquo; attribute as root of tree or subtree</p>
+
+<p>{% codeblock %}
+function DTL(examples,attributes,parent_examples) returns a tree
+    if examples is empty then return PLURALITY-VALUE(parent_examples)
+    else if all examples have the same classification then return the classification
+    else if attributes is empty then return PLURALITY-VALUE(examples)
+    else
+        A = arg max(attributes) IMPORTANCE(a,examples)
+        tree = a new decision tree with root test A
+        for each value vk of A do
+            exs = {e: e belongs to examples and e.A= vk }
+            subtree = DECISION-TREE-LEARNING(exs,attributes – A, examples)
+            add a branch to tree with label (A = vk ) and subtree subtree return tree</p>
+
+<p>Function PLURALITY-VALUE selects the most common (or majority of the) output values
+{% endcodeblock %}</p>
+
+<p>Implement IMPORTANCE(a,examples):
+- Idea: a good attribute splits the examples into subsets that are (ideally) &ldquo;all positive&rdquo; or &ldquo;all negative&rdquo;
+- Information theory: use notion of information gain.
+- Entropy H(V): a measure of the uncertainty of a random variable. More information -&gt; reduced entropy. B(p) = - sum(prob*ln(prob))
+- Remainder(A) = sum((pk+nk)/(p+n) * B(pk/(pk+nk)))
+- Gain(A) = B(p/(p+n)) - remainder(A)</p>
+
+<h1 id="neural-networks">Neural networks</h1>
+
+<p>feed-forward networks:
+- single layer perceptrons
+- multi layer perceptrons: powerful expressive, trained by gradient descent (error back-propagation)
+- have no internal state</p>
+
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">cixuuz</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">2017-05-07</span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/ai/">AI</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/statistical-learning/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">statistical learning</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        
+          <a class="next" href="/post/ai-constraint-satisfaction-problem/">
+            <span class="next-text nav-default">AI: Constraint Satisfaction Problems</span>
+            <span class="prev-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+  
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2016 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">cixuuz</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+<script type="text/javascript" src="/dist/even.min.js?v=2.7.0"></script>
+
+
+
+
+</body>
+</html>

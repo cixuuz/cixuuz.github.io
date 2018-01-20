@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ai on Chen Tong</title>
+    <link>http://localhost:1313/tags/ai/</link>
+    <description>Recent content in Ai on Chen Tong</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 07 May 2017 22:12:39 +0000</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AI: Learning from observations</title>
+      <link>http://localhost:1313/post/ai-learning-from-obs/</link>
+      <pubDate>Sun, 07 May 2017 22:12:39 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/ai-learning-from-obs/</guid>
+      <description>Decision tree learning Problem: decide whether to wait for a table at a restaurant, based on the following attributes:
+ Alternate: is there an alternative restaurant nearby? Bar: is there a comfortable bar area to wait in? Fri/Sat: is today Friday or Saturday? Hungry: are we hungry? Patrons: number of people in the restaurant (None, Some, Full) Price: price range ($, $$, $$$) Raining: is it raining outside? Reservation: have we made a reservation?</description>
+    </item>
+    
+    <item>
+      <title>AI: Constraint Satisfaction Problems</title>
+      <link>http://localhost:1313/post/ai-constraint-satisfaction-problem/</link>
+      <pubDate>Sun, 07 May 2017 21:12:39 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/ai-constraint-satisfaction-problem/</guid>
+      <description>CSPs are a special kind of search problem  States defined by values of a fixed set of variables from domain Goal test defined by constraints on variable values acceptable solutions are complete and consistent binary CSP: relates two variables; constraint graph: nodes are variables, arc are constraits. Discrete variable(n) with finit domain(d): O(d^n) complete assignments Discrete variable with infinit domain need a constraint Varieties of constraints: involve one varible(unary), two(binary), three(higher-order)  Backtracking  depth-first search with one variable assigned at each level the basic uninformed algorithm for CSP  {% codeblock %} function BacktrackingSearch(csp) return solution or failure return Backtrack({}, csp)</description>
+    </item>
+    
+    <item>
+      <title>AI: first-order logic</title>
+      <link>http://localhost:1313/post/ai-first-order-logic/</link>
+      <pubDate>Tue, 18 Apr 2017 21:12:39 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/ai-first-order-logic/</guid>
+      <description>While propositional logic assumes the world contains facts, first-order logic assumes the world contains objects, relations, functions, like natural language.
+Syntax  Constants: Poly, 2, refer to objects Predicates: brother, larger than, refer to relations functions: sqrt, refer to functional relations variables: x, y connectives: ^ $\Rightarrow$ equality: = quantifiers: $\exists$, $\forall$  Sentences  atomic sentence = predicate(term1, &amp;hellip;, termN) or term1 = term2. where term = function(term1, &amp;hellip;, termN) or constant or variable complex sentences are made from atomic sentences using connectives  Universal quantification $\forall  $ Typically, $\Rightarrow$ is the main connective with $\forall$, avoid $\wedge$.</description>
+    </item>
+    
+    <item>
+      <title>AI: Logical Agents</title>
+      <link>http://localhost:1313/post/ai-logical-agents/</link>
+      <pubDate>Sun, 16 Apr 2017 10:30:08 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/ai-logical-agents/</guid>
+      <description>knowledge base a set of sentences. - inference:deriving new sentences from old - TELL: add new sentences to the knowledge base - ASK: a way to query what is known. The standard names for these operations
+Generic KB-Based Agent Similar to agents with internal states. {% codeblock %} function KB-Agent(percept) returns an action static KB = a knowledge base, t = 0 // a counter indicating time tell(KB, make_percept_sentence(percept, t)) action = ask(KB, make_action_query(t)) tell(KB, make_action_sentence(action, t)) t++ return action {% endcodeblock %}</description>
+    </item>
+    
+  </channel>
+</rss>

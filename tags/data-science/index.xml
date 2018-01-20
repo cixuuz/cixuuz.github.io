@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data Science on Chen Tong</title>
+    <link>http://localhost:1313/tags/data-science/</link>
+    <description>Recent content in Data Science on Chen Tong</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 22 Apr 2017 13:21:18 +0000</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/tags/data-science/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Deep Learning behind Tensorflow</title>
+      <link>http://localhost:1313/post/deep_learning_behind_tensorflow_distribute_principles_and_framework/</link>
+      <pubDate>Sat, 22 Apr 2017 13:21:18 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/deep_learning_behind_tensorflow_distribute_principles_and_framework/</guid>
+      <description>machine learning word2vex represent word as low dimensional, dense vectors compute the statistics of how ofen some word cooccurs with its neighbor words in a large text corpus. 将数量变成小的dense的vector predictive models directly try to predict a word from its neighbours in terms of learned small, dense embedding Word2Vec https://web.archive.org/web/20160311161826/http://cs224d.stanford.edu/lecture_notes/LectureNotes1.pdf Parameter Server https://www.cs.cmu.edu/~muli/file/parameter_server_osdi14.pdf</description>
+    </item>
+    
+  </channel>
+</rss>

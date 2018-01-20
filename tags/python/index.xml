@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Chen Tong</title>
+    <link>http://localhost:1313/tags/python/</link>
+    <description>Recent content in Python on Chen Tong</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 11 Apr 2017 18:22:32 +0000</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>notes for advices pythonic programming</title>
+      <link>http://localhost:1313/post/notes-for-advices-pythonic-programming/</link>
+      <pubDate>Tue, 11 Apr 2017 18:22:32 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/notes-for-advices-pythonic-programming/</guid>
+      <description>编写高质量代码：改善Python程序的91个建议 的读书笔记 记录一下自己认为比较有用的片段 10 充分利用 Lazy evaluation 的特性 if x and y，在 x 为 false 的情况下 y 表达</description>
+    </item>
+    
+    <item>
+      <title>remote debug using pycharm on AWS ec2</title>
+      <link>http://localhost:1313/post/2017-04-05-remote-debug-using-pycharm-on-aws-ec2/</link>
+      <pubDate>Wed, 05 Apr 2017 19:03:18 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2017-04-05-remote-debug-using-pycharm-on-aws-ec2/</guid>
+      <description>http://www.jianshu.com/p/9b362cdee2ab</description>
+    </item>
+    
+    <item>
+      <title>python tips</title>
+      <link>http://localhost:1313/post/2017-03-31-python-tips/</link>
+      <pubDate>Fri, 31 Mar 2017 17:59:32 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2017-03-31-python-tips/</guid>
+      <description>https://zhuanlan.zhihu.com/p/26099601 2).函数的传值到底是值传递还是引用传递，要分情况 a.不可变参数用值传递： 像整数和字符串这样的不可变对象，是通过拷贝进行传递的，因为你无论</description>
+    </item>
+    
+    <item>
+      <title>python profiling and optimize</title>
+      <link>http://localhost:1313/post/2017-03-30-python-profiling/</link>
+      <pubDate>Thu, 30 Mar 2017 18:14:15 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2017-03-30-python-profiling/</guid>
+      <description>profiling python {% codeblock &amp;ldquo;commandline profiling&amp;rdquo; %} python -m cProfile -s tottime your_program.py {% endcodeblock %} 优化 np random 比原生函数快四倍 {% asset_img np1.png %} {% asset_img np2.png %} 需要记住的延迟数据 {% codeblock %} Latency Comparison Numbers L1 cache reference 0.5 ns Branch mispredict 5 ns L2 cache reference 7 ns 14x L1 cache Mutex lock/unlock</description>
+    </item>
+    
+  </channel>
+</rss>

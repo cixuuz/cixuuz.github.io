@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>AI-notes - Chen Tong</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="cixuuz" />
+  <meta name="description" content="Catalog  Four different views of AI Intelligent Agents  Simple reflex agents Model-based reflex agents Goal-based agents Utility-based agents Learning agents  Solving Problems by Searching  State space formulation Uninformed search strategies  breath-first depth-first depth limited search uniform-cost search iterative deepening search bi-directional search summary  Informed Search and Exploration  Greedy best-first search A* Search  Admissible and consistent heuristic functions Inventing and learning heuristic functions    Adversarial Search  Games Minimax algorithm Alpha-Beta Pruning Evaluation functions cutting off search   Four different views of AI  Think humanly: cognitive modeling is to determin how human thinks inside their brain." />
+
+  <meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.32.1" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/2017-03-19-ai-notes/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" href="/favicon.ico" />
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=2.7.0" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+<meta property="og:title" content="AI-notes" />
+<meta property="og:description" content="Catalog  Four different views of AI Intelligent Agents  Simple reflex agents Model-based reflex agents Goal-based agents Utility-based agents Learning agents  Solving Problems by Searching  State space formulation Uninformed search strategies  breath-first depth-first depth limited search uniform-cost search iterative deepening search bi-directional search summary  Informed Search and Exploration  Greedy best-first search A* Search  Admissible and consistent heuristic functions Inventing and learning heuristic functions    Adversarial Search  Games Minimax algorithm Alpha-Beta Pruning Evaluation functions cutting off search   Four different views of AI  Think humanly: cognitive modeling is to determin how human thinks inside their brain." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/2017-03-19-ai-notes/" />
+
+
+
+<meta property="article:published_time" content="2017-03-19T17:35:06&#43;00:00"/>
+
+<meta property="article:modified_time" content="2017-03-19T17:35:06&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="AI-notes">
+<meta itemprop="description" content="Catalog  Four different views of AI Intelligent Agents  Simple reflex agents Model-based reflex agents Goal-based agents Utility-based agents Learning agents  Solving Problems by Searching  State space formulation Uninformed search strategies  breath-first depth-first depth limited search uniform-cost search iterative deepening search bi-directional search summary  Informed Search and Exploration  Greedy best-first search A* Search  Admissible and consistent heuristic functions Inventing and learning heuristic functions    Adversarial Search  Games Minimax algorithm Alpha-Beta Pruning Evaluation functions cutting off search   Four different views of AI  Think humanly: cognitive modeling is to determin how human thinks inside their brain.">
+
+
+<meta itemprop="datePublished" content="2017-03-19T17:35:06&#43;00:00" />
+<meta itemprop="dateModified" content="2017-03-19T17:35:06&#43;00:00" />
+<meta itemprop="wordCount" content="1934">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="AI-notes"/>
+<meta name="twitter:description" content="Catalog  Four different views of AI Intelligent Agents  Simple reflex agents Model-based reflex agents Goal-based agents Utility-based agents Learning agents  Solving Problems by Searching  State space formulation Uninformed search strategies  breath-first depth-first depth limited search uniform-cost search iterative deepening search bi-directional search summary  Informed Search and Exploration  Greedy best-first search A* Search  Admissible and consistent heuristic functions Inventing and learning heuristic functions    Adversarial Search  Games Minimax algorithm Alpha-Beta Pruning Evaluation functions cutting off search   Four different views of AI  Think humanly: cognitive modeling is to determin how human thinks inside their brain."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">AI-notes</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2017-03-19 </span>
+        
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#catalog">Catalog</a></li>
+<li><a href="#four-different-views-of-ai">Four different views of AI</a></li>
+<li><a href="#rational-agents">Rational Agents</a>
+<ul>
+<li><a href="#simple-reflex-agents">Simple reflex agents</a></li>
+<li><a href="#model-based-reflex-agents-red-is-new">Model-based reflex agents (red is new)</a></li>
+<li><a href="#goal-based-agents">Goal-based agents</a></li>
+<li><a href="#utility-based-agents">Utility-based agents</a></li>
+<li><a href="#learning-agents">Learning agents</a></li>
+</ul></li>
+<li><a href="#solving-problems-by-searching">Solving Problems by Searching</a>
+<ul>
+<li><a href="#state-space-formulation">State space formulation</a></li>
+</ul></li>
+<li><a href="#uninformed-search-strategies-blind-search">Uninformed search strategies (blind search)</a>
+<ul>
+<li><a href="#breath-first">breath-first</a>
+<ul>
+<li><a href="#tree-search">Tree Search</a></li>
+<li><a href="#graph-search">Graph Search</a></li>
+</ul></li>
+<li><a href="#uniform-cost-search">uniform-cost search</a>
+<ul>
+<li><a href="#tree-search-1">Tree search</a></li>
+<li><a href="#graph-search-1">Graph search</a></li>
+</ul></li>
+<li><a href="#depth-first">depth-first</a></li>
+<li><a href="#depth-limited-search">depth limited search</a></li>
+<li><a href="#iterative-deepening-search">iterative deepening search</a></li>
+<li><a href="#bi-directional-search">bi-directional search</a></li>
+<li><a href="#summary">Summary</a></li>
+</ul></li>
+<li><a href="#informed-search-and-exploration">Informed Search and Exploration</a>
+<ul>
+<li><a href="#greedy-best-first-search">Greedy best-first search</a></li>
+<li><a href="#a-search">A* Search</a></li>
+</ul></li>
+<li><a href="#adversarial-search">Adversarial Search</a>
+<ul>
+<li><a href="#games">Games</a></li>
+<li><a href="#minimax-algorithm">Minimax algorithm</a></li>
+<li><a href="#alpha-beta-pruning">Alpha-Beta Pruning</a></li>
+<li><a href="#evaluation-functions">Evaluation functions</a></li>
+<li><a href="#cutting-off-search">cutting off search</a></li>
+</ul></li>
+<li><a href="#reference">Reference</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      
+
+<h1 id="catalog">Catalog</h1>
+
+<ol>
+<li><a href="#four-different-views-of-ai">Four different views of AI</a></li>
+<li><a href="#rational-agents">Intelligent Agents</a>
+
+<ol>
+<li><a href="#simple-reflex-agents">Simple reflex agents</a></li>
+<li><a href="#model-based-reflex-agents-red-is-new">Model-based reflex agents</a></li>
+<li><a href="#goal-based-agents">Goal-based agents</a></li>
+<li><a href="#utility-based-agents">Utility-based agents</a></li>
+<li><a href="#learning-agents">Learning agents</a></li>
+</ol></li>
+<li><a href="#solving-problems-by-searching">Solving Problems by Searching</a>
+
+<ol>
+<li><a href="#state-space-formulation">State space formulation</a></li>
+<li><a href="#uninformed-search-strategies-blind-search">Uninformed search strategies</a>
+
+<ul>
+<li><a href="#breath-first">breath-first</a></li>
+<li><a href="#depth-first">depth-first</a></li>
+<li><a href="#depth-limited-search">depth limited search</a></li>
+<li><a href="#uniform-cost-search">uniform-cost search</a></li>
+<li><a href="#iterative-deepening-search">iterative deepening search</a></li>
+<li><a href="#bi-directional-search">bi-directional search</a></li>
+<li><a href="#summary">summary</a></li>
+</ul></li>
+<li><a href="#informed-search-and-exploration">Informed Search and Exploration</a>
+
+<ul>
+<li><a href="#greedy-best-first-search">Greedy best-first search</a></li>
+<li><a href="#a-search">A* Search</a>
+
+<ul>
+<li>Admissible and consistent heuristic functions</li>
+<li>Inventing and learning heuristic functions</li>
+</ul></li>
+</ul></li>
+</ol></li>
+<li><a href="#adversarial-search">Adversarial Search</a>
+
+<ol>
+<li><a href="#games">Games</a></li>
+<li><a href="#minimax-algorithm">Minimax algorithm</a></li>
+<li><a href="#alpha-beta-pruning">Alpha-Beta Pruning</a></li>
+<li><a href="#evaluation-functions">Evaluation functions</a></li>
+<li><a href="#cutting-off-search">cutting off search</a></li>
+</ol></li>
+</ol>
+
+<hr />
+
+<h1 id="four-different-views-of-ai">Four different views of AI</h1>
+
+<ul>
+<li><p>Think humanly: cognitive modeling is to determin how human thinks inside their brain.</p>
+
+<ul>
+<li>top-down: test human behaviors.</li>
+<li>down-top: identify neurological data</li>
+</ul></li>
+
+<li><p>Think rationally</p>
+
+<ul>
+<li>logic: notations and rules of derivation of thoughts.</li>
+<li>caveat: hard to handle with informal knowledge, and difference between principle and practice.</li>
+</ul></li>
+
+<li><p>Act humanly: Turing test</p></li>
+
+<li><p>Act rationally</p>
+
+<ul>
+<li>rational agent: entity that perceives and acts.</li>
+<li>caveat: computation limits, other words, cannot always perform actions to best results</li>
+</ul></li>
+</ul>
+
+<h1 id="rational-agents">Rational Agents</h1>
+
+<p>Task setting (PEAS): performance measure, environment, actuators, and sensors</p>
+
+<h2 id="simple-reflex-agents">Simple reflex agents</h2>
+
+<ul>
+<li>If current state, then do certain action.</li>
+<li>based on only current state</li>
+<li>Implemented by condition-action rules</li>
+</ul>
+
+<p>{% asset_img simple_reflex.png %}</p>
+
+<p>{% codeblock %}
+func simple_reflex_agents (percept) returns an action
+    # static
+    rules = a set of condition-action rules
+    # main
+    state = input(percept)
+    action = match_rules(state)
+    return action
+{% endcodeblock %}</p>
+
+<h2 id="model-based-reflex-agents-red-is-new">Model-based reflex agents (red is new)</h2>
+
+<ul>
+<li>simple refelx agent <strong>with internal state</strong></li>
+</ul>
+
+<p>{% asset_img model-based.png %}</p>
+
+<p>{% codeblock %}
+func reflex_agents_with_state (percept) returns an action
+    # static: maintain internal state
+    rules = a of condition-action rules
+    state = description of current world
+    action = most recent action
+    # main
+    state = update_state(state, action, percept)
+    action = match_rules(state)
+    return action
+{% endcodeblock %}</p>
+
+<h2 id="goal-based-agents">Goal-based agents</h2>
+
+<ul>
+<li>future is included in searching and planning actions.</li>
+<li>knowledge is represented explicity, and can be manipulated.</li>
+</ul>
+
+<p>{% asset_img goal_based.png %}</p>
+
+<h2 id="utility-based-agents">Utility-based agents</h2>
+
+<ul>
+<li>state is quanlified based on utility function.</li>
+<li>goal can be reached by choosing a series states with higher utility.</li>
+</ul>
+
+<p>{% asset_img utility_based.png %}</p>
+
+<h2 id="learning-agents">Learning agents</h2>
+
+<ul>
+<li>performance element as a selecter based on learning elements and percepts</li>
+<li>learning element improves performance</li>
+<li>problem generator explore more informative experience</li>
+</ul>
+
+<p>{% asset_img learning_based.png %}</p>
+
+<h1 id="solving-problems-by-searching">Solving Problems by Searching</h1>
+
+<ul>
+<li>Problem solving agent: it will percept a goal, and finish it, then have another goal</li>
+</ul>
+
+<p>{% codeblock %}
+function SIMPLE-PROBLEM-SOLVING-AGENT(percept) return an action
+    # static
+    seq = an action sequence, initially empty
+    state = some description of the current world
+    goal = a goal, initially null
+    problem = a problem formulation
+    # main
+    state = UPDATE-STATE(state, percept)
+    if seq is empty
+        goal = FORMULATE-GOAL(state)
+        problem = FORMULATE-PROBLEM(state, goal)
+        seq = SEARCH(problem)</p>
+
+<pre><code>if seq = failure 
+    return a null action
+
+action = FIRST(seq) 
+seq = REST(seq)
+return action
+</code></pre>
+
+<p>{% endcodeblock %}</p>
+
+<h2 id="state-space-formulation">State space formulation</h2>
+
+<ul>
+<li>problem solving formulation = inital state + actions + transition model</li>
+<li>all states that could be reached from the initial state by any sequence of actions</li>
+
+<li><p>action + transition model = successor function</p></li>
+
+<li><p>Performance measures</p>
+
+<ul>
+<li>Completeness</li>
+<li>Optimality</li>
+<li>Time Complexity</li>
+<li>Space Complexity
+
+<ul>
+<li>b: branching factor or max # of successors of any node of the search tree</li>
+<li>d: depth of the sallowest goal node</li>
+<li>m: max length of any path in the state space</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h1 id="uninformed-search-strategies-blind-search">Uninformed search strategies (blind search)</h1>
+
+<h2 id="breath-first">breath-first</h2>
+
+<ul>
+<li>expand <strong>shallowest</strong> unexpanded node</li>
+<li><strong>frontier</strong> is a FIFO queue</li>
+<li>check for goal state <strong>as soon as a node is generated</strong>, instead of when a node is to expand</li>
+</ul>
+
+<h3 id="tree-search">Tree Search</h3>
+
+<p>{% codeblock %}
+function TREE-SEARCH ( problem ) return a solution or failure
+    # initial
+    frontier = queue(the initial state of problem)
+    if goal_test(root)
+        return the corresponding solution
+    # main
+    loop do<br />
+        if is_empty(frontier)<br />
+            return failure</p>
+
+<pre><code>    node = frontier.pop_left()
+    children = node.children
+
+    loop child in children do
+        if  goal_test(child) 
+            return  the  corresponding solution 
+        else  
+            frontier.add(child)
+</code></pre>
+
+<p>{% endcodeblock %}</p>
+
+<h3 id="graph-search">Graph Search</h3>
+
+<p>{% codeblock %}
+function GRAPH-SEARCH ( problem ) return a solution or failure<br />
+    # inital
+    frontier = queue(initial state of problem)
+    if goal_test(root)
+        return the corresponding solution
+    explored = set()</p>
+
+<pre><code># main
+loop do  
+    if is_empty(frontier)
+        return  failure 
+    node = frontier.pop()
+    explored.add(node)
+    children = node.children
+
+    loop child in children do
+        if goal_test(child) 
+            return the corresponding solution 
+        else if child not in explored or frontier
+            frontier.append(child)
+</code></pre>
+
+<p>{% endcodeblock %}</p>
+
+<ul>
+<li>Evaluation
+
+<ul>
+<li>Completeness: Yes if finite successors b</li>
+<li>Optimality:
+
+<ul>
+<li>Yes if step cost is same</li>
+<li>No if different cost</li>
+</ul></li>
+<li>Time: Assume every state has b successors<br />
+$$1 + b^1 + b^2 + &hellip; + b^d = O(b^d)$$</li>
+<li>Space: $O(b^d)$
+since keep all nodes to retrive possible path solution</li>
+</ul></li>
+</ul>
+
+<h2 id="uniform-cost-search">uniform-cost search</h2>
+
+<ul>
+<li>expand node <strong>with lowest path cost</strong>, which is the sum of costs from intial node to current node, also g(n)</li>
+<li><strong>priority queue</strong> ordered by path cost</li>
+<li>goal test <strong>when the node poped(is about to expand)</strong> from the frontier to avoid finding a short expensive path before a long cheap path.</li>
+</ul>
+
+<h3 id="tree-search-1">Tree search</h3>
+
+<p>{% codeblock %}
+function TREE-SEARCH(problem) return a solution or failure
+    # initial
+    # frontier is a priority queue ordered by path cost
+    frontier = priority_queue(the initial state of problem)
+    # main
+    loop do<br />
+        if is_empty(frontier)
+            return  failure
+        node = frontier.pop_left()
+        if goal_test(node)
+            return the corresponding solution
+        else
+            frontier.append(node.children)
+{% endcodeblock %}</p>
+
+<h3 id="graph-search-1">Graph search</h3>
+
+<p>{% codeblock %}
+function TREE-SEARCH(problem) return a solution or failure
+    # initial
+    # frontier is a priority queue ordered by path cost
+    frontier = priority_queue(the initial state of problem)
+    explored = set()
+    # main
+    loop do<br />
+        if is_empty(frontier)
+            return  failure
+        node = frontier.pop_left()
+        explored.add(node)
+        if goal_test(node)
+            return the corresponding solution
+        if node.children not in frontier or explored set
+            frontier.append(node.children)
+        else if node.children in the frontier with a higher path cost
+            replace that node in the frontier with same node with lower path cost
+{% endcodeblock %}</p>
+
+<ul>
+<li>Evaluation
+if b is finit, and step cost $\geq \epsilon \geq 0$
+
+<ul>
+<li>Completeness: Yes</li>
+<li>Optimality: Yes<br /></li>
+<li>Time: $O(b^{1+\lfloor C^* / \epsilon \rfloor})$ where $C^*$ is the cost of optimal solution</li>
+<li>Space: $O(b^{1+\lfloor C^* / \epsilon \rfloor})$<br /></li>
+</ul></li>
+</ul>
+
+<h2 id="depth-first">depth-first</h2>
+
+<ul>
+<li>Expand <strong>deepest</strong> unexpanded node</li>
+<li>Frontier is a LIFO queue (stack)</li>
+<li>Goal-Test <strong>when inserted</strong></li>
+</ul>
+
+<p>{% codeblock iterative %}
+function DFS-SEARCH(problem) return a solution or failure
+    # frontier is a LIFO queue
+    frontier = stack(initial state of problem)
+    if goal_test(root)
+        return the corresponding solution</p>
+
+<pre><code>loop do 
+    if is_empty(node) 
+        return failure 
+    node = frontier.pop_up()
+    children = node.chilren
+
+    for each child
+        if goal_test(child) 
+            return the corresponding solution
+        else
+            frontier.push(child)
+</code></pre>
+
+<p>{% endcodeblock %}</p>
+
+<ul>
+<li>Evaluation
+
+<ul>
+<li>Completeness: No unless search space is finit and no loop</li>
+<li>Optimality: No</li>
+<li>Time: $O(b^m)$, terrible if m &gt;&gt; d</li>
+<li>Space:<br />
+$O(dm)$ a single path + expanded unexplored nodes<br />
+$O(m)$ if backtracking</li>
+</ul></li>
+</ul>
+
+<h2 id="depth-limited-search">depth limited search</h2>
+
+<ul>
+<li>dfs with depth limit l to solve infinite-path problem</li>
+</ul>
+
+<p>{% codeblock %}
+function DEPTH-LIMITED-SEARCH(problem, limit) return a solution or failure/cutoff
+    return RECURSIVE-DLS(MAKE-NODE(problem.INITIAL-STATE), problem, limit)</p>
+
+<p>function RECURSIVE-DLS(node, problem, limit) return a solution or failure/cutoff
+    if problem.GOAL-TEST(node.STATE)
+        return SOLUTION(node)
+    else if limit = 0
+        return cutoff
+    else
+        cutoff_occurred? = false</p>
+
+<pre><code>for each action in problem.ACTIONS(node.STATE) do 
+    child = CHILD-NODE(problem, node, action) 
+    if (child ！= NULL)
+        result = RECURSIVE-DLS(child, problem, limit-1) 
+        if result = cutoff 
+            cutoff_occurred? = true 
+        else if result ！= failure 
+            return result
+
+if cutoff_occurred? 
+    return cutoff 
+else 
+    return failure
+</code></pre>
+
+<p>/<em>At the end of the search process,
+failure is returned to the main calling function only if no solution is found
+and cutoff never occurred</em>/
+{% endcodeblock %}</p>
+
+<ul>
+<li>Evaluation
+
+<ul>
+<li>Completeness: No if $l &lt; d$</li>
+<li>Optimality: No</li>
+<li>Time: $O(b^l)$<br /></li>
+<li>Space: $O(bl)$, a single path + expanded unexplored nodes</li>
+</ul></li>
+</ul>
+
+<h2 id="iterative-deepening-search">iterative deepening search</h2>
+
+<ul>
+<li>IDS inherits the memory advantage of Depth-first search</li>
+<li>IDS has the completeness property of Breadth-first search</li>
+</ul>
+
+<p>{% codeblock %}
+function ITERATIVE_DEEPENING_SEARCH(problem) return a solution or failure
+    for depth = 1 to infinit do
+        result = DEPTH-LIMITED_SEARCH(problem, depth)
+        if result != cutoff
+            return result
+/<em>Final result returned is either a solution
+or a failure if the algorithm exits the infinite loop.</em>/
+{% endcodeblock %}</p>
+
+<ul>
+<li>Evaluation
+
+<ul>
+<li>Completeness: Yes, if no infinite path</li>
+<li>Optimality: Yes, if cost is a non-decreasing function only of depth</li>
+<li>Time: $(d)b + (d-1)b^2 + &hellip; + (1)b^d = O(b^d)$</li>
+<li>Space: $O(bd)$, a single path + expanded unexplored nodes</li>
+</ul></li>
+</ul>
+
+<h2 id="bi-directional-search">bi-directional search</h2>
+
+<ul>
+<li>Both searches are BF</li>
+<li>Actions are sesily reversible, or predecessor can be computable</li>
+<li>Evaluation
+
+<ul>
+<li>Completeness: Yes, if b is finite</li>
+<li>Optimality: Yes, if cost is constant</li>
+<li>Time: $O(b^{d \over 2})$<br /></li>
+<li>Space: $O(b^{d \over 2})$</li>
+</ul></li>
+</ul>
+
+<h2 id="summary">Summary</h2>
+
+<p>{% asset_img summary_search.png %}</p>
+
+<h1 id="informed-search-and-exploration">Informed Search and Exploration</h1>
+
+<ul>
+<li>g(n) = known path cost so far to node n.</li>
+<li>h(n) = estimate of (optimal) cost to goal from node n.</li>
+</ul>
+
+<h2 id="greedy-best-first-search">Greedy best-first search</h2>
+
+<ul>
+<li>f(n) = h(n)</li>
+<li>Greedy Best First Search (GBFS) expands the node n with smallest h(n).</li>
+<li>Evaluation
+
+<ul>
+<li>Completeness: No, may stuck in a loop</li>
+<li>Optimality: No</li>
+<li>Time: O(b^m)</li>
+<li>Space: O(b^m), keeps all nodes in memory</li>
+</ul></li>
+</ul>
+
+<h2 id="a-search">A* Search</h2>
+
+<ul>
+<li>f(n) = g(n)+h(n) = estimate of total cost to goal through node n</li>
+<li>A* search expands the node n with smallest f(n)</li>
+<li>Admissible：$0 &lt;= h(n) &lt;= h^*(n)$<br /></li>
+<li>consistent: $h(n) &lt;= c(n, a, n&rsquo;) + h(n&rsquo;)$. Also, f(n) is non-decreaing along any path</li>
+<li>Evaluation
+
+<ul>
+<li>Completeness: Yes if finit f &lt; f(G)</li>
+<li>Optimality: Yes if admissible (tree) or consistent (graph)<br /></li>
+<li>Optimally Efficient. no optimal algorithm with same heuristic is guaranteed to expand fewer nodes<br />
+<strong>prove: optimality under admissible (tree)</strong><br />
+suppose there exists suboptimal goal G2 in the frontier queue. Let n be an unexpended node on a shortest cost path to optimal goal G.<br />
+$f(n) = g(n) + h(n) &lt;= g(n) + h^<em>(n) = g(G) = g(G) + h(G) = f(G)$
+So, $f(n) &lt;= f(G)$
+Since G2 is suboptimal, we have:<br />
+$g(G) &lt; g(G2) =&gt; g(G) + h(G) &lt; g(G2) + h(G2) =&gt; f(G) &lt; f(G2)$
+Therefore, $f(n) &lt;= f(G) &lt; f(G2)$ for all n along the shortest cost path. A</em> algo will always select $f(G)$<br />
+<strong>Proved</strong></li>
+<li>Time: $O(b^d)$<br /></li>
+<li>Space: $O(b^d)$, keeps all nodes in memory</li>
+</ul></li>
+
+<li><p>Effective branching factor
+$$N + 1 = 1 + b^* + (b^<em>)^2+ &hellip; + (b^</em>)^d$$</p></li>
+
+<li><p>Inventing and learning heuristic functions</p>
+
+<ul>
+<li>Admissible heuristics can be derived from the exact solution cost of a relaxed version</li>
+<li>sub-problem, ie. pattern database stores the exact solution</li>
+<li>learning from experience</li>
+</ul></li>
+</ul>
+
+<h1 id="adversarial-search">Adversarial Search</h1>
+
+<h2 id="games">Games</h2>
+
+<p>Solution is strategy (approximate not accurate)<br />
+- strategy specifies move for every possible opponent reply<br />
+- Time limits force an approximate solution<br />
+- Evaluation function: evaluate “goodness” of game position</p>
+
+<h2 id="minimax-algorithm">Minimax algorithm</h2>
+
+<p>{% codeblock %}
+function MINIMAX-DECISION(state) returns an action
+    v = MAX-VALUE(state)
+    return the action in ACTIONS(state) with value v
+function MAX-VALUE(state) returns a utility value
+    if TERMINAL-TEST(state)
+        return UTILITY(state)
+    v = - ∞
+    for each a in ACTIONS(state) do
+        v = MAX(v, MIN-VALUE(RESULT(state, a)))
+    return v
+function MIN-VALUE(state) returns a utility value
+    if TERMINAL-TEST(state)
+        return UTILITY(state)
+    v = ∞
+    for each a in ACTIONS(state) do
+        v = MIN(v, MAX-VALUE(RESULT(state, a)))
+    return v
+{% endcodeblock %}</p>
+
+<ul>
+<li>Evaluation
+
+<ul>
+<li>Completeness: Yes if d is finite</li>
+<li>Optimality: Yes if against an optimal opponent</li>
+<li>Time: $O(b^m)$<br /></li>
+<li>Space: $O(m)$, depth-first exploration, recursive</li>
+</ul></li>
+</ul>
+
+<h2 id="alpha-beta-pruning">Alpha-Beta Pruning</h2>
+
+<p>{% asset_img ab1.png %}
+{% asset_img ab2.png %}
+{% asset_img ab3.png %}
+{% asset_img ab4.png %}
+{% asset_img ab5.png %}
+{% asset_img ab6.png %}
+{% asset_img ab7.png %}</p>
+
+<p>{% codeblock %}
+function MINIMAX-DECISION(state) returns an action
+    v = MAX-VALUE(state, -infinit, infinit)
+    return the action in ACTIONS(state) with value v
+function MAX-VALUE(state, alpha, beta) returns a utility value
+    if TERMINAL-TEST(state)
+        return UTILITY(state)
+    v = - ∞
+    for each a in ACTIONS(state) do
+        v = MAX(v, MIN-VALUE(RESULT(state, a), alpha, beta))
+        if v &gt;= beta
+            return v
+        alpha = max(alpha, v)
+    return v
+function MIN-VALUE(state) returns a utility value
+    if TERMINAL-TEST(state)
+        return UTILITY(state)
+    v = ∞
+    for each a in ACTIONS(state) do
+        v = MIN(v, MAX-VALUE(RESULT(state, a)))
+        if v &lt;= alpha
+            return v
+        beta = min(beta, v)
+    return v
+{% endcodeblock %}</p>
+
+<h2 id="evaluation-functions">Evaluation functions</h2>
+
+<p>linear weighted sum of features</p>
+
+<h2 id="cutting-off-search">cutting off search</h2>
+
+<p>{% codeblock %}
+if TERMINAL-TEST(state)
+    return UTILITY(state)
+Become:
+if CUTOFF-TEST(state, depth)
+    return EVAL(state)
+{% endcodeblock %}</p>
+
+<h1 id="reference">Reference</h1>
+
+<ol>
+<li><p>CS 6613 / CS 4613 by E. K. Wong</p></li>
+
+<li><p><a href="https://www.ics.uci.edu/~rickl/courses/cs-171/cs171-lecture-slides/cs-171-03-UninformedSearch.pdf">CS <sup>171</sup>&frasl;<sub>03</sub> from UCI</a></p></li>
+
+<li><p><a href="http://myweb.sabanciuniv.edu/rdehkharghani/files/2016/02/Prentice-Hall-Series-in-Artificial-Intelligence-Stuart-Russell-Peter-Norvig-Artificial-Intelligence_-A-Modern-Approach-Prentice-Hall-2010.pdf">Artificial Intelligence: A Modern Approach</a></p></li>
+</ol>
+
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">cixuuz</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">2017-03-19</span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/2017-03-21-how-to-set-up-admin-and-user-account-on-mongodb/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">how to set up admin and user account on mongodb</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        
+          <a class="next" href="/post/syntax-highlighting/">
+            <span class="next-text nav-default">Syntax Highlighting</span>
+            <span class="prev-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+  
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2016 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">cixuuz</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+<script type="text/javascript" src="/dist/even.min.js?v=2.7.0"></script>
+
+
+
+
+</body>
+</html>

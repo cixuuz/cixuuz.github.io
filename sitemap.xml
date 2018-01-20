@@ -1,412 +1,790 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<?xml-stylesheet type="text/xsl" href="http://localhost:1313/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://cixuuz.github.io/post/lcs_1023/</loc>
-    <lastmod>2017-10-23T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/post/even-preview/</loc>
+    <lastmod>2017-08-23T18:03:09+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/post/lcs_1022/</loc>
-    <lastmod>2017-10-22T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/about/</loc>
+    <lastmod>2017-08-28T21:41:52+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/post/lcs_1019/</loc>
-    <lastmod>2017-10-19T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/post/java-multithreading/</loc>
+    <lastmod>2017-10-29T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/post/system_design_web_crawler/</loc>
+    <loc>http://localhost:1313/post/system_design_web_crawler/</loc>
     <lastmod>2017-10-18T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/post/lcs_1017/</loc>
-    <lastmod>2017-10-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cixuuz.github.io/post/lcs_1016/</loc>
-    <lastmod>2017-10-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cixuuz.github.io/post/lcs_1015/</loc>
-    <lastmod>2017-10-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cixuuz.github.io/post/lcs_1014/</loc>
-    <lastmod>2017-10-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cixuuz.github.io/post/system_design_tinyurl/</loc>
+    <loc>http://localhost:1313/post/system_design_tinyurl/</loc>
     <lastmod>2017-10-12T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/post/lcs_1012/</loc>
-    <lastmod>2017-10-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cixuuz.github.io/post/lcs_1011/</loc>
-    <lastmod>2017-10-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cixuuz.github.io/post/lcs_1010/</loc>
-    <lastmod>2017-10-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cixuuz.github.io/post/lcs_1009/</loc>
-    <lastmod>2017-10-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cixuuz.github.io/post/lcs_1008/</loc>
-    <lastmod>2017-10-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cixuuz.github.io/post/ml_framework/</loc>
+    <loc>http://localhost:1313/post/ml_framework/</loc>
     <lastmod>2017-10-07T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/post/lcs_1005/</loc>
-    <lastmod>2017-10-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cixuuz.github.io/post/lcs_1004/</loc>
-    <lastmod>2017-10-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cixuuz.github.io/post/programming-multithreading/</loc>
+    <loc>http://localhost:1313/post/programming-multithreading/</loc>
     <lastmod>2017-10-02T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/post/lcs_0929/</loc>
-    <lastmod>2017-09-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cixuuz.github.io/post/lcs_0928/</loc>
-    <lastmod>2017-09-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cixuuz.github.io/post/lcs_0927/</loc>
-    <lastmod>2017-09-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cixuuz.github.io/post/ds-feature-engineer/</loc>
+    <loc>http://localhost:1313/post/ds-feature-engineer/</loc>
     <lastmod>2017-09-26T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/post/ml-xgboost/</loc>
+    <loc>http://localhost:1313/post/ml-xgboost/</loc>
     <lastmod>2017-09-26T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/post/lcs_0923/</loc>
-    <lastmod>2017-09-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cixuuz.github.io/post/interview-ds/</loc>
+    <loc>http://localhost:1313/post/interview-ds/</loc>
     <lastmod>2017-09-22T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/post/python-pandas/</loc>
+    <loc>http://localhost:1313/post/python-pandas/</loc>
     <lastmod>2017-09-22T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/post/java-jvm/</loc>
+    <loc>http://localhost:1313/post/java-jvm/</loc>
     <lastmod>2017-09-21T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/post/distributed_system/</loc>
+    <loc>http://localhost:1313/post/distributed_system/</loc>
     <lastmod>2017-09-21T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/post/spark-install/</loc>
+    <loc>http://localhost:1313/post/spark-install/</loc>
     <lastmod>2017-09-21T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/post/sql-newsql/</loc>
+    <loc>http://localhost:1313/post/sql-newsql/</loc>
     <lastmod>2017-09-21T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/post/lcs_0918/</loc>
-    <lastmod>2017-09-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cixuuz.github.io/post/performance_reviews/</loc>
+    <loc>http://localhost:1313/post/performance_reviews/</loc>
     <lastmod>2017-09-15T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/post/lcs_0915/</loc>
-    <lastmod>2017-09-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cixuuz.github.io/post/lcs_0914/</loc>
-    <lastmod>2017-09-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cixuuz.github.io/post/ds_summary/</loc>
+    <loc>http://localhost:1313/post/ds_summary/</loc>
     <lastmod>2017-09-13T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/post/ds_metrics/</loc>
+    <loc>http://localhost:1313/post/ds_metrics/</loc>
     <lastmod>2017-09-13T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/post/lcs_0913/</loc>
-    <lastmod>2017-09-13T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/post/english-preview/</loc>
+    <lastmod>2017-08-31T15:43:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/post/lcs_0907/</loc>
-    <lastmod>2017-09-07T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/post/japanese-preview/</loc>
+    <lastmod>2017-08-30T01:53:34+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/post/lcs_0906/</loc>
-    <lastmod>2017-09-06T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/post/chinese-preview/</loc>
+    <lastmod>2017-08-30T01:37:56+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/post/algorithm-leetcode/</loc>
-    <lastmod>2017-09-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cixuuz.github.io/post/lcs_0905/</loc>
-    <lastmod>2017-09-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cixuuz.github.io/post/lcs_0904/</loc>
-    <lastmod>2017-09-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cixuuz.github.io/post/lcs_0903/</loc>
-    <lastmod>2017-09-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cixuuz.github.io/post/lcs_0902/</loc>
-    <lastmod>2017-09-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cixuuz.github.io/post/lcs_0901/</loc>
-    <lastmod>2017-09-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cixuuz.github.io/post/java-comparator/</loc>
+    <loc>http://localhost:1313/post/java-comparator/</loc>
     <lastmod>2017-08-29T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/post/lcs_0829/</loc>
-    <lastmod>2017-08-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cixuuz.github.io/post/lcs_0828/</loc>
-    <lastmod>2017-08-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cixuuz.github.io/post/lcs_0827/</loc>
-    <lastmod>2017-08-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cixuuz.github.io/post/java-tutorial/</loc>
+    <loc>http://localhost:1313/post/java-tutorial/</loc>
     <lastmod>2017-08-24T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/post/lcs_0824/</loc>
-    <lastmod>2017-08-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cixuuz.github.io/post/lcs_0823/</loc>
+    <loc>http://localhost:1313/post/resume/</loc>
     <lastmod>2017-08-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/post/resume/</loc>
+    <loc>http://localhost:1313/post/java-pass-by-value/</loc>
     <lastmod>2017-08-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/post/java-pass-by-value/</loc>
-    <lastmod>2017-08-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cixuuz.github.io/post/lcs_0822/</loc>
-    <lastmod>2017-08-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cixuuz.github.io/post/readings_in_database_systems/</loc>
+    <loc>http://localhost:1313/post/readings_in_database_systems/</loc>
     <lastmod>2017-08-21T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/post/python-numpy/</loc>
+    <loc>http://localhost:1313/post/python-numpy/</loc>
     <lastmod>2017-08-21T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/post/database-bigtable-leveldb/</loc>
+    <loc>http://localhost:1313/post/database-bigtable-leveldb/</loc>
     <lastmod>2017-08-21T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/post/kafka-message-format/</loc>
+    <loc>http://localhost:1313/post/kafka-message-format/</loc>
     <lastmod>2017-08-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/post/kafka-stream/</loc>
+    <loc>http://localhost:1313/post/kafka-stream/</loc>
     <lastmod>2017-08-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/post/mysql-high-availability/</loc>
+    <loc>http://localhost:1313/post/mysql-high-availability/</loc>
     <lastmod>2017-08-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/post/database-index/</loc>
+    <loc>http://localhost:1313/post/database-index/</loc>
     <lastmod>2017-08-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/post/js-es6/</loc>
+    <loc>http://localhost:1313/post/js-es6/</loc>
     <lastmod>2017-08-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/post/spark-memory-management/</loc>
+    <loc>http://localhost:1313/post/spark-memory-management/</loc>
     <lastmod>2017-08-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/post/statistical-learning/</loc>
+    <loc>http://localhost:1313/post/statistical-learning/</loc>
     <lastmod>2017-08-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/post/lcs_0815/</loc>
-    <lastmod>2017-08-15T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/post/ai-learning-from-obs/</loc>
+    <lastmod>2017-05-07T22:12:39+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/post/lcs_0813/</loc>
-    <lastmod>2017-08-13T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/post/ai-constraint-satisfaction-problem/</loc>
+    <lastmod>2017-05-07T21:12:39+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/post/lcs_0812/</loc>
-    <lastmod>2017-08-12T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/post/hardware-raid-principles/</loc>
+    <lastmod>2017-05-07T19:08:30+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/post/lc_102/</loc>
-    <lastmod>2017-08-08T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/post/java-path/</loc>
+    <lastmod>2017-05-07T18:08:30+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/post/lc_175/</loc>
-    <lastmod>2017-06-25T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/post/four-types-financial-statements/</loc>
+    <lastmod>2017-04-25T11:23:18+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/post/lc_176/</loc>
-    <lastmod>2017-06-25T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/post/deep_learning_behind_tensorflow_distribute_principles_and_framework/</loc>
+    <lastmod>2017-04-22T13:21:18+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/post/lc_177/</loc>
-    <lastmod>2017-06-25T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/post/ai-first-order-logic/</loc>
+    <lastmod>2017-04-18T21:12:39+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/post/lc_178/</loc>
-    <lastmod>2017-06-25T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/post/amazon-ceo-letter-2016/</loc>
+    <lastmod>2017-04-17T12:21:39+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/post/lc_180/</loc>
-    <lastmod>2017-06-25T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/post/ai-logical-agents/</loc>
+    <lastmod>2017-04-16T10:30:08+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/post/airflow_config/</loc>
+    <loc>http://localhost:1313/post/intro-to-xpath/</loc>
+    <lastmod>2017-04-13T10:30:08+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/post/ds-jd/</loc>
+    <loc>http://localhost:1313/post/notes-for-advices-pythonic-programming/</loc>
+    <lastmod>2017-04-11T18:22:32+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/post/ds-suggest/</loc>
+    <loc>http://localhost:1313/post/2017-04-05-remote-debug-using-pycharm-on-aws-ec2/</loc>
+    <lastmod>2017-04-05T19:03:18+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/post/vis-summary/</loc>
+    <loc>http://localhost:1313/post/2017-03-31-python-tips/</loc>
+    <lastmod>2017-03-31T17:59:32+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/categories/</loc>
+    <loc>http://localhost:1313/post/2017-03-30-python-profiling/</loc>
+    <lastmod>2017-03-30T18:14:15+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2017-03-30-json/</loc>
+    <lastmod>2017-03-30T16:05:06+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2017-03-28-all-about-hardware/</loc>
+    <lastmod>2017-03-28T18:08:30+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2017-03-26-how-to-remote-connect-to-postgresql/</loc>
+    <lastmod>2017-03-26T21:05:22+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2017-03-21-how-to-set-up-admin-and-user-account-on-mongodb/</loc>
+    <lastmod>2017-03-21T10:52:11+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2017-03-19-ai-notes/</loc>
+    <lastmod>2017-03-19T17:35:06+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/syntax-highlighting/</loc>
+    <lastmod>2017-08-30T16:01:23+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/ds-jd/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/ds-suggest/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/vis-summary/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/ai/</loc>
+    <lastmod>2017-05-07T22:12:39+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/</loc>
-    <lastmod>2017-10-23T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/categories/algorithm/</loc>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/post/</loc>
-    <lastmod>2017-10-23T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/tags/aws/</loc>
+    <lastmod>2017-04-05T19:03:18+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://cixuuz.github.io/tags/</loc>
+    <loc>http://localhost:1313/post/2016-11-11-bellmanford-algorithm/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2016-11-05-bittiger-cs101-notebook-1/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2016-11-05-bittiger-cs101-notebook-2/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2016-11-05-bittiger-cs101-notebook-3/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2016-11-05-bittiger-cs101-notebook-4/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2016-11-07-bittiger-cs101-notebook-5/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2016-11-07-bittiger-cs101-notebook-6/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2016-11-28-bittiger-cs101-notebook-7/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2016-11-28-bittiger-cs101-notebook-9/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/category-2/</loc>
+    <lastmod>2017-08-23T18:03:09+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/category-3/</loc>
+    <lastmod>2017-08-23T18:03:09+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2017-08-23T18:03:09+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/company/</loc>
+    <lastmod>2017-04-17T12:21:39+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/data/</loc>
+    <lastmod>2017-04-13T10:30:08+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/data-science/</loc>
+    <lastmod>2017-04-22T13:21:18+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/data-science/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/database/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2016-10-29-database-notebook-01/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/english/</loc>
+    <lastmod>2017-08-31T15:43:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/english/</loc>
+    <lastmod>2017-08-31T15:43:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/finance/</loc>
+    <lastmod>2017-04-25T11:23:18+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/graph/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2016-06-20-kaggle-freshman-book-1.cn/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/latex/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2016-12-25-bittiger-cs101-notebook-8/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/leetcode/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2016-11-03-leetcode-239/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2016-04-12-network-centrality/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/</loc>
+    <lastmod>2017-08-23T18:03:09+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2016-03-31-precision-recall-fmeasure/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/preview/</loc>
+    <lastmod>2017-08-23T18:03:09+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/python/</loc>
+    <lastmod>2017-04-11T18:22:32+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/python/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2016-05-30-about-generator.cn/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2016-06-18-about-generator-2.cn/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2016-07-31-python-path-1.cn/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2016-03-30-mathjax-with-jekyll/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/statistics/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/syntax-highlighting/</loc>
+    <lastmod>2017-08-30T16:01:23+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/syntax-highlighting/</loc>
+    <lastmod>2017-08-30T16:01:23+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/system-design/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/tag-1/</loc>
+    <lastmod>2017-08-30T01:37:56+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/tag-2/</loc>
+    <lastmod>2017-08-31T15:43:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/tag-3/</loc>
+    <lastmod>2017-08-23T18:03:09+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/tag-4/</loc>
+    <lastmod>2017-08-30T01:53:34+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/tag-5/</loc>
+    <lastmod>2017-08-30T16:01:23+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2017-05-07T22:12:39+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/theme-preview/</loc>
+    <lastmod>2017-08-23T18:03:09+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/theme-preview/</loc>
+    <lastmod>2017-08-23T18:03:09+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/website/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/xml/</loc>
+    <lastmod>2017-04-13T10:30:08+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/%E4%B8%AD%E6%96%87/</loc>
+    <lastmod>2017-08-30T01:37:56+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/%E4%B8%AD%E6%96%87/</loc>
+    <lastmod>2017-08-30T01:37:56+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/%E6%97%A5%E6%9C%AC%E8%AA%9E/</loc>
+    <lastmod>2017-08-30T01:53:34+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/%E6%97%A5%E6%9C%AC%E8%AA%9E/</loc>
+    <lastmod>2017-08-30T01:53:34+08:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   

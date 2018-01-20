@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data Science on Chen Tong</title>
+    <link>http://localhost:1313/categories/data-science/</link>
+    <description>Recent content in Data Science on Chen Tong</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="http://localhost:1313/categories/data-science/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Kaggle新生必读手册1</title>
+      <link>http://localhost:1313/post/2016-06-20-kaggle-freshman-book-1.cn/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2016-06-20-kaggle-freshman-book-1.cn/</guid>
+      <description>按，本文根据陈驰在tigger kaggle小组中的关于kaggle比赛的微讲座整理的。整理者：Wente Guo(正文部分), EK(QA部分及</description>
+    </item>
+    
+  </channel>
+</rss>

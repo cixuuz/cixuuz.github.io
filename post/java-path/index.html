@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Java path - Chen Tong</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="cixuuz" />
+  <meta name="description" content="本文转自w大 《第一阶段》筑基 如果你不知道什么是for/while lopp、不知道什么是list，建议你先上这门公开课： UDacity CS101：Intr" />
+
+  <meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.32.1" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/java-path/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" href="/favicon.ico" />
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=2.7.0" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+<meta property="og:title" content="Java path" />
+<meta property="og:description" content="本文转自w大 《第一阶段》筑基 如果你不知道什么是for/while lopp、不知道什么是list，建议你先上这门公开课： UDacity CS101：Intr" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/java-path/" />
+
+
+
+<meta property="article:published_time" content="2017-05-07T18:08:30&#43;00:00"/>
+
+<meta property="article:modified_time" content="2017-05-07T18:08:30&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Java path">
+<meta itemprop="description" content="本文转自w大 《第一阶段》筑基 如果你不知道什么是for/while lopp、不知道什么是list，建议你先上这门公开课： UDacity CS101：Intr">
+
+
+<meta itemprop="datePublished" content="2017-05-07T18:08:30&#43;00:00" />
+<meta itemprop="dateModified" content="2017-05-07T18:08:30&#43;00:00" />
+<meta itemprop="wordCount" content="2153">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Java path"/>
+<meta name="twitter:description" content="本文转自w大 《第一阶段》筑基 如果你不知道什么是for/while lopp、不知道什么是list，建议你先上这门公开课： UDacity CS101：Intr"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Java path</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2017-05-07 </span>
+        
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#第一阶段-筑基">《第一阶段》筑基</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      
+
+<p>本文转自w大</p>
+
+<h1 id="第一阶段-筑基">《第一阶段》筑基</h1>
+
+<p>如果你不知道什么是for/while lopp、不知道什么是list，建议你先上这门公开课：
+UDacity CS101：Introduction to Computer Science/Building a Search Engine
+ <a href="https://www.udacity.com/course/cs101">https://www.udacity.com/course/cs101</a>
+学完了以后，好歹对基本的programming control flow, very basic data structure熟悉一下。</p>
+
+<p>绝大多数的理工科学生，本科期间是上了C语言的；如果你是美本，很可能上过其他编程语言，这就算消除了零基础了。</p>
+
+<p>《第二阶段》入门</p>
+
+<p>你必须先学Java和SQL，Warald推荐的书籍如下：
+1）Head First Java
+目前市面上要求Object oriented programming尤其是Java的工作是最多的。这本书最大的优点就是容易读懂，无论是内容讲解还是大量图片设计，都非常容易理解。
+2）A First Course in Database Systems，作者是Jeffrey D. Ullman, Jennifer Widom
+用SQL查询数据库是基本技能。基本上你会英语就能读懂这本书、学会SQL。
+Warald非常推荐转专业学CS的同学从这本书入手来培养兴趣，计算机/管理信息系统甚至Business/Marketing等行业，有些人的日常工作就是用SQL处理数据。</p>
+
+<p>coursera之前有过Daphne Koller的database公开课，貌似下面要换成Jennifer Widom来教（<a href="https://class.coursera.org/db/class/index），上这门课程也可以。">https://class.coursera.org/db/class/index），上这门课程也可以。</a></p>
+
+<p>读完这两本书，下面你要继续学Java和数据结构：
+3）Data Structures and Algorithms in Java
+Warald推荐Berkeley CS61b：<a href="http://www.cs.berkeley.edu/~jrs/61b/。这门课程是给大一新生上的，并不高深，里面推荐了head">http://www.cs.berkeley.edu/~jrs/61b/。这门课程是给大一新生上的，并不高深，里面推荐了head</a> first java，也推荐了Data Structures and Algorithms in Java。据joyce在一亩三分地里说，这个老师是berkeley计算机系本科教课最清楚的老师之一，所有的lecture video都在youtube上，notes都可以自由下载。作业和projects也都在网上，可以自己练习。
+另一个选择是coursera的algorithm课程，Princeton大学Robert Sedgewick教授开的，算法跟数据结构都有了，作业不错，也是用Java，以前开课时一亩三分地里有人组织一起上课：<a href="http://www.1point3acres.com/bbs/thread-37519-1-1.html。最近正好在开Round">http://www.1point3acres.com/bbs/thread-37519-1-1.html。最近正好在开Round</a> II。</p>
+
+<p>公开课最大的好处是可以得到及时的feedback，而berkeley的CS61b这类传统的video下载观看模式，你只能闷头做题，作对作错都不知道。</p>
+
+<p>如果你们学校有类似课程，你可以去选课或者旁听，但是一定要做作业、练习编程！否则这门课就算是白上了！</p>
+
+<p>熬到这里为止，你已经具备最基本的能力了！如果这些你早就会了，恭喜！你的书没白念！</p>
+
+<p>下面Warald建议你更深入的学习Java：
+4）Thinking in Java
+这本书很经典，但是不适合作为入门书籍。学完了前面两本java书，你可以翻着看看这本，会有帮助。
+然后是一个重头戏：
+5）Programming Interview Exposed
+这本书籍不是“课本”，不是“课程”，而是教你做各种常见面试题目的。
+很多人来问Warald：我是小白，请问该如何准备面试求职？这本书就是我的回答。熟练掌握这本书籍的内容，是你找到工作的基础。</p>
+
+<p>完成了上面这五步，你就已经具备了在美国找工作的基本条件了；尽管没人敢保证你一定能找到工作，但是即使只会这些，你已经“有可能”找到工作，尤其是不瞄准google、facebook等热门公司，或者找对软件开发技能要求不高的工作。</p>
+
+<p>各位同学，计算机/CS和其他专业一个很大的不同，就是容易上手、容易自学成才！你不需要焊电路板、做化学实验（这些都需要设备和钱），下载电子书和免费软件，spend your time，use your talent，就可以了! 你离在美国找到工作的距离，可能只有这五本书的厚度。</p>
+
+<p>《第三阶段》进级</p>
+
+<p>要全面扎实的掌握计算机学科知识，要想在找工作的时候稳拿offer、获得更多更佳的就业选择，当然不可能只学前面的五本书。基础教育可以有稳定可循的套路，而往高处进级就复杂了，有些人也未必能训练出来，否则岂不是人人都去google、linkedin、微软工作了？</p>
+
+<p>从找工作的角度来看，下面是你应该做的：
+6）刷career cup和leetcode题目
+一亩三分地论坛有个编程算法面试题专版（<a href="http://www.1point3acres.com/bbs/forum-84-1.html），近期有人组织大家一起刷题讨论：http://www.1point3acres.com/bbs/thread-48094-1-1.html。">http://www.1point3acres.com/bbs/forum-84-1.html），近期有人组织大家一起刷题讨论：http://www.1point3acres.com/bbs/thread-48094-1-1.html。</a>
+同时，Warald建议你继续在udacity和coursera上课比如machine learning、artificial intelligence，学了都会很有帮助。如果你在本校选计算机课程没选上，那更是应该利用这种免费的机会，听斯坦福等牛校牛人讲课。</p>
+
+<p>对于在美国读书的同学来说，进入这个进级阶段，往往也是你在美国读书的中晚期了，你已经上了网路、操作系统、软件工程等课程，简历逐渐充实了，甚至对于将来做哪个行业或者方向（data management/mobile/web front-end/etc）也大体有眉目了，然后就是根据自己的兴趣，补充相关专业知识了。</p>
+
+<p><a href="http://www.horstmann.com/corejava.html">http://www.horstmann.com/corejava.html</a></p>
+
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">cixuuz</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">2017-05-07</span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/hardware-raid-principles/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">RAID基本原理</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        
+          <a class="next" href="/post/four-types-financial-statements/">
+            <span class="next-text nav-default">Types of Financial Statements</span>
+            <span class="prev-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+  
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2016 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">cixuuz</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+<script type="text/javascript" src="/dist/even.min.js?v=2.7.0"></script>
+
+
+
+
+</body>
+</html>

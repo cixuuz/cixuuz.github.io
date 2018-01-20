@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>System Design on Chen Tong</title>
+    <link>http://localhost:1313/categories/system-design/</link>
+    <description>Recent content in System Design on Chen Tong</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="http://localhost:1313/categories/system-design/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Bittiger cs101 notebook - how to design a google sheet</title>
+      <link>http://localhost:1313/post/2016-11-05-bittiger-cs101-notebook-1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2016-11-05-bittiger-cs101-notebook-1/</guid>
+      <description>Structure  Data Structure Algorithm
+ Computer Architecture
+ Operation System
+ Computer Network
+ Software Engineering
+ Design thinking  How to design a google sheet  know the features How to store cells in a sheet:
+   Array Linked List Four Direction Node operations     O(1) O(1) O(1) update   O(m*n) O(m+n) O(p) insert row or column   O(m*n) O(m*n) O(p) space: store cells    Identifying Circular Dependency</description>
+    </item>
+    
+    <item>
+      <title>Bittiger cs101 notebook 1 - how to calculate</title>
+      <link>http://localhost:1313/post/2016-11-05-bittiger-cs101-notebook-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2016-11-05-bittiger-cs101-notebook-2/</guid>
+      <description>CPU: central processing unit http://www.visual6502.org/JSSim/expert-6800.html
+1 HZ = 1 clock time 2.34GHZ = 2.34B clock time
+Register - Data Register - Instructure Register - Address Register - Flag Register: boolean like compare
+between ALU and control unit
+ALU (Arithmetic Logic Unit) - Transistor
+AND, OR, NOT, XOR
+Control unit</description>
+    </item>
+    
+    <item>
+      <title>Bittiger cs101 notebook 2 - linux and file system</title>
+      <link>http://localhost:1313/post/2016-11-05-bittiger-cs101-notebook-3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2016-11-05-bittiger-cs101-notebook-3/</guid>
+      <description>need for a file system  hardware
+ file
+ size type authorization read and write time  operations
+  common file system:  FAT(File Allocation Table)
+connect by points and write by order ext2(second extended file system)
+ supernode | file sysem descrip | inode bitmap | block bitmap | inode | block
+ use hashmap (inode) record file content
+ inode -&amp;gt; meta Data
+ block -&amp;gt; file content</description>
+    </item>
+    
+    <item>
+      <title>Bittiger cs101 notebook 3 - JVM</title>
+      <link>http://localhost:1313/post/2016-11-05-bittiger-cs101-notebook-4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2016-11-05-bittiger-cs101-notebook-4/</guid>
+      <description>JVM class loader load code class and other java base classes such as java.io util &amp;hellip;
+ static class will be loaded in prepare in link
+ Resolve change symbol reference to actural address
+ parallel to speed up
+ NoClassDeFoundError from the first load part
+ ClassNotFoundException from solve in link
+  runtime data: memory  metaspace: class like static, default 64MB max before Java 8
+ heap: 25% space of memory</description>
+    </item>
+    
+    <item>
+      <title>Bittiger cs101 notebook 4 - multithreaded programming fundamentals</title>
+      <link>http://localhost:1313/post/2016-11-07-bittiger-cs101-notebook-5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2016-11-07-bittiger-cs101-notebook-5/</guid>
+      <description>Process is a instance of a running program
+- logical control flow: process execution interleaved
+- private address space: managed by virtual memory machine
+- for security
+Concurrent process their time flow are overlapped
+A Process with multithreaded
+Similar Each has its own logical control flow Each can run concurrently Each is context switched
+different Threads share code and data, Threads are less expensive than processes in some degree</description>
+    </item>
+    
+    <item>
+      <title>Bittiger cs101 notebook 5 - what happens when visit a website</title>
+      <link>http://localhost:1313/post/2016-11-07-bittiger-cs101-notebook-6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2016-11-07-bittiger-cs101-notebook-6/</guid>
+      <description>Interruption generates an interrupt
+interrupt controller
+ Typeahead
+processor
+do_IRO()
+handler()
+less delay: best: less than 10 ms
+cache: 1. used before 2. used predictive
+ Http/Https:
+protocol
+IPV4: 256^4
+IPV6:
+ DNS:
+nslookup www.google.com
+traceroute www.google.com
+port:
+443 https
+8080&amp;frasl;80 http
+ Seven Layers:
+connect with https:
+(7). Application Layer: https
+(6). Presentation
+(5). Session
+(4). Transport:
+tcp : find a road from a to b
+tcp：Three Interaction Protocol</description>
+    </item>
+    
+    <item>
+      <title>Bittiger cs101 notebook 6 - web programming</title>
+      <link>http://localhost:1313/post/2016-11-28-bittiger-cs101-notebook-7/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2016-11-28-bittiger-cs101-notebook-7/</guid>
+      <description>Http and Chrome dev tools Http header  Host: send to where, dns lookup
+ Referer: linked from where,
+ User-Agent: browser, os
+ Cache-Control:
+ static: can cache
+ non-static: cannot cache
+  Date: timestamp
+  Http request methods GET
+HEAD
+POST: post data
+PUT: store data
+DELETE
+TRACE
+OPTIONS
+CONNECT
+status 304: cached content
+Restful api reasons: - single page application
+- mobile and other services</description>
+    </item>
+    
+    <item>
+      <title>Bittiger cs101 notebook 7 - design pattern in Java</title>
+      <link>http://localhost:1313/post/2016-11-28-bittiger-cs101-notebook-9/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2016-11-28-bittiger-cs101-notebook-9/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

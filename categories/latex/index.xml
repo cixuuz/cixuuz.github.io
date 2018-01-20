@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Latex on Chen Tong</title>
+    <link>http://localhost:1313/categories/latex/</link>
+    <description>Recent content in Latex on Chen Tong</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="http://localhost:1313/categories/latex/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Latex symbols list</title>
+      <link>http://localhost:1313/post/2016-12-25-bittiger-cs101-notebook-8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2016-12-25-bittiger-cs101-notebook-8/</guid>
+      <description> Greek letters Reference  https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols  </description>
+    </item>
+    
+  </channel>
+</rss>

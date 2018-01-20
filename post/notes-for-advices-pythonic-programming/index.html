@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>notes for advices pythonic programming - Chen Tong</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="cixuuz" />
+  <meta name="description" content="编写高质量代码：改善Python程序的91个建议 的读书笔记 记录一下自己认为比较有用的片段 10 充分利用 Lazy evaluation 的特性 if x and y，在 x 为 false 的情况下 y 表达" />
+
+  <meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.32.1" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/notes-for-advices-pythonic-programming/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" href="/favicon.ico" />
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=2.7.0" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+<meta property="og:title" content="notes for advices pythonic programming" />
+<meta property="og:description" content="编写高质量代码：改善Python程序的91个建议 的读书笔记 记录一下自己认为比较有用的片段 10 充分利用 Lazy evaluation 的特性 if x and y，在 x 为 false 的情况下 y 表达" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/notes-for-advices-pythonic-programming/" />
+
+
+
+<meta property="article:published_time" content="2017-04-11T18:22:32&#43;00:00"/>
+
+<meta property="article:modified_time" content="2017-04-11T18:22:32&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="notes for advices pythonic programming">
+<meta itemprop="description" content="编写高质量代码：改善Python程序的91个建议 的读书笔记 记录一下自己认为比较有用的片段 10 充分利用 Lazy evaluation 的特性 if x and y，在 x 为 false 的情况下 y 表达">
+
+
+<meta itemprop="datePublished" content="2017-04-11T18:22:32&#43;00:00" />
+<meta itemprop="dateModified" content="2017-04-11T18:22:32&#43;00:00" />
+<meta itemprop="wordCount" content="3162">
+
+
+
+<meta itemprop="keywords" content="Python," />
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="notes for advices pythonic programming"/>
+<meta name="twitter:description" content="编写高质量代码：改善Python程序的91个建议 的读书笔记 记录一下自己认为比较有用的片段 10 充分利用 Lazy evaluation 的特性 if x and y，在 x 为 false 的情况下 y 表达"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">notes for advices pythonic programming</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2017-04-11 </span>
+        
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#编写高质量代码-改善python程序的91个建议-https-book-douban-com-subject-25910544-的读书笔记"><a href="https://book.douban.com/subject/25910544/">编写高质量代码：改善Python程序的91个建议</a> 的读书笔记</a>
+<ul>
+<li><a href="#10-充分利用-lazy-evaluation-的特性">10 充分利用 Lazy evaluation 的特性</a></li>
+<li><a href="#isinstance支持多类型检查">isinstance支持多类型检查</a></li>
+<li><a href="#join-方法的效率要高于-操作符">join() 方法的效率要高于 + 操作符。</a></li>
+<li><a href="#31-记住函数传参既不是传值也不是传引用">31：记住函数传参既不是传值也不是传引用</a></li>
+<li><a href="#40-深入掌握-configparser">40：深入掌握 ConfigParser</a></li>
+</ul></li>
+<li><a href="#format-conf">format.conf</a>
+<ul>
+<li><a href="#57-为什么需要-self-参数">57：为什么需要 self 参数</a></li>
+<li><a href="#59-理解描述符机制">59：理解描述符机制</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      
+
+<h1 id="编写高质量代码-改善python程序的91个建议-https-book-douban-com-subject-25910544-的读书笔记"><a href="https://book.douban.com/subject/25910544/">编写高质量代码：改善Python程序的91个建议</a> 的读书笔记</h1>
+
+<p>记录一下自己认为比较有用的片段</p>
+
+<h2 id="10-充分利用-lazy-evaluation-的特性">10 充分利用 Lazy evaluation 的特性</h2>
+
+<ul>
+<li>if x and y，在 x 为 false 的情况下 y 表达式的值将不再计算。</li>
+<li>if x or y，当 x 的值为 true 的时候将直接返回，不再计算 y 的值。</li>
+</ul>
+
+<h2 id="isinstance支持多类型检查">isinstance支持多类型检查</h2>
+
+<p>{% codeblock %}
+&gt;&gt;&gt; isinstance(2, float)
+False
+&gt;&gt;&gt; isinstance(&ldquo;a&rdquo;, (str, unicode))
+True
+&gt;&gt;&gt; isinstance((2, 3), (str, list, tuple)) # 支持多种类型列表
+True
+{% endcodeblock %}</p>
+
+<h2 id="join-方法的效率要高于-操作符">join() 方法的效率要高于 + 操作符。</h2>
+
+<p>当用操作符 + 连接字符串的时候，由于字符串是不可变对象，其工作原理实际上是这样的：如果要连接如下字符串：S1+S2+S3+&hellip;+SN，执行一次 + 操作便会在内存中申请一块新的内存空间，并将上一次操作的结果和本次操作的右操作数复制到新申请的内存空间，在 N 个字符串连接的过程中，会产生 N-1 个中间结果，每产生一个中间结果都需要申请和复制一次内存，总共需要申请 N-1 次内存，从而严重影响了执行效率，<strong>时间复杂度近似为 O(n^2)</strong>。
+而当用 join() 方法连接字符串的时候，会首先计算需要申请的总的内存空间，然后一次性申请所需内存并将字符序列中的每一个元素复制到内存中去，<strong>所以 join 操作的时间复杂度为 O(n)</strong>。</p>
+
+<h2 id="31-记住函数传参既不是传值也不是传引用">31：记住函数传参既不是传值也不是传引用</h2>
+
+<ul>
+<li>Prefer to call by reference
+对于 Python 函数参数是传值还是传引用这个问题的答案是：都不是。正确的叫法应该是传对象（call by object）或者说传对象的引用（call-by-object-reference）。函数参数在传递的过程中将整个对象传入，对可变对象的修改在函数外部以及内部都可见，调用者和被调用者之间共享这个对象，而对于不可变对象，由于并不能真正被修改，因此，修改往往是通过生成一个新对象然后赋值来实现的。
+{% codeblock %}
+&gt;&gt;&gt; def test_func(a_list):
+a_list[0] = &lsquo;a&rsquo;
+print(&ldquo;0: {}&ldquo;.format(a_list))
+a_list = [&ldquo;b&rdquo;,&ldquo;c&rdquo;,&ldquo;d&rdquo;]
+print(&ldquo;1: {}&ldquo;.format(a_list))</li>
+</ul>
+
+<blockquote>
+<blockquote>
+<blockquote>
+<p>a_list = [&ldquo;c&rdquo;,&ldquo;d&rdquo;,&ldquo;e&rdquo;]
+test_func(a_list)
+0: [&lsquo;a&rsquo;, &rsquo;d&rsquo;, &lsquo;e&rsquo;]
+1: [&lsquo;b&rsquo;, &lsquo;c&rsquo;, &rsquo;d&rsquo;]
+a_list
+[&lsquo;a&rsquo;, &rsquo;d&rsquo;, &lsquo;e&rsquo;]
+{% endcodeblock %}</p>
+</blockquote>
+</blockquote>
+</blockquote>
+
+<h2 id="40-深入掌握-configparser">40：深入掌握 ConfigParser</h2>
+
+<p>ConfigParser 的基本用法通过手册可以掌握，但是仍然有几个知识点值得注意。</p>
+
+<p>首先就是 getboolean() 这个函数。getboolean() 根据一定的规则将配置项的值转换为布尔值，如以下的配置：
+[section1]
+option1=0
+当调用 getboolean(&ldquo;section1&rdquo;, &ldquo;option1&rdquo;) 时，将返回 False。不过 getboolean() 的真值规则值得一说：除了 0 以外，no、false 和 off 都会被转义为 False，而对应的 1、yes、true 和 on 则都被转义为 True，其他值都会导致抛出 ValueError 异常。
+除了 getboolean() 之外，还需要注意的是配置项的查找规则。
+首先，在 ConfigParser 支持的配置文件格式里，有一个 [DEFAULT] 节，当读取的配置项不在指定的节里时，ConfigParser 将会到 [DEFAULT] 节中查找。
+除此之外，还有一些机制导致项目对配置项的查找更复杂，这就是 class ConfigParser 构造函数中的 defaults 形参以及其 get(section, option[, raw[, vars]]) 中的全名参数 vars。如果把这些机制全部用上，那么配置项值的查找规则如下：
+如果找不到节名，就抛出 NoSectionError
+如果给定的配置项出现在 get() 方法的 var 参数中，则返回 var 参数中的值
+如果在指定的节中含有给定的配置项，则返回其值
+如果在 【DEFAULT】中有指定的配置项，则返回其值
+如果在构造函数的 defaults 参数中有指定的配置项，则返回其值
+抛出 NoOptionError
+Python 中字符串格式化可以使用以下语法：
+{% codeblock %}
+&gt;&gt;&gt; &ldquo;%(protocol)s://%(server)s:%(port)s/&rdquo; % {&ldquo;protocol&rdquo;: &ldquo;http&rdquo;, &ldquo;server&rdquo;: &ldquo;example.com&rdquo;, &ldquo;port&rdquo;: 1080}
+&ldquo;<a href="http://example.com:1080/&quot;">http://example.com:1080/&quot;</a>
+{% endcodeblock %}
+其实 ConfigParser 支持类似的用法，所以在配置文件中可以使用。如，有如下配置选项：
+{% codeblock %}</p>
+
+<h1 id="format-conf">format.conf</h1>
+
+<p>[DEFAULT]
+conn_str = %(dbn)s://%(user)s:%(pw)s@%(host)s:%(port)s/%(db)s
+dbn = mysql
+user = root
+host = localhost
+port = 3306
+[db1]
+user = aaa
+pw = ppp
+db = example
+[db2]
+host = 192.168.0.110
+pw = www
+db = example
+{% endcodeblock %}</p>
+
+<h2 id="57-为什么需要-self-参数">57：为什么需要 self 参数</h2>
+
+<p>在类中当定义实例方法的时候需要将第一个参数显式声明为 self，而调用的时候并不需要传入该参数。
+self 表示的就是实例对象本身，即类的对象在内存中的地址。self 是对对象本身的引用。我们在调用实例方法的时候也可以直接传入实例对象。其实 self 本身并不是 Python 的关键字（cls 也不是），可以将 self 替换成任何你喜欢的名称，如 this、obj 等，实际效果和 self 是一样的（但并不推荐，因为 self 更符合约定俗成的原则）
+在方法声明的时候需要定义 self 作为第一个参数，而调用方法的时候却不用传入这个参数。虽然这并不影响语言本身的使用，而且也很容易遵循这个规则，但既然如此，为什么必须在定义方法的时候声明 self 参数？原因如下：
+Python 在当初设计的时候借鉴了其他语言的一些特征，如 Moudla-3 中方法会显式地在参数列表中传入 self。Python 起源于 20 世纪 80 年代末，那个时候的很多语言都有 self，如 Smalltalk、Modula-3 等。Python 在最开始设计的时候受到了其他语言的影响，因此借鉴了其中的一些理念。
+Python 语言本身的动态性决定了使用 self 能够带来一定便利。
+Python 属于一级对象语言（first class object)，如果 m 是类 A 的一个方法，有好几种方式都可以引用该方法：
+{% codeblock %}
+&gt;&gt;&gt; class A:
+        def m(self, value):
+            pass
+&gt;&gt;&gt; A.<strong>dict</strong>[&ldquo;m&rdquo;]
+&gt;&gt;&gt; A.m.<strong>func</strong>
+{% endcodeblock %}
+实例方法是作用于对象的，最简单的方式就是将对象本身传递到该方法中去，self 的存在保证了 A.<strong>dict</strong><a href="a, 2">&rsquo;m&rsquo;</a> 的使用和 a.(2) 一致。同时当子类覆盖了父类中的方法但仍然想调用该父类的方法的时候，可以方便地使用 baseclass.methodname(self, <argument list>) 或 super(childclass, self).methodname(<argument list>) 来实现。
+在存在同名的局部变量以及实例变量的情况下使用 self 使得实例变量更容易被区分</p>
+
+<ul>
+<li>Guido 认为，基于 Python 目前的一些特性（如类中动态添加方法，在类风格的装饰器中没有 self 无法确认是返回一个静态方法还是类方法等）保留其原有设计是个更好的选择，更何况 Python 的哲学是：显示优于隐式（Explicit is better than implicit）。</li>
+</ul>
+
+<h2 id="59-理解描述符机制">59：理解描述符机制</h2>
+
+<p>除了在不同的局部变量、全局变量中查找名字，还有一个相似的场景，那就是查找对象的属性。在 Python 中，一切皆是对象，所以类也是对象，类的实例也是对象。
+每一个类都有一个 <strong>dict</strong> 属性，其中包含的是它的所有属性，又称为类属性。
+除了与类相关的类属性之外，每一个实例也有相应的属性表（<strong>dict</strong>），称为实例属性。当我们通过实例访问一个属性时，它首先会尝试在实例属性中查找，如果找不到，则会到类属性中查找。
+实例可以访问类属性，但与读操作有所不同，如果通过实例增加一个属性，只能改变此实例的属性，对类属性而言，并没有变化。
+能不能给类增加一个属性？答案是，能，也不能。说能是因为每一个 class 也是一个对象，动态地增减对象的属性与方法正是 Python 这种动态语言的特性，自然是支持的。
+说不能，是因为在 Python 中，内置类型和用户定义的类型是有分别的，内置类型并不能够随意地为它增加属性或方法。
+当我们通过 &ldquo;.&rdquo; 操作符访问一个属性时，如果访问的实例属性，与直接通过 <strong>dict</strong> 属性获取相应的元素是一样的；而如果访问的是类属性，则并不相同；&rdquo;.&rdquo; 操作符封装了对两种不同属性进行查找的细节。
+访问类属性时，通过 <strong>dict</strong> 访问和使用 &ldquo;.&rdquo; 操作符访问是一样的，但如果是方法，却又不是如此了。
+当通过 &ldquo;.&rdquo; 操作符访问时，Python 的名字查找并不是先在实例属性中查找，然后再在类属性中查找那么简单，实际上，根据通过实例访问属性和根据类访问属性的不同，有以下两种情况：
+一种是通过实例访问，比如代码 obj.x，如果 x 是一个描述符，那么 <strong>getattribute</strong>() 会返回 type(obj).<strong>dict</strong>[&lsquo;x&rsquo;].<strong>get</strong>(obj, type(obj)) 结果，即：type(obj) 获取 obj 的类型；type(obj).<strong>dict</strong>[&lsquo;x&rsquo;] 返回的是一个描述符，这里有一个试探和判断的过程；最后调用这个描述符的 <strong>get</strong>() 方法。
+另一个是通过类访问的情况，比如代码 cls.x，则会被 <strong>getattribute</strong>() 转换为 cls.<strong>dict</strong>[&lsquo;x&rsquo;].<strong>get</strong>(None, cls)。
+描述符协议是一个 Duck Typing 的协议，而每一个函数都有 <strong>get</strong> 方法，也就是说其他每一个函数都是描述符。
+描述符机制有什么作用？其实它的作用编写一般程序的话还真用不上，但对于编写程序库的读者来说就有用了，比如已绑定方法和未绑定方法。
+由于对描述符的 <strong>get</strong>() 的调用参数不同，当以 obj.x 的形式访问时，调用参数是 <strong>get</strong>(obj, type(obj))；而以 cls.x 的形式访问时，调用参数是 <strong>get</strong>(None, type(obj))，这可以通过未绑定方法的 im_self 属性为 None 得到印证。
+除此之外，所有对属性、方法进行修饰的方案往往都用到了描述符，比如 classmethod、staticmethod 和 property 等。以下是 property 的参考实现：
+{% codeblock %}
+class Property(object):
+    &ldquo;Emulate PyProperty_Type() in Objects/descrobject.c&rdquo;
+    def <strong>init</strong>(self, fget=None, fset=None, fdel=None, doc=None):
+        self.fget = fget
+        self.fset = fset
+        self.fdel = fdel
+        self.<strong>doc</strong> = doc
+    def <strong>get</strong>(self, obj, objtype=None):
+        if obj is None:
+            return self
+        if self.fget is None:
+            raise AttributeError, &ldquo;unreadable attribute&rdquo;
+        return self.fget(obj)
+    def <strong>set</strong>(self, obj, value):
+        if self.fset is None:
+            raise AttributeError, &ldquo;can&rsquo;t set attribute&rdquo;
+        self.fset(obj, value)
+    def <strong>delete</strong>(self, obj):
+        if self.fdel is None:
+            raise AttributeError, &ldquo;can&rsquo;t delete attribute&rdquo;
+        self.fdel(obj)
+{% endcodeblock %}</p>
+
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">cixuuz</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">2017-04-11</span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/python/">Python</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/intro-to-xpath/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Intro to xpath</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        
+          <a class="next" href="/post/2017-04-05-remote-debug-using-pycharm-on-aws-ec2/">
+            <span class="next-text nav-default">remote debug using pycharm on AWS ec2</span>
+            <span class="prev-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+  
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2016 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">cixuuz</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+<script type="text/javascript" src="/dist/even.min.js?v=2.7.0"></script>
+
+
+
+
+</body>
+</html>
