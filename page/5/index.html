@@ -55,7 +55,7 @@
 
 
 
-<meta property="og:updated_time" content="2017-09-21T00:00:00&#43;00:00"/>
+<meta property="og:updated_time" content="2017-04-22T13:21:18&#43;00:00"/>
 
 
 
@@ -141,9 +141,9 @@
     
       <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/spark-install/">install spark</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/deep_learning_behind_tensorflow_distribute_principles_and_framework/">Deep Learning behind Tensorflow</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2017-09-21 </span>
+      <span class="post-time"> 2017-04-22 </span>
       
       
     </div>
@@ -151,10 +151,10 @@
   
   <div class="post-content">
     <div class="post-summary">
-      install spark https://www.davidadrian.cc/posts/2017/08/how-to-spark-cluster/
+      machine learning word2vex represent word as low dimensional, dense vectors compute the statistics of how ofen some word cooccurs with its neighbor words in a large text corpus. 将数量变成小的dense的vector predictive models directly try to predict a word from its neighbours in terms of learned small, dense embedding Word2Vec https://web.archive.org/web/20160311161826/http://cs224d.stanford.edu/lecture_notes/LectureNotes1.pdf Parameter Server https://www.cs.cmu.edu/~muli/file/parameter_server_osdi14.pdf
     </div>
     <div class="read-more">
-      <a href="/post/spark-install/" class="read-more-link">阅读更多</a>
+      <a href="/post/deep_learning_behind_tensorflow_distribute_principles_and_framework/" class="read-more-link">阅读更多</a>
     </div>
   </div>
 </article>
@@ -162,9 +162,9 @@
     
       <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/sql-newsql/">newSQL</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/ai-first-order-logic/">AI: first-order logic</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2017-09-21 </span>
+      <span class="post-time"> 2017-04-18 </span>
       
       
     </div>
@@ -172,10 +172,11 @@
   
   <div class="post-content">
     <div class="post-summary">
-      newSQL
+      While propositional logic assumes the world contains facts, first-order logic assumes the world contains objects, relations, functions, like natural language.
+Syntax  Constants: Poly, 2, refer to objects Predicates: brother, larger than, refer to relations functions: sqrt, refer to functional relations variables: x, y connectives: ^ $\Rightarrow$ equality: = quantifiers: $\exists$, $\forall$  Sentences  atomic sentence = predicate(term1, &hellip;, termN) or term1 = term2. where term = function(term1, &hellip;, termN) or constant or variable complex sentences are made from atomic sentences using connectives  Universal quantification $\forall  $ Typically, $\Rightarrow$ is the main connective with $\forall$, avoid $\wedge$.
     </div>
     <div class="read-more">
-      <a href="/post/sql-newsql/" class="read-more-link">阅读更多</a>
+      <a href="/post/ai-first-order-logic/" class="read-more-link">阅读更多</a>
     </div>
   </div>
 </article>
@@ -183,9 +184,9 @@
     
       <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/performance_reviews/">Performance_reviews</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/amazon-ceo-letter-2016/">Amazon CEO letter 2016</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2017-09-15 </span>
+      <span class="post-time"> 2017-04-17 </span>
       
       
     </div>
@@ -193,10 +194,158 @@
   
   <div class="post-content">
     <div class="post-summary">
-      How do Individual Contributors Get Stuck?
+      转载 To our shareowners: This year, Amazon became the fastest company ever to reach $100 billion in annual sales. Also this year, Amazon Web Services is reaching $10 billion in annual sales &hellip; doing so at a pace even faster than Amazon achieved that milestone. What’s going on here? Both were planted as tiny seeds and both have grown organically without significant acquisitions into
     </div>
     <div class="read-more">
-      <a href="/post/performance_reviews/" class="read-more-link">阅读更多</a>
+      <a href="/post/amazon-ceo-letter-2016/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/ai-logical-agents/">AI: Logical Agents</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2017-04-16 </span>
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      knowledge base a set of sentences. - inference:deriving new sentences from old - TELL: add new sentences to the knowledge base - ASK: a way to query what is known. The standard names for these operations
+Generic KB-Based Agent Similar to agents with internal states. {% codeblock %} function KB-Agent(percept) returns an action static KB = a knowledge base, t = 0 // a counter indicating time tell(KB, make_percept_sentence(percept, t)) action = ask(KB, make_action_query(t)) tell(KB, make_action_sentence(action, t)) t++ return action {% endcodeblock %}
+    </div>
+    <div class="read-more">
+      <a href="/post/ai-logical-agents/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/intro-to-xpath/">Intro to xpath</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2017-04-13 </span>
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      发现一个很好的xpath入门教程 xpath有三种记号，分别是 /, [] 和 :: / /foo/bar 指的是从根结点开始，/foo 对于每个节点，也就是根结点，得到它的子节
+    </div>
+    <div class="read-more">
+      <a href="/post/intro-to-xpath/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/notes-for-advices-pythonic-programming/">notes for advices pythonic programming</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2017-04-11 </span>
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      编写高质量代码：改善Python程序的91个建议 的读书笔记 记录一下自己认为比较有用的片段 10 充分利用 Lazy evaluation 的特性 if x and y，在 x 为 false 的情况下 y 表达
+    </div>
+    <div class="read-more">
+      <a href="/post/notes-for-advices-pythonic-programming/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/2017-04-05-remote-debug-using-pycharm-on-aws-ec2/">remote debug using pycharm on AWS ec2</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2017-04-05 </span>
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      http://www.jianshu.com/p/9b362cdee2ab
+    </div>
+    <div class="read-more">
+      <a href="/post/2017-04-05-remote-debug-using-pycharm-on-aws-ec2/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/2017-03-31-python-tips/">python tips</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2017-03-31 </span>
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      https://zhuanlan.zhihu.com/p/26099601 2).函数的传值到底是值传递还是引用传递，要分情况 a.不可变参数用值传递： 像整数和字符串这样的不可变对象，是通过拷贝进行传递的，因为你无论
+    </div>
+    <div class="read-more">
+      <a href="/post/2017-03-31-python-tips/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/2017-03-30-python-profiling/">python profiling and optimize</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2017-03-30 </span>
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      profiling python {% codeblock &ldquo;commandline profiling&rdquo; %} python -m cProfile -s tottime your_program.py {% endcodeblock %} 优化 np random 比原生函数快四倍 {% asset_img np1.png %} {% asset_img np2.png %} 需要记住的延迟数据 {% codeblock %} Latency Comparison Numbers L1 cache reference 0.5 ns Branch mispredict 5 ns L2 cache reference 7 ns 14x L1 cache Mutex lock/unlock
+    </div>
+    <div class="read-more">
+      <a href="/post/2017-03-30-python-profiling/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/2017-03-30-json/">JSON是一种格式，基于文本，优于轻量，用于交换数据</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2017-03-30 </span>
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      JSON是一种格式，基于文本，优于轻量，用于交换数据 规范 http://json.org/ object {} { members } members pair pair , members pair string : value array [] [ elements ] elements value value , elements value string number object array true false null string &rdquo;&rdquo; &rdquo; chars &ldquo; chars char char chars
+    </div>
+    <div class="read-more">
+      <a href="/post/2017-03-30-json/" class="read-more-link">阅读更多</a>
     </div>
   </div>
 </article>

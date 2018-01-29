@@ -30,11 +30,29 @@
     </item>
     
     <item>
+      <title>Bug</title>
+      <link>http://localhost:1313/tags/bug/</link>
+      <pubDate>Mon, 29 Jan 2018 15:15:14 -0500</pubDate>
+      
+      <guid>http://localhost:1313/tags/bug/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Company</title>
       <link>http://localhost:1313/tags/company/</link>
       <pubDate>Mon, 17 Apr 2017 12:21:39 +0000</pubDate>
       
       <guid>http://localhost:1313/tags/company/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Coursera</title>
+      <link>http://localhost:1313/tags/coursera/</link>
+      <pubDate>Mon, 29 Jan 2018 15:15:14 -0500</pubDate>
+      
+      <guid>http://localhost:1313/tags/coursera/</guid>
       <description></description>
     </item>
     
@@ -75,11 +93,47 @@
     </item>
     
     <item>
+      <title>Java</title>
+      <link>http://localhost:1313/tags/java/</link>
+      <pubDate>Mon, 29 Jan 2018 15:15:14 -0500</pubDate>
+      
+      <guid>http://localhost:1313/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mutation</title>
+      <link>http://localhost:1313/tags/mutation/</link>
+      <pubDate>Mon, 29 Jan 2018 15:15:14 -0500</pubDate>
+      
+      <guid>http://localhost:1313/tags/mutation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Notes</title>
+      <link>http://localhost:1313/tags/notes/</link>
+      <pubDate>Mon, 29 Jan 2018 15:15:14 -0500</pubDate>
+      
+      <guid>http://localhost:1313/tags/notes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Preview</title>
       <link>http://localhost:1313/tags/preview/</link>
       <pubDate>Wed, 23 Aug 2017 18:03:09 +0800</pubDate>
       
       <guid>http://localhost:1313/tags/preview/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Programming</title>
+      <link>http://localhost:1313/tags/programming/</link>
+      <pubDate>Mon, 29 Jan 2018 15:15:14 -0500</pubDate>
+      
+      <guid>http://localhost:1313/tags/programming/</guid>
       <description></description>
     </item>
     

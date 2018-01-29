@@ -176,6 +176,52 @@
     
       <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/programming-mutation/">Mutation可能的问题</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2018-01-29 </span>
+      <div class="post-category">
+          
+            <a href="/categories/programming/"> programming </a>
+          
+        </div>
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>因为类型是Mutation的，所以reference和copy就有了区别。如果是reference，那么可能会暴露数据本身，遭到恶意修改，引发安全的问题。下面是一段Java代码，其中有一个 Mutation引起的的bug：</p>
+
+<pre><code class="language-Java">class ProtectedResource {
+    private Resource theResource = ...;
+    private String[] allowedUsers = ...;    
+    public String[] getAllowedUsers() {
+        return allowedUsers;
+    }
+    public String currentUser() {...}
+    public void useTheResource() {
+        for (String allowedUser : allowedUsers) {
+            if (currentUser().equals(allowdUser)) {
+                ... // access allowed: use it
+                return;
+            }
+        }
+        throw new IllegalAccessException();
+    }
+}
+</code></pre>
+
+<p></p>
+    </div>
+    <div class="read-more">
+      <a href="/post/programming-mutation/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/java-multithreading/">Java Multithreading</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2017-10-29 </span>
@@ -211,6 +257,139 @@
     </div>
     <div class="read-more">
       <a href="/post/system_design_web_crawler/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/system_design_tinyurl/">System Design - TinyURL</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2017-10-12 </span>
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Two methods Hash Function Pros: - use traditional hash function - randomly distributed - support url clean - hash functions cost time
+cons: - not short - collisions, start collisions from 2^(n/2). solution: url + timestamp
+Auto-increment index Base10, Base62
+Pros: - simple, good with rdb - can be short - no conflicts
+cons: - not support url clean
+    </div>
+    <div class="read-more">
+      <a href="/post/system_design_tinyurl/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/ml_framework/">Machine Learning Framework</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2017-10-07 </span>
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      机器学习架构 https://mp.weixin.qq.com/s/eQ4CcqhGd070BYSQdonO5g 境界 1：参数可单机存储和更新 此种境界较为简单，但仍可以使用参数服务器，通过数据并行来加速模型的训练。 境界 2：参数不可单机存储，
+    </div>
+    <div class="read-more">
+      <a href="/post/ml_framework/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/programming-multithreading/">Programming multithreading</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2017-10-02 </span>
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Semaphores: It&rsquo;s simply a way to limit the number of consumers for a specific resource. For example, to limit the number of simultaneous calls to a database in an application.
+    </div>
+    <div class="read-more">
+      <a href="/post/programming-multithreading/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/ds-feature-engineer/">feature engineer</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2017-09-26 </span>
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+       Onehot encoding One of k encoding on an array of lenght k
+hash encoding label encoding  non-linear tree-based not increase dimensionality  count encoding target encoding encode categorical variables by their ratio of target
+reducing dimensonality https://medium.com/towards-data-science/reducing-dimensionality-from-dimensionality-reduction-techniques-f658aec24dfe
+ PCA t-SNE Auto Encoders  
+    </div>
+    <div class="read-more">
+      <a href="/post/ds-feature-engineer/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/ml-xgboost/">machine learning xgboost</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2017-09-26 </span>
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      
+    </div>
+    <div class="read-more">
+      <a href="/post/ml-xgboost/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/interview-ds/">interview ds</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2017-09-22 </span>
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Probability/Statistics Questions 1. conditional probability 如何判断独立性？ 2. bayes rule problem: base rate fallacy sampling: bootstrap, reservoir A/B test, p value Poisson, Binomial以及Exponential queuing question: The most efficient way to queue is single line, multiple servers. It is efficient because: You don&rsquo;t have servers
+    </div>
+    <div class="read-more">
+      <a href="/post/interview-ds/" class="read-more-link">阅读更多</a>
     </div>
   </div>
 </article>

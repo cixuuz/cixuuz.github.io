@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mutation on Chen Tong</title>
+    <link>http://localhost:1313/tags/mutation/</link>
+    <description>Recent content in Mutation on Chen Tong</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 29 Jan 2018 15:15:14 -0500</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/tags/mutation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mutation可能的问题</title>
+      <link>http://localhost:1313/post/programming-mutation/</link>
+      <pubDate>Mon, 29 Jan 2018 15:15:14 -0500</pubDate>
+      
+      <guid>http://localhost:1313/post/programming-mutation/</guid>
+      <description>&lt;p&gt;因为类型是Mutation的，所以reference和copy就有了区别。如果是reference，那么可能会暴露数据本身，遭到恶意修改，引发安全的问题。下面是一段Java代码，其中有一个 Mutation引起的的bug：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Java&#34;&gt;class ProtectedResource {
+    private Resource theResource = ...;
+    private String[] allowedUsers = ...;    
+    public String[] getAllowedUsers() {
+        return allowedUsers;
+    }
+    public String currentUser() {...}
+    public void useTheResource() {
+        for (String allowedUser : allowedUsers) {
+            if (currentUser().equals(allowdUser)) {
+                ... // access allowed: use it
+                return;
+            }
+        }
+        throw new IllegalAccessException();
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

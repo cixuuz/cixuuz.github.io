@@ -55,7 +55,7 @@
 
 
 
-<meta property="og:updated_time" content="2017-08-30T01:53:34&#43;08:00"/>
+
 
 
 
@@ -141,12 +141,12 @@
     
       <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/japanese-preview/">日本語 敬語体系</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/2016-11-05-bittiger-cs101-notebook-2/">Bittiger cs101 notebook 1 - how to calculate</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2017-08-30 </span>
+      <span class="post-time"> 0001-01-01 </span>
       <div class="post-category">
           
-            <a href="/categories/%E6%97%A5%E6%9C%AC%E8%AA%9E/"> 日本語 </a>
+            <a href="/categories/system-design/"> system design </a>
           
         </div>
       
@@ -155,18 +155,16 @@
   
   <div class="post-content">
     <div class="post-summary">
-      <blockquote>
-<p>日本語の敬語体系は、一般に、大きく尊敬語・謙譲語・丁寧語に分類される。文化審議会国語分科会は、2007年2月に「敬語の指針」を答申し、これに丁重語および美化語を含めた5分類を示している。</p>
-</blockquote>
-
-<h1 id="尊敬語">尊敬語</h1>
-
-<p>尊敬語は、動作の主体を高めることで、主体への敬意を表す言い方である。動詞に「お（ご）～になる」を付けた形、また、助動詞「（ら）れる」を付けた形などが用いられる。たとえば、動詞「取る」の尊敬形として、「（先生が）お取りになる」「（先生が）取られる」などが用いられる。</p>
-
-<p></p>
+      CPU: central processing unit http://www.visual6502.org/JSSim/expert-6800.html
+1 HZ = 1 clock time 2.34GHZ = 2.34B clock time
+Register - Data Register - Instructure Register - Address Register - Flag Register: boolean like compare
+between ALU and control unit
+ALU (Arithmetic Logic Unit) - Transistor
+AND, OR, NOT, XOR
+Control unit
     </div>
     <div class="read-more">
-      <a href="/post/japanese-preview/" class="read-more-link">阅读更多</a>
+      <a href="/post/2016-11-05-bittiger-cs101-notebook-2/" class="read-more-link">阅读更多</a>
     </div>
   </div>
 </article>
@@ -174,12 +172,12 @@
     
       <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/chinese-preview/">中文 《长恨歌》</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/2016-11-05-bittiger-cs101-notebook-3/">Bittiger cs101 notebook 2 - linux and file system</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2017-08-30 </span>
+      <span class="post-time"> 0001-01-01 </span>
       <div class="post-category">
           
-            <a href="/categories/%E4%B8%AD%E6%96%87/"> 中文 </a>
+            <a href="/categories/system-design/"> system design </a>
           
         </div>
       
@@ -188,24 +186,18 @@
   
   <div class="post-content">
     <div class="post-summary">
-      <blockquote>
-<p>《长恨歌》是中国唐朝诗人白居易的一首长篇叙事诗。</p>
-</blockquote>
-
-<h1 id="第一段-贵妃受宠爱">第一段：贵妃受宠爱</h1>
-
-<p>汉皇重色思倾国，御宇多年求不得。杨家有女初长成，养在深闺人未识。</p>
-
-<p>天生丽质难自弃，一朝选在君王侧。回眸一笑百媚生，六宫粉黛无颜色。</p>
-
-<p>春寒赐浴华清池，温泉水滑洗凝脂。侍儿扶起娇无力，始是新承恩泽时。</p>
-
-<p>云鬓花颜金步摇，芙蓉帐暖度春宵。春宵苦短日高起，从此君王不早朝。</p>
-
-<p></p>
+      need for a file system  hardware
+ file
+ size type authorization read and write time  operations
+  common file system:  FAT(File Allocation Table)
+connect by points and write by order ext2(second extended file system)
+ supernode | file sysem descrip | inode bitmap | block bitmap | inode | block
+ use hashmap (inode) record file content
+ inode -&gt; meta Data
+ block -&gt; file content
     </div>
     <div class="read-more">
-      <a href="/post/chinese-preview/" class="read-more-link">阅读更多</a>
+      <a href="/post/2016-11-05-bittiger-cs101-notebook-3/" class="read-more-link">阅读更多</a>
     </div>
   </div>
 </article>
@@ -213,20 +205,257 @@
     
       <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/java-comparator/">Java::Comparator</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/2016-11-05-bittiger-cs101-notebook-4/">Bittiger cs101 notebook 3 - JVM</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2017-08-29 </span>
-      
+      <span class="post-time"> 0001-01-01 </span>
+      <div class="post-category">
+          
+            <a href="/categories/system-design/"> system design </a>
+          
+        </div>
       
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      做题的时候遇到了sort，想试试Java 8的新语法。于是有了一些研究： Reference Very confused by Java 8 Comparator type inference access field by lambda. intervals is a list of interval. intervals.sort(Comparator.comparingInt((Interval i) -&gt; i.start)); Comparator.comparing((Person p)-&gt;p.firstName) .thenComparing(p-&gt;p.lastName) .thenComparingInt(p-&gt;p.age); Comparator.comparing(Person::getFirstName) .thenComparing(Person::getLastName) .thenComparingInt(Person::getAge); @Override public int compareTo(Person o){
+      JVM class loader load code class and other java base classes such as java.io util &hellip;
+ static class will be loaded in prepare in link
+ Resolve change symbol reference to actural address
+ parallel to speed up
+ NoClassDeFoundError from the first load part
+ ClassNotFoundException from solve in link
+  runtime data: memory  metaspace: class like static, default 64MB max before Java 8
+ heap: 25% space of memory
     </div>
     <div class="read-more">
-      <a href="/post/java-comparator/" class="read-more-link">阅读更多</a>
+      <a href="/post/2016-11-05-bittiger-cs101-notebook-4/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/2016-11-07-bittiger-cs101-notebook-5/">Bittiger cs101 notebook 4 - multithreaded programming fundamentals</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 0001-01-01 </span>
+      <div class="post-category">
+          
+            <a href="/categories/system-design/"> system design </a>
+          
+        </div>
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Process is a instance of a running program
+- logical control flow: process execution interleaved
+- private address space: managed by virtual memory machine
+- for security
+Concurrent process their time flow are overlapped
+A Process with multithreaded
+Similar Each has its own logical control flow Each can run concurrently Each is context switched
+different Threads share code and data, Threads are less expensive than processes in some degree
+    </div>
+    <div class="read-more">
+      <a href="/post/2016-11-07-bittiger-cs101-notebook-5/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/2016-11-07-bittiger-cs101-notebook-6/">Bittiger cs101 notebook 5 - what happens when visit a website</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 0001-01-01 </span>
+      <div class="post-category">
+          
+            <a href="/categories/system-design/"> system design </a>
+          
+        </div>
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Interruption generates an interrupt
+interrupt controller
+ Typeahead
+processor
+do_IRO()
+handler()
+less delay: best: less than 10 ms
+cache: 1. used before 2. used predictive
+ Http/Https:
+protocol
+IPV4: 256^4
+IPV6:
+ DNS:
+nslookup www.google.com
+traceroute www.google.com
+port:
+443 https
+8080&frasl;80 http
+ Seven Layers:
+connect with https:
+(7). Application Layer: https
+(6). Presentation
+(5). Session
+(4). Transport:
+tcp : find a road from a to b
+tcp：Three Interaction Protocol
+    </div>
+    <div class="read-more">
+      <a href="/post/2016-11-07-bittiger-cs101-notebook-6/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/2016-11-28-bittiger-cs101-notebook-7/">Bittiger cs101 notebook 6 - web programming</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 0001-01-01 </span>
+      <div class="post-category">
+          
+            <a href="/categories/system-design/"> system design </a>
+          
+        </div>
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Http and Chrome dev tools Http header  Host: send to where, dns lookup
+ Referer: linked from where,
+ User-Agent: browser, os
+ Cache-Control:
+ static: can cache
+ non-static: cannot cache
+  Date: timestamp
+  Http request methods GET
+HEAD
+POST: post data
+PUT: store data
+DELETE
+TRACE
+OPTIONS
+CONNECT
+status 304: cached content
+Restful api reasons: - single page application
+- mobile and other services
+    </div>
+    <div class="read-more">
+      <a href="/post/2016-11-28-bittiger-cs101-notebook-7/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/2016-11-28-bittiger-cs101-notebook-9/">Bittiger cs101 notebook 7 - design pattern in Java</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 0001-01-01 </span>
+      <div class="post-category">
+          
+            <a href="/categories/system-design/"> system design </a>
+          
+        </div>
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      
+    </div>
+    <div class="read-more">
+      <a href="/post/2016-11-28-bittiger-cs101-notebook-9/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/2016-10-29-database-notebook-01/">Database Notebook 1</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 0001-01-01 </span>
+      <div class="post-category">
+          
+            <a href="/categories/database/"> Database </a>
+          
+        </div>
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      [TOC]
+Purpose of Database Management System (DBMS) is to solve problems caused by file systems
+ Data redundancy and inconsistency: duplicate information, file formats Difficulty in accessing data: new program to carry data Data isolation: files and formats Integrity: constraints are fixed, hard to add or change Atomicity of updates: failures may cause inconsistency. Concurrent access by multiple users Security: permissions  Schema: the logical structure of the database
+    </div>
+    <div class="read-more">
+      <a href="/post/2016-10-29-database-notebook-01/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/2016-06-20-kaggle-freshman-book-1.cn/">Kaggle新生必读手册1</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 0001-01-01 </span>
+      <div class="post-category">
+          
+            <a href="/categories/data-science/"> Data Science </a>
+          
+        </div>
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      按，本文根据陈驰在tigger kaggle小组中的关于kaggle比赛的微讲座整理的。整理者：Wente Guo(正文部分), EK(QA部分及
+    </div>
+    <div class="read-more">
+      <a href="/post/2016-06-20-kaggle-freshman-book-1.cn/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/2016-12-25-bittiger-cs101-notebook-8/">Latex symbols list</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 0001-01-01 </span>
+      <div class="post-category">
+          
+            <a href="/categories/latex/"> latex </a>
+          
+        </div>
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+       Greek letters Reference  https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols  
+    </div>
+    <div class="read-more">
+      <a href="/post/2016-12-25-bittiger-cs101-notebook-8/" class="read-more-link">阅读更多</a>
     </div>
   </div>
 </article>
