@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Python从小白到大白-Generator 漫谈 - Chen Tong&#39;s Ideas and Writings</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Chen Tong" /><meta name="description" content="按, 作为一个Python初学者, Python的格式化语法让众多编程小白追捧, 它的语法糖让代码变得简洁易读，它的庞大开源库让它在各个领域都能发" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.54.0 with even 4.0.0" />
+
+
+<link rel="canonical" href="https://cixuuz.github.io/post/2016-05-30-about-generator.cn/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Python从小白到大白-Generator 漫谈" />
+<meta property="og:description" content="按, 作为一个Python初学者, Python的格式化语法让众多编程小白追捧, 它的语法糖让代码变得简洁易读，它的庞大开源库让它在各个领域都能发" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cixuuz.github.io/post/2016-05-30-about-generator.cn/" />
+
+
+<meta itemprop="name" content="Python从小白到大白-Generator 漫谈">
+<meta itemprop="description" content="按, 作为一个Python初学者, Python的格式化语法让众多编程小白追捧, 它的语法糖让代码变得简洁易读，它的庞大开源库让它在各个领域都能发">
+
+
+
+<meta itemprop="wordCount" content="2445">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Python从小白到大白-Generator 漫谈"/>
+<meta name="twitter:description" content="按, 作为一个Python初学者, Python的格式化语法让众多编程小白追捧, 它的语法糖让代码变得简洁易读，它的庞大开源库让它在各个领域都能发"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Python从小白到大白-Generator 漫谈</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 0001-01-01 </span>
+        <div class="post-category">
+            <a href="/categories/python/"> Python </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#list-set-tuple-dict-comprehension-and-container">{list, set, tuple, dict} comprehension and container</a></li>
+<li><a href="#iterable">iterable</a></li>
+<li><a href="#iterator">iterator</a></li>
+<li><a href="#generator-function-and-iterator">generator function and iterator</a></li>
+<li><a href="#generator-expression">generator expression</a></li>
+<li><a href="#summary">Summary</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<p>按, 作为一个Python初学者, Python的格式化语法让众多编程小白追捧, 它的语法糖让代码变得简洁易读，它的庞大开源库让它在各个领域都能发挥作用. 但我时常感受到这个门槛极低的语言远没有表面上看起来易懂易用. 在Python的学习之路上, 我也时常迷茫于自己是否真正掌握了这门语言. Stackoverflow上有一篇帖子很好地说明了Python的进阶之路, 于是我准备顺着这个思路写写各个要点.</p>
+
+<p>根据这篇帖子, <a href="http://stackoverflow.com/questions/2573135/python-progression-path-from-apprentice-to-guru">Python进阶之路: 从小白到大神</a>. 其中, 前两点分别是Discover <a href="https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions">list comprehensions</a> 和 <a href="https://en.wikipedia.org/wiki/Python_syntax_and_semantics#Generators">Discover generators(生成器)</a>. 身为小白的我, 心里暗想generators是个啥。于是，研究了一番，遂成此文。</p>
+
+<p>注: 全文使用Python3.5, 标准库.</p>
+
+<p>谈起Generator, 与之相关的的<a href="http://nvie.com/posts/iterators-vs-generators/">概念</a>有
+- {list, set, tuple, dict} comprehension and container
+- iterable
+- iterator
+- generator fuction and iterator
+- generator expression</p>
+
+<p>接下来, 我们分别来看看这些概念:</p>
+
+<h1 id="list-set-tuple-dict-comprehension-and-container">{list, set, tuple, dict} comprehension and container</h1>
+
+<p>Container是存储元素的数据结构, 一般存储在内存中. 在Python中，常见的container包括但不限于:
+- list, deque, …
+- set, …
+- tuple, namedtuple, …
+- dict, defaultdict, Counter, …</p>
+
+<p>简单举例:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">assert</span> <span class="mi">1</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>  <span class="c1"># list</span>
+<span class="k">assert</span> <span class="mi">1</span> <span class="ow">in</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>  <span class="c1"># set</span>
+<span class="k">assert</span> <span class="mi">1</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>  <span class="c1"># tuple</span>
+<span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="s1">&#39;qux&#39;</span><span class="p">}</span>
+<span class="k">assert</span> <span class="mi">1</span> <span class="ow">in</span> <span class="n">d</span>  <span class="c1"># dict</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>特别的, String也是container. 我们可以查询一个substring是否在string里, 如:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;foobar&#39;</span>
+<span class="k">assert</span> <span class="s1">&#39;foo&#39;</span> <span class="ow">in</span> <span class="n">s</span>
+<span class="k">assert</span> <span class="s1">&#39;x&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">s</span>  <span class="c1"># string 包含所有的 substrings. 需要注意的是string并不存储这些substrings, 只是可以如此查询</span></code></pre></td></tr></table>
+</div>
+</div>
+<h1 id="iterable">iterable</h1>
+
+<p>一般说来,大部分的containers是iterable.而iterable不限于containers,还包括像文件.</p>
+
+<p>iterable是实现了<code>__iter__()</code>方法的对象.该方法返回的是的一个iterator对象.其中,iterator的目的是返回所有元素.来看例子:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Iterable</span><span class="p">,</span> <span class="n">Iterator</span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">z</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="nb">next</span><span class="p">(</span><span class="n">y</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">1</pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="nb">next</span><span class="p">(</span><span class="n">y</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">2</pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="nb">next</span><span class="p">(</span><span class="n">z</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">1</pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="nb">next</span><span class="p">(</span><span class="n">z</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">2</pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">list</pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">True</pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="nb">type</span><span class="p">(</span><span class="n">y</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">list_iterator</pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="nb">isinstance</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">True</pre></td></tr></table>
+</div>
+</div>
+<p>可以看出, x是list, 也是iterable. y和z都是x的返回值, 也就是iterators, 互相独立. iterators通过<code>___next___()</code>这个方法返回元素，每执行一次, 返回一个元素. 值得注意的是，y作为iterable的实例, 它也是iterator. iterable是一个比iterator更大的概念.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">dis</span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">dis</span><span class="o">.</span><span class="n">dis</span><span class="p">(</span><span class="s1">&#39;for _ in x: pass&#39;</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">  1           0 SETUP_LOOP              14 (to 17)
+              3 LOAD_NAME                0 (x)
+              6 GET_ITER
+        &gt;&gt;    7 FOR_ITER                 6 (to 16)
+             10 STORE_NAME               1 (_)
+             13 JUMP_ABSOLUTE            7
+        &gt;&gt;   16 POP_BLOCK
+        &gt;&gt;   17 LOAD_CONST               0 (None)
+             20 RETURN_VALUE</pre></td></tr></table>
+</div>
+</div>
+<p>更深入的, 我们可以明显看出在for循环中, Python每次都是调用FOR_ITER这个指令实现了读取下一个next()的功能, 也就是说, for循环中，首先利用GET_ITER得到x的返回值, 一个iterator. 再通过FOR_ITER得到其中的元素. 如此实现了循环的功能.</p>
+
+<h1 id="iterator">iterator</h1>
+
+<p>那么什么是iterator? 就像之前我们提到的, iterator可以通过调用<code>__next___()</code>生成下一个值. 我们也可以说有<code>__next___()</code>这个方法的都可以是iterator. 这与它如何生成值无关. 我们具体看一个例子:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">islice</span>
+<span class="k">class</span> <span class="nc">seq</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gap</span> <span class="o">=</span> <span class="mi">2</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">curr</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">def</span> <span class="nf">__next__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">curr</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">curr</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">gap</span>
+        <span class="k">return</span> <span class="n">value</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="n">seq</span><span class="p">()</span>
+<span class="nb">list</span><span class="p">(</span><span class="n">islice</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">[1, 3, 5, 7, 9, 11, 13, 15, 17, 19]</pre></td></tr></table>
+</div>
+</div>
+<p>以上, 我们构建了一个等差数列, 差为2. 其中, f既是iterable(因为iter方法), 也是iterator(因为有next方法).</p>
+
+<p>对于iterator, next方法做的两件事是:
+1. 更新iterator的状态，到下次调用;
+2. 返回当前调用结果, eg: <code>return value</code>.</p>
+
+<h1 id="generator-function-and-iterator">generator function and iterator</h1>
+
+<p>Ok. 终于到了本文的正题 generator. 首先<a href="https://docs.python.org/3/glossary.html#term-generator">下定义</a>, generator是返回generator iterator的function(函数). 具体来说, 它可以让你更优雅的实现iterator, 而不用写带有<code>__iter__()</code> 和 <code>__next__()</code> 的类. 继续以上面那个等差数列为例, 我们看看generator如何的优雅的完成它:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">seq</span><span class="p">():</span>
+    <span class="n">gap</span><span class="p">,</span> <span class="n">curr</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="k">yield</span> <span class="n">curr</span>
+        <span class="n">curr</span> <span class="o">=</span> <span class="n">curr</span> <span class="o">+</span> <span class="n">gap</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="n">seq</span><span class="p">()</span>
+<span class="nb">list</span><span class="p">(</span><span class="n">islice</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">[1, 3, 5, 7, 9, 11, 13, 15, 17, 19]</pre></td></tr></table>
+</div>
+</div>
+<p>以上, 我们看到了让它如此优雅的原因 <code>yield</code>.</p>
+
+<p>让我们看看这段code是如何运行的,</p>
+
+<p>首先， seq是一个Python程序, 它返回的是iterator. 当 f = seq() 被调用, generator 会准备好返回. 但这时没有执行任何代码.</p>
+
+<p>接下来, 这个generator实例在islice()中被使用. 仍然没有执行代码. 然后, list()开始建立list. 为了得到list的元素, list()开始调用islice()的next()方法抓取元素, 也就是要在 f 函数中取元素.</p>
+
+<p>记住每次只生成一个元素. 这是代码开始运行到 gap, curr = 2, 1 初始化变量. 接着进入始终为真的循环, 到了yield语句. 它做两件事: 1.暂停, 并更新状态到下一次yield, 2. 返回当前结果, 也就是curr值, 1. 这个值接着被传到了islice(), 最后加到list中. list现在是 [1].</p>
+
+<p>list()继续要下一个值. 暂停的 f 函数继续运行下一个语句curr + gap. curr 现在是2. 继续进入下一个while循环, 遇到 yield. 同样的, yield做两件事: 1.暂停下来调整状态; 2. 返回值2. 值返回到list, list 等于 [1, 2].</p>
+
+<p>如此循环直到list取完10个元素. 特别的, 在第11次去值, islice()会有exception: StopIteration. 告诉list已经取值结束.</p>
+
+<h1 id="generator-expression">generator expression</h1>
+
+<p>generator expression是Python的另一种generator. 相信大家都用过list expression, 比如生成一列数的平方:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="p">[</span><span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">]</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">[1, 4, 9, 16, 25, 36]</pre></td></tr></table>
+</div>
+</div>
+<p>generator expression很类似, 比如</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">squares_list</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">)</span>
+<span class="n">squares_list</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">&lt;generator object &lt;genexpr&gt; at 0x10435eaf0&gt;</pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="nb">next</span><span class="p">(</span><span class="n">squares_list</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">1</pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="nb">list</span><span class="p">(</span><span class="n">squares_list</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">[4, 9, 16, 25, 36]</pre></td></tr></table>
+</div>
+</div>
+<p>以上, 不再累述.</p>
+
+<h1 id="summary">Summary</h1>
+
+<p>下图说明了各个概念之间的关系,
+<img src="http://i.imgur.com/S71qxcw.png" alt="关系图" />
+注: 图片部分引用自 <a href="http://nvie.com/posts/iterators-vs-generators/">http://nvie.com/posts/iterators-vs-generators/</a></p>
+
+<p>最后，谈谈为什么要使用generators. 它能帮你实现更优雅的代码, 减少中间变量和不必要的数据结构，从而代码量, 节省内存空间和运算性能.</p>
+
+<p>针对一个循环代码,</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">def something():
+    result = []
+    for ... in ...:
+        result.append(x)
+    return result</pre></td></tr></table>
+</div>
+</div>
+<p>你可以做这样的转换</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">def iter_something():
+    for ... in ...:
+        yield x</pre></td></tr></table>
+</div>
+</div>
+<p>感谢阅读，欢迎大家修改指正.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"></code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Chen Tong</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        0001-01-01
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/post/2016-03-31-precision-recall-fmeasure/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Preicision, Recall, and F-Measure</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/2016-06-18-about-generator-2.cn/">
+            <span class="next-text nav-default">Python从小白到大白-Generator 漫谈 (续1)</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:nychent@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="http://localhost:1313" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="http://localhost:1313" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://cixuuz.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Chen Tong</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

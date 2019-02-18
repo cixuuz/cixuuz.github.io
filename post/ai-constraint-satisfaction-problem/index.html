@@ -1,185 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>AI: Constraint Satisfaction Problems - Chen Tong</title>
-  <meta name="renderer" content="webkit" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword"  content="data">
+    <link rel="shortcut icon" href="/img/ironman-draw.png">
+    
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <title>
+        
+          AI: Constraint Satisfaction Problems - cixuuz
+        
+    </title>
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="canonical" href="http://cixuuz.github.io/ai-constraint-satisfaction-problem/">
 
-<meta name="theme-color" content="#f8f5ec" />
-<meta name="msapplication-navbutton-color" content="#f8f5ec">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
 
+     
+    <link rel="stylesheet" href="/css/beantech.min.css">
+    
+    
+    <link rel="stylesheet" href="/css/highlight.css">
 
-<meta name="author" content="cixuuz" />
-  <meta name="description" content="CSPs are a special kind of search problem  States defined by values of a fixed set of variables from domain Goal test defined by constraints on variable values acceptable solutions are complete and consistent binary CSP: relates two variables; constraint graph: nodes are variables, arc are constraits. Discrete variable(n) with finit domain(d): O(d^n) complete assignments Discrete variable with infinit domain need a constraint Varieties of constraints: involve one varible(unary), two(binary), three(higher-order)  Backtracking  depth-first search with one variable assigned at each level the basic uninformed algorithm for CSP  {% codeblock %} function BacktrackingSearch(csp) return solution or failure return Backtrack({}, csp)" />
+    <link rel="stylesheet" href="/css/widget.css">
 
-  <meta name="keywords" content="Hugo, theme, even" />
+    <link rel="stylesheet" href="/css/rocket.css">
 
+    <link rel="stylesheet" href="/css/signature.css">
 
+    <link rel="stylesheet" href="/css/toc.css">
 
-
-
-
-<meta name="generator" content="Hugo 0.32.1" />
-
-
-<link rel="canonical" href="http://localhost:1313/post/ai-constraint-satisfaction-problem/" />
-
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="icon" href="/favicon.ico" />
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-
-
-
-
+    
+    
+    
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
 
-
-<link href="/dist/even.min.css?v=2.7.0" rel="stylesheet">
-<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
-
-<meta property="og:title" content="AI: Constraint Satisfaction Problems" />
-<meta property="og:description" content="CSPs are a special kind of search problem  States defined by values of a fixed set of variables from domain Goal test defined by constraints on variable values acceptable solutions are complete and consistent binary CSP: relates two variables; constraint graph: nodes are variables, arc are constraits. Discrete variable(n) with finit domain(d): O(d^n) complete assignments Discrete variable with infinit domain need a constraint Varieties of constraints: involve one varible(unary), two(binary), three(higher-order)  Backtracking  depth-first search with one variable assigned at each level the basic uninformed algorithm for CSP  {% codeblock %} function BacktrackingSearch(csp) return solution or failure return Backtrack({}, csp)" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/post/ai-constraint-satisfaction-problem/" />
+    
 
 
+    
+    
+    
 
-<meta property="article:published_time" content="2017-05-07T21:12:39&#43;00:00"/>
-
-<meta property="article:modified_time" content="2017-05-07T21:12:39&#43;00:00"/>
-
-
-
-
-
-
-
-
-
-
-
-<meta itemprop="name" content="AI: Constraint Satisfaction Problems">
-<meta itemprop="description" content="CSPs are a special kind of search problem  States defined by values of a fixed set of variables from domain Goal test defined by constraints on variable values acceptable solutions are complete and consistent binary CSP: relates two variables; constraint graph: nodes are variables, arc are constraits. Discrete variable(n) with finit domain(d): O(d^n) complete assignments Discrete variable with infinit domain need a constraint Varieties of constraints: involve one varible(unary), two(binary), three(higher-order)  Backtracking  depth-first search with one variable assigned at each level the basic uninformed algorithm for CSP  {% codeblock %} function BacktrackingSearch(csp) return solution or failure return Backtrack({}, csp)">
-
-
-<meta itemprop="datePublished" content="2017-05-07T21:12:39&#43;00:00" />
-<meta itemprop="dateModified" content="2017-05-07T21:12:39&#43;00:00" />
-<meta itemprop="wordCount" content="384">
-
-
-
-<meta itemprop="keywords" content="AI," />
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="AI: Constraint Satisfaction Problems"/>
-<meta name="twitter:description" content="CSPs are a special kind of search problem  States defined by values of a fixed set of variables from domain Goal test defined by constraints on variable values acceptable solutions are complete and consistent binary CSP: relates two variables; constraint graph: nodes are variables, arc are constraits. Discrete variable(n) with finit domain(d): O(d^n) complete assignments Discrete variable with infinit domain need a constraint Varieties of constraints: involve one varible(unary), two(binary), three(higher-order)  Backtracking  depth-first search with one variable assigned at each level the basic uninformed algorithm for CSP  {% codeblock %} function BacktrackingSearch(csp) return solution or failure return Backtrack({}, csp)"/>
-
-<!--[if lte IE 9]>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
-<![endif]-->
-
-<!--[if lt IE 9]>
-  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-<![endif]-->
-
+    
+    <script></script>
 </head>
-<body>
-  <div id="mobile-navbar" class="mobile-navbar">
-  <div class="mobile-header-logo">
-    <a href="/" class="logo">Even</a>
-  </div>
-  <div class="mobile-navbar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
-<nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list">
-    <a href="/">
-        <li class="mobile-menu-item">Home</li>
-      </a><a href="/post/">
-        <li class="mobile-menu-item">Archives</li>
-      </a><a href="/tags/">
-        <li class="mobile-menu-item">Tags</li>
-      </a><a href="/categories/">
-        <li class="mobile-menu-item">Categories</li>
-      </a><a href="/about/">
-        <li class="mobile-menu-item">About</li>
-      </a>
-  </ul>
-</nav>
-  <div class="container" id="mobile-panel">
-    <header id="header" class="header">
-        <div class="logo-wrapper">
-  <a href="/" class="logo">Even</a>
-</div>
 
-<nav class="site-navbar">
-  <ul id="menu" class="menu">
-    <li class="menu-item">
-        <a class="menu-item-link" href="/">Home</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/post/">Archives</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/tags/">Tags</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/categories/">Categories</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/about/">About</a>
-      </li>
-  </ul>
-</nav>
-    </header>
 
-    <main id="main" class="main">
-      <div class="content-wrapper">
-        <div id="content" class="content">
-          <article class="post">
+
+<body ontouchstart="">
+	
+
+<style type="text/css">
+    header.intro-header{
+        
+            background-image: url('undefined')
+             
+        
+    }
     
-    <header class="post-header">
-      <h1 class="post-title">AI: Constraint Satisfaction Problems</h1>
+</style>
 
-      <div class="post-meta">
-        <span class="post-time"> 2017-05-07 </span>
+<header class="intro-header" >
+    
+    <div id="signature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                              <a class="tag" href="/tags/#AI" title="AI">AI</a>
+                            
+                        </div>
+                        <h1>AI: Constraint Satisfaction Problems</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            Posted by Chet on
+                            2017-05-07
+                        </span>
+                    </div>
+                
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+	
+    
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">cixuuz</a>
+        </div>
+
         
         
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">about</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archive/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
         
-      </div>
-    </header>
-
+    </div>
     
-    
-<div class="post-toc" id="post-toc">
-  <h2 class="post-toc-title">文章目录</h2>
-  
-  <div class="post-toc-content always-active">
-    <nav id="TableOfContents">
-<ul>
-<li><a href="#csps-are-a-special-kind-of-search-problem">CSPs are a special kind of search problem</a></li>
-<li><a href="#backtracking">Backtracking</a></li>
-<li><a href="#improve-serach-efficiency">improve serach efficiency</a></li>
-</ul>
 </nav>
-  </div>
-</div>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
 
     
-    <div class="post-content">
-      
+    
 
-<h1 id="csps-are-a-special-kind-of-search-problem">CSPs are a special kind of search problem</h1>
 
-<ol>
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <h1 id="csps-are-a-special-kind-of-search-problem">CSPs are a special kind of search problem</h1>
+<ol style="list-style-type: decimal">
 <li>States defined by values of a fixed set of variables from domain</li>
 <li>Goal test defined by constraints on variable values</li>
 <li>acceptable solutions are complete and consistent</li>
@@ -188,196 +209,316 @@
 <li>Discrete variable with infinit domain need a constraint</li>
 <li>Varieties of constraints: involve one varible(unary), two(binary), three(higher-order)</li>
 </ol>
-
 <h1 id="backtracking">Backtracking</h1>
-
-<ol>
+<ol style="list-style-type: decimal">
 <li>depth-first search with one variable assigned at each level</li>
 <li>the basic uninformed algorithm for CSP</li>
 </ol>
-
-<p>{% codeblock %}
-function BacktrackingSearch(csp) return solution or failure
-    return Backtrack({}, csp)</p>
-
-<p>function Backtrack(assignment, csp) return solution or failure
-    # goal test
-    if assignment is complete then return assignment
-    # variable ordering/selection
-    var =  SelectUnassignedVariable(csp)
-    # value ordering
-    for each value in OrderDomainValues(var, assignment, csp) do
-        if value is consistent with assignment then
-            add {var=value} to assignment
-            # inferences from current state
-            inferences = Inference(csp, var, value)
-            if inferences != failure then
-                add inferences to assginment
-                result = Backtrack(assignment, csp)
-                if result != failture then
-                    return result
-            remove {var=value} and inferences from assignment
-    return failure
-{% endcodeblock %}</p>
-
+<figure class="highlight livescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> BacktrackingSearch(csp) <span class="keyword">return</span> solution <span class="keyword">or</span> failure</div><div class="line">    <span class="keyword">return</span> Backtrack({}, csp)</div><div class="line"></div><div class="line"><span class="keyword">function</span> Backtrack(assignment, csp) <span class="keyword">return</span> solution <span class="keyword">or</span> failure</div><div class="line">    <span class="comment"># goal test</span></div><div class="line">    <span class="keyword">if</span> assignment <span class="keyword">is</span> complete <span class="keyword">then</span> <span class="keyword">return</span> assignment</div><div class="line">    <span class="comment"># variable ordering/selection</span></div><div class="line">    <span class="keyword">var</span> =  SelectUnassignedVariable(csp)</div><div class="line">    <span class="comment"># value ordering</span></div><div class="line">    <span class="keyword">for</span> each value <span class="keyword">in</span> OrderDomainValues(<span class="keyword">var</span>, assignment, csp) <span class="keyword">do</span></div><div class="line">        <span class="keyword">if</span> value <span class="keyword">is</span> consistent <span class="keyword">with</span> assignment <span class="keyword">then</span></div><div class="line">            add {<span class="keyword">var</span>=value} <span class="keyword">to</span> assignment</div><div class="line">            <span class="comment"># inferences from current state</span></div><div class="line">            inferences = Inference(csp, <span class="keyword">var</span>, value)</div><div class="line">            <span class="keyword">if</span> inferences != failure <span class="keyword">then</span></div><div class="line">                add inferences <span class="keyword">to</span> assginment</div><div class="line">                result = Backtrack(assignment, csp)</div><div class="line">                <span class="keyword">if</span> result != failture <span class="keyword">then</span></div><div class="line">                    <span class="keyword">return</span> result</div><div class="line">            remove {<span class="keyword">var</span>=value} <span class="keyword">and</span> inferences <span class="keyword">from</span> assignment</div><div class="line">    <span class="keyword">return</span> failure</div></pre></td></tr></table></figure>
 <h1 id="improve-serach-efficiency">improve serach efficiency</h1>
-
 <ul>
-<li>Variable ordering
-
-<ul>
+<li>Variable ordering</li>
 <li>Most constrained variable or Minimum remaining values (MRV): choose the variable with the fewest legal values</li>
 <li>Degree heuristic: has the most number of unassigned neighbors</li>
-</ul></li>
-<li>Value ordering
-
-<ul>
+<li>Value ordering</li>
 <li>Least-constraining-value: the one that rules out the fewest values in the remaining variables</li>
-</ul></li>
-<li>Constraint propagation(inferences in code)
-
-<ul>
+<li>Constraint propagation(inferences in code)</li>
 <li>Forward checking prevents assignments that lead to later failures</li>
 <li>Constraint propagation (e.g., arc consistency) does additional work to constrain values and detect inconsistencies early. based on X -&gt; Y is consistent iff for every value x in X there is some allowed y in Y.</li>
-</ul></li>
 </ul>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">AC-3</span>(<span class="title">csp</span>) <span class="title">return</span> <span class="title">boolean</span></span></div><div class="line">    inputs: csp, <span class="keyword">a</span> binary csp <span class="keyword">with</span> components(X, D, C)</div><div class="line">    <span class="built_in">local</span> varibales: queue, <span class="keyword">a</span> queue <span class="keyword">of</span> arcs, initially all <span class="keyword">the</span> arcs <span class="keyword">in</span> csp</div><div class="line"></div><div class="line">    <span class="keyword">while</span> queue is <span class="keyword">not</span> <span class="literal">empty</span> <span class="built_in">do</span> </div><div class="line">        (xi, xj) = RemoveFirst(queue)</div><div class="line">        <span class="keyword">if</span> Revise(csp, xi, xj) <span class="keyword">then</span></div><div class="line">            <span class="keyword">if</span> Di is <span class="literal">empty</span> <span class="keyword">then</span> <span class="literal">return</span> <span class="literal">false</span></div><div class="line">            <span class="keyword">for</span> <span class="keyword">each</span> Xk <span class="keyword">in</span> Xi.neighbours - Xi <span class="built_in">do</span> </div><div class="line">                <span class="built_in">add</span> (Xk, Xi) <span class="built_in">to</span> queue</div><div class="line">    <span class="literal">return</span> <span class="literal">true</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Revise</span>(<span class="title">csp</span>, <span class="title">xi</span>, <span class="title">xj</span>) <span class="title">return</span> <span class="title">true</span> <span class="title">iff</span> <span class="title">revise</span> <span class="title">domain</span></span></div><div class="line">    revised = <span class="literal">false</span></div><div class="line">    <span class="keyword">for</span> <span class="keyword">each</span> x <span class="keyword">in</span> Dj <span class="built_in">do</span></div><div class="line">        <span class="keyword">if</span> no <span class="built_in">value</span> y <span class="keyword">in</span> Dj allows(X, y) <span class="keyword">then</span></div><div class="line">            <span class="built_in">delete</span> x <span class="built_in">from</span> Di</div><div class="line">            revised = <span class="literal">true</span></div><div class="line">    <span class="literal">return</span> revised</div></pre></td></tr></table></figure>
 
-<p>{% codeblock %}
-function AC-3(csp) return boolean
-    inputs: csp, a binary csp with components(X, D, C)
-    local varibales: queue, a queue of arcs, initially all the arcs in csp</p>
+                
 
-<pre><code>while queue is not empty do 
-    (xi, xj) = RemoveFirst(queue)
-    if Revise(csp, xi, xj) then
-        if Di is empty then return false
-        for each Xk in Xi.neighbours - Xi do 
-            add (Xk, Xi) to queue
-return true
-</code></pre>
+                <hr>
+                
+                <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/ai-learning-from-obs/" data-toggle="tooltip" data-placement="top" title="AI: Learning from observations">&larr; Previous Post</a>
+                        </li>
+                    
+                    
+                        <li class="next">
+                            <a href="/hardware-raid-principles/" data-toggle="tooltip" data-placement="top" title="RAID基本原理">Next Post &rarr;</a>
+                        </li>
+                    
+                </ul>
 
-<p>function Revise(csp, xi, xj) return true iff revise domain
-    revised = false
-    for each x in Dj do
-        if no value y in Dj allows(X, y) then
-            delete x from Di
-            revised = true
-    return revised
-{% endcodeblock %}</p>
+                
+                
+                
 
-    </div>
+                
+                
+                
 
-    
-    
-<div class="post-copyright">
-  <p class="copyright-item">
-    <span class="item-title">文章作者</span>
-    <span class="item-content">cixuuz</span>
-  </p>
-  <p class="copyright-item">
-    <span class="item-title">上次更新</span>
-    <span class="item-content">2017-05-07</span>
-  </p>
-  
-  <p class="copyright-item">
-    <span class="item-title">许可协议</span>
-    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
-  </p>
-</div>
+                
+                
+                    <div class="comment">
+                        <div id="disqus_thread" class="disqus-thread"></div>
+                    </div>
+                
+                
+            </div>
+            
+            
+            
 
     
-    
-
-    <footer class="post-footer">
-      <div class="post-tags">
-          
-          <a href="/tags/ai/">AI</a>
-          
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#csps-are-a-special-kind-of-search-problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">CSPs are a special kind of search problem</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#backtracking"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Backtracking</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#improve-serach-efficiency"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">improve serach efficiency</span></a></li></ol>
+        
         </div>
-
-      
-      <nav class="post-nav">
-        
-          <a class="prev" href="/post/ai-learning-from-obs/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">AI: Learning from observations</span>
-            <span class="prev-text nav-mobile">上一篇</span>
-          </a>
-        
-          <a class="next" href="/post/hardware-raid-principles/">
-            <span class="next-text nav-default">RAID基本原理</span>
-            <span class="prev-text nav-mobile">下一篇</span>
-            <i class="iconfont icon-right"></i>
-          </a>
-      </nav>
-    </footer>
-  </article>
-        </div>
-        
-  
-
-  
-
-  
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="social-links">
-      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
-      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
-      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
-      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
-      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
-      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
-      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
-      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
-      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
-      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
-      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
-      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
-      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
-  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
-</div>
-
-<div class="copyright">
-  <span class="power-by">
-    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
-  </span>
-  <span class="division">|</span>
-  <span class="theme-info">
-    主题 - 
-    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
-  </span>
-
-  
-
-  <span class="copyright-year">
-    &copy; 
+      </aside>
     
-      2016 - 
-    2018
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">cixuuz</span>
-  </span>
-</div>
-    </footer>
 
-    <div class="back-to-top" id="back-to-top">
-      <i class="iconfont icon-up"></i>
+                
+            
+            <div class="
+                col-lg-4 col-lg-offset-1
+                col-md-2 col-md-offset-1
+                sidebar-container">
+
+                
+                
+                <section>
+                    
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#AI" title="AI">AI</a>
+                        
+                    </div>
+                </section>
+                
+
+                
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="http://zhyoulun.com/" target="_blank">Youlun</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
     </div>
-  </div>
-  
-<script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
-<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
-  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
-<script type="text/javascript" src="/dist/even.min.js?v=2.7.0"></script>
+</article>
 
 
+
+
+
+<script type="text/javascript">
+     
+    var disqus_shortname = "cixuuz";
+    var disqus_identifier = "http://cixuuz.github.io/ai-constraint-satisfaction-problem/";
+    var disqus_url = "http://cixuuz.github.io/ai-constraint-satisfaction-problem/";
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+
+
+
+
+
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: 'ℬ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+     
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    
+    
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+                
+                
+
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/cixuuz">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://www.linkedin.com/in/chent">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Chet 2017 
+                    <br>
+                    Theme by <a href="http://huangxuan.me">Hux</a> 
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span> 
+                    re-Ported by <a href="http://beantech.org">BeanTech</a> | 
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="91px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=YenYuHsuan&repo=hexo-theme-beantech&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script src="/js/jquery.min.js"></script>
+
+
+<script src="/js/bootstrap.min.js"></script>
+
+
+<script src="/js/hux-blog.min.js"></script>
+
+
+
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        async("http://cixuuz.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+<script>
+    
+    var _gaId = 'UA-93897188-1';
+    var _gaDomain = 'cixuuz.github.io';
+
+    
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+
+
+
+
+
+
+
+
+	<a id="rocket" href="#top" class=""></a>
+	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+
+<img src="http://cixuuz.github.io/img/icon_wechat.png" width="0" height="0" />
 
 
 </body>
+
 </html>

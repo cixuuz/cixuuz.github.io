@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Database Notebook 1 - Chen Tong&#39;s Ideas and Writings</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Chen Tong" /><meta name="description" content="[TOC]
+Purpose of Database Management System (DBMS) is to solve problems caused by file systems
+ Data redundancy and inconsistency: duplicate information, file formats Difficulty in accessing data: new program to carry data Data isolation: files and formats Integrity: constraints are fixed, hard to add or change Atomicity of updates: failures may cause inconsistency. Concurrent access by multiple users Security: permissions  Schema: the logical structure of the database" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.54.0 with even 4.0.0" />
+
+
+<link rel="canonical" href="https://cixuuz.github.io/post/2016-10-29-database-notebook-01/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Database Notebook 1" />
+<meta property="og:description" content="[TOC]
+Purpose of Database Management System (DBMS) is to solve problems caused by file systems
+ Data redundancy and inconsistency: duplicate information, file formats Difficulty in accessing data: new program to carry data Data isolation: files and formats Integrity: constraints are fixed, hard to add or change Atomicity of updates: failures may cause inconsistency. Concurrent access by multiple users Security: permissions  Schema: the logical structure of the database" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cixuuz.github.io/post/2016-10-29-database-notebook-01/" />
+
+
+<meta itemprop="name" content="Database Notebook 1">
+<meta itemprop="description" content="[TOC]
+Purpose of Database Management System (DBMS) is to solve problems caused by file systems
+ Data redundancy and inconsistency: duplicate information, file formats Difficulty in accessing data: new program to carry data Data isolation: files and formats Integrity: constraints are fixed, hard to add or change Atomicity of updates: failures may cause inconsistency. Concurrent access by multiple users Security: permissions  Schema: the logical structure of the database">
+
+
+
+<meta itemprop="wordCount" content="475">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Database Notebook 1"/>
+<meta name="twitter:description" content="[TOC]
+Purpose of Database Management System (DBMS) is to solve problems caused by file systems
+ Data redundancy and inconsistency: duplicate information, file formats Difficulty in accessing data: new program to carry data Data isolation: files and formats Integrity: constraints are fixed, hard to add or change Atomicity of updates: failures may cause inconsistency. Concurrent access by multiple users Security: permissions  Schema: the logical structure of the database"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Database Notebook 1</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 0001-01-01 </span>
+        <div class="post-category">
+            <a href="/categories/database/"> Database </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#relation-schema">Relation schema</a></li>
+<li><a href="#relational-operators-relational-algebra">Relational operators / Relational Algebra</a></li>
+<li><a href="#modification">Modification</a></li>
+<li><a href="#sql-relational-algebra">SQL &amp; Relational Algebra</a></li>
+<li><a href="#tuple-relational-calculus">Tuple relational calculus</a></li>
+<li><a href="#domain-relational-calculus">Domain relational calculus</a></li>
+<li><a href="#sql">SQL</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<p>[TOC]</p>
+
+<p><strong>Purpose</strong> of Database Management System (DBMS) is to solve problems caused by file systems</p>
+
+<ul>
+<li>Data redundancy and inconsistency: duplicate information, file formats</li>
+<li>Difficulty in accessing data: new program to carry data</li>
+<li>Data isolation: files and formats</li>
+<li>Integrity: constraints are fixed, hard to add or change</li>
+<li>Atomicity of updates: failures may cause inconsistency.</li>
+<li>Concurrent access by multiple users</li>
+<li>Security: permissions</li>
+</ul>
+
+<p><strong>Schema</strong>: the logical structure of the database</p>
+
+<p><strong>Instance</strong>: the actual content of the database at a particular point in time</p>
+
+<p>Physical Data Independence: the ability to modify the physical schema without changing the logical schema</p>
+
+<p>Data Manipulation Language (DML)
+Data Definition Language (DDL)</p>
+
+<p><strong>Attributes</strong></p>
+
+<ul>
+<li>Domain of the attribute is the set of allowed values for the attribute</li>
+<li>values should be atomic/indivisible</li>
+<li>$null \in every \ domain$</li>
+</ul>
+
+<h2 id="relation-schema">Relation schema</h2>
+
+<p>$R = (A_1, A_2, &hellip;, A_3)$
+$instructor = (ID, name , depart_name, salary)$</p>
+
+<p><strong>relation</strong>
+is a subset of the join of domains
+$r \in D_1 * D_2*&hellip;*D_n$
+is also a set of n-tuples $ a_1, a_2, &hellip;, a_n$ where $a_i \in D_i$
+is unordered</p>
+
+<p>Normalization theory</p>
+
+<p><strong>Keys</strong> $\in $ R
+<strong>Super key</strong> can identify a unique tuple of r&reg;
+minimal super key is <strong>candidate key</strong>
+one of candidate key is <strong>primary key</strong>
+<strong>Foreign key</strong>: value in one relation must appear in another</p>
+
+<h2 id="relational-operators-relational-algebra">Relational operators / Relational Algebra</h2>
+
+<table>
+<thead>
+<tr>
+<th>Op</th>
+<th align="left">Symbol</th>
+<th align="left">Example</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Selection</td>
+<td align="left">$\sigma_p&reg; = {t</td>
+<td align="left">t \in r\ and\ p(t) }$ $\land\ and \ \lor\ or \ \neg \ not $</td>
+</tr>
+
+<tr>
+<td>Projection</td>
+<td align="left">$\Pi_{A_1, A_2, &hellip;, A_k}&reg; \ duplicates\ tuples\ are\ removed$</td>
+<td align="left">$\Pi<em>{A, C} &reg; \ \Pi</em>{ID, name, salary}(instructor)$</td>
+</tr>
+
+<tr>
+<td>Cartesian product</td>
+<td align="left">$r \times s = {t\ q</td>
+<td align="left">t \in r \land q \in s} $ assume attributes are disjoint; rename if joint</td>
+</tr>
+
+<tr>
+<td>Union</td>
+<td align="left">assume same attributes</td>
+<td align="left">$r \cup s $</td>
+</tr>
+
+<tr>
+<td>Difference</td>
+<td align="left"></td>
+<td align="left">r - s</td>
+</tr>
+
+<tr>
+<td>rename</td>
+<td align="left">$\rho<em>X(E) \ \rho</em>{X(A_1, A_2, &hellip;, A_n)}(E)$</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td><strong>Derived ops</strong></td>
+<td align="left">&mdash;</td>
+<td align="left">&mdash;</td>
+</tr>
+
+<tr>
+<td>Intersection</td>
+<td align="left"></td>
+<td align="left">$r \cap s$</td>
+</tr>
+
+<tr>
+<td>Nature join</td>
+<td align="left">associative; commutative</td>
+<td align="left">$r \Join s$</td>
+</tr>
+
+<tr>
+<td>Theta Join</td>
+<td align="left">$r \Join<em>\theta s = \sigma</em>\theta(r \times s)$</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td>Assignment</td>
+<td align="left">$\leftarrow $</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td>Left outer join</td>
+<td align="left">r &#10197; s = $(r \Join s) \cup (r - \Pi_R(r \Join s) \times {(null,&hellip;, null)}) $</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td>Right outer join</td>
+<td align="left">r &#10198; s</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td>Full outer join</td>
+<td align="left">r &#10199; s</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td>Division</td>
+<td align="left">$r \div s = largest\ t(R-S)\ st.\ t\times s \in r \ temp1 \leftarrow \Pi<em>{R-S}&reg; \ temp2 \leftarrow \Pi</em>{R-S}((temp1 \times s) - \Pi_{R-S, S}&reg;) \ result = temp1 - temp2$</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td><strong>Extended ops</strong></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td>Generalized projection</td>
+<td align="left">$\Pi_{F_1, F_2, &hellip; ,F_n}(E)$</td>
+<td align="left">$\Pi_{ID,salary/12}(instructor)$</td>
+</tr>
+
+<tr>
+<td><strong>Aggregation func</strong></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td>avg, min, max, sum, count</td>
+<td align="left">$<em>{G1,G2,&hellip;Gn}G</em>{F_1(A_1),&hellip;,F_n(A_n)}(E)$</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td>rename</td>
+<td align="left">$<em>{dept_name}G</em>{\boldsymbol{avg}(salary)\ \boldsymbol{as}\ avg_sal}(instructor)$</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="modification">Modification</h2>
+
+<p>deletion
+insertion
+updating</p>
+
+<h2 id="sql-relational-algebra">SQL &amp; Relational Algebra</h2>
+
+<table>
+<thead>
+<tr>
+<th align="left">SQL</th>
+<th align="left">RA</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">$select\ A_1, A_2, &hellip;, A_n \ from\ r_1, r_2, &hellip; ,r_m \ where\ P$</td>
+<td align="left">$\Pi_{A_1,&hellip;,A_n}(\sigma_P(r_1 \times &hellip; \times r_m)) $</td>
+</tr>
+
+<tr>
+<td align="left">$select\ A_1, A_2, sum(A_3) \ from\ r_1, r_2, &hellip; ,r_m \ where\ P \ group\ by\ A_1, A_2 $</td>
+<td align="left">$_{A_1, A<em>2}G</em>{sum(A_3)}(\sigma_P(r_1 \times &hellip; \times r_m)) $</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="tuple-relational-calculus">Tuple relational calculus</h2>
+
+<p>safety</p>
+
+<h2 id="domain-relational-calculus">Domain relational calculus</h2>
+
+<p>${<X_1,X_2,...,X_n> | P(X_1,&hellip;,X_n)}$</p>
+
+<h2 id="sql">SQL</h2>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Chen Tong</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        0001-01-01
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/post/2016-11-28-bittiger-cs101-notebook-9/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Bittiger cs101 notebook 7 - design pattern in Java</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/2016-06-20-kaggle-freshman-book-1.cn/">
+            <span class="next-text nav-default">Kaggle新生必读手册1</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:nychent@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="http://localhost:1313" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="http://localhost:1313" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://cixuuz.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Chen Tong</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

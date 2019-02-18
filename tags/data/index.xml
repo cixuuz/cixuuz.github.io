@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Data on Chen Tong</title>
-    <link>http://localhost:1313/tags/data/</link>
-    <description>Recent content in Data on Chen Tong</description>
+    <title>data on Chen Tong&#39;s Ideas and Writings</title>
+    <link>https://cixuuz.github.io/tags/data/</link>
+    <description>Recent content in data on Chen Tong&#39;s Ideas and Writings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 13 Apr 2017 10:30:08 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/data/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://cixuuz.github.io/tags/data/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Intro to xpath</title>
-      <link>http://localhost:1313/post/intro-to-xpath/</link>
+      <link>https://cixuuz.github.io/post/intro-to-xpath/</link>
       <pubDate>Thu, 13 Apr 2017 10:30:08 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/intro-to-xpath/</guid>
+      <guid>https://cixuuz.github.io/post/intro-to-xpath/</guid>
       <description>发现一个很好的xpath入门教程 xpath有三种记号，分别是 /, [] 和 :: / /foo/bar 指的是从根结点开始，/foo 对于每个节点，也就是根结点，得到它的子节</description>
     </item>
     

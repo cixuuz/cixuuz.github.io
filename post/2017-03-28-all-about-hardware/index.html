@@ -1,317 +1,517 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>SSD vs HDD的性能对比.讲解了为什么SSD的读写性能高于HDD - Chen Tong</title>
-  <meta name="renderer" content="webkit" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword"  content="data">
+    <link rel="shortcut icon" href="/img/ironman-draw.png">
+    
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <title>
+        
+          SSD vs HDD的性能对比.讲解了为什么SSD的读写性能高于HDD - cixuuz
+        
+    </title>
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="canonical" href="http://cixuuz.github.io/2017-03-28-All-about-hardware/">
 
-<meta name="theme-color" content="#f8f5ec" />
-<meta name="msapplication-navbutton-color" content="#f8f5ec">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
 
+     
+    <link rel="stylesheet" href="/css/beantech.min.css">
+    
+    
+    <link rel="stylesheet" href="/css/highlight.css">
 
-<meta name="author" content="cixuuz" />
-  <meta name="description" content="SSD vs HDD的性能对比.讲解了为什么SSD的读写性能高于HDD. NAND一个重要的特性是，其只能是读或写单个page，但不能覆盖写如某个pag" />
+    <link rel="stylesheet" href="/css/widget.css">
 
-  <meta name="keywords" content="Hugo, theme, even" />
+    <link rel="stylesheet" href="/css/rocket.css">
 
+    <link rel="stylesheet" href="/css/signature.css">
 
+    <link rel="stylesheet" href="/css/toc.css">
 
-
-
-
-<meta name="generator" content="Hugo 0.32.1" />
-
-
-<link rel="canonical" href="http://localhost:1313/post/2017-03-28-all-about-hardware/" />
-
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="icon" href="/favicon.ico" />
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-
-
-
-
+    
+    
+    
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
 
-
-<link href="/dist/even.min.css?v=2.7.0" rel="stylesheet">
-<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
-
-<meta property="og:title" content="SSD vs HDD的性能对比.讲解了为什么SSD的读写性能高于HDD" />
-<meta property="og:description" content="SSD vs HDD的性能对比.讲解了为什么SSD的读写性能高于HDD. NAND一个重要的特性是，其只能是读或写单个page，但不能覆盖写如某个pag" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/post/2017-03-28-all-about-hardware/" />
+    
 
 
+    
+    
+    
 
-<meta property="article:published_time" content="2017-03-28T18:08:30&#43;00:00"/>
-
-<meta property="article:modified_time" content="2017-03-28T18:08:30&#43;00:00"/>
-
-
-
-
-
-
-
-
-
-
-
-<meta itemprop="name" content="SSD vs HDD的性能对比.讲解了为什么SSD的读写性能高于HDD">
-<meta itemprop="description" content="SSD vs HDD的性能对比.讲解了为什么SSD的读写性能高于HDD. NAND一个重要的特性是，其只能是读或写单个page，但不能覆盖写如某个pag">
-
-
-<meta itemprop="datePublished" content="2017-03-28T18:08:30&#43;00:00" />
-<meta itemprop="dateModified" content="2017-03-28T18:08:30&#43;00:00" />
-<meta itemprop="wordCount" content="352">
-
-
-
-<meta itemprop="keywords" content="" />
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="SSD vs HDD的性能对比.讲解了为什么SSD的读写性能高于HDD"/>
-<meta name="twitter:description" content="SSD vs HDD的性能对比.讲解了为什么SSD的读写性能高于HDD. NAND一个重要的特性是，其只能是读或写单个page，但不能覆盖写如某个pag"/>
-
-<!--[if lte IE 9]>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
-<![endif]-->
-
-<!--[if lt IE 9]>
-  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-<![endif]-->
-
+    
+    <script></script>
 </head>
-<body>
-  <div id="mobile-navbar" class="mobile-navbar">
-  <div class="mobile-header-logo">
-    <a href="/" class="logo">Even</a>
-  </div>
-  <div class="mobile-navbar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
-<nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list">
-    <a href="/">
-        <li class="mobile-menu-item">Home</li>
-      </a><a href="/post/">
-        <li class="mobile-menu-item">Archives</li>
-      </a><a href="/tags/">
-        <li class="mobile-menu-item">Tags</li>
-      </a><a href="/categories/">
-        <li class="mobile-menu-item">Categories</li>
-      </a><a href="/about/">
-        <li class="mobile-menu-item">About</li>
-      </a>
-  </ul>
-</nav>
-  <div class="container" id="mobile-panel">
-    <header id="header" class="header">
-        <div class="logo-wrapper">
-  <a href="/" class="logo">Even</a>
-</div>
 
-<nav class="site-navbar">
-  <ul id="menu" class="menu">
-    <li class="menu-item">
-        <a class="menu-item-link" href="/">Home</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/post/">Archives</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/tags/">Tags</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/categories/">Categories</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/about/">About</a>
-      </li>
-  </ul>
-</nav>
-    </header>
 
-    <main id="main" class="main">
-      <div class="content-wrapper">
-        <div id="content" class="content">
-          <article class="post">
-    
-    <header class="post-header">
-      <h1 class="post-title">SSD vs HDD的性能对比.讲解了为什么SSD的读写性能高于HDD</h1>
 
-      <div class="post-meta">
-        <span class="post-time"> 2017-03-28 </span>
+<body ontouchstart="">
+	
+
+<style type="text/css">
+    header.intro-header{
         
+            background-image: url('undefined')
+             
         
-        
-      </div>
-    </header>
-
+    }
     
+</style>
+
+<header class="intro-header" >
     
-<div class="post-toc" id="post-toc">
-  <h2 class="post-toc-title">文章目录</h2>
-  
-  <div class="post-toc-content always-active">
-    <nav id="TableOfContents">
-<ul>
-<li><a href="#ssd-vs-hdd的性能对比-讲解了为什么ssd的读写性能高于hdd-http-oserror-com-backend-ssd-principle"><a href="http://oserror.com/backend/ssd-principle/">SSD vs HDD的性能对比.讲解了为什么SSD的读写性能高于HDD.</a></a></li>
-<li><a href="#reference">Reference</a></li>
-</ul>
-</nav>
-  </div>
-</div>
+    <div id="signature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                              <a class="tag" href="/tags/#hardware" title="hardware">hardware</a>
+                            
+                        </div>
+                        <h1>SSD vs HDD的性能对比.讲解了为什么SSD的读写性能高于HDD</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            Posted by Chet on
+                            2017-03-28
+                        </span>
+                    </div>
+                
 
-    
-    <div class="post-content">
-      
 
-<h1 id="ssd-vs-hdd的性能对比-讲解了为什么ssd的读写性能高于hdd-http-oserror-com-backend-ssd-principle"><a href="http://oserror.com/backend/ssd-principle/">SSD vs HDD的性能对比.讲解了为什么SSD的读写性能高于HDD.</a></h1>
-
-<ul>
-<li>NAND一个重要的特性是，其只能是读或写单个page，但不能覆盖写如某个page，必须先要清空里面的内容，再写入。</li>
-<li>由于清空内容的电压较高，必须是以block为单位。因此，没有空闲的page时，必须要找到没有有效内容的block，先擦写，然后再选择空闲的page写入。</li>
-<li>主要问题：写放大
-
-<ul>
-<li>SSD读写是以page为单位的，如果更新page中的部分数据，也需要写整个page</li>
-<li>SSD的garbage collection中，会在block间移动数据</li>
-<li>SSD的wear leveing中，可能也会在block间交换数据，导致写放大</li>
-</ul></li>
-<li>总结
-
-<ul>
-<li>需要充分利用其随机读写快的特性</li>
-<li>尽可能在软件层面更新小块数据，减轻SSD写放大问题</li>
-<li>避免频繁的更新数据，减轻SSD写放大及寿命减少的问题，尽可能使用追加的方式写数据</li>
-</ul></li>
-</ul>
-
-<h1 id="reference">Reference</h1>
-
-<ol>
-<li><a href="http://www.pcgamer.com/hard-drive-vs-ssd-performance/2/">http://www.pcgamer.com/hard-drive-vs-ssd-performance/2/</a></li>
-</ol>
-
+                </div>
+            </div>
+        </div>
     </div>
+</header>
 
+	
     
-    
-<div class="post-copyright">
-  <p class="copyright-item">
-    <span class="item-title">文章作者</span>
-    <span class="item-content">cixuuz</span>
-  </p>
-  <p class="copyright-item">
-    <span class="item-title">上次更新</span>
-    <span class="item-content">2017-03-28</span>
-  </p>
-  
-  <p class="copyright-item">
-    <span class="item-title">许可协议</span>
-    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
-  </p>
-</div>
-
-    
-    
-
-    <footer class="post-footer">
-      
-
-      
-      <nav class="post-nav">
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
         
-          <a class="prev" href="/post/2017-03-30-json/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">JSON是一种格式，基于文本，优于轻量，用于交换数据</span>
-            <span class="prev-text nav-mobile">上一篇</span>
-          </a>
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">cixuuz</a>
+        </div>
+
         
-          <a class="next" href="/post/2017-03-26-how-to-remote-connect-to-postgresql/">
-            <span class="next-text nav-default">How to remote connect to PostgreSQL</span>
-            <span class="prev-text nav-mobile">下一篇</span>
-            <i class="iconfont icon-right"></i>
-          </a>
-      </nav>
-    </footer>
-  </article>
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">about</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archive/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
         </div>
         
-  
-
-  
-
-  
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="social-links">
-      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
-      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
-      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
-      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
-      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
-      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
-      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
-      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
-      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
-      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
-      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
-      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
-      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
-  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
-</div>
-
-<div class="copyright">
-  <span class="power-by">
-    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
-  </span>
-  <span class="division">|</span>
-  <span class="theme-info">
-    主题 - 
-    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
-  </span>
-
-  
-
-  <span class="copyright-year">
-    &copy; 
-    
-      2016 - 
-    2018
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">cixuuz</span>
-  </span>
-</div>
-    </footer>
-
-    <div class="back-to-top" id="back-to-top">
-      <i class="iconfont icon-up"></i>
     </div>
-  </div>
-  
-<script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
-<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
-  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
-<script type="text/javascript" src="/dist/even.min.js?v=2.7.0"></script>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
 
 
+    
+    
+
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <h1 id="ssd-vs-hddx7684x6027x80fdx5bf9x6bd4x8bb2x89e3x4e86x4e3ax4ec0x4e48ssdx7684x8bfbx5199x6027x80fdx9ad8x4e8ehdd"><a href="http://oserror.com/backend/ssd-principle/" target="_blank" rel="external">SSD vs HDD&#x7684;&#x6027;&#x80FD;&#x5BF9;&#x6BD4;.&#x8BB2;&#x89E3;&#x4E86;&#x4E3A;&#x4EC0;&#x4E48;SSD&#x7684;&#x8BFB;&#x5199;&#x6027;&#x80FD;&#x9AD8;&#x4E8E;HDD.</a></h1>
+<ul>
+<li>NAND&#x4E00;&#x4E2A;&#x91CD;&#x8981;&#x7684;&#x7279;&#x6027;&#x662F;&#xFF0C;&#x5176;&#x53EA;&#x80FD;&#x662F;&#x8BFB;&#x6216;&#x5199;&#x5355;&#x4E2A;page&#xFF0C;&#x4F46;&#x4E0D;&#x80FD;&#x8986;&#x76D6;&#x5199;&#x5982;&#x67D0;&#x4E2A;page&#xFF0C;&#x5FC5;&#x987B;&#x5148;&#x8981;&#x6E05;&#x7A7A;&#x91CC;&#x9762;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x518D;&#x5199;&#x5165;&#x3002;</li>
+<li>&#x7531;&#x4E8E;&#x6E05;&#x7A7A;&#x5185;&#x5BB9;&#x7684;&#x7535;&#x538B;&#x8F83;&#x9AD8;&#xFF0C;&#x5FC5;&#x987B;&#x662F;&#x4EE5;block&#x4E3A;&#x5355;&#x4F4D;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x6CA1;&#x6709;&#x7A7A;&#x95F2;&#x7684;page&#x65F6;&#xFF0C;&#x5FC5;&#x987B;&#x8981;&#x627E;&#x5230;&#x6CA1;&#x6709;&#x6709;&#x6548;&#x5185;&#x5BB9;&#x7684;block&#xFF0C;&#x5148;&#x64E6;&#x5199;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x9009;&#x62E9;&#x7A7A;&#x95F2;&#x7684;page&#x5199;&#x5165;&#x3002;</li>
+<li>&#x4E3B;&#x8981;&#x95EE;&#x9898;&#xFF1A;&#x5199;&#x653E;&#x5927;
+<ul>
+<li>SSD&#x8BFB;&#x5199;&#x662F;&#x4EE5;page&#x4E3A;&#x5355;&#x4F4D;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x66F4;&#x65B0;page&#x4E2D;&#x7684;&#x90E8;&#x5206;&#x6570;&#x636E;&#xFF0C;&#x4E5F;&#x9700;&#x8981;&#x5199;&#x6574;&#x4E2A;page</li>
+<li>SSD&#x7684;garbage collection&#x4E2D;&#xFF0C;&#x4F1A;&#x5728;block&#x95F4;&#x79FB;&#x52A8;&#x6570;&#x636E;</li>
+<li>SSD&#x7684;wear leveing&#x4E2D;&#xFF0C;&#x53EF;&#x80FD;&#x4E5F;&#x4F1A;&#x5728;block&#x95F4;&#x4EA4;&#x6362;&#x6570;&#x636E;&#xFF0C;&#x5BFC;&#x81F4;&#x5199;&#x653E;&#x5927;</li>
+</ul></li>
+<li>&#x603B;&#x7ED3;
+<ul>
+<li>&#x9700;&#x8981;&#x5145;&#x5206;&#x5229;&#x7528;&#x5176;&#x968F;&#x673A;&#x8BFB;&#x5199;&#x5FEB;&#x7684;&#x7279;&#x6027;</li>
+<li>&#x5C3D;&#x53EF;&#x80FD;&#x5728;&#x8F6F;&#x4EF6;&#x5C42;&#x9762;&#x66F4;&#x65B0;&#x5C0F;&#x5757;&#x6570;&#x636E;&#xFF0C;&#x51CF;&#x8F7B;SSD&#x5199;&#x653E;&#x5927;&#x95EE;&#x9898;</li>
+<li>&#x907F;&#x514D;&#x9891;&#x7E41;&#x7684;&#x66F4;&#x65B0;&#x6570;&#x636E;&#xFF0C;&#x51CF;&#x8F7B;SSD&#x5199;&#x653E;&#x5927;&#x53CA;&#x5BFF;&#x547D;&#x51CF;&#x5C11;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x5C3D;&#x53EF;&#x80FD;&#x4F7F;&#x7528;&#x8FFD;&#x52A0;&#x7684;&#x65B9;&#x5F0F;&#x5199;&#x6570;&#x636E;</li>
+</ul></li>
+</ul>
+<h1 id="reference">Reference</h1>
+<ol style="list-style-type: decimal">
+<li>http://www.pcgamer.com/hard-drive-vs-ssd-performance/2/</li>
+</ol>
+
+                
+
+                <hr>
+                
+                <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/2017-03-30-json/" data-toggle="tooltip" data-placement="top" title="JSON是一种格式，基于文本，优于轻量，用于交换数据">&larr; Previous Post</a>
+                        </li>
+                    
+                    
+                        <li class="next">
+                            <a href="/2017-03-26-How-to-remote-connect-to-PostgreSQL/" data-toggle="tooltip" data-placement="top" title="How to remote connect to PostgreSQL">Next Post &rarr;</a>
+                        </li>
+                    
+                </ul>
+
+                
+                
+                
+
+                
+                
+                
+
+                
+                
+                    <div class="comment">
+                        <div id="disqus_thread" class="disqus-thread"></div>
+                    </div>
+                
+                
+            </div>
+            
+            
+            
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#ssd-vs-hddx7684x6027x80fdx5bf9x6bd4x8bb2x89e3x4e86x4e3ax4ec0x4e48ssdx7684x8bfbx5199x6027x80fdx9ad8x4e8ehdd"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">SSD vs HDD的性能对比.讲解了为什么SSD的读写性能高于HDD.</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#reference"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Reference</span></a></li></ol>
+        
+        </div>
+      </aside>
+    
+
+                
+            
+            <div class="
+                col-lg-4 col-lg-offset-1
+                col-md-2 col-md-offset-1
+                sidebar-container">
+
+                
+                
+                <section>
+                    
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#hardware" title="hardware">hardware</a>
+                        
+                    </div>
+                </section>
+                
+
+                
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="http://zhyoulun.com/" target="_blank">Youlun</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+
+<script type="text/javascript">
+     
+    var disqus_shortname = "cixuuz";
+    var disqus_identifier = "http://cixuuz.github.io/2017-03-28-All-about-hardware/";
+    var disqus_url = "http://cixuuz.github.io/2017-03-28-All-about-hardware/";
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+
+
+
+
+
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: 'ℬ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+     
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    
+    
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+                
+                
+
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/cixuuz">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://www.linkedin.com/in/chent">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Chet 2017 
+                    <br>
+                    Theme by <a href="http://huangxuan.me">Hux</a> 
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span> 
+                    re-Ported by <a href="http://beantech.org">BeanTech</a> | 
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="91px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=YenYuHsuan&repo=hexo-theme-beantech&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script src="/js/jquery.min.js"></script>
+
+
+<script src="/js/bootstrap.min.js"></script>
+
+
+<script src="/js/hux-blog.min.js"></script>
+
+
+
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        async("http://cixuuz.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+<script>
+    
+    var _gaId = 'UA-93897188-1';
+    var _gaDomain = 'cixuuz.github.io';
+
+    
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+
+
+
+
+
+
+
+
+	<a id="rocket" href="#top" class=""></a>
+	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+
+<img src="http://cixuuz.github.io/img/icon_wechat.png" width="0" height="0" />
 
 
 </body>
+
 </html>

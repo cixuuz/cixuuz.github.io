@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Algorithm on Chen Tong</title>
-    <link>http://localhost:1313/categories/algorithm/</link>
-    <description>Recent content in Algorithm on Chen Tong</description>
+    <title>algorithm on Chen Tong&#39;s Ideas and Writings</title>
+    <link>https://cixuuz.github.io/categories/algorithm/</link>
+    <description>Recent content in algorithm on Chen Tong&#39;s Ideas and Writings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	<atom:link href="http://localhost:1313/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://cixuuz.github.io/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Bellman–Ford algorithm and Routing Information Protocol</title>
-      <link>http://localhost:1313/post/2016-11-11-bellmanford-algorithm/</link>
+      <link>https://cixuuz.github.io/post/2016-11-11-bellmanford-algorithm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2016-11-11-bellmanford-algorithm/</guid>
+      <guid>https://cixuuz.github.io/post/2016-11-11-bellmanford-algorithm/</guid>
       <description>There is an unacceptable solution for leetcode Minimum Height Trees due to time limit exceeded. But it&amp;rsquo;s an algorithm I didn&amp;rsquo;t know, so record it.
 It&amp;rsquo;s Bellman–Ford algorithm used in Routing Information Protocol.
 object  computes shortest paths from a single source vertex to all of the other vertices in a weighted digraph.[1] It is slower than Dijkstra&amp;rsquo;s algorithm for the same problem, but more versatile, as it is capable of handling graphs in which some of the edge weights are negative numbers.</description>

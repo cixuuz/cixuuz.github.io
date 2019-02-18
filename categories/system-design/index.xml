@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>System Design on Chen Tong</title>
-    <link>http://localhost:1313/categories/system-design/</link>
-    <description>Recent content in System Design on Chen Tong</description>
+    <title>system design on Chen Tong&#39;s Ideas and Writings</title>
+    <link>https://cixuuz.github.io/categories/system-design/</link>
+    <description>Recent content in system design on Chen Tong&#39;s Ideas and Writings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	<atom:link href="http://localhost:1313/categories/system-design/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://cixuuz.github.io/categories/system-design/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Bittiger cs101 notebook - how to design a google sheet</title>
-      <link>http://localhost:1313/post/2016-11-05-bittiger-cs101-notebook-1/</link>
+      <link>https://cixuuz.github.io/post/2016-11-05-bittiger-cs101-notebook-1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2016-11-05-bittiger-cs101-notebook-1/</guid>
+      <guid>https://cixuuz.github.io/post/2016-11-05-bittiger-cs101-notebook-1/</guid>
       <description>Structure  Data Structure Algorithm
  Computer Architecture
  Operation System
@@ -27,10 +27,10 @@
     
     <item>
       <title>Bittiger cs101 notebook 1 - how to calculate</title>
-      <link>http://localhost:1313/post/2016-11-05-bittiger-cs101-notebook-2/</link>
+      <link>https://cixuuz.github.io/post/2016-11-05-bittiger-cs101-notebook-2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2016-11-05-bittiger-cs101-notebook-2/</guid>
+      <guid>https://cixuuz.github.io/post/2016-11-05-bittiger-cs101-notebook-2/</guid>
       <description>CPU: central processing unit http://www.visual6502.org/JSSim/expert-6800.html
 1 HZ = 1 clock time 2.34GHZ = 2.34B clock time
 Register - Data Register - Instructure Register - Address Register - Flag Register: boolean like compare
@@ -42,10 +42,10 @@ Control unit</description>
     
     <item>
       <title>Bittiger cs101 notebook 2 - linux and file system</title>
-      <link>http://localhost:1313/post/2016-11-05-bittiger-cs101-notebook-3/</link>
+      <link>https://cixuuz.github.io/post/2016-11-05-bittiger-cs101-notebook-3/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2016-11-05-bittiger-cs101-notebook-3/</guid>
+      <guid>https://cixuuz.github.io/post/2016-11-05-bittiger-cs101-notebook-3/</guid>
       <description>need for a file system  hardware
  file
  size type authorization read and write time  operations
@@ -59,10 +59,10 @@ connect by points and write by order ext2(second extended file system)
     
     <item>
       <title>Bittiger cs101 notebook 3 - JVM</title>
-      <link>http://localhost:1313/post/2016-11-05-bittiger-cs101-notebook-4/</link>
+      <link>https://cixuuz.github.io/post/2016-11-05-bittiger-cs101-notebook-4/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2016-11-05-bittiger-cs101-notebook-4/</guid>
+      <guid>https://cixuuz.github.io/post/2016-11-05-bittiger-cs101-notebook-4/</guid>
       <description>JVM class loader load code class and other java base classes such as java.io util &amp;hellip;
  static class will be loaded in prepare in link
  Resolve change symbol reference to actural address
@@ -75,10 +75,10 @@ connect by points and write by order ext2(second extended file system)
     
     <item>
       <title>Bittiger cs101 notebook 4 - multithreaded programming fundamentals</title>
-      <link>http://localhost:1313/post/2016-11-07-bittiger-cs101-notebook-5/</link>
+      <link>https://cixuuz.github.io/post/2016-11-07-bittiger-cs101-notebook-5/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2016-11-07-bittiger-cs101-notebook-5/</guid>
+      <guid>https://cixuuz.github.io/post/2016-11-07-bittiger-cs101-notebook-5/</guid>
       <description>Process is a instance of a running program
 - logical control flow: process execution interleaved
 - private address space: managed by virtual memory machine
@@ -91,10 +91,10 @@ different Threads share code and data, Threads are less expensive than processes
     
     <item>
       <title>Bittiger cs101 notebook 5 - what happens when visit a website</title>
-      <link>http://localhost:1313/post/2016-11-07-bittiger-cs101-notebook-6/</link>
+      <link>https://cixuuz.github.io/post/2016-11-07-bittiger-cs101-notebook-6/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2016-11-07-bittiger-cs101-notebook-6/</guid>
+      <guid>https://cixuuz.github.io/post/2016-11-07-bittiger-cs101-notebook-6/</guid>
       <description>Interruption generates an interrupt
 interrupt controller
  Typeahead
@@ -125,10 +125,10 @@ tcp：Three Interaction Protocol</description>
     
     <item>
       <title>Bittiger cs101 notebook 6 - web programming</title>
-      <link>http://localhost:1313/post/2016-11-28-bittiger-cs101-notebook-7/</link>
+      <link>https://cixuuz.github.io/post/2016-11-28-bittiger-cs101-notebook-7/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2016-11-28-bittiger-cs101-notebook-7/</guid>
+      <guid>https://cixuuz.github.io/post/2016-11-28-bittiger-cs101-notebook-7/</guid>
       <description>Http and Chrome dev tools Http header  Host: send to where, dns lookup
  Referer: linked from where,
  User-Agent: browser, os
@@ -151,10 +151,10 @@ Restful api reasons: - single page application
     
     <item>
       <title>Bittiger cs101 notebook 7 - design pattern in Java</title>
-      <link>http://localhost:1313/post/2016-11-28-bittiger-cs101-notebook-9/</link>
+      <link>https://cixuuz.github.io/post/2016-11-28-bittiger-cs101-notebook-9/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2016-11-28-bittiger-cs101-notebook-9/</guid>
+      <guid>https://cixuuz.github.io/post/2016-11-28-bittiger-cs101-notebook-9/</guid>
       <description></description>
     </item>
     

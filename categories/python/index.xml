@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Python on Chen Tong</title>
-    <link>http://localhost:1313/categories/python/</link>
-    <description>Recent content in Python on Chen Tong</description>
+    <title>Python on Chen Tong&#39;s Ideas and Writings</title>
+    <link>https://cixuuz.github.io/categories/python/</link>
+    <description>Recent content in Python on Chen Tong&#39;s Ideas and Writings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	<atom:link href="http://localhost:1313/categories/python/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://cixuuz.github.io/categories/python/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Python从小白到大白-Generator 漫谈</title>
-      <link>http://localhost:1313/post/2016-05-30-about-generator.cn/</link>
+      <link>https://cixuuz.github.io/post/2016-05-30-about-generator.cn/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2016-05-30-about-generator.cn/</guid>
+      <guid>https://cixuuz.github.io/post/2016-05-30-about-generator.cn/</guid>
       <description>按, 作为一个Python初学者, Python的格式化语法让众多编程小白追捧, 它的语法糖让代码变得简洁易读，它的庞大开源库让它在各个领域都能发</description>
     </item>
     
     <item>
       <title>Python从小白到大白-Generator 漫谈 (续1)</title>
-      <link>http://localhost:1313/post/2016-06-18-about-generator-2.cn/</link>
+      <link>https://cixuuz.github.io/post/2016-06-18-about-generator-2.cn/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2016-06-18-about-generator-2.cn/</guid>
+      <guid>https://cixuuz.github.io/post/2016-06-18-about-generator-2.cn/</guid>
       <description>按, 上篇介绍了generator相关的概念. 这篇来探究一下generator相关的操作方法. 以下都是使用Python 2.7.10. 根据官方文档 generator 通过 yield 来</description>
     </item>
     
     <item>
       <title>Python从小白到大白-Python也可以是函数式语言</title>
-      <link>http://localhost:1313/post/2016-07-31-python-path-1.cn/</link>
+      <link>https://cixuuz.github.io/post/2016-07-31-python-path-1.cn/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2016-07-31-python-path-1.cn/</guid>
+      <guid>https://cixuuz.github.io/post/2016-07-31-python-path-1.cn/</guid>
       <description>引言 按, 作为一个Python初学者, Python的格式化语法让众多编程小白追捧, 它的语法糖让代码变得简洁易读, 它的庞大开源库让它在各个领域都</description>
     </item>
     

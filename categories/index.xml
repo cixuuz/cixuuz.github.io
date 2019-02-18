@@ -1,174 +1,102 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Chen Tong</title>
-    <link>http://localhost:1313/categories/</link>
-    <description>Recent content in Categories on Chen Tong</description>
+    <title>Categories on Chen Tong&#39;s Ideas and Writings</title>
+    <link>https://cixuuz.github.io/categories/</link>
+    <description>Recent content in Categories on Chen Tong&#39;s Ideas and Writings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	<atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://cixuuz.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Algorithm</title>
-      <link>http://localhost:1313/categories/algorithm/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/categories/algorithm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Category 2</title>
-      <link>http://localhost:1313/categories/category-2/</link>
-      <pubDate>Wed, 23 Aug 2017 18:03:09 +0800</pubDate>
-      
-      <guid>http://localhost:1313/categories/category-2/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Category 3</title>
-      <link>http://localhost:1313/categories/category-3/</link>
-      <pubDate>Wed, 23 Aug 2017 18:03:09 +0800</pubDate>
-      
-      <guid>http://localhost:1313/categories/category-3/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>Data Science</title>
-      <link>http://localhost:1313/categories/data-science/</link>
+      <link>https://cixuuz.github.io/categories/data-science/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/categories/data-science/</guid>
+      <guid>https://cixuuz.github.io/categories/data-science/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Database</title>
-      <link>http://localhost:1313/categories/database/</link>
+      <link>https://cixuuz.github.io/categories/database/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/categories/database/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>English</title>
-      <link>http://localhost:1313/categories/english/</link>
-      <pubDate>Thu, 31 Aug 2017 15:43:48 +0800</pubDate>
-      
-      <guid>http://localhost:1313/categories/english/</guid>
+      <guid>https://cixuuz.github.io/categories/database/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Graph</title>
-      <link>http://localhost:1313/categories/graph/</link>
+      <link>https://cixuuz.github.io/categories/graph/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/categories/graph/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Latex</title>
-      <link>http://localhost:1313/categories/latex/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/categories/latex/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Leetcode</title>
-      <link>http://localhost:1313/categories/leetcode/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/categories/leetcode/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Programming</title>
-      <link>http://localhost:1313/categories/programming/</link>
-      <pubDate>Mon, 29 Jan 2018 15:15:14 -0500</pubDate>
-      
-      <guid>http://localhost:1313/categories/programming/</guid>
+      <guid>https://cixuuz.github.io/categories/graph/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Python</title>
-      <link>http://localhost:1313/categories/python/</link>
+      <link>https://cixuuz.github.io/categories/python/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/categories/python/</guid>
+      <guid>https://cixuuz.github.io/categories/python/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Statistics</title>
-      <link>http://localhost:1313/categories/statistics/</link>
+      <link>https://cixuuz.github.io/categories/statistics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/categories/statistics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Syntax Highlighting</title>
-      <link>http://localhost:1313/categories/syntax-highlighting/</link>
-      <pubDate>Tue, 30 Aug 2011 16:01:23 +0800</pubDate>
-      
-      <guid>http://localhost:1313/categories/syntax-highlighting/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>System Design</title>
-      <link>http://localhost:1313/categories/system-design/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/categories/system-design/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Theme Preview</title>
-      <link>http://localhost:1313/categories/theme-preview/</link>
-      <pubDate>Wed, 23 Aug 2017 18:03:09 +0800</pubDate>
-      
-      <guid>http://localhost:1313/categories/theme-preview/</guid>
+      <guid>https://cixuuz.github.io/categories/statistics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Website</title>
-      <link>http://localhost:1313/categories/website/</link>
+      <link>https://cixuuz.github.io/categories/website/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/categories/website/</guid>
+      <guid>https://cixuuz.github.io/categories/website/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>中文</title>
-      <link>http://localhost:1313/categories/%E4%B8%AD%E6%96%87/</link>
-      <pubDate>Wed, 30 Aug 2017 01:37:56 +0800</pubDate>
+      <title>algorithm</title>
+      <link>https://cixuuz.github.io/categories/algorithm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/categories/%E4%B8%AD%E6%96%87/</guid>
+      <guid>https://cixuuz.github.io/categories/algorithm/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>日本語</title>
-      <link>http://localhost:1313/categories/%E6%97%A5%E6%9C%AC%E8%AA%9E/</link>
-      <pubDate>Wed, 30 Aug 2017 01:53:34 +0800</pubDate>
+      <title>latex</title>
+      <link>https://cixuuz.github.io/categories/latex/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/categories/%E6%97%A5%E6%9C%AC%E8%AA%9E/</guid>
+      <guid>https://cixuuz.github.io/categories/latex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>leetcode</title>
+      <link>https://cixuuz.github.io/categories/leetcode/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/categories/leetcode/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>system design</title>
+      <link>https://cixuuz.github.io/categories/system-design/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/categories/system-design/</guid>
       <description></description>
     </item>
     

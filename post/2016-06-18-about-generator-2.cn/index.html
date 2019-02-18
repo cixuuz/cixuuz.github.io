@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Python从小白到大白-Generator 漫谈 (续1) - Chen Tong&#39;s Ideas and Writings</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Chen Tong" /><meta name="description" content="按, 上篇介绍了generator相关的概念. 这篇来探究一下generator相关的操作方法. 以下都是使用Python 2.7.10. 根据官方文档 generator 通过 yield 来" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.54.0 with even 4.0.0" />
+
+
+<link rel="canonical" href="https://cixuuz.github.io/post/2016-06-18-about-generator-2.cn/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Python从小白到大白-Generator 漫谈 (续1)" />
+<meta property="og:description" content="按, 上篇介绍了generator相关的概念. 这篇来探究一下generator相关的操作方法. 以下都是使用Python 2.7.10. 根据官方文档 generator 通过 yield 来" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cixuuz.github.io/post/2016-06-18-about-generator-2.cn/" />
+
+
+<meta itemprop="name" content="Python从小白到大白-Generator 漫谈 (续1)">
+<meta itemprop="description" content="按, 上篇介绍了generator相关的概念. 这篇来探究一下generator相关的操作方法. 以下都是使用Python 2.7.10. 根据官方文档 generator 通过 yield 来">
+
+
+
+<meta itemprop="wordCount" content="1255">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Python从小白到大白-Generator 漫谈 (续1)"/>
+<meta name="twitter:description" content="按, 上篇介绍了generator相关的概念. 这篇来探究一下generator相关的操作方法. 以下都是使用Python 2.7.10. 根据官方文档 generator 通过 yield 来"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Python从小白到大白-Generator 漫谈 (续1)</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 0001-01-01 </span>
+        <div class="post-category">
+            <a href="/categories/python/"> Python </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    
+  </div>
+</div>
+    <div class="post-content">
+      <p>按, <a href="http://nychent.github.io/about-generator.cn/">上篇</a>介绍了generator相关的概念. 这篇来探究一下generator相关的操作方法. 以下都是使用Python 2.7.10.</p>
+
+<p>根据<a href="https://docs.python.org/3/glossary.html#term-generator">官方文档</a> generator 通过 yield 来实现 <code>next()</code> 方法.
+&gt; A function which returns a generator iterator. It looks like a normal
+&gt; function except that it contains yield expressions for producing a
+&gt; series of values usable in a for-loop or that can be retrieved one at
+&gt; a time with the next() function.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-Python" data-lang="Python"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-Python" data-lang="Python"><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">fib</span><span class="p">():</span>
+<span class="o">...</span>     <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+<span class="o">...</span>     <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+<span class="o">...</span>             <span class="k">yield</span> <span class="n">b</span>
+<span class="o">...</span>             <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">fib</span>
+<span class="o">&lt;</span><span class="n">function</span> <span class="n">fib</span> <span class="n">at</span> <span class="mh">0x10d930c80</span><span class="o">&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">f</span> <span class="o">=</span> <span class="n">fib</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">f</span>
+<span class="o">&lt;</span><span class="n">generator</span> <span class="nb">object</span> <span class="n">fib</span> <span class="n">at</span> <span class="mh">0x10d92faa0</span><span class="o">&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">next</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">next</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">next</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="mi">2</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">next</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="mi">3</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">next</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="mi">5</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>以上, 我们可以看到yield用法. 每次执行到yield, 都会记住执行状态的局部变量以及表达式。再下次恢复时, 即next(), 它会从记住的状态继续执行.</p>
+
+<p>generator的另一种调用方法是通过send(value)来实现的。我们来看一个例子:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-Python" data-lang="Python"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-Python" data-lang="Python"><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">gen</span><span class="p">():</span>
+<span class="o">...</span>     <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+<span class="o">...</span>             <span class="n">value</span> <span class="o">=</span> <span class="k">yield</span>
+<span class="o">...</span>             <span class="k">print</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">g</span> <span class="o">=</span> <span class="n">gen</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">g</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s2">&#34;ek&#34;</span><span class="p">)</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&#34;&lt;stdin&gt;&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">TypeError</span><span class="p">:</span> <span class="n">can</span><span class="s1">&#39;t send non-None value to a just-started generator</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-Python" data-lang="Python"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-Python" data-lang="Python"><span class="o">&gt;&gt;&gt;</span> <span class="nb">next</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">g</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s2">&#34;ek&#34;</span><span class="p">)</span>
+<span class="n">ek</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">next</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+<span class="bp">None</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>以上, 展示了如何讲value传入yield当前表达式. 具体来说, 使用send(value)时, generator停在yield的语句. 传入的值被复制到value, 然后print函数打印value, 经过循环遇到yield时, 暂停. 需要注意的是在没有执行next()前, generator状态并没有停在yield状态，也就无法传入值.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-Python" data-lang="Python"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-Python" data-lang="Python"><span class="o">&gt;&gt;&gt;</span> <span class="n">g</span> <span class="o">=</span> <span class="n">gen</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">g</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="bp">None</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">g</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s2">&#34;ek&#34;</span><span class="p">)</span>
+<span class="n">ek</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>以上, 除了next(), 可以让generator到达yield, send(None)作用是一样的.</p>
+
+<p>让我们乘热打铁, 看一个稍微复杂的例子:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-Python" data-lang="Python"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-Python" data-lang="Python"><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">gen</span><span class="p">(</span><span class="n">value</span> <span class="o">=</span> <span class="bp">None</span><span class="p">):</span>
+<span class="o">...</span>     <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+<span class="o">...</span>             <span class="n">value</span> <span class="o">=</span> <span class="p">(</span><span class="k">yield</span> <span class="n">value</span><span class="p">)</span>
+<span class="o">...</span>             <span class="k">print</span><span class="p">(</span><span class="s2">&#34;The value is&#34;</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+<span class="o">...</span>             <span class="k">if</span> <span class="n">value</span><span class="p">:</span>
+<span class="o">...</span>                     <span class="n">value</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">g</span> <span class="o">=</span> <span class="n">gen</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">next</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+<span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">g</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="p">(</span><span class="s1">&#39;The value is&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="mi">3</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">g</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="p">(</span><span class="s1">&#39;The value is&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="mi">11</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">next</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+<span class="p">(</span><span class="s1">&#39;The value is&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>在这个例子里, value = (yield value) 这个形式看起来很复杂. 但两个value 的含义并不相同. 具体来看, 执行next()时, generator执行到yield value表达式, 保存上下文环境暂停返回当前值1. 再执行send(value)时, 从value = yield开始, 打印传入的值 2, 再次遇到yield value暂停返回当前值 3 (上个循环时 加上 1). send(10)是一样的. 在看最后一个next(), 这里需要记住的是调用next()表达式的值时, yield的值总是为None. 因此, 在这里返回None.</p>
+
+<p>接下来, 我们来实现一下Python 内建函数 range() <a href="http://thepythonguru.com/python-generators/">实现方法</a> (复刻版, 非真实实现):</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-Python" data-lang="Python"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-Python" data-lang="Python"><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">my_range</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">,</span> <span class="n">step</span> <span class="o">=</span> <span class="mi">1</span><span class="p">):</span>
+<span class="o">...</span>     <span class="k">if</span> <span class="n">stop</span> <span class="o">&lt;=</span> <span class="n">start</span><span class="p">:</span>
+<span class="o">...</span>         <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&#34;Start must be smaller than stop&#34;</span><span class="p">)</span>
+<span class="o">...</span>     <span class="n">i</span> <span class="o">=</span> <span class="n">start</span>
+<span class="o">...</span>     <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">stop</span><span class="p">:</span>
+<span class="o">...</span>         <span class="k">yield</span> <span class="n">i</span>
+<span class="o">...</span>         <span class="n">i</span> <span class="o">+=</span> <span class="n">step</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">try</span><span class="p">:</span>
+<span class="o">...</span>     <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">my_range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">3</span><span class="p">):</span>
+<span class="o">...</span>         <span class="k">print</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+<span class="o">...</span> <span class="k">except</span> <span class="ne">RuntimeError</span> <span class="k">as</span> <span class="n">ex</span><span class="p">:</span>
+<span class="o">...</span>     <span class="k">print</span><span class="p">(</span><span class="n">ex</span><span class="p">)</span>
+<span class="o">...</span> <span class="k">except</span><span class="p">:</span>
+<span class="o">...</span>     <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Unknown error occurred&#34;</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="mi">10</span>
+<span class="mi">13</span>
+<span class="mi">16</span>
+<span class="mi">19</span>
+<span class="mi">22</span>
+<span class="mi">25</span>
+<span class="mi">28</span>
+<span class="mi">31</span>
+<span class="mi">34</span>
+<span class="mi">37</span>
+<span class="mi">40</span>
+<span class="mi">43</span>
+<span class="mi">46</span>
+<span class="mi">49</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>最后, generator 的另外两个方法分别是 throw(type[, value[, traceback]]) 和 close(). 前者用于抛出 type 异常, 后者用于关闭generator.
+我们直接看下<a href="https://docs.python.org/3/reference/expressions.html#examples">Python文档</a>的例子:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-Python" data-lang="Python"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-Python" data-lang="Python"><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">echo</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+<span class="o">...</span>     <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Execution starts when &#39;next()&#39; is called for the first time.&#34;</span><span class="p">)</span>
+<span class="o">...</span>     <span class="k">try</span><span class="p">:</span>
+<span class="o">...</span>         <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+<span class="o">...</span>             <span class="k">try</span><span class="p">:</span>
+<span class="o">...</span>                 <span class="n">value</span> <span class="o">=</span> <span class="p">(</span><span class="k">yield</span> <span class="n">value</span><span class="p">)</span>
+<span class="o">...</span>             <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="o">...</span>                 <span class="n">value</span> <span class="o">=</span> <span class="n">e</span>
+<span class="o">...</span>     <span class="k">finally</span><span class="p">:</span>
+<span class="o">...</span>         <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Don&#39;t forget to clean up when &#39;close()&#39; is called.&#34;</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">generator</span> <span class="o">=</span> <span class="n">echo</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">generator</span><span class="p">))</span>
+<span class="n">Execution</span> <span class="n">starts</span> <span class="n">when</span> <span class="s1">&#39;next()&#39;</span> <span class="ow">is</span> <span class="n">called</span> <span class="k">for</span> <span class="n">the</span> <span class="n">first</span> <span class="n">time</span><span class="o">.</span>
+<span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">generator</span><span class="p">))</span>
+<span class="bp">None</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">generator</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+<span class="mi">2</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">generator</span><span class="o">.</span><span class="n">throw</span><span class="p">(</span><span class="ne">TypeError</span><span class="p">,</span> <span class="s2">&#34;spam&#34;</span><span class="p">)</span>
+<span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;spam&#39;</span><span class="p">,)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">generator</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">Don</span><span class="s1">&#39;t forget to clean up when &#39;</span><span class="n">close</span><span class="p">()</span><span class="s1">&#39; is called.</span></code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Chen Tong</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        0001-01-01
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/post/2016-05-30-about-generator.cn/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Python从小白到大白-Generator 漫谈</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/2016-07-31-python-path-1.cn/">
+            <span class="next-text nav-default">Python从小白到大白-Python也可以是函数式语言</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:nychent@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="http://localhost:1313" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="http://localhost:1313" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://cixuuz.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Chen Tong</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

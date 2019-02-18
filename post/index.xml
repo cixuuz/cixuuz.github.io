@@ -1,85 +1,115 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Chen Tong</title>
-    <link>http://localhost:1313/post/</link>
-    <description>Recent content in Posts on Chen Tong</description>
+    <title>Posts on Chen Tong&#39;s Ideas and Writings</title>
+    <link>https://cixuuz.github.io/post/</link>
+    <description>Recent content in Posts on Chen Tong&#39;s Ideas and Writings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 23 Aug 2017 18:03:09 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 04 Nov 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://cixuuz.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Theme preview</title>
-      <link>http://localhost:1313/post/even-preview/</link>
-      <pubDate>Wed, 23 Aug 2017 18:03:09 +0800</pubDate>
-      
-      <guid>http://localhost:1313/post/even-preview/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;Copy from &lt;a href=&#34;https://laozhu.me/post/hugo-nuo-post-preview/&#34;&gt;《Hugo 主题 Nuo 文章样式预览》&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;这篇文章集中说明主题所支持的 Markdown 语法和 Hugo Shortcodes 插件，你也可以在这里预览到他们的样子。如果你不喜欢某些样式，可以去修改 css/ 文件夹下的 .scss 文件。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
     
     <item>
-      <title>Mutation可能的问题</title>
-      <link>http://localhost:1313/post/programming-mutation/</link>
-      <pubDate>Mon, 29 Jan 2018 15:15:14 -0500</pubDate>
+      <title>leetcode summary 11/04</title>
+      <link>https://cixuuz.github.io/post/lcs_1104/</link>
+      <pubDate>Sat, 04 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/programming-mutation/</guid>
-      <description>&lt;p&gt;因为类型是Mutation的，所以reference和copy就有了区别。如果是reference，那么可能会暴露数据本身，遭到恶意修改，引发安全的问题。下面是一段Java代码，其中有一个 Mutation引起的的bug：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-Java&#34;&gt;class ProtectedResource {
-    private Resource theResource = ...;
-    private String[] allowedUsers = ...;    
-    public String[] getAllowedUsers() {
-        return allowedUsers;
-    }
-    public String currentUser() {...}
-    public void useTheResource() {
-        for (String allowedUser : allowedUsers) {
-            if (currentUser().equals(allowdUser)) {
-                ... // access allowed: use it
-                return;
-            }
-        }
-        throw new IllegalAccessException();
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <guid>https://cixuuz.github.io/post/lcs_1104/</guid>
+      <description> 624. Maximum Distance in Arrays  609. Find Duplicate File in System </description>
     </item>
     
     <item>
       <title>Java Multithreading</title>
-      <link>http://localhost:1313/post/java-multithreading/</link>
+      <link>https://cixuuz.github.io/post/java-multithreading/</link>
       <pubDate>Sun, 29 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/java-multithreading/</guid>
+      <guid>https://cixuuz.github.io/post/java-multithreading/</guid>
       <description>http://hackjutsu.com/2016/01/20/Java%20Concurrency/</description>
     </item>
     
     <item>
+      <title>leetcode summary 10/23</title>
+      <link>https://cixuuz.github.io/post/lcs_1023/</link>
+      <pubDate>Mon, 23 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_1023/</guid>
+      <description> 79. Word Search  212. Word Search II  92. Reverse Linked List II  160. Intersection of Two Linked Lists  287. Find the Duplicate Number  268. Missing Number  151. Reverse Words in a String  186. Reverse Words in a String II  215. Kth Largest Element in an Array  88. Merge Sorted Array  437. Path Sum III </description>
+    </item>
+    
+    <item>
+      <title>leetcode summary 10/22</title>
+      <link>https://cixuuz.github.io/post/lcs_1022/</link>
+      <pubDate>Sun, 22 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_1022/</guid>
+      <description> 598. Range Addition II  592. Fraction Addition and Subtraction  </description>
+    </item>
+    
+    <item>
+      <title>leetcode summary 10/19</title>
+      <link>https://cixuuz.github.io/post/lcs_1019/</link>
+      <pubDate>Thu, 19 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_1019/</guid>
+      <description>42. Trapping Rain Water https://gist.github.com/cd4159bf4d1b5d31fa27f13062e1681b
+322. Coin Change https://gist.github.com/e383d1c66294ddc044a77e1a8e3ca529
+518. Coin Change 2 https://gist.github.com/f4408eb706be4b337494af0dd0e24c47</description>
+    </item>
+    
+    <item>
       <title>System Design - Web Crawler</title>
-      <link>http://localhost:1313/post/system_design_web_crawler/</link>
+      <link>https://cixuuz.github.io/post/system_design_web_crawler/</link>
       <pubDate>Wed, 18 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/system_design_web_crawler/</guid>
+      <guid>https://cixuuz.github.io/post/system_design_web_crawler/</guid>
       <description>Guideline: The Crawler Service processes each page link by doing the following in a loop: 1. Takes the top ranked page link to crawl 2. Checks crawled_links in the NoSQL Database for an entry with a similar page signature 3. If we have a similar page, reduces the priority of the page link 1. This prevents us from getting into a cycle; Continue 2. Else, crawls the link - Adds a job to the Reverse Index Service queue to generate a reverse index - Adds a job to the Document Service queue to generate a static title and snippet - Generates the page signature - Removes the link from links_to_crawl in the NoSQL Database - Inserts the page link and signature to crawled_links in the NoSQL Database</description>
     </item>
     
     <item>
+      <title>leetcode summary 10/17</title>
+      <link>https://cixuuz.github.io/post/lcs_1017/</link>
+      <pubDate>Tue, 17 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_1017/</guid>
+      <description>33. Search in Rotated Sorted Array https://leetcode.com/problems/search-in-rotated-sorted-array/discuss/ 
+341. Flatten Nested List Iterator  generator, sepecific to this question stack, interative https://leetcode.com/problems/flatten-nested-list-iterator/discuss/  155. Min Stack https://discuss.leetcode.com/topic/7020/java-accepted-solution-using-one-stack</description>
+    </item>
+    
+    <item>
+      <title>leetcode summary 10/16</title>
+      <link>https://cixuuz.github.io/post/lcs_1016/</link>
+      <pubDate>Mon, 16 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_1016/</guid>
+      <description> 138. Copy List with Random Pointer  301. Remove Invalid Parentheses  </description>
+    </item>
+    
+    <item>
+      <title>leetcode summary 10/15</title>
+      <link>https://cixuuz.github.io/post/lcs_1015/</link>
+      <pubDate>Sun, 15 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_1015/</guid>
+      <description> 692. Top K Frequent Words  Python3 sorting using functools.total_ordering, implements eq and le   98. Validate Binary Search Tree  121. Best Time to Buy and Sell Stock  get min price before current price   122. Best Time to Buy and Sell Stock II  123. Best Time to Buy and Sell Stock III 188. Best Time to Buy and Sell Stock IV  309. Best Time to Buy and Sell Stock with Cooldown  </description>
+    </item>
+    
+    <item>
+      <title>leetcode summary 10/14</title>
+      <link>https://cixuuz.github.io/post/lcs_1014/</link>
+      <pubDate>Sat, 14 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_1014/</guid>
+      <description> 76. Minimum Window Substring  242. Valid Anagram  sort hashmap   139. Word Break  memo s[i:] dp   49. Group Anagrams  387. First Unique Character in a String  283. Move Zeroes  </description>
+    </item>
+    
+    <item>
       <title>System Design - TinyURL</title>
-      <link>http://localhost:1313/post/system_design_tinyurl/</link>
+      <link>https://cixuuz.github.io/post/system_design_tinyurl/</link>
       <pubDate>Thu, 12 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/system_design_tinyurl/</guid>
+      <guid>https://cixuuz.github.io/post/system_design_tinyurl/</guid>
       <description>Two methods Hash Function Pros: - use traditional hash function - randomly distributed - support url clean - hash functions cost time
 cons: - not short - collisions, start collisions from 2^(n/2). solution: url + timestamp
 Auto-increment index Base10, Base62
@@ -88,29 +118,119 @@ cons: - not support url clean</description>
     </item>
     
     <item>
+      <title>leetcode summary 10/12</title>
+      <link>https://cixuuz.github.io/post/lcs_1012/</link>
+      <pubDate>Thu, 12 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_1012/</guid>
+      <description> 56. Merge Intervals  sort then merge   </description>
+    </item>
+    
+    <item>
+      <title>leetcode summary 10/11</title>
+      <link>https://cixuuz.github.io/post/lcs_1011/</link>
+      <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_1011/</guid>
+      <description> 232. Implement Queue using Stacks  </description>
+    </item>
+    
+    <item>
+      <title>leetcode summary 10/10</title>
+      <link>https://cixuuz.github.io/post/lcs_1010/</link>
+      <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_1010/</guid>
+      <description> 53. Maximum Subarray  </description>
+    </item>
+    
+    <item>
+      <title>leetcode summary 10/09</title>
+      <link>https://cixuuz.github.io/post/lcs_1009/</link>
+      <pubDate>Mon, 09 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_1009/</guid>
+      <description> 500. Keyboard Row  566. Reshape the Matrix  </description>
+    </item>
+    
+    <item>
+      <title>leetcode summary 10/08</title>
+      <link>https://cixuuz.github.io/post/lcs_1008/</link>
+      <pubDate>Sun, 08 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_1008/</guid>
+      <description> 146. LRU Cache  LinkedHashMap OrderedDict   412. Fizz Buzz  </description>
+    </item>
+    
+    <item>
       <title>Machine Learning Framework</title>
-      <link>http://localhost:1313/post/ml_framework/</link>
+      <link>https://cixuuz.github.io/post/ml_framework/</link>
       <pubDate>Sat, 07 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/ml_framework/</guid>
+      <guid>https://cixuuz.github.io/post/ml_framework/</guid>
       <description>机器学习架构 https://mp.weixin.qq.com/s/eQ4CcqhGd070BYSQdonO5g 境界 1：参数可单机存储和更新 此种境界较为简单，但仍可以使用参数服务器，通过数据并行来加速模型的训练。 境界 2：参数不可单机存储，</description>
     </item>
     
     <item>
+      <title>leetcode summary 10/05</title>
+      <link>https://cixuuz.github.io/post/lcs_1005/</link>
+      <pubDate>Thu, 05 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_1005/</guid>
+      <description> 369. Plus One Linked List  reverse, add, reverse dfs return carry two points to the change part   </description>
+    </item>
+    
+    <item>
+      <title>leetcode summary 10/04</title>
+      <link>https://cixuuz.github.io/post/lcs_1004/</link>
+      <pubDate>Wed, 04 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_1004/</guid>
+      <description> 163. Missing Ranges  overflow   </description>
+    </item>
+    
+    <item>
       <title>Programming multithreading</title>
-      <link>http://localhost:1313/post/programming-multithreading/</link>
+      <link>https://cixuuz.github.io/post/programming-multithreading/</link>
       <pubDate>Mon, 02 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/programming-multithreading/</guid>
+      <guid>https://cixuuz.github.io/post/programming-multithreading/</guid>
       <description>Semaphores: It&amp;rsquo;s simply a way to limit the number of consumers for a specific resource. For example, to limit the number of simultaneous calls to a database in an application.</description>
     </item>
     
     <item>
+      <title>leetcode summary 09/29</title>
+      <link>https://cixuuz.github.io/post/lcs_0929/</link>
+      <pubDate>Fri, 29 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_0929/</guid>
+      <description> 675. Cut Off Trees for Golf Event  heap and bfs   </description>
+    </item>
+    
+    <item>
+      <title>leetcode summary 09/28</title>
+      <link>https://cixuuz.github.io/post/lcs_0928/</link>
+      <pubDate>Thu, 28 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_0928/</guid>
+      <description> 153. Find Minimum in Rotated Sorted Array  bs   </description>
+    </item>
+    
+    <item>
+      <title>leetcode summary 09/27</title>
+      <link>https://cixuuz.github.io/post/lcs_0927/</link>
+      <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_0927/</guid>
+      <description> 451. Sort Characters By Frequency  bucket sort   </description>
+    </item>
+    
+    <item>
       <title>feature engineer</title>
-      <link>http://localhost:1313/post/ds-feature-engineer/</link>
+      <link>https://cixuuz.github.io/post/ds-feature-engineer/</link>
       <pubDate>Tue, 26 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/ds-feature-engineer/</guid>
+      <guid>https://cixuuz.github.io/post/ds-feature-engineer/</guid>
       <description> Onehot encoding One of k encoding on an array of lenght k
 hash encoding label encoding  non-linear tree-based not increase dimensionality  count encoding target encoding encode categorical variables by their ratio of target
 reducing dimensonality https://medium.com/towards-data-science/reducing-dimensionality-from-dimensionality-reduction-techniques-f658aec24dfe
@@ -119,46 +239,55 @@ reducing dimensonality https://medium.com/towards-data-science/reducing-dimensio
     
     <item>
       <title>machine learning xgboost</title>
-      <link>http://localhost:1313/post/ml-xgboost/</link>
+      <link>https://cixuuz.github.io/post/ml-xgboost/</link>
       <pubDate>Tue, 26 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/ml-xgboost/</guid>
+      <guid>https://cixuuz.github.io/post/ml-xgboost/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>leetcode summary 09/23</title>
+      <link>https://cixuuz.github.io/post/lcs_0923/</link>
+      <pubDate>Sat, 23 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_0923/</guid>
+      <description> 677. Map Sum Pairs  Trie   682. Baseball Game  </description>
+    </item>
+    
+    <item>
       <title>interview ds</title>
-      <link>http://localhost:1313/post/interview-ds/</link>
+      <link>https://cixuuz.github.io/post/interview-ds/</link>
       <pubDate>Fri, 22 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/interview-ds/</guid>
+      <guid>https://cixuuz.github.io/post/interview-ds/</guid>
       <description>Probability/Statistics Questions 1. conditional probability 如何判断独立性？ 2. bayes rule problem: base rate fallacy sampling: bootstrap, reservoir A/B test, p value Poisson, Binomial以及Exponential queuing question: The most efficient way to queue is single line, multiple servers. It is efficient because: You don&amp;rsquo;t have servers</description>
     </item>
     
     <item>
       <title>python pandas</title>
-      <link>http://localhost:1313/post/python-pandas/</link>
+      <link>https://cixuuz.github.io/post/python-pandas/</link>
       <pubDate>Fri, 22 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/python-pandas/</guid>
+      <guid>https://cixuuz.github.io/post/python-pandas/</guid>
       <description>aggragate in pandas https://pythonforbiologists.com/when-to-use-aggregatefiltertransform-in-pandas/</description>
     </item>
     
     <item>
       <title>JVM</title>
-      <link>http://localhost:1313/post/java-jvm/</link>
+      <link>https://cixuuz.github.io/post/java-jvm/</link>
       <pubDate>Thu, 21 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/java-jvm/</guid>
+      <guid>https://cixuuz.github.io/post/java-jvm/</guid>
       <description>make a JVM</description>
     </item>
     
     <item>
       <title>Path to Distributed System</title>
-      <link>http://localhost:1313/post/distributed_system/</link>
+      <link>https://cixuuz.github.io/post/distributed_system/</link>
       <pubDate>Thu, 21 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/distributed_system/</guid>
+      <guid>https://cixuuz.github.io/post/distributed_system/</guid>
       <description>Google papers(GFS/BigTable/Spanner/F1)
 Consensus algorithms(Raft/Paxos)
 Distributed computing sys (spark/dremel/presto)
@@ -167,229 +296,354 @@ newSql(tiDB)</description>
     
     <item>
       <title>install spark</title>
-      <link>http://localhost:1313/post/spark-install/</link>
+      <link>https://cixuuz.github.io/post/spark-install/</link>
       <pubDate>Thu, 21 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/spark-install/</guid>
+      <guid>https://cixuuz.github.io/post/spark-install/</guid>
       <description>install spark https://www.davidadrian.cc/posts/2017/08/how-to-spark-cluster/</description>
     </item>
     
     <item>
       <title>newSQL</title>
-      <link>http://localhost:1313/post/sql-newsql/</link>
+      <link>https://cixuuz.github.io/post/sql-newsql/</link>
       <pubDate>Thu, 21 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/sql-newsql/</guid>
+      <guid>https://cixuuz.github.io/post/sql-newsql/</guid>
       <description>newSQL</description>
     </item>
     
     <item>
+      <title>leetcode summary 09/18</title>
+      <link>https://cixuuz.github.io/post/lcs_0918/</link>
+      <pubDate>Mon, 18 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_0918/</guid>
+      <description> 132. Palindrome Partitioning II  dp: current status[j] depends on previous status[0, i-1] + isPalidrom[i, j]   459. Repeated Substring Pattern  </description>
+    </item>
+    
+    <item>
       <title>Performance_reviews</title>
-      <link>http://localhost:1313/post/performance_reviews/</link>
+      <link>https://cixuuz.github.io/post/performance_reviews/</link>
       <pubDate>Fri, 15 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/performance_reviews/</guid>
+      <guid>https://cixuuz.github.io/post/performance_reviews/</guid>
       <description>How do Individual Contributors Get Stuck?</description>
     </item>
     
     <item>
+      <title>leetcode summary 09/15</title>
+      <link>https://cixuuz.github.io/post/lcs_0915/</link>
+      <pubDate>Fri, 15 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_0915/</guid>
+      <description> 131. Palindrome Partitioning  list all possible partitions and check can cache palindrome   </description>
+    </item>
+    
+    <item>
+      <title>leetcode summary 09/14</title>
+      <link>https://cixuuz.github.io/post/lcs_0914/</link>
+      <pubDate>Thu, 14 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_0914/</guid>
+      <description> 234. Palindrome Linked List  reverse half and compare then reverse back   5. Longest Palindromic Substring  9. Palindrome Number  125. Valid Palindrome  Character.isLetterOrDigit() StringBuilder.reverse() is mutable   214. Shortest Palindrome  brute force LTE small range when compare   </description>
+    </item>
+    
+    <item>
       <title>Data Science Path</title>
-      <link>http://localhost:1313/post/ds_summary/</link>
+      <link>https://cixuuz.github.io/post/ds_summary/</link>
       <pubDate>Wed, 13 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/ds_summary/</guid>
+      <guid>https://cixuuz.github.io/post/ds_summary/</guid>
       <description>Machine Learning Machine Learning Supervised Learning Classification (qualitative) K-NN Logistic Regression Neural Networks error analysis skewed data F1 score = 2PR/(P+R) accuracy precision recall learning curve SVM Kernal Parameters C sigma Regression (quantitative) Linear Regression validation sensitivity compactness Ensemble Learning decrease variance (bagging), bias (boosting), or improve predictions (stacking). The basic motivation of sequential methods is to exploit the dependence between the base learners. The basic motivation of parallel methods</description>
     </item>
     
     <item>
       <title>Metrics selection</title>
-      <link>http://localhost:1313/post/ds_metrics/</link>
+      <link>https://cixuuz.github.io/post/ds_metrics/</link>
       <pubDate>Wed, 13 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/ds_metrics/</guid>
+      <guid>https://cixuuz.github.io/post/ds_metrics/</guid>
       <description>Definitions  A type I error occurs when the null hypothesis (H0) is true, but is rejected. Also known as false positive, where positive means rejection of a null hypothesis.
  A type II error occurs when the null hypothesis is false, but erroneously fails to be rejected. Also called as false negative, where negative refers to retaining a null hypothesis.
  TPR (True Positive Rate) = # True positives / # positives = Recall = \( TP \over (TP+FN) \)</description>
     </item>
     
     <item>
-      <title>English Creating a New Theme</title>
-      <link>http://localhost:1313/post/english-preview/</link>
-      <pubDate>Thu, 31 Aug 2017 15:43:48 +0800</pubDate>
+      <title>leetcode summary 09/13</title>
+      <link>https://cixuuz.github.io/post/lcs_0913/</link>
+      <pubDate>Wed, 13 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/english-preview/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-
-&lt;p&gt;This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <guid>https://cixuuz.github.io/post/lcs_0913/</guid>
+      <description> 409. Longest Palindrome  use as many as char in odds add 1 if any odd exists   479. Largest Palindrome Product  enumerate all situation from max to min   266. Palindrome Permutation  only one odd count   267. Palindrome Permutation II  </description>
     </item>
     
     <item>
-      <title>日本語 敬語体系</title>
-      <link>http://localhost:1313/post/japanese-preview/</link>
-      <pubDate>Wed, 30 Aug 2017 01:53:34 +0800</pubDate>
+      <title>leetcode summary 09/07</title>
+      <link>https://cixuuz.github.io/post/lcs_0907/</link>
+      <pubDate>Thu, 07 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/japanese-preview/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;日本語の敬語体系は、一般に、大きく尊敬語・謙譲語・丁寧語に分類される。文化審議会国語分科会は、2007年2月に「敬語の指針」を答申し、これに丁重語および美化語を含めた5分類を示している。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h1 id=&#34;尊敬語&#34;&gt;尊敬語&lt;/h1&gt;
-
-&lt;p&gt;尊敬語は、動作の主体を高めることで、主体への敬意を表す言い方である。動詞に「お（ご）～になる」を付けた形、また、助動詞「（ら）れる」を付けた形などが用いられる。たとえば、動詞「取る」の尊敬形として、「（先生が）お取りになる」「（先生が）取られる」などが用いられる。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <guid>https://cixuuz.github.io/post/lcs_0907/</guid>
+      <description> 336. Palindrome Pairs  </description>
     </item>
     
     <item>
-      <title>中文 《长恨歌》</title>
-      <link>http://localhost:1313/post/chinese-preview/</link>
-      <pubDate>Wed, 30 Aug 2017 01:37:56 +0800</pubDate>
+      <title>leetcode summary 09/06</title>
+      <link>https://cixuuz.github.io/post/lcs_0906/</link>
+      <pubDate>Wed, 06 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/chinese-preview/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;《长恨歌》是中国唐朝诗人白居易的一首长篇叙事诗。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h1 id=&#34;第一段-贵妃受宠爱&#34;&gt;第一段：贵妃受宠爱&lt;/h1&gt;
-
-&lt;p&gt;汉皇重色思倾国，御宇多年求不得。杨家有女初长成，养在深闺人未识。&lt;/p&gt;
-
-&lt;p&gt;天生丽质难自弃，一朝选在君王侧。回眸一笑百媚生，六宫粉黛无颜色。&lt;/p&gt;
-
-&lt;p&gt;春寒赐浴华清池，温泉水滑洗凝脂。侍儿扶起娇无力，始是新承恩泽时。&lt;/p&gt;
-
-&lt;p&gt;云鬓花颜金步摇，芙蓉帐暖度春宵。春宵苦短日高起，从此君王不早朝。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <guid>https://cixuuz.github.io/post/lcs_0906/</guid>
+      <description>517 Super Washing Machines  the least steps we need to eventually finish this process is determined by the peak of abs(cnt) (accumulative count of gain/lose array) and the max of &amp;ldquo;gain/lose&amp;rdquo; array. &amp;gt;For a single machine, necessary operations is to transfer dresses from one side to another until sum of both sides and itself reaches the average number. We can calculate (required dresses) - (contained dresses) of each side as L and R:   L &amp;gt; 0 &amp;amp;&amp;amp; R &amp;gt; 0: both sides lacks dresses, and we can only export one dress from current machines at a time, so result is abs(L) + abs&amp;reg; L &amp;lt; 0 &amp;amp;&amp;amp; R &amp;lt; 0: both sides contains too many dresses, and we can import dresses from both sides at the same time, so result is max(abs(L), abs&amp;reg;) L &amp;lt; 0 &amp;amp;&amp;amp; R &amp;gt; 0 or L &amp;gt;0 &amp;amp;&amp;amp; R &amp;lt; 0: the side with a larger absolute value will import/export its extra dresses from/to current machine or other side, so result is max(abs(L), abs&amp;reg;)</description>
+    </item>
+    
+    <item>
+      <title>Algorithm - leetcode</title>
+      <link>https://cixuuz.github.io/post/algorithm-leetcode/</link>
+      <pubDate>Tue, 05 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/algorithm-leetcode/</guid>
+      <description>692. Top K Frequent Words 2017-10-15
+682. Baseball Game 2017-09-23
+677. Map Sum Pairs 2017-09-23
+647. Palindromic Substrings 2017-09-06
+624. Maximum Distance in Arrays 2017-11-04
+598. Range Addition II 2017-10-22
+592. Fraction Addition and Subtraction 2017-10-22
+566. Reshape the Matrix 2017-10-09
+564. Find the Closest Palindrome 2017-09-06
+532. K-diff Pairs in an Array 2017-09-04
+529. Minesweepe 2017-09-06
+518. Coin Change 2 2017-10-19
+517. Super Washing Machines 2017-09-06
+516. Longest Palindromic Subsequence 2017-09-05</description>
+    </item>
+    
+    <item>
+      <title>leetcode summary 09/05</title>
+      <link>https://cixuuz.github.io/post/lcs_0905/</link>
+      <pubDate>Tue, 05 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_0905/</guid>
+      <description> 516 Longest Palindromic Subsequence  O(2^n) Brute force. If the two ends of a string are the same, then they must be included in the longest palindrome subsequence. Otherwise, both ends cannot be included in the longest palindrome subsequence.
+ O(n^2) memo the result from left to right. also rewrite in dp fashion 
+  508 Most Frequent Subtree Sum  postOrder and check count   </description>
+    </item>
+    
+    <item>
+      <title>leetcode summary 09/04</title>
+      <link>https://cixuuz.github.io/post/lcs_0904/</link>
+      <pubDate>Mon, 04 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_0904/</guid>
+      <description> 532. K-diff Pairs in an Array  corner case, length less than 2 and negative k.  variant of two sum: O(1) space  </description>
+    </item>
+    
+    <item>
+      <title>leetcode summary 09/03</title>
+      <link>https://cixuuz.github.io/post/lcs_0903/</link>
+      <pubDate>Sun, 03 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_0903/</guid>
+      <description> 270. Closest Binary Search Tree Value  recursive: pass pre node value when null iterative: similar dfs   272. Closest Binary Search Tree Value II  inorder traverse all nodes and get k nearest   285. Inorder Successor in BST  read carefully   298. Binary Tree Longest Consecutive Sequence  dfs: pass parent value to children and compare values   333. Largest BST Subtree  construct a class to hold size, lower bound, upper bound go in bottom-up deal with leaves carefully, better use infinit   </description>
+    </item>
+    
+    <item>
+      <title>leetcode summary 09/02 (10)</title>
+      <link>https://cixuuz.github.io/post/lcs_0902/</link>
+      <pubDate>Sat, 02 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_0902/</guid>
+      <description>617. Merge Two Binary Trees  dfs   606. Construct String from Binary Tree  right can be omitted in some case   553. Optimal Division  math: x1 must be numerator and x2 must go to denominator.   545. Boundary of Binary Tree  wrong answer: [37,-34,-48,null,-100,-100,48,null,null,null,null,-54,null,-71,-22,null,null,null,8] [1] [0, null, 0, 0] neat solution of one traversal:  node.left is left bound if node is left bound; node.</description>
+    </item>
+    
+    <item>
+      <title>leetcode summary 09/01</title>
+      <link>https://cixuuz.github.io/post/lcs_0901/</link>
+      <pubDate>Fri, 01 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_0901/</guid>
+      <description> 662. Maximum Width of Binary Tree  iterative: save index of each node while queue nodes. recursive: dfs, keep a array of left most nodes.   640. Solve the Equation  corner cases:  &amp;ldquo;0x=0&amp;rdquo; &amp;ldquo;x=-x&amp;rdquo; &amp;ldquo;x=-1&amp;rdquo; &amp;ldquo;0x=-x&amp;rdquo;    </description>
     </item>
     
     <item>
       <title>Java::Comparator</title>
-      <link>http://localhost:1313/post/java-comparator/</link>
+      <link>https://cixuuz.github.io/post/java-comparator/</link>
       <pubDate>Tue, 29 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/java-comparator/</guid>
+      <guid>https://cixuuz.github.io/post/java-comparator/</guid>
       <description>做题的时候遇到了sort，想试试Java 8的新语法。于是有了一些研究： Reference Very confused by Java 8 Comparator type inference access field by lambda. intervals is a list of interval. intervals.sort(Comparator.comparingInt((Interval i) -&amp;gt; i.start)); Comparator.comparing((Person p)-&amp;gt;p.firstName) .thenComparing(p-&amp;gt;p.lastName) .thenComparingInt(p-&amp;gt;p.age); Comparator.comparing(Person::getFirstName) .thenComparing(Person::getLastName) .thenComparingInt(Person::getAge); @Override public int compareTo(Person o){</description>
     </item>
     
     <item>
+      <title>leetcode summary 08/29</title>
+      <link>https://cixuuz.github.io/post/lcs_0829/</link>
+      <pubDate>Tue, 29 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_0829/</guid>
+      <description>107. Binary Tree Level Order Traversal II  use element as index to record whether visit   117. Populating Next Right Pointers in Each Node II  child connected and be used for next level   646 Maximum Length of Pair Chain  DP: pairs[i][0] &amp;gt; pairs[j][1]? dp[j] + 1 : dp[j] greedy: for end point z, if all intervals where end point &amp;lt; z, there is no possible to get a longer chain based on previous intervals.</description>
+    </item>
+    
+    <item>
+      <title>leetcode summary 08/28</title>
+      <link>https://cixuuz.github.io/post/lcs_0828/</link>
+      <pubDate>Mon, 28 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_0828/</guid>
+      <description> 107. Binary Tree Level Order Traversal II  645. Set Mismatch  use element as index to record whether visit   </description>
+    </item>
+    
+    <item>
+      <title>leetcode summary 08/27</title>
+      <link>https://cixuuz.github.io/post/lcs_0827/</link>
+      <pubDate>Sun, 27 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_0827/</guid>
+      <description>51. N-Queens  dfs: each recursion check with previous rows quick check: using a boolean array to record if current location is conflicts with elements in col, \ and / bit mask:  set i to 1: a |= (1 &amp;lt;&amp;lt; i) set i to 0: a &amp;amp;= ~(1 &amp;lt;&amp;lt; i) inverse i: a ^= (1 &amp;lt;&amp;lt; i) get i: (a &amp;gt;&amp;gt; i) &amp;amp; 1 find last 1: a &amp;amp; -a    52.</description>
+    </item>
+    
+    <item>
       <title>Core Java 读书笔记</title>
-      <link>http://localhost:1313/post/java-tutorial/</link>
+      <link>https://cixuuz.github.io/post/java-tutorial/</link>
       <pubDate>Thu, 24 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/java-tutorial/</guid>
-      <description>http://docs.oracle.com/javase/tutorial/ Core Java
-Ch4 Objects and Classes 4.1 Introduction to Object-Oriented Programming  Encapsulation: The key to making encapsulation work is to have methods never directly access instance fields in a class other than their own.  4.2 Using Predefined Classes  an object variable doesn’t actually contain an object. It only refers to an object.  4.3 Defining Your Own Classes, page 145 4.4 Static Fields and Methods, page 158 4.</description>
+      <guid>https://cixuuz.github.io/post/java-tutorial/</guid>
+      <description>http://docs.oracle.com/javase/tutorial/ Core Java Ch4 Objects and Classes 4.1 Introduction to Object-Oriented Programming Encapsulation: The key to making encapsulation work is to have methods never directly access instance fields in a class other than their own. 4.2 Using Predefined Classes an object variable doesn’t actually contain an object. It only refers to an object. 4.3 Defining Your Own Classes, page 145 4.4 Static Fields and</description>
+    </item>
+    
+    <item>
+      <title>leetcode summary 08/24</title>
+      <link>https://cixuuz.github.io/post/lcs_0824/</link>
+      <pubDate>Thu, 24 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_0824/</guid>
+      <description> 250. Count Univalue Subtrees tc: O(n) sc: O(n)
+terminal case: null -&amp;gt; True every node: whether left subtree equals val, and right subtree equals val. Only true, count + 1. refer
+ </description>
+    </item>
+    
+    <item>
+      <title>leetcode summary 08/23</title>
+      <link>https://cixuuz.github.io/post/lcs_0823/</link>
+      <pubDate>Wed, 23 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_0823/</guid>
+      <description>337. House Robber III  basic: for each node, you can choose rob or not, based on the parent&amp;rsquo;s status. return max amount of each choice. dp: keep previous rob information.   95. Unique Binary Search Trees II  foreach 1 to n, generate left and right subtree and combine with current node.   111. Minimum Depth of Binary Tree  its root to leaf, not to other node.</description>
     </item>
     
     <item>
       <title>resume</title>
-      <link>http://localhost:1313/post/resume/</link>
+      <link>https://cixuuz.github.io/post/resume/</link>
       <pubDate>Wed, 23 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/resume/</guid>
+      <guid>https://cixuuz.github.io/post/resume/</guid>
       <description>你面试的时候可以解释说一下如何scale 整个性能瓶颈会出现哪里？如何解决？ Professional Experience Data Engineer, 7Chord, New York Jan 2017 – Sep 2017 • Designed and built near real time data ETL pipeline scheduled by Airflow, which streams 10GB data from 10 different data</description>
     </item>
     
     <item>
       <title>title</title>
-      <link>http://localhost:1313/post/java-pass-by-value/</link>
+      <link>https://cixuuz.github.io/post/java-pass-by-value/</link>
       <pubDate>Wed, 23 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/java-pass-by-value/</guid>
+      <guid>https://cixuuz.github.io/post/java-pass-by-value/</guid>
       <description>java 传值还是引用 refer Java is always pass-by-value. Unfortunately, they decided to call the location of an object a &amp;ldquo;reference&amp;rdquo;. When we pass the value of an object, we are passing the reference to it.</description>
     </item>
     
     <item>
+      <title>leetcode summary 08/22</title>
+      <link>https://cixuuz.github.io/post/lcs_0822/</link>
+      <pubDate>Tue, 22 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_0822/</guid>
+      <description>114. Flatten Binary Tree to Linked List  iterative: set left tree to the right child, left child is null, then go to next right node. recursive: use post order get successor of each node, set successor to each node&amp;rsquo;r right child   199. Binary Tree Right Side View  iterative: BFS, always pop rightmost node. It&amp;rsquo;s better using queue, and loop N times. N is the size of queue.</description>
+    </item>
+    
+    <item>
       <title>Notes of Readings in Database Systems</title>
-      <link>http://localhost:1313/post/readings_in_database_systems/</link>
+      <link>https://cixuuz.github.io/post/readings_in_database_systems/</link>
       <pubDate>Mon, 21 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/readings_in_database_systems/</guid>
+      <guid>https://cixuuz.github.io/post/readings_in_database_systems/</guid>
       <description>redbook
 Preface Background introduced by Michael Stonebraker Traditional RDBMS Systems introduced by Michael Stonebraker Techniques Everyone Should Know introduced by Peter Bailis New DBMS Architectures introduced by Michael Stonebraker [HTML] [PDF] Large-Scale Dataflow Engines introduced by Peter Bailis [HTML] [PDF] Weak Isolation and Distribution introduced by Peter Bailis [HTML] [PDF] Query Optimization introduced by Joe Hellerstein [HTML] [PDF] Interactive Analytics introduced by Joe Hellerstein [HTML] [PDF] Languages introduced by Joe Hellerstein [HTML] [PDF] Web Data introduced by Peter Bailis [HTML] [PDF] A Biased Take on a Moving Target: Complex Analytics by Michael Stonebraker [HTML] [PDF] A Biased Take on a Moving Target: Data Integration by Michael Stonebraker</description>
     </item>
     
     <item>
       <title>Python Numpy</title>
-      <link>http://localhost:1313/post/python-numpy/</link>
+      <link>https://cixuuz.github.io/post/python-numpy/</link>
       <pubDate>Mon, 21 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/python-numpy/</guid>
-      <description>在 Numpy 中, 创建 2D Array 的默认方式是 &amp;ldquo;C-type&amp;rdquo; 以 row 为主在内存中排列, 而如果是 &amp;ldquo;Fortran&amp;rdquo; 的方式创建的, 就是以 column 为主在内存中排列. col_major = np.zeros((10,10), order=&#39;C&#39;) # C-type row_major = np.zeros((10,10), order=&#39;F&#39;) # Fortran copy慢 vi</description>
+      <guid>https://cixuuz.github.io/post/python-numpy/</guid>
+      <description>在 Numpy 中, 创建 2D Array 的默认方式是 &amp;ldquo;C-type&amp;rdquo; 以 row 为主在内存中排列, 而如果是 &amp;ldquo;Fortran&amp;rdquo; 的方式创建的, 就是以 column 为主在内存中排列. 1 2 col_major = np.zeros((10,10), order=&amp;#39;C&amp;#39;) # C-type row_major = np.zeros((10,10), order=&amp;#39;F&amp;#39;) # Fortran copy慢</description>
     </item>
     
     <item>
       <title>bigtable and leveldb</title>
-      <link>http://localhost:1313/post/database-bigtable-leveldb/</link>
+      <link>https://cixuuz.github.io/post/database-bigtable-leveldb/</link>
       <pubDate>Mon, 21 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/database-bigtable-leveldb/</guid>
+      <guid>https://cixuuz.github.io/post/database-bigtable-leveldb/</guid>
       <description>浅析 Bigtable 和 LevelDB 的实现</description>
     </item>
     
     <item>
       <title>Kafka message format</title>
-      <link>http://localhost:1313/post/kafka-message-format/</link>
+      <link>https://cixuuz.github.io/post/kafka-message-format/</link>
       <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/kafka-message-format/</guid>
+      <guid>https://cixuuz.github.io/post/kafka-message-format/</guid>
       <description>Apache Kafka消息格式</description>
     </item>
     
     <item>
       <title>Kafka stream</title>
-      <link>http://localhost:1313/post/kafka-stream/</link>
+      <link>https://cixuuz.github.io/post/kafka-stream/</link>
       <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/kafka-stream/</guid>
+      <guid>https://cixuuz.github.io/post/kafka-stream/</guid>
       <description>kafka stream</description>
     </item>
     
     <item>
       <title>MySQL 架构</title>
-      <link>http://localhost:1313/post/mysql-high-availability/</link>
+      <link>https://cixuuz.github.io/post/mysql-high-availability/</link>
       <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/mysql-high-availability/</guid>
+      <guid>https://cixuuz.github.io/post/mysql-high-availability/</guid>
       <description>refer 高可用架构 MySQL高可用方面，目前业界主流依然是基于异步复制的技术，例如Keepalived、MHA、ZooKeeper等，要求数据强一</description>
     </item>
     
     <item>
       <title>database index</title>
-      <link>http://localhost:1313/post/database-index/</link>
+      <link>https://cixuuz.github.io/post/database-index/</link>
       <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/database-index/</guid>
+      <guid>https://cixuuz.github.io/post/database-index/</guid>
       <description>数据库索引与事务管理 B+ tree B+树是n叉排序树 hash index MySQL: innoDB以及MyISAM引擎，均不支持Hash索引</description>
     </item>
     
     <item>
       <title>javascript es6</title>
-      <link>http://localhost:1313/post/js-es6/</link>
+      <link>https://cixuuz.github.io/post/js-es6/</link>
       <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/js-es6/</guid>
-      <description>ES6 let则实际上为JavaScript新增了块级作用域。用它所声明的变量，只在let命令所在的代码块内有效。 var a = []; for (let i = 0; i &amp;lt; 10; i++) { a[i] =</description>
+      <guid>https://cixuuz.github.io/post/js-es6/</guid>
+      <description>ES6 let则实际上为JavaScript新增了块级作用域。用它所声明的变量，只在let命令所在的代码块内有效。 1 2 3 4 5 6 7 var a = []; for (let i = 0;</description>
     </item>
     
     <item>
       <title>spark 内存管理</title>
-      <link>http://localhost:1313/post/spark-memory-management/</link>
+      <link>https://cixuuz.github.io/post/spark-memory-management/</link>
       <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/spark-memory-management/</guid>
+      <guid>https://cixuuz.github.io/post/spark-memory-management/</guid>
       <description>Spark 内存管理的前世今生（上） Spark 内存管理的前世今生（下）</description>
     </item>
     
     <item>
       <title>statistical learning</title>
-      <link>http://localhost:1313/post/statistical-learning/</link>
+      <link>https://cixuuz.github.io/post/statistical-learning/</link>
       <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/statistical-learning/</guid>
+      <guid>https://cixuuz.github.io/post/statistical-learning/</guid>
       <description>Statistical Learning Videos Book: Fundamentals of Modern Statistical Methods: Substantially Improving Power and Accuracy
 Supervised Learning Regression and classification is classified by its output types. Regression when we predict quantitative outputs, and clas- siﬁcation when we predict qualitative outputs.
  Least squares assumes f(x) is well approximated by a globally linear function. k-nearest neighbors assumes f(x) is well approximated by a locally constant function.
@@ -397,48 +651,136 @@ Supervised Learning Regression and classification is classified by its output ty
     </item>
     
     <item>
+      <title>lcs 08/15</title>
+      <link>https://cixuuz.github.io/post/lcs_0815/</link>
+      <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_0815/</guid>
+      <description>99. Recover Binary Search Tree  travese in order. The result should be sorted ascending. The misplaced larger element will be close to head, while the smaller one will be close to end. For example, 1 2 3 is the in order. But the wrong seq is like 3 2 1. Apparently, 3 &amp;gt; 2 so 3 is the first node. 2 &amp;gt; 1, so 1 is the second one.</description>
+    </item>
+    
+    <item>
+      <title>lcs 08/13</title>
+      <link>https://cixuuz.github.io/post/lcs_0813/</link>
+      <pubDate>Sun, 13 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_0813/</guid>
+      <description>99. Recover Binary Search Tree  travese in order. The result should be sorted ascending. The misplaced larger element will be close to head, while the smaller one will be close to end. For example, 1 2 3 is the in order. But the wrong seq is like 3 2 1. Apparently, 3 &amp;gt; 2 so 3 is the first node. 2 &amp;gt; 1, so 1 is the second one.</description>
+    </item>
+    
+    <item>
+      <title>lcs 08/12</title>
+      <link>https://cixuuz.github.io/post/lcs_0812/</link>
+      <pubDate>Sat, 12 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lcs_0812/</guid>
+      <description>297. Serialize and Deserialize Binary Tree  deque inherits from linkedlist(collection). represent separator and null as a String. string and char are not same. append complete subtree ex &amp;ldquo;1,null,null,&amp;rdquo;   105. Construct Binary Tree from Preorder and Inorder Traversal  recursive solution is straightforward. The only thing is that jump idx to find right start in inorder array. To speed up, we can cache inorder and index in the front.</description>
+    </item>
+    
+    <item>
+      <title>leetcode 102</title>
+      <link>https://cixuuz.github.io/post/lc_102/</link>
+      <pubDate>Tue, 08 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lc_102/</guid>
+      <description>4. Median of Two Sorted Arrays Pure math. Median definition is the median is used for dividing a set into two equal length subsets, that one subset is always greater than the other.
+102. Binary Tree Level Order Traversal  The best way to to iterate tree level by level is to use for loop in Java. (BFS) return null is not same as return; (empty)  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42  public class Solution { public List&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt; levelOrder(TreeNode root) { List&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt; res = new LinkedList&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt;(); Queue&amp;lt;TreeNode&amp;gt; q = new LinkedList&amp;lt;TreeNode&amp;gt;(); if (root == null) return res; q.</description>
+    </item>
+    
+    <item>
+      <title>175. Combine Two Tables</title>
+      <link>https://cixuuz.github.io/post/lc_175/</link>
+      <pubDate>Sun, 25 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lc_175/</guid>
+      <description> 175. Combine Two Tables
+Solution select FirstName, LastName, City, State from person left join address on person.personid = address.personid;
+Summary </description>
+    </item>
+    
+    <item>
+      <title>176. Second Highest Salary</title>
+      <link>https://cixuuz.github.io/post/lc_176/</link>
+      <pubDate>Sun, 25 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lc_176/</guid>
+      <description>176. Second Highest Salary
+Solution select (select salary from employee group by salary order by salary desc limit 1 offset 1) as SecondHighestSalary;
+Summary There is a trick to print null when result is empty.</description>
+    </item>
+    
+    <item>
+      <title>177. Nth Highest Salary</title>
+      <link>https://cixuuz.github.io/post/lc_177/</link>
+      <pubDate>Sun, 25 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lc_177/</guid>
+      <description>177. Nth Highest Salary
+Solution CREATE FUNCTION getNthHighestSalary(N INT) RETURNS INT BEGIN declare m int; set m = N - 1; RETURN ( # Write your MySQL query statement below. select distinct salary from Employee order by salary desc limit 1 offset m ); END
+Summary The LIMIT clause can be used to constrain the number of rows returned by the SELECT statement. LIMIT takes one or two numeric arguments, which must both be nonnegative integer constants (except when using prepared statements).</description>
+    </item>
+    
+    <item>
+      <title>178. Rank Scores</title>
+      <link>https://cixuuz.github.io/post/lc_178/</link>
+      <pubDate>Sun, 25 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lc_178/</guid>
+      <description>178. Rank Scores Solution 1 SELECT Score, @rank := @rank + (@prev &amp;lt;&amp;gt; (@prev := Score)) Rank FROM Scores, (SELECT @rank := 0, @prev := -1) init ORDER BY Score desc solution 2 SELECT Score, (SELECT COUNT(DISTINCT Score) FROM Scores as s1 WHERE s1.Score &amp;gt;= s2.Score) As rank FROM Scores as s2 ORDER BY rank; 一直不知道还能这么嵌套写法 Summary</description>
+    </item>
+    
+    <item>
+      <title>178. Rank Scores</title>
+      <link>https://cixuuz.github.io/post/lc_180/</link>
+      <pubDate>Sun, 25 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/lc_180/</guid>
+      <description>178. Rank Scores Solution 1 SELECT Score, @rank := @rank + (@prev &amp;lt;&amp;gt; (@prev := Score)) Rank FROM Scores, (SELECT @rank := 0, @prev := -1) init ORDER BY Score desc solution 2 SELECT Score, (SELECT COUNT(DISTINCT Score) FROM Scores as s1 WHERE s1.Score &amp;gt;= s2.Score) As rank FROM Scores as s2 ORDER BY rank; 一直不知道还能这么嵌套写法 Summary</description>
+    </item>
+    
+    <item>
       <title>AI: Learning from observations</title>
-      <link>http://localhost:1313/post/ai-learning-from-obs/</link>
+      <link>https://cixuuz.github.io/post/ai-learning-from-obs/</link>
       <pubDate>Sun, 07 May 2017 22:12:39 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/ai-learning-from-obs/</guid>
+      <guid>https://cixuuz.github.io/post/ai-learning-from-obs/</guid>
       <description>Decision tree learning Problem: decide whether to wait for a table at a restaurant, based on the following attributes:
  Alternate: is there an alternative restaurant nearby? Bar: is there a comfortable bar area to wait in? Fri/Sat: is today Friday or Saturday? Hungry: are we hungry? Patrons: number of people in the restaurant (None, Some, Full) Price: price range ($, $$, $$$) Raining: is it raining outside? Reservation: have we made a reservation?</description>
     </item>
     
     <item>
       <title>AI: Constraint Satisfaction Problems</title>
-      <link>http://localhost:1313/post/ai-constraint-satisfaction-problem/</link>
+      <link>https://cixuuz.github.io/post/ai-constraint-satisfaction-problem/</link>
       <pubDate>Sun, 07 May 2017 21:12:39 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/ai-constraint-satisfaction-problem/</guid>
+      <guid>https://cixuuz.github.io/post/ai-constraint-satisfaction-problem/</guid>
       <description>CSPs are a special kind of search problem  States defined by values of a fixed set of variables from domain Goal test defined by constraints on variable values acceptable solutions are complete and consistent binary CSP: relates two variables; constraint graph: nodes are variables, arc are constraits. Discrete variable(n) with finit domain(d): O(d^n) complete assignments Discrete variable with infinit domain need a constraint Varieties of constraints: involve one varible(unary), two(binary), three(higher-order)  Backtracking  depth-first search with one variable assigned at each level the basic uninformed algorithm for CSP  {% codeblock %} function BacktrackingSearch(csp) return solution or failure return Backtrack({}, csp)</description>
     </item>
     
     <item>
       <title>RAID基本原理</title>
-      <link>http://localhost:1313/post/hardware-raid-principles/</link>
+      <link>https://cixuuz.github.io/post/hardware-raid-principles/</link>
       <pubDate>Sun, 07 May 2017 19:08:30 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/hardware-raid-principles/</guid>
+      <guid>https://cixuuz.github.io/post/hardware-raid-principles/</guid>
       <description>RAID基本原理 RAID级别 读性能 写性能 空间利用率 最大能容忍的坏盘数 RAID0 单块盘的N倍 单块盘的N倍 100% 0 RAID1 单块盘的N倍 最慢磁盘的性能 1/N N-1 RAID2 不到单块</description>
     </item>
     
     <item>
       <title>Java path</title>
-      <link>http://localhost:1313/post/java-path/</link>
+      <link>https://cixuuz.github.io/post/java-path/</link>
       <pubDate>Sun, 07 May 2017 18:08:30 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/java-path/</guid>
+      <guid>https://cixuuz.github.io/post/java-path/</guid>
       <description>本文转自w大 《第一阶段》筑基 如果你不知道什么是for/while lopp、不知道什么是list，建议你先上这门公开课： UDacity CS101：Intr</description>
     </item>
     
     <item>
       <title>Types of Financial Statements</title>
-      <link>http://localhost:1313/post/four-types-financial-statements/</link>
+      <link>https://cixuuz.github.io/post/four-types-financial-statements/</link>
       <pubDate>Tue, 25 Apr 2017 11:23:18 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/four-types-financial-statements/</guid>
+      <guid>https://cixuuz.github.io/post/four-types-financial-statements/</guid>
       <description>From
 Statement of Financial Position Statement of Financial Position, also known as the Balance Sheet, presents the financial position of an entity at a given date. It is comprised of the following three elements:
 Assets: Something a business owns or controls (e.g. cash, inventory, plant and machinery, etc) Liabilities: Something a business owes to someone (e.g. creditors, bank loans, etc) Equity: What the business owes to its owners. This represents the amount of capital that remains in the business after its assets are used to pay off its outstanding liabilities.</description>
@@ -446,120 +788,120 @@ Assets: Something a business owns or controls (e.g. cash, inventory, plant and m
     
     <item>
       <title>Deep Learning behind Tensorflow</title>
-      <link>http://localhost:1313/post/deep_learning_behind_tensorflow_distribute_principles_and_framework/</link>
+      <link>https://cixuuz.github.io/post/deep_learning_behind_tensorflow_distribute_principles_and_framework/</link>
       <pubDate>Sat, 22 Apr 2017 13:21:18 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/deep_learning_behind_tensorflow_distribute_principles_and_framework/</guid>
+      <guid>https://cixuuz.github.io/post/deep_learning_behind_tensorflow_distribute_principles_and_framework/</guid>
       <description>machine learning word2vex represent word as low dimensional, dense vectors compute the statistics of how ofen some word cooccurs with its neighbor words in a large text corpus. 将数量变成小的dense的vector predictive models directly try to predict a word from its neighbours in terms of learned small, dense embedding Word2Vec https://web.archive.org/web/20160311161826/http://cs224d.stanford.edu/lecture_notes/LectureNotes1.pdf Parameter Server https://www.cs.cmu.edu/~muli/file/parameter_server_osdi14.pdf</description>
     </item>
     
     <item>
       <title>AI: first-order logic</title>
-      <link>http://localhost:1313/post/ai-first-order-logic/</link>
+      <link>https://cixuuz.github.io/post/ai-first-order-logic/</link>
       <pubDate>Tue, 18 Apr 2017 21:12:39 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/ai-first-order-logic/</guid>
+      <guid>https://cixuuz.github.io/post/ai-first-order-logic/</guid>
       <description>While propositional logic assumes the world contains facts, first-order logic assumes the world contains objects, relations, functions, like natural language.
 Syntax  Constants: Poly, 2, refer to objects Predicates: brother, larger than, refer to relations functions: sqrt, refer to functional relations variables: x, y connectives: ^ $\Rightarrow$ equality: = quantifiers: $\exists$, $\forall$  Sentences  atomic sentence = predicate(term1, &amp;hellip;, termN) or term1 = term2. where term = function(term1, &amp;hellip;, termN) or constant or variable complex sentences are made from atomic sentences using connectives  Universal quantification $\forall  $ Typically, $\Rightarrow$ is the main connective with $\forall$, avoid $\wedge$.</description>
     </item>
     
     <item>
       <title>Amazon CEO letter 2016</title>
-      <link>http://localhost:1313/post/amazon-ceo-letter-2016/</link>
+      <link>https://cixuuz.github.io/post/amazon-ceo-letter-2016/</link>
       <pubDate>Mon, 17 Apr 2017 12:21:39 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/amazon-ceo-letter-2016/</guid>
+      <guid>https://cixuuz.github.io/post/amazon-ceo-letter-2016/</guid>
       <description>转载 To our shareowners: This year, Amazon became the fastest company ever to reach $100 billion in annual sales. Also this year, Amazon Web Services is reaching $10 billion in annual sales &amp;hellip; doing so at a pace even faster than Amazon achieved that milestone. What’s going on here? Both were planted as tiny seeds and both have grown organically without significant acquisitions into</description>
     </item>
     
     <item>
       <title>AI: Logical Agents</title>
-      <link>http://localhost:1313/post/ai-logical-agents/</link>
+      <link>https://cixuuz.github.io/post/ai-logical-agents/</link>
       <pubDate>Sun, 16 Apr 2017 10:30:08 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/ai-logical-agents/</guid>
+      <guid>https://cixuuz.github.io/post/ai-logical-agents/</guid>
       <description>knowledge base a set of sentences. - inference:deriving new sentences from old - TELL: add new sentences to the knowledge base - ASK: a way to query what is known. The standard names for these operations
 Generic KB-Based Agent Similar to agents with internal states. {% codeblock %} function KB-Agent(percept) returns an action static KB = a knowledge base, t = 0 // a counter indicating time tell(KB, make_percept_sentence(percept, t)) action = ask(KB, make_action_query(t)) tell(KB, make_action_sentence(action, t)) t++ return action {% endcodeblock %}</description>
     </item>
     
     <item>
       <title>Intro to xpath</title>
-      <link>http://localhost:1313/post/intro-to-xpath/</link>
+      <link>https://cixuuz.github.io/post/intro-to-xpath/</link>
       <pubDate>Thu, 13 Apr 2017 10:30:08 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/intro-to-xpath/</guid>
+      <guid>https://cixuuz.github.io/post/intro-to-xpath/</guid>
       <description>发现一个很好的xpath入门教程 xpath有三种记号，分别是 /, [] 和 :: / /foo/bar 指的是从根结点开始，/foo 对于每个节点，也就是根结点，得到它的子节</description>
     </item>
     
     <item>
       <title>notes for advices pythonic programming</title>
-      <link>http://localhost:1313/post/notes-for-advices-pythonic-programming/</link>
+      <link>https://cixuuz.github.io/post/notes-for-advices-pythonic-programming/</link>
       <pubDate>Tue, 11 Apr 2017 18:22:32 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/notes-for-advices-pythonic-programming/</guid>
+      <guid>https://cixuuz.github.io/post/notes-for-advices-pythonic-programming/</guid>
       <description>编写高质量代码：改善Python程序的91个建议 的读书笔记 记录一下自己认为比较有用的片段 10 充分利用 Lazy evaluation 的特性 if x and y，在 x 为 false 的情况下 y 表达</description>
     </item>
     
     <item>
       <title>remote debug using pycharm on AWS ec2</title>
-      <link>http://localhost:1313/post/2017-04-05-remote-debug-using-pycharm-on-aws-ec2/</link>
+      <link>https://cixuuz.github.io/post/2017-04-05-remote-debug-using-pycharm-on-aws-ec2/</link>
       <pubDate>Wed, 05 Apr 2017 19:03:18 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2017-04-05-remote-debug-using-pycharm-on-aws-ec2/</guid>
+      <guid>https://cixuuz.github.io/post/2017-04-05-remote-debug-using-pycharm-on-aws-ec2/</guid>
       <description>http://www.jianshu.com/p/9b362cdee2ab</description>
     </item>
     
     <item>
       <title>python tips</title>
-      <link>http://localhost:1313/post/2017-03-31-python-tips/</link>
+      <link>https://cixuuz.github.io/post/2017-03-31-python-tips/</link>
       <pubDate>Fri, 31 Mar 2017 17:59:32 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2017-03-31-python-tips/</guid>
+      <guid>https://cixuuz.github.io/post/2017-03-31-python-tips/</guid>
       <description>https://zhuanlan.zhihu.com/p/26099601 2).函数的传值到底是值传递还是引用传递，要分情况 a.不可变参数用值传递： 像整数和字符串这样的不可变对象，是通过拷贝进行传递的，因为你无论</description>
     </item>
     
     <item>
       <title>python profiling and optimize</title>
-      <link>http://localhost:1313/post/2017-03-30-python-profiling/</link>
+      <link>https://cixuuz.github.io/post/2017-03-30-python-profiling/</link>
       <pubDate>Thu, 30 Mar 2017 18:14:15 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2017-03-30-python-profiling/</guid>
+      <guid>https://cixuuz.github.io/post/2017-03-30-python-profiling/</guid>
       <description>profiling python {% codeblock &amp;ldquo;commandline profiling&amp;rdquo; %} python -m cProfile -s tottime your_program.py {% endcodeblock %} 优化 np random 比原生函数快四倍 {% asset_img np1.png %} {% asset_img np2.png %} 需要记住的延迟数据 {% codeblock %} Latency Comparison Numbers L1 cache reference 0.5 ns Branch mispredict 5 ns L2 cache reference 7 ns 14x L1 cache Mutex lock/unlock</description>
     </item>
     
     <item>
       <title>JSON是一种格式，基于文本，优于轻量，用于交换数据</title>
-      <link>http://localhost:1313/post/2017-03-30-json/</link>
+      <link>https://cixuuz.github.io/post/2017-03-30-json/</link>
       <pubDate>Thu, 30 Mar 2017 16:05:06 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2017-03-30-json/</guid>
+      <guid>https://cixuuz.github.io/post/2017-03-30-json/</guid>
       <description>JSON是一种格式，基于文本，优于轻量，用于交换数据 规范 http://json.org/ object {} { members } members pair pair , members pair string : value array [] [ elements ] elements value value , elements value string number object array true false null string &amp;rdquo;&amp;rdquo; &amp;rdquo; chars &amp;ldquo; chars char char chars</description>
     </item>
     
     <item>
       <title>SSD vs HDD的性能对比.讲解了为什么SSD的读写性能高于HDD</title>
-      <link>http://localhost:1313/post/2017-03-28-all-about-hardware/</link>
+      <link>https://cixuuz.github.io/post/2017-03-28-all-about-hardware/</link>
       <pubDate>Tue, 28 Mar 2017 18:08:30 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2017-03-28-all-about-hardware/</guid>
+      <guid>https://cixuuz.github.io/post/2017-03-28-all-about-hardware/</guid>
       <description>SSD vs HDD的性能对比.讲解了为什么SSD的读写性能高于HDD. NAND一个重要的特性是，其只能是读或写单个page，但不能覆盖写如某个pag</description>
     </item>
     
     <item>
       <title>How to remote connect to PostgreSQL</title>
-      <link>http://localhost:1313/post/2017-03-26-how-to-remote-connect-to-postgresql/</link>
+      <link>https://cixuuz.github.io/post/2017-03-26-how-to-remote-connect-to-postgresql/</link>
       <pubDate>Sun, 26 Mar 2017 21:05:22 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2017-03-26-how-to-remote-connect-to-postgresql/</guid>
+      <guid>https://cixuuz.github.io/post/2017-03-26-how-to-remote-connect-to-postgresql/</guid>
       <description>如何远程连接Postgresql 默认情况下，PostgreSQL 是配制成绑定 “localhost”. {% asset_img netstat.png %} 上图可以看出端口5432是绑定在</description>
     </item>
     
     <item>
       <title>how to set up admin and user account on mongodb</title>
-      <link>http://localhost:1313/post/2017-03-21-how-to-set-up-admin-and-user-account-on-mongodb/</link>
+      <link>https://cixuuz.github.io/post/2017-03-21-how-to-set-up-admin-and-user-account-on-mongodb/</link>
       <pubDate>Tue, 21 Mar 2017 10:52:11 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2017-03-21-how-to-set-up-admin-and-user-account-on-mongodb/</guid>
+      <guid>https://cixuuz.github.io/post/2017-03-21-how-to-set-up-admin-and-user-account-on-mongodb/</guid>
       <description>https://ianlondon.github.io/blog/mongodb-auth/
 https://help.aliyun.com/knowledge_detail/37451.html
 https://zhuanlan.zhihu.com/p/24709042</description>
@@ -567,42 +909,154 @@ https://zhuanlan.zhihu.com/p/24709042</description>
     
     <item>
       <title>AI-notes</title>
-      <link>http://localhost:1313/post/2017-03-19-ai-notes/</link>
+      <link>https://cixuuz.github.io/post/2017-03-19-ai-notes/</link>
       <pubDate>Sun, 19 Mar 2017 17:35:06 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2017-03-19-ai-notes/</guid>
-      <description>Catalog  Four different views of AI Intelligent Agents  Simple reflex agents Model-based reflex agents Goal-based agents Utility-based agents Learning agents  Solving Problems by Searching  State space formulation Uninformed search strategies  breath-first depth-first depth limited search uniform-cost search iterative deepening search bi-directional search summary  Informed Search and Exploration  Greedy best-first search A* Search  Admissible and consistent heuristic functions Inventing and learning heuristic functions    Adversarial Search  Games Minimax algorithm Alpha-Beta Pruning Evaluation functions cutting off search   Four different views of AI  Think humanly: cognitive modeling is to determin how human thinks inside their brain.</description>
-    </item>
-    
-    <item>
-      <title>Syntax Highlighting</title>
-      <link>http://localhost:1313/post/syntax-highlighting/</link>
-      <pubDate>Tue, 30 Aug 2011 16:01:23 +0800</pubDate>
-      
-      <guid>http://localhost:1313/post/syntax-highlighting/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;function helloWorld () {
-  alert(&amp;quot;Hello, World!&amp;quot;)
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <guid>https://cixuuz.github.io/post/2017-03-19-ai-notes/</guid>
+      <description>Catalog Four different views of AI Intelligent Agents Simple reflex agents Model-based reflex agents Goal-based agents Utility-based agents Learning agents Solving Problems by Searching State space formulation Uninformed search strategies breath-first depth-first depth limited search uniform-cost search iterative deepening search bi-directional search summary Informed Search and Exploration Greedy best-first search A* Search Admissible and consistent heuristic functions Inventing and learning heuristic functions Adversarial Search Games Minimax algorithm Alpha-Beta Pruning Evaluation</description>
     </item>
     
     <item>
       <title></title>
-      <link>http://localhost:1313/post/ds-jd/</link>
+      <link>https://cixuuz.github.io/post/2017-03-26-how-to-remote-connect-to-postgresql/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/ds-jd/</guid>
+      <guid>https://cixuuz.github.io/post/2017-03-26-how-to-remote-connect-to-postgresql/</guid>
+      <description>How to remote connect to PostgreSQL - cixuuz  -- --      header.intro-header{ background-image: url(&#39;undefined&#39;) /*post*/ }   How to remote connect to PostgreSQL  Posted by Chet on 2017-03-26        Toggle navigation     cixuuz  &#39;s height woule be hold on by its content. so, when navbar scale out, the  will cover tags.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://cixuuz.github.io/post/2017-03-28-all-about-hardware/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/2017-03-28-all-about-hardware/</guid>
+      <description>SSD vs HDD的性能对比.讲解了为什么SSD的读写性能高于HDD - cixuuz  -- --      header.intro-header{ background-image: url(&#39;undefined&#39;) /*post*/ }  hardware  SSD vs HDD的性能对比.讲解了为什么SSD的读写性能高于HDD  Posted by Chet on 2017-03-28        Toggle navigation     cixuuz  &#39;s height woule be hold on by its content. so, when navbar scale out, the  will cover tags. also mask any touch event of tags, unfortunately.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://cixuuz.github.io/post/2017-03-30-json/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/2017-03-30-json/</guid>
+      <description>JSON是一种格式，基于文本，优于轻量，用于交换数据 - cixuuz  -- --      header.intro-header{ background-image: url(&#39;null&#39;) /*post*/ }   JSON是一种格式，基于文本，优于轻量，用于交换数据  Posted by Chet on 2017-03-30        Toggle navigation     cixuuz  &#39;s height woule be hold on by its content. so, when navbar scale out, the  will cover tags. also mask any touch event of tags, unfortunately. --  Home   about   Archives   Tags        // Drop Bootstarp low-performance Navbar // Use customize navbar with high-quality material design animation // in high-perf jank-free CSS3 implementation var $body = document.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://cixuuz.github.io/post/2017-03-30-python-profiling/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/2017-03-30-python-profiling/</guid>
+      <description>python profiling and optimize - cixuuz  -- --      header.intro-header{ background-image: url(&#39;null&#39;) /*post*/ }  Python  python profiling and optimize  Posted by Chet on 2017-03-30        Toggle navigation     cixuuz  &#39;s height woule be hold on by its content. so, when navbar scale out, the  will cover tags. also mask any touch event of tags, unfortunately.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://cixuuz.github.io/post/2017-03-31-python-tips/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/2017-03-31-python-tips/</guid>
+      <description>python tips - cixuuz  -- --      header.intro-header{ background-image: url(&#39;null&#39;) /*post*/ }  Python  python tips  Posted by Chet on 2017-03-31        Toggle navigation     cixuuz  &#39;s height woule be hold on by its content. so, when navbar scale out, the  will cover tags. also mask any touch event of tags, unfortunately.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://cixuuz.github.io/post/2017-04-05-remote-debug-using-pycharm-on-aws-ec2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/2017-04-05-remote-debug-using-pycharm-on-aws-ec2/</guid>
+      <description>remote debug using pycharm on AWS ec2 - cixuuz  -- --      header.intro-header{ background-image: url(&#39;null&#39;) /*post*/ }  Python AWS  remote debug using pycharm on AWS ec2  Posted by Chet on 2017-04-05        Toggle navigation     cixuuz  &#39;s height woule be hold on by its content. so, when navbar scale out, the  will cover tags.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://cixuuz.github.io/post/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/about/</guid>
+      <description>about - cixuuz  -- --      header.intro-header{ background-image: url(&#39;/undefined&#39;) /*page*/ }  about -- All about data       Toggle navigation     cixuuz  &#39;s height woule be hold on by its content. so, when navbar scale out, the  will cover tags. also mask any touch event of tags, unfortunately. --  Home   about   Archives   Tags        // Drop Bootstarp low-performance Navbar // Use customize navbar with high-quality material design animation // in high-perf jank-free CSS3 implementation var $body = document.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://cixuuz.github.io/post/ai-constraint-satisfaction-problem/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/ai-constraint-satisfaction-problem/</guid>
+      <description>AI: Constraint Satisfaction Problems - cixuuz  -- --      header.intro-header{ background-image: url(&#39;undefined&#39;) /*post*/ }  AI  AI: Constraint Satisfaction Problems  Posted by Chet on 2017-05-07        Toggle navigation     cixuuz  &#39;s height woule be hold on by its content. so, when navbar scale out, the  will cover tags. also mask any touch event of tags, unfortunately.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://cixuuz.github.io/post/ai-first-order-logic/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/ai-first-order-logic/</guid>
+      <description>AI: first-order logic - cixuuz  -- --      header.intro-header{ background-image: url(&#39;undefined&#39;) /*post*/ }  AI  AI: first-order logic  Posted by Chet on 2017-04-18        Toggle navigation     cixuuz  &#39;s height woule be hold on by its content. so, when navbar scale out, the  will cover tags. also mask any touch event of tags, unfortunately.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://cixuuz.github.io/post/ai-learning-from-obs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/ai-learning-from-obs/</guid>
+      <description>AI: Learning from observations - cixuuz  -- --      header.intro-header{ background-image: url(&#39;undefined&#39;) /*post*/ }  AI  AI: Learning from observations  Posted by Chet on 2017-05-07        Toggle navigation     cixuuz  &#39;s height woule be hold on by its content. so, when navbar scale out, the  will cover tags. also mask any touch event of tags, unfortunately.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://cixuuz.github.io/post/ai-logical-agents/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/ai-logical-agents/</guid>
+      <description>AI: Logical Agents - cixuuz  -- --      header.intro-header{ background-image: url(&#39;undefined&#39;) /*post*/ }  AI  AI: Logical Agents  Posted by Chet on 2017-04-16        Toggle navigation     cixuuz  &#39;s height woule be hold on by its content. so, when navbar scale out, the  will cover tags. also mask any touch event of tags, unfortunately.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://cixuuz.github.io/post/airflow_config/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/airflow_config/</guid>
+      <description>enter instance setting up python environment sudo apt-get update
+sudo apt-get install python3-pip
+sudo apt-get install build-essential libssl-dev libffi-dev python-dev
+sudo apt-get install -y python3-venv
+alias py3=&amp;lsquo;source /home/ubuntu/py_envs/py3/bin/activate&amp;rsquo;
+setting airflow export AIRFLOW_HOME=~/nfs/airflow
+python3 -m venv py_envs/py3 pip install &amp;ldquo;airflow[celery, crypto, mysql, password, s3, postgres, slack]&amp;rdquo;
+call this command many times, until it says it&amp;rsquo;s not installed pip uninstall librabbitmq
+https://github.com/celery/celery/issues/3675
+rabbitmq slack https://slack.com/api/oauth.access?client_id=4b39e9-752c4&amp;amp;client_secret=33fea0113f5b1&amp;amp;code=ccdaa72ad</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://cixuuz.github.io/post/amazon-ceo-letter-2016/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/amazon-ceo-letter-2016/</guid>
+      <description>Amazon CEO letter 2016 - cixuuz  -- --      header.intro-header{ background-image: url(&#39;undefined&#39;) /*post*/ }  company  Amazon CEO letter 2016  Posted by Chet on 2017-04-17        Toggle navigation     cixuuz  &#39;s height woule be hold on by its content. so, when navbar scale out, the  will cover tags. also mask any touch event of tags, unfortunately.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://cixuuz.github.io/post/ds-jd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/ds-jd/</guid>
       <description>PhD in Computer Science, Computational Linguistics, or related field preferred, or Master’s degree with 2+ years’ of relevant industry experience Proficient programming skills in a high-level language (e.g. Java, Scala, Python, C/C++, Perl, Matlab, R) Experience with statistical data analysis, experimental design, and hypotheses validation Familiarity with probabilistic models and an understanding of the mathematical concepts underlying machine learning methods Project-based experience with some of the following tools: Applied machine learning (e.</description>
     </item>
     
     <item>
       <title></title>
-      <link>http://localhost:1313/post/ds-suggest/</link>
+      <link>https://cixuuz.github.io/post/ds-suggest/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/ds-suggest/</guid>
+      <guid>https://cixuuz.github.io/post/ds-suggest/</guid>
       <description>Strictly speaking, there is no such thing as &amp;ldquo;data science&amp;rdquo; (see What is data science and what is it not? ). See also: Vardi, Science has only two legs: http://portal.acm.org/ft_gateway...
 Here are some resources I&amp;rsquo;ve collected about working with data, I hope you find them useful (note: I&amp;rsquo;m an undergrad student, this is not an expert opinion in any way).
 1) Learn about matrix factorizations
@@ -611,20 +1065,20 @@ Take the Computational Linear Algebra course (it is sometimes called Applied Lin
     
     <item>
       <title></title>
-      <link>http://localhost:1313/post/vis-summary/</link>
+      <link>https://cixuuz.github.io/post/vis-summary/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/vis-summary/</guid>
+      <guid>https://cixuuz.github.io/post/vis-summary/</guid>
       <description>https://www.youtube.com/watch?v=QyhqzaMiFxk&amp;amp;list=PLQVvvaa0QuDfefDfXb9Yf0la1fPDKluPF&amp;amp;index=7
 d3: http://d3.decembercafe.org/pages/lessons/10.html</description>
     </item>
     
     <item>
       <title>Bellman–Ford algorithm and Routing Information Protocol</title>
-      <link>http://localhost:1313/post/2016-11-11-bellmanford-algorithm/</link>
+      <link>https://cixuuz.github.io/post/2016-11-11-bellmanford-algorithm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2016-11-11-bellmanford-algorithm/</guid>
+      <guid>https://cixuuz.github.io/post/2016-11-11-bellmanford-algorithm/</guid>
       <description>There is an unacceptable solution for leetcode Minimum Height Trees due to time limit exceeded. But it&amp;rsquo;s an algorithm I didn&amp;rsquo;t know, so record it.
 It&amp;rsquo;s Bellman–Ford algorithm used in Routing Information Protocol.
 object  computes shortest paths from a single source vertex to all of the other vertices in a weighted digraph.[1] It is slower than Dijkstra&amp;rsquo;s algorithm for the same problem, but more versatile, as it is capable of handling graphs in which some of the edge weights are negative numbers.</description>
@@ -632,10 +1086,10 @@ object  computes shortest paths from a single source vertex to all of the other 
     
     <item>
       <title>Bittiger cs101 notebook - how to design a google sheet</title>
-      <link>http://localhost:1313/post/2016-11-05-bittiger-cs101-notebook-1/</link>
+      <link>https://cixuuz.github.io/post/2016-11-05-bittiger-cs101-notebook-1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2016-11-05-bittiger-cs101-notebook-1/</guid>
+      <guid>https://cixuuz.github.io/post/2016-11-05-bittiger-cs101-notebook-1/</guid>
       <description>Structure  Data Structure Algorithm
  Computer Architecture
  Operation System
@@ -647,10 +1101,10 @@ object  computes shortest paths from a single source vertex to all of the other 
     
     <item>
       <title>Bittiger cs101 notebook 1 - how to calculate</title>
-      <link>http://localhost:1313/post/2016-11-05-bittiger-cs101-notebook-2/</link>
+      <link>https://cixuuz.github.io/post/2016-11-05-bittiger-cs101-notebook-2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2016-11-05-bittiger-cs101-notebook-2/</guid>
+      <guid>https://cixuuz.github.io/post/2016-11-05-bittiger-cs101-notebook-2/</guid>
       <description>CPU: central processing unit http://www.visual6502.org/JSSim/expert-6800.html
 1 HZ = 1 clock time 2.34GHZ = 2.34B clock time
 Register - Data Register - Instructure Register - Address Register - Flag Register: boolean like compare
@@ -662,10 +1116,10 @@ Control unit</description>
     
     <item>
       <title>Bittiger cs101 notebook 2 - linux and file system</title>
-      <link>http://localhost:1313/post/2016-11-05-bittiger-cs101-notebook-3/</link>
+      <link>https://cixuuz.github.io/post/2016-11-05-bittiger-cs101-notebook-3/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2016-11-05-bittiger-cs101-notebook-3/</guid>
+      <guid>https://cixuuz.github.io/post/2016-11-05-bittiger-cs101-notebook-3/</guid>
       <description>need for a file system  hardware
  file
  size type authorization read and write time  operations
@@ -679,10 +1133,10 @@ connect by points and write by order ext2(second extended file system)
     
     <item>
       <title>Bittiger cs101 notebook 3 - JVM</title>
-      <link>http://localhost:1313/post/2016-11-05-bittiger-cs101-notebook-4/</link>
+      <link>https://cixuuz.github.io/post/2016-11-05-bittiger-cs101-notebook-4/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2016-11-05-bittiger-cs101-notebook-4/</guid>
+      <guid>https://cixuuz.github.io/post/2016-11-05-bittiger-cs101-notebook-4/</guid>
       <description>JVM class loader load code class and other java base classes such as java.io util &amp;hellip;
  static class will be loaded in prepare in link
  Resolve change symbol reference to actural address
@@ -695,10 +1149,10 @@ connect by points and write by order ext2(second extended file system)
     
     <item>
       <title>Bittiger cs101 notebook 4 - multithreaded programming fundamentals</title>
-      <link>http://localhost:1313/post/2016-11-07-bittiger-cs101-notebook-5/</link>
+      <link>https://cixuuz.github.io/post/2016-11-07-bittiger-cs101-notebook-5/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2016-11-07-bittiger-cs101-notebook-5/</guid>
+      <guid>https://cixuuz.github.io/post/2016-11-07-bittiger-cs101-notebook-5/</guid>
       <description>Process is a instance of a running program
 - logical control flow: process execution interleaved
 - private address space: managed by virtual memory machine
@@ -711,10 +1165,10 @@ different Threads share code and data, Threads are less expensive than processes
     
     <item>
       <title>Bittiger cs101 notebook 5 - what happens when visit a website</title>
-      <link>http://localhost:1313/post/2016-11-07-bittiger-cs101-notebook-6/</link>
+      <link>https://cixuuz.github.io/post/2016-11-07-bittiger-cs101-notebook-6/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2016-11-07-bittiger-cs101-notebook-6/</guid>
+      <guid>https://cixuuz.github.io/post/2016-11-07-bittiger-cs101-notebook-6/</guid>
       <description>Interruption generates an interrupt
 interrupt controller
  Typeahead
@@ -745,10 +1199,10 @@ tcp：Three Interaction Protocol</description>
     
     <item>
       <title>Bittiger cs101 notebook 6 - web programming</title>
-      <link>http://localhost:1313/post/2016-11-28-bittiger-cs101-notebook-7/</link>
+      <link>https://cixuuz.github.io/post/2016-11-28-bittiger-cs101-notebook-7/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2016-11-28-bittiger-cs101-notebook-7/</guid>
+      <guid>https://cixuuz.github.io/post/2016-11-28-bittiger-cs101-notebook-7/</guid>
       <description>Http and Chrome dev tools Http header  Host: send to where, dns lookup
  Referer: linked from where,
  User-Agent: browser, os
@@ -771,19 +1225,19 @@ Restful api reasons: - single page application
     
     <item>
       <title>Bittiger cs101 notebook 7 - design pattern in Java</title>
-      <link>http://localhost:1313/post/2016-11-28-bittiger-cs101-notebook-9/</link>
+      <link>https://cixuuz.github.io/post/2016-11-28-bittiger-cs101-notebook-9/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2016-11-28-bittiger-cs101-notebook-9/</guid>
+      <guid>https://cixuuz.github.io/post/2016-11-28-bittiger-cs101-notebook-9/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Database Notebook 1</title>
-      <link>http://localhost:1313/post/2016-10-29-database-notebook-01/</link>
+      <link>https://cixuuz.github.io/post/2016-10-29-database-notebook-01/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2016-10-29-database-notebook-01/</guid>
+      <guid>https://cixuuz.github.io/post/2016-10-29-database-notebook-01/</guid>
       <description>[TOC]
 Purpose of Database Management System (DBMS) is to solve problems caused by file systems
  Data redundancy and inconsistency: duplicate information, file formats Difficulty in accessing data: new program to carry data Data isolation: files and formats Integrity: constraints are fixed, hard to add or change Atomicity of updates: failures may cause inconsistency. Concurrent access by multiple users Security: permissions  Schema: the logical structure of the database</description>
@@ -791,37 +1245,37 @@ Purpose of Database Management System (DBMS) is to solve problems caused by file
     
     <item>
       <title>Kaggle新生必读手册1</title>
-      <link>http://localhost:1313/post/2016-06-20-kaggle-freshman-book-1.cn/</link>
+      <link>https://cixuuz.github.io/post/2016-06-20-kaggle-freshman-book-1.cn/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2016-06-20-kaggle-freshman-book-1.cn/</guid>
+      <guid>https://cixuuz.github.io/post/2016-06-20-kaggle-freshman-book-1.cn/</guid>
       <description>按，本文根据陈驰在tigger kaggle小组中的关于kaggle比赛的微讲座整理的。整理者：Wente Guo(正文部分), EK(QA部分及</description>
     </item>
     
     <item>
       <title>Latex symbols list</title>
-      <link>http://localhost:1313/post/2016-12-25-bittiger-cs101-notebook-8/</link>
+      <link>https://cixuuz.github.io/post/2016-12-25-bittiger-cs101-notebook-8/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2016-12-25-bittiger-cs101-notebook-8/</guid>
+      <guid>https://cixuuz.github.io/post/2016-12-25-bittiger-cs101-notebook-8/</guid>
       <description> Greek letters Reference  https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols  </description>
     </item>
     
     <item>
       <title>Leetcode 239 Sliding Window Maximum</title>
-      <link>http://localhost:1313/post/2016-11-03-leetcode-239/</link>
+      <link>https://cixuuz.github.io/post/2016-11-03-leetcode-239/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2016-11-03-leetcode-239/</guid>
+      <guid>https://cixuuz.github.io/post/2016-11-03-leetcode-239/</guid>
       <description>OK。终于仍不住要自己开贴记录一下刷题流程了。那么就从今天开始吧，希望今年能把所有的内容都更新起来。 https://leetcode.com/problems/sliding-window-maximum/ 做到这题是因为这是 Cloudera 的OA的一题。 先上</description>
     </item>
     
     <item>
       <title>Network Centrality</title>
-      <link>http://localhost:1313/post/2016-04-12-network-centrality/</link>
+      <link>https://cixuuz.github.io/post/2016-04-12-network-centrality/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2016-04-12-network-centrality/</guid>
+      <guid>https://cixuuz.github.io/post/2016-04-12-network-centrality/</guid>
       <description>This is one of notes from CS3943/9223 Foundation of Data Science at New York University.
 In this article, we talk about how to measure the centrality in networks.
 What is centrality? In graph theory and network analysis, indicators of centrality identify the most important vertices within a graph.
@@ -830,49 +1284,58 @@ Here is an example network with 5 nodes, and 5 links. There are three ways to me
     
     <item>
       <title>Preicision, Recall, and F-Measure</title>
-      <link>http://localhost:1313/post/2016-03-31-precision-recall-fmeasure/</link>
+      <link>https://cixuuz.github.io/post/2016-03-31-precision-recall-fmeasure/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2016-03-31-precision-recall-fmeasure/</guid>
+      <guid>https://cixuuz.github.io/post/2016-03-31-precision-recall-fmeasure/</guid>
       <description>This is one of notes from CS3943/9223 Foundation of Data Science at New York University.
 First of all, we have definitions: In pattern recognition and information retrieval with binary classification, precision (also called positive predictive value) is the fraction of retrieved instances that are relevant, while recall (also known as sensitivity) is the fraction of relevant instances that are retrieved. Both precision and recall are therefore based on an understanding and measure of relevance.</description>
     </item>
     
     <item>
       <title>Python从小白到大白-Generator 漫谈</title>
-      <link>http://localhost:1313/post/2016-05-30-about-generator.cn/</link>
+      <link>https://cixuuz.github.io/post/2016-05-30-about-generator.cn/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2016-05-30-about-generator.cn/</guid>
+      <guid>https://cixuuz.github.io/post/2016-05-30-about-generator.cn/</guid>
       <description>按, 作为一个Python初学者, Python的格式化语法让众多编程小白追捧, 它的语法糖让代码变得简洁易读，它的庞大开源库让它在各个领域都能发</description>
     </item>
     
     <item>
       <title>Python从小白到大白-Generator 漫谈 (续1)</title>
-      <link>http://localhost:1313/post/2016-06-18-about-generator-2.cn/</link>
+      <link>https://cixuuz.github.io/post/2016-06-18-about-generator-2.cn/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2016-06-18-about-generator-2.cn/</guid>
+      <guid>https://cixuuz.github.io/post/2016-06-18-about-generator-2.cn/</guid>
       <description>按, 上篇介绍了generator相关的概念. 这篇来探究一下generator相关的操作方法. 以下都是使用Python 2.7.10. 根据官方文档 generator 通过 yield 来</description>
     </item>
     
     <item>
       <title>Python从小白到大白-Python也可以是函数式语言</title>
-      <link>http://localhost:1313/post/2016-07-31-python-path-1.cn/</link>
+      <link>https://cixuuz.github.io/post/2016-07-31-python-path-1.cn/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2016-07-31-python-path-1.cn/</guid>
+      <guid>https://cixuuz.github.io/post/2016-07-31-python-path-1.cn/</guid>
       <description>引言 按, 作为一个Python初学者, Python的格式化语法让众多编程小白追捧, 它的语法糖让代码变得简洁易读, 它的庞大开源库让它在各个领域都</description>
     </item>
     
     <item>
       <title>Rendering LaTex using MathJax with Jekyll</title>
-      <link>http://localhost:1313/post/2016-03-30-mathjax-with-jekyll/</link>
+      <link>https://cixuuz.github.io/post/2016-03-30-mathjax-with-jekyll/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2016-03-30-mathjax-with-jekyll/</guid>
+      <guid>https://cixuuz.github.io/post/2016-03-30-mathjax-with-jekyll/</guid>
       <description>It is easy and simple to build a website with Jekyll. An advantage of using Jekyll is the ability to support MathJax, which means I can write LaTeX-like equations that get nicely displayed in a web browser, like this one \( \mathsf{ 3^2 + 4^2 = 5^2} \).
 What’s MathJax? If you check MathJax website you’ll see that it is an open source JavaScript display engine for mathematics that works in all browsers.</description>
+    </item>
+    
+    <item>
+      <title>title</title>
+      <link>https://cixuuz.github.io/post/kd-tree/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/kd-tree/</guid>
+      <description></description>
     </item>
     
   </channel>

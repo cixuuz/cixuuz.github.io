@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Network Centrality - Chen Tong&#39;s Ideas and Writings</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Chen Tong" /><meta name="description" content="This is one of notes from CS3943/9223 Foundation of Data Science at New York University.
+In this article, we talk about how to measure the centrality in networks.
+What is centrality? In graph theory and network analysis, indicators of centrality identify the most important vertices within a graph.
+Here is an example network with 5 nodes, and 5 links. There are three ways to measure centrality: 1. Degree centrality 2." /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.54.0 with even 4.0.0" />
+
+
+<link rel="canonical" href="https://cixuuz.github.io/post/2016-04-12-network-centrality/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Network Centrality" />
+<meta property="og:description" content="This is one of notes from CS3943/9223 Foundation of Data Science at New York University.
+In this article, we talk about how to measure the centrality in networks.
+What is centrality? In graph theory and network analysis, indicators of centrality identify the most important vertices within a graph.
+Here is an example network with 5 nodes, and 5 links. There are three ways to measure centrality: 1. Degree centrality 2." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cixuuz.github.io/post/2016-04-12-network-centrality/" />
+
+
+<meta itemprop="name" content="Network Centrality">
+<meta itemprop="description" content="This is one of notes from CS3943/9223 Foundation of Data Science at New York University.
+In this article, we talk about how to measure the centrality in networks.
+What is centrality? In graph theory and network analysis, indicators of centrality identify the most important vertices within a graph.
+Here is an example network with 5 nodes, and 5 links. There are three ways to measure centrality: 1. Degree centrality 2.">
+
+
+
+<meta itemprop="wordCount" content="327">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Network Centrality"/>
+<meta name="twitter:description" content="This is one of notes from CS3943/9223 Foundation of Data Science at New York University.
+In this article, we talk about how to measure the centrality in networks.
+What is centrality? In graph theory and network analysis, indicators of centrality identify the most important vertices within a graph.
+Here is an example network with 5 nodes, and 5 links. There are three ways to measure centrality: 1. Degree centrality 2."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Network Centrality</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 0001-01-01 </span>
+        <div class="post-category">
+            <a href="/categories/graph/"> Graph </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#what-is-centrality">What is centrality?</a></li>
+<li><a href="#degree-centrality">Degree centrality</a></li>
+<li><a href="#betweenness-centrality">Betweenness centrality</a></li>
+<li><a href="#closeness-centrality">Closeness centrality</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<p>This is one of notes from CS3943/9223 Foundation of Data Science at New York University.</p>
+
+<hr />
+
+<p>In this article, we talk about how to measure the <a href="https://en.wikipedia.org/wiki/Centrality">centrality</a> in networks.</p>
+
+<h2 id="what-is-centrality">What is centrality?</h2>
+
+<p>In graph theory and network analysis, indicators of centrality identify the most important vertices within a graph.</p>
+
+<p>Here is an example network with 5 nodes, and 5 links.
+<img src="http://i.imgur.com/Zjb6TiL.png?1" alt="Example" /></p>
+
+<p>There are three ways to measure centrality:
+1. Degree centrality
+2. Betweenness centrality
+3. Closeness centrality</p>
+
+<h2 id="degree-centrality">Degree centrality</h2>
+
+<p>For each node, it has a degree - the number of ties that a node has.
+Here, we define <strong>Standardized Degree</strong>:
+\[degree \over {N - 1}\]
+where N is the total number of nodes in network</p>
+
+<h2 id="betweenness-centrality">Betweenness centrality</h2>
+
+<p>First, we define \(B(n)\) as the number of short paths that go through Node <em>n</em>.
+To calculate \(B(n)\), we denote \(\sigma<em>{xy}(n)\) as the shortest path from x to y through <em>n</em>. Then, take node B as example, we have such equation:<br />
+{% raw %}<br />
+$$B(B) = {{\sigma</em>{AC}(B)}\over{\sigma<em>{AC}}} + {{\sigma</em>{AC}(B)}\over{\sigma<em>{AC}}} + {{\sigma</em>{AE}(B)}\over{\sigma<em>{AE}}} + {{\sigma</em>{CD}(B)}\over{\sigma<em>{CD}}} + {{\sigma</em>{CE}(B)}\over{\sigma<em>{CE}}} + {{\sigma</em>{DE}(B)}\over{\sigma_{DE}}} \ = {\dfrac{1}{1}} + {\dfrac{1}{1}} + {\dfrac{2}{2}} + {\dfrac{1}{2}} + {\dfrac{0}{1}} + {\dfrac{0}{1}} \ = \dfrac{7}{2} $$
+{% endraw %}
+Still, we want a whole index to centrality. Thus, we have <strong>Standardized Betweenness Centrality</strong>:
+$$\dfrac{B(n)}{\dfrac{(N-1)(N-2)}{2}}$$</p>
+
+<h2 id="closeness-centrality">Closeness centrality</h2>
+
+<p>Definition:
+$$C(n) = \dfrac{1}{Average (L(n, m))}$$
+where \(L(n,m)\) is the shortest links from node n to node m.
+For example:
+$$Average L(A, m) = \dfrac{1+2+2+3}{4} \ = 2$$</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>In our example, N = 4.</p>
+
+<p>|&mdash;
+| Node | Degree Centrality |Standardized Degree | Betweeness Centrality | Standardized Betweeness | Closeness Centrality
+|-|:-|:-|:-:|-:|:-
+| A | 1 | \(1\over4\) | 0 | 0 | \(1\over2\)
+| B | 3 | \(3\over4\) | \(7\over2\) | \(7\over12\) | \(4\over5\)
+| C | 2 | \(1\over2\) | 1 | \(1\over6\) | \(2\over3\)
+| D | 2 | \(1\over2\) | 1 | \(1\over6\) | \(2\over3\)
+| E | 2 | \(1\over2\) | \(1\over2\) | \(1\over12\) | \(4\over7\)
+|&mdash;</p>
+
+<p>latex Greek letter: <a href="http://jblevins.org/log/greek">http://jblevins.org/log/greek</a></p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Chen Tong</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        0001-01-01
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/post/2016-11-03-leetcode-239/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Leetcode 239 Sliding Window Maximum</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/2016-03-31-precision-recall-fmeasure/">
+            <span class="next-text nav-default">Preicision, Recall, and F-Measure</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:nychent@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="http://localhost:1313" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="http://localhost:1313" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://cixuuz.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Chen Tong</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

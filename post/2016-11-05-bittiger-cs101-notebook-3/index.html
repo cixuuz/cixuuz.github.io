@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Bittiger cs101 notebook 2 - linux and file system - Chen Tong&#39;s Ideas and Writings</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Chen Tong" /><meta name="description" content="need for a file system  hardware
+ file
+ size type authorization read and write time  operations
+  common file system:  FAT(File Allocation Table)
+connect by points and write by order ext2(second extended file system)
+ supernode | file sysem descrip | inode bitmap | block bitmap | inode | block
+ use hashmap (inode) record file content
+ inode -&amp;gt; meta Data
+ block -&amp;gt; file content" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.54.0 with even 4.0.0" />
+
+
+<link rel="canonical" href="https://cixuuz.github.io/post/2016-11-05-bittiger-cs101-notebook-3/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Bittiger cs101 notebook 2 - linux and file system" />
+<meta property="og:description" content="need for a file system  hardware
+ file
+ size type authorization read and write time  operations
+  common file system:  FAT(File Allocation Table)
+connect by points and write by order ext2(second extended file system)
+ supernode | file sysem descrip | inode bitmap | block bitmap | inode | block
+ use hashmap (inode) record file content
+ inode -&gt; meta Data
+ block -&gt; file content" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cixuuz.github.io/post/2016-11-05-bittiger-cs101-notebook-3/" />
+
+
+<meta itemprop="name" content="Bittiger cs101 notebook 2 - linux and file system">
+<meta itemprop="description" content="need for a file system  hardware
+ file
+ size type authorization read and write time  operations
+  common file system:  FAT(File Allocation Table)
+connect by points and write by order ext2(second extended file system)
+ supernode | file sysem descrip | inode bitmap | block bitmap | inode | block
+ use hashmap (inode) record file content
+ inode -&gt; meta Data
+ block -&gt; file content">
+
+
+
+<meta itemprop="wordCount" content="199">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Bittiger cs101 notebook 2 - linux and file system"/>
+<meta name="twitter:description" content="need for a file system  hardware
+ file
+ size type authorization read and write time  operations
+  common file system:  FAT(File Allocation Table)
+connect by points and write by order ext2(second extended file system)
+ supernode | file sysem descrip | inode bitmap | block bitmap | inode | block
+ use hashmap (inode) record file content
+ inode -&gt; meta Data
+ block -&gt; file content"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Bittiger cs101 notebook 2 - linux and file system</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 0001-01-01 </span>
+        <div class="post-category">
+            <a href="/categories/system-design/"> system design </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#need-for-a-file-system">need for a file system</a></li>
+<li><a href="#common-file-system">common file system:</a></li>
+<li><a href="#linux">linux</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<h1 id="need-for-a-file-system">need for a file system</h1>
+
+<ul>
+<li><p>hardware</p></li>
+
+<li><p>file</p>
+
+<ul>
+<li>size</li>
+<li>type</li>
+<li>authorization</li>
+<li>read and write time</li>
+</ul></li>
+
+<li><p>operations</p></li>
+</ul>
+
+<h1 id="common-file-system">common file system:</h1>
+
+<ul>
+<li>FAT(File Allocation Table)<br />
+connect by points and write by order</li>
+<li>ext2(second extended file system)<br />
+
+<ul>
+<li>supernode | file sysem descrip | inode bitmap | block bitmap | inode | block<br /></li>
+<li>use hashmap (inode) record file content<br />
+
+<ul>
+<li>inode -&gt; meta Data<br /></li>
+<li>block -&gt; file content<br /></li>
+</ul></li>
+<li>use bitmap record whether it is empty<br /></li>
+<li>fixed size block: 1k, 2k, 4k<br /></li>
+<li>fixed size inode: 128byte<br /></li>
+<li>one inode has at least one block<br /></li>
+<li>use super node to record file system meta Data
+
+<ul>
+<li>the number of inode and block<br /></li>
+<li>the stat of bitmaps<br /></li>
+<li>the size of inode and block<br /></li>
+<li>start point of each part<br /></li>
+</ul></li>
+<li>larger size: indirect inode<br /></li>
+</ul></li>
+<li>ext3 log file system: in order to check errors efficiently<br /></li>
+</ul>
+
+<h1 id="linux">linux</h1>
+
+<ul>
+<li>group<br />
+
+<ul>
+<li>owner<br /></li>
+<li>owners&rsquo; group<br /></li>
+<li>others<br /></li>
+</ul></li>
+<li>drwxr-xr-x:<br />
+
+<ul>
+<li>d refers dictonary; - refers file;<br /></li>
+<li>r readable  : 4<br /></li>
+<li>w writable  : 2<br /></li>
+<li>x executable   : 1<br /></li>
+<li>r-x : 4 + 1 = 5<br /></li>
+</ul></li>
+<li>commands:<br />
+
+<ul>
+<li>find: find Desktop -name &ldquo;<em>.</em>&rdquo;<br /></li>
+<li>grep: grep &ldquo;pattern&rdquo; filename</li>
+<li>pipe: find . -name &ldquo;*.java&rdquo; | xargs grep &ldquo;public&rdquo;<br />
+(xargs: pass previous contect as argus for current command)</li>
+<li>awk &lsquo;{x+=$2+$3;a[NR]=$2+$3}END{y=x/NR;for(i in a){if(a[i] &lt; y) z++} print z}&rsquo; table.txt</li>
+</ul></li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Chen Tong</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        0001-01-01
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/post/2016-11-05-bittiger-cs101-notebook-2/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Bittiger cs101 notebook 1 - how to calculate</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/2016-11-05-bittiger-cs101-notebook-4/">
+            <span class="next-text nav-default">Bittiger cs101 notebook 3 - JVM</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:nychent@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="http://localhost:1313" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="http://localhost:1313" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://cixuuz.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Chen Tong</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

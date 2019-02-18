@@ -1,271 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>AI: Logical Agents - Chen Tong</title>
-  <meta name="renderer" content="webkit" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword"  content="data">
+    <link rel="shortcut icon" href="/img/ironman-draw.png">
+    
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <title>
+        
+          AI: Logical Agents - cixuuz
+        
+    </title>
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="canonical" href="http://cixuuz.github.io/ai-logical-agents/">
 
-<meta name="theme-color" content="#f8f5ec" />
-<meta name="msapplication-navbutton-color" content="#f8f5ec">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
 
+     
+    <link rel="stylesheet" href="/css/beantech.min.css">
+    
+    
+    <link rel="stylesheet" href="/css/highlight.css">
 
-<meta name="author" content="cixuuz" />
-  <meta name="description" content="knowledge base a set of sentences. - inference:deriving new sentences from old - TELL: add new sentences to the knowledge base - ASK: a way to query what is known. The standard names for these operations
-Generic KB-Based Agent Similar to agents with internal states. {% codeblock %} function KB-Agent(percept) returns an action static KB = a knowledge base, t = 0 // a counter indicating time tell(KB, make_percept_sentence(percept, t)) action = ask(KB, make_action_query(t)) tell(KB, make_action_sentence(action, t)) t&#43;&#43; return action {% endcodeblock %}" />
+    <link rel="stylesheet" href="/css/widget.css">
 
-  <meta name="keywords" content="Hugo, theme, even" />
+    <link rel="stylesheet" href="/css/rocket.css">
 
+    <link rel="stylesheet" href="/css/signature.css">
 
+    <link rel="stylesheet" href="/css/toc.css">
 
-
-
-
-<meta name="generator" content="Hugo 0.32.1" />
-
-
-<link rel="canonical" href="http://localhost:1313/post/ai-logical-agents/" />
-
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="icon" href="/favicon.ico" />
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-
-
-
+    
+    
+    
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
 
+    
 
 
-<link href="/dist/even.min.css?v=2.7.0" rel="stylesheet">
-<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+    
+    
+    
 
-<meta property="og:title" content="AI: Logical Agents" />
-<meta property="og:description" content="knowledge base a set of sentences. - inference:deriving new sentences from old - TELL: add new sentences to the knowledge base - ASK: a way to query what is known. The standard names for these operations
-Generic KB-Based Agent Similar to agents with internal states. {% codeblock %} function KB-Agent(percept) returns an action static KB = a knowledge base, t = 0 // a counter indicating time tell(KB, make_percept_sentence(percept, t)) action = ask(KB, make_action_query(t)) tell(KB, make_action_sentence(action, t)) t&#43;&#43; return action {% endcodeblock %}" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/post/ai-logical-agents/" />
-
-
-
-<meta property="article:published_time" content="2017-04-16T10:30:08&#43;00:00"/>
-
-<meta property="article:modified_time" content="2017-04-16T10:30:08&#43;00:00"/>
-
-
-
-
-
-
-
-
-
-
-
-<meta itemprop="name" content="AI: Logical Agents">
-<meta itemprop="description" content="knowledge base a set of sentences. - inference:deriving new sentences from old - TELL: add new sentences to the knowledge base - ASK: a way to query what is known. The standard names for these operations
-Generic KB-Based Agent Similar to agents with internal states. {% codeblock %} function KB-Agent(percept) returns an action static KB = a knowledge base, t = 0 // a counter indicating time tell(KB, make_percept_sentence(percept, t)) action = ask(KB, make_action_query(t)) tell(KB, make_action_sentence(action, t)) t&#43;&#43; return action {% endcodeblock %}">
-
-
-<meta itemprop="datePublished" content="2017-04-16T10:30:08&#43;00:00" />
-<meta itemprop="dateModified" content="2017-04-16T10:30:08&#43;00:00" />
-<meta itemprop="wordCount" content="740">
-
-
-
-<meta itemprop="keywords" content="AI," />
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="AI: Logical Agents"/>
-<meta name="twitter:description" content="knowledge base a set of sentences. - inference:deriving new sentences from old - TELL: add new sentences to the knowledge base - ASK: a way to query what is known. The standard names for these operations
-Generic KB-Based Agent Similar to agents with internal states. {% codeblock %} function KB-Agent(percept) returns an action static KB = a knowledge base, t = 0 // a counter indicating time tell(KB, make_percept_sentence(percept, t)) action = ask(KB, make_action_query(t)) tell(KB, make_action_sentence(action, t)) t&#43;&#43; return action {% endcodeblock %}"/>
-
-<!--[if lte IE 9]>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
-<![endif]-->
-
-<!--[if lt IE 9]>
-  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-<![endif]-->
-
+    
+    <script></script>
 </head>
-<body>
-  <div id="mobile-navbar" class="mobile-navbar">
-  <div class="mobile-header-logo">
-    <a href="/" class="logo">Even</a>
-  </div>
-  <div class="mobile-navbar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
-<nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list">
-    <a href="/">
-        <li class="mobile-menu-item">Home</li>
-      </a><a href="/post/">
-        <li class="mobile-menu-item">Archives</li>
-      </a><a href="/tags/">
-        <li class="mobile-menu-item">Tags</li>
-      </a><a href="/categories/">
-        <li class="mobile-menu-item">Categories</li>
-      </a><a href="/about/">
-        <li class="mobile-menu-item">About</li>
-      </a>
-  </ul>
-</nav>
-  <div class="container" id="mobile-panel">
-    <header id="header" class="header">
-        <div class="logo-wrapper">
-  <a href="/" class="logo">Even</a>
-</div>
 
-<nav class="site-navbar">
-  <ul id="menu" class="menu">
-    <li class="menu-item">
-        <a class="menu-item-link" href="/">Home</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/post/">Archives</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/tags/">Tags</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/categories/">Categories</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/about/">About</a>
-      </li>
-  </ul>
-</nav>
-    </header>
 
-    <main id="main" class="main">
-      <div class="content-wrapper">
-        <div id="content" class="content">
-          <article class="post">
+
+<body ontouchstart="">
+	
+
+<style type="text/css">
+    header.intro-header{
+        
+            background-image: url('undefined')
+             
+        
+    }
     
-    <header class="post-header">
-      <h1 class="post-title">AI: Logical Agents</h1>
+</style>
 
-      <div class="post-meta">
-        <span class="post-time"> 2017-04-16 </span>
+<header class="intro-header" >
+    
+    <div id="signature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                              <a class="tag" href="/tags/#AI" title="AI">AI</a>
+                            
+                        </div>
+                        <h1>AI: Logical Agents</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            Posted by Chet on
+                            2017-04-16
+                        </span>
+                    </div>
+                
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+	
+    
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">cixuuz</a>
+        </div>
+
         
         
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">about</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archive/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
         
-      </div>
-    </header>
-
+    </div>
     
-    
-<div class="post-toc" id="post-toc">
-  <h2 class="post-toc-title">文章目录</h2>
-  
-  <div class="post-toc-content always-active">
-    <nav id="TableOfContents">
-<ul>
-<li><a href="#knowledge-base">knowledge base</a></li>
-<li><a href="#generic-kb-based-agent">Generic KB-Based Agent</a></li>
-<li><a href="#logic">logic</a></li>
-<li><a href="#propositional-logic">Propositional logic:</a>
-<ul>
-<li><a href="#truth-tables-model-checking">Truth tables (model checking)</a></li>
-<li><a href="#theorem-proving">Theorem proving</a></li>
-<li><a href="#horn-clauses">Horn clauses</a>
-<ul>
-<li><a href="#forward-chaining">Forward chaining</a></li>
-</ul></li>
-</ul></li>
-</ul>
 </nav>
-  </div>
-</div>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
 
     
-    <div class="post-content">
-      
+    
 
-<h1 id="knowledge-base">knowledge base</h1>
 
-<p>a set of sentences.
-- inference:deriving new sentences from old
-- TELL: add new sentences to the knowledge base
-- ASK: a way to query what is known. The standard names for these operations</p>
+<article>
+    <div class="container">
+        <div class="row">
 
+            
+            <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <h1 id="knowledge-base">knowledge base</h1>
+<p>a set of sentences. - inference:deriving new sentences from old - TELL: add new sentences to the knowledge base - ASK: a way to query what is known. The standard names for these operations</p>
 <h1 id="generic-kb-based-agent">Generic KB-Based Agent</h1>
-
-<p>Similar to agents with internal states.
-{% codeblock %}
-function KB-Agent(percept) returns an action
-  static KB = a knowledge base,
-         t = 0 // a counter indicating time
-  tell(KB, make_percept_sentence(percept, t))
-  action = ask(KB, make_action_query(t))
-  tell(KB, make_action_sentence(action, t))
-  t++
-  return action
-{% endcodeblock %}</p>
-
-<p>Agent must be able to:
-  - Represent stats and actions;
-  - Incorporate new percepts;
-  - Update internal representation of the world;
-  - Deduce hidden properties of the world;
-  - Deduce appropriate actions.</p>
-
+<p>Similar to agents with internal states. <figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">KB</span>-<span class="title">Agent</span><span class="params">(percept)</span> <span class="title">returns</span> <span class="title">an</span> <span class="title">action</span></span></div><div class="line">  <span class="title">static</span> <span class="title">KB</span> = <span class="title">a</span> <span class="title">knowledge</span> <span class="title">base</span>, </div><div class="line">         <span class="title">t</span> = 0 // <span class="title">a</span> <span class="title">counter</span> <span class="title">indicating</span> <span class="title">time</span></div><div class="line">  <span class="title">tell</span><span class="params">(KB, make_percept_sentence<span class="params">(percept, t)</span>)</span></div><div class="line">  <span class="title">action</span> = <span class="title">ask</span><span class="params">(KB, make_action_query<span class="params">(t)</span>)</span></div><div class="line">  <span class="title">tell</span><span class="params">(KB, make_action_sentence<span class="params">(action, t)</span>)</span></div><div class="line">  <span class="title">t</span>++</div><div class="line">  <span class="title">return</span> <span class="title">action</span></div></pre></td></tr></table></figure></p>
+<p>Agent must be able to: - Represent stats and actions; - Incorporate new percepts; - Update internal representation of the world; - Deduce hidden properties of the world; - Deduce appropriate actions.</p>
 <h1 id="logic">logic</h1>
-
 <ul>
-<li>Syntax: what expressions are legal<br /></li>
-
+<li>Syntax: what expressions are legal<br>
+</li>
 <li><p>Semantics: what legal expression mean</p></li>
-
-<li><p>entailment: α $\models$ β if and only if, in every model in which α is true, β is also true.</p></li>
-
-<li><p>Models: M(alpha) = set of all models of alpha: alpha $\models$ beta if and only if M(alpha) $\subseteq$ M(beta)</p></li>
-
-<li><p>Soundness: An inference algorithm that derives only entailed sentences is called sound or truth- preserving.</p></li>
-
+<li>entailment: &#x3B1; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x22A8;</mo></mrow><annotation encoding="application/x-tex">\models</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:0.999em;vertical-align:-0.249em;"></span><span class="base textstyle uncramped"><span class="mrel">&#x22A8;</span></span></span></span> &#x3B2; if and only if, in every model in which &#x3B1; is true, &#x3B2; is also true.</li>
+<li>Models: M(alpha) = set of all models of alpha: alpha <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x22A8;</mo></mrow><annotation encoding="application/x-tex">\models</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:0.999em;vertical-align:-0.249em;"></span><span class="base textstyle uncramped"><span class="mrel">&#x22A8;</span></span></span></span> beta if and only if M(alpha) <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x2286;</mo></mrow><annotation encoding="application/x-tex">\subseteq</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.63597em;"></span><span class="strut bottom" style="height:0.7719400000000001em;vertical-align:-0.13597em;"></span><span class="base textstyle uncramped"><span class="mrel">&#x2286;</span></span></span></span> M(beta)<br>
+</li>
+<li>Soundness: An inference algorithm that derives only entailed sentences is called sound or truth- preserving.</li>
 <li><p>Completeness: an inference algorithm is complete if it can derive any sentence that is entailed.</p></li>
 </ul>
-
 <h1 id="propositional-logic">Propositional logic:</h1>
-
 <ul>
-<li>Syntax: $\neg \wedge \vee \Rightarrow ()implication \Leftrightarrow (biconditional)$</li>
-<li>sematic:
-
-<ul>
-<li>¬P is true iff P is false in m.</li>
-<li>P ∧ Q is true iff both P and Q are true in m.</li>
-<li>P ∨ Q is true iff either P or Q is true in m.</li>
-<li>P ⇒ Q is true unless P is true and Q is false in m.</li>
-<li>P ⇔ Q is true iff P and Q are both true or both false in m.</li>
-</ul></li>
+<li>Syntax: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">&#xAC;</mi><mo>&#x2227;</mo><mo>&#x2228;</mo><mo>&#x21D2;</mo><mo>(</mo><mo>)</mo><mi>i</mi><mi>m</mi><mi>p</mi><mi>l</mi><mi>i</mi><mi>c</mi><mi>a</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi><mo>&#x21D4;</mo><mo>(</mo><mi>b</mi><mi>i</mi><mi>c</mi><mi>o</mi><mi>n</mi><mi>d</mi><mi>i</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi><mi>a</mi><mi>l</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\neg \wedge \vee \Rightarrow ()implication \Leftrightarrow (biconditional)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">&#xAC;</span><span class="mbin">&#x2227;</span><span class="mord">&#x2228;</span><span class="mrel">&#x21D2;</span><span class="mopen">(</span><span class="mclose">)</span><span class="mord mathit">i</span><span class="mord mathit">m</span><span class="mord mathit">p</span><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mord mathit">i</span><span class="mord mathit">c</span><span class="mord mathit">a</span><span class="mord mathit">t</span><span class="mord mathit">i</span><span class="mord mathit">o</span><span class="mord mathit">n</span><span class="mrel">&#x21D4;</span><span class="mopen">(</span><span class="mord mathit">b</span><span class="mord mathit">i</span><span class="mord mathit">c</span><span class="mord mathit">o</span><span class="mord mathit">n</span><span class="mord mathit">d</span><span class="mord mathit">i</span><span class="mord mathit">t</span><span class="mord mathit">i</span><span class="mord mathit">o</span><span class="mord mathit">n</span><span class="mord mathit">a</span><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mclose">)</span></span></span></span></li>
+<li>sematic:</li>
+<li>&#xAC;P is true iff P is false in m.</li>
+<li>P &#x2227; Q is true iff both P and Q are true in m.</li>
+<li>P &#x2228; Q is true iff either P or Q is true in m.</li>
+<li>P &#x21D2; Q is true unless P is true and Q is false in m.</li>
+<li>P &#x21D4; Q is true iff P and Q are both true or both false in m.</li>
 </ul>
-
 <h2 id="truth-tables-model-checking">Truth tables (model checking)</h2>
-
 <table>
 <thead>
-<tr>
+<tr class="header">
 <th>P</th>
 <th>Q</th>
-<th>$\neg P$</th>
-<th>$P\wedge Q$</th>
-<th>$P \vee Q$</th>
-<th>P$\Rightarrow$Q</th>
-<th>P$\Leftrightarrow$Q</th>
+<th><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">&#xAC;</mi><mi>P</mi></mrow><annotation encoding="application/x-tex">\neg P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">&#xAC;</span><span class="mord mathit" style="margin-right:0.13889em;">P</span></span></span></span></th>
+<th><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mo>&#x2227;</mo><mi>Q</mi></mrow><annotation encoding="application/x-tex">P\wedge Q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mbin">&#x2227;</span><span class="mord mathit">Q</span></span></span></span></th>
+<th><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mo>&#x2228;</mo><mi>Q</mi></mrow><annotation encoding="application/x-tex">P \vee Q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mbin">&#x2228;</span><span class="mord mathit">Q</span></span></span></span></th>
+<th>P<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x21D2;</mo></mrow><annotation encoding="application/x-tex">\Rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">&#x21D2;</span></span></span></span>Q</th>
+<th>P<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x21D4;</mo></mrow><annotation encoding="application/x-tex">\Leftrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">&#x21D4;</span></span></span></span>Q</th>
 </tr>
 </thead>
-
 <tbody>
-<tr>
+<tr class="odd">
 <td>False</td>
 <td>False</td>
 <td>True</td>
@@ -274,8 +248,7 @@ function KB-Agent(percept) returns an action
 <td>True</td>
 <td>True</td>
 </tr>
-
-<tr>
+<tr class="even">
 <td>False</td>
 <td>True</td>
 <td>True</td>
@@ -284,8 +257,7 @@ function KB-Agent(percept) returns an action
 <td>True</td>
 <td>False</td>
 </tr>
-
-<tr>
+<tr class="odd">
 <td>True</td>
 <td>False</td>
 <td>False</td>
@@ -294,8 +266,7 @@ function KB-Agent(percept) returns an action
 <td>False</td>
 <td>False</td>
 </tr>
-
-<tr>
+<tr class="even">
 <td>True</td>
 <td>True</td>
 <td>False</td>
@@ -306,177 +277,319 @@ function KB-Agent(percept) returns an action
 </tr>
 </tbody>
 </table>
-
 <ul>
 <li>True table enumeration algorithm is sound and complete</li>
-<li>Time: $O(2^n)$, n symbols</li>
-<li>Space: $O(n)$</li>
+<li>Time: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><msup><mn>2</mn><mi>n</mi></msup><mo>)</mo></mrow><annotation encoding="application/x-tex">O(2^n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathrm">2</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight">n</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span></span></span></span>, n symbols</li>
+<li>Space: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span></li>
 </ul>
-
-<p>Standard logical equivalences: α≡β if and only if α |= β and β |= α
-- (α ∧ β) ≡ (β ∧ α) commutativity of ∧
-- (α ∨ β) ≡ (β ∨ α) commutativity of ∨
-- ((α ∧ β) ∧ γ) ≡ (α ∧ (β ∧ γ)) associativity of ∧
-- ((α ∨ β) ∨ γ) ≡ (α ∨ (β ∨ γ)) associativity of ∨
-- ¬(¬α) ≡ α double-negation elimination
-- (α ⇒ β) ≡ (¬β ⇒ ¬α) contraposition
-- (α ⇒ β) ≡ (¬α ∨ β) implication elimination
-- (α ⇔ β) ≡ ((α ⇒ β) ∧ (β ⇒ α)) biconditional elimination
-- ¬(α ∧ β) ≡ (¬α ∨ ¬β) De Morgan
-- ¬(α ∨ β) ≡ (¬α ∧ ¬β) De Morgan
-- (α ∧ (β ∨ γ)) ≡ ((α ∧ β) ∨ (α ∧ γ)) distributivity of ∧ over ∨
-- (α ∨ (β ∧ γ)) ≡ ((α ∨ β) ∧ (α ∨ γ)) distributivity of ∨ over ∧</p>
-
+<p>Standard logical equivalences: &#x3B1;&#x2261;&#x3B2; if and only if &#x3B1; |= &#x3B2; and &#x3B2; |= &#x3B1; - (&#x3B1; &#x2227; &#x3B2;) &#x2261; (&#x3B2; &#x2227; &#x3B1;) commutativity of &#x2227; - (&#x3B1; &#x2228; &#x3B2;) &#x2261; (&#x3B2; &#x2228; &#x3B1;) commutativity of &#x2228; - ((&#x3B1; &#x2227; &#x3B2;) &#x2227; &#x3B3;) &#x2261; (&#x3B1; &#x2227; (&#x3B2; &#x2227; &#x3B3;)) associativity of &#x2227; - ((&#x3B1; &#x2228; &#x3B2;) &#x2228; &#x3B3;) &#x2261; (&#x3B1; &#x2228; (&#x3B2; &#x2228; &#x3B3;)) associativity of &#x2228; - &#xAC;(&#xAC;&#x3B1;) &#x2261; &#x3B1; double-negation elimination - (&#x3B1; &#x21D2; &#x3B2;) &#x2261; (&#xAC;&#x3B2; &#x21D2; &#xAC;&#x3B1;) contraposition - (&#x3B1; &#x21D2; &#x3B2;) &#x2261; (&#xAC;&#x3B1; &#x2228; &#x3B2;) implication elimination - (&#x3B1; &#x21D4; &#x3B2;) &#x2261; ((&#x3B1; &#x21D2; &#x3B2;) &#x2227; (&#x3B2; &#x21D2; &#x3B1;)) biconditional elimination - &#xAC;(&#x3B1; &#x2227; &#x3B2;) &#x2261; (&#xAC;&#x3B1; &#x2228; &#xAC;&#x3B2;) De Morgan - &#xAC;(&#x3B1; &#x2228; &#x3B2;) &#x2261; (&#xAC;&#x3B1; &#x2227; &#xAC;&#x3B2;) De Morgan - (&#x3B1; &#x2227; (&#x3B2; &#x2228; &#x3B3;)) &#x2261; ((&#x3B1; &#x2227; &#x3B2;) &#x2228; (&#x3B1; &#x2227; &#x3B3;)) distributivity of &#x2227; over &#x2228; - (&#x3B1; &#x2228; (&#x3B2; &#x2227; &#x3B3;)) &#x2261; ((&#x3B1; &#x2228; &#x3B2;) &#x2227; (&#x3B1; &#x2228; &#x3B3;)) distributivity of &#x2228; over &#x2227;</p>
 <h2 id="theorem-proving">Theorem proving</h2>
-
 <ul>
 <li>A sentence is <strong>valid</strong> if it is true in all models</li>
-<li>Deduction theorem: for any sentences α and β, α $\models$ β if and only if the sentence (α ⇒ β) is valid.</li>
-<li>A sentence is satisﬁable if it is true in, or satisﬁed by, some model. α |= β if and only if the sentence (α ∧ ¬β) is unsatisﬁable.</li>
-<li>Modus Ponens: whenever any sentences of the form α ⇒ β and α are given, then the sentence β can be inferred.<br />
-$\frac{\alpha \Rightarrow \beta, \beta}{\beta}$</li>
-<li>And-Elimination:
-$\frac{\alpha \wedge \beta}{\alpha}$</li>
-<li>monotonicity: the set of entailed sentences can only increase as information is added to the knowledge base.
-$ if KB \models \alpha then KB \wedge \beta \models \alpha$</li>
-
-<li><p>unit clause, where clause is a disjunction of literals:
-$\frac{l_1 \vee &hellip; \vee l_k , m_1 \vee &hellip; \vee m_n}{l<em>1 \vee &hellip; \vee l</em>{i-1} \vee l_{i+1} \vee m<em>1 \vee \vee m</em>{j-1} \vee m_{j+1} \vee &hellip; \vee m_n}$</p></li>
-
-<li><p>conjunctive normal form:A sentence expressed as a conjunction of clauses</p></li>
-
-<li><p>Resolution Algorithm:
-{% codeblock %}
-function PL-Resolution(KB, a) returns true or false
-clauses = the set of clauses in the CNF representation of KB and not a
-new = {}
-loop do
-  for each Ci, Cj in clauses do
-    resolvents = PL-Resolution(Ci, Cj)
-    If resolvents contains the empty clause return true
-    new = new U resolvents
-  if new belongs to clauses then return false
-  clauses = clauses U new
-{% endcodeblock %}</p></li>
+<li>Deduction theorem: for any sentences &#x3B1; and &#x3B2;, &#x3B1; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x22A8;</mo></mrow><annotation encoding="application/x-tex">\models</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:0.999em;vertical-align:-0.249em;"></span><span class="base textstyle uncramped"><span class="mrel">&#x22A8;</span></span></span></span> &#x3B2; if and only if the sentence (&#x3B1; &#x21D2; &#x3B2;) is valid.</li>
+<li>A sentence is satis&#xFB01;able if it is true in, or satis&#xFB01;ed by, some model. &#x3B1; |= &#x3B2; if and only if the sentence (&#x3B1; &#x2227; &#xAC;&#x3B2;) is unsatis&#xFB01;able.</li>
+<li>Modus Ponens: whenever any sentences of the form &#x3B1; &#x21D2; &#x3B2; and &#x3B1; are given, then the sentence &#x3B2; can be inferred.<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mrow><mi>&#x3B1;</mi><mo>&#x21D2;</mo><mi>&#x3B2;</mi><mo separator="true">,</mo><mi>&#x3B2;</mi></mrow><mrow><mi>&#x3B2;</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{\alpha \Rightarrow \beta, \beta}{\beta}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.9322159999999999em;"></span><span class="strut bottom" style="height:1.4133239999999998em;vertical-align:-0.481108em;"></span><span class="base textstyle uncramped"><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.345em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.05278em;">&#x3B2;</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.44610799999999995em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span><span class="mrel mtight">&#x21D2;</span><span class="mord mathit mtight" style="margin-right:0.05278em;">&#x3B2;</span><span class="mpunct mtight">,</span><span class="mord mathit mtight" style="margin-right:0.05278em;">&#x3B2;</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span></span></span></span></li>
+<li>And-Elimination: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mrow><mi>&#x3B1;</mi><mo>&#x2227;</mo><mi>&#x3B2;</mi></mrow><mrow><mi>&#x3B1;</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{\alpha \wedge \beta}{\alpha}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.9322159999999999em;"></span><span class="strut bottom" style="height:1.277216em;vertical-align:-0.345em;"></span><span class="base textstyle uncramped"><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.345em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.44610799999999995em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span><span class="mbin mtight">&#x2227;</span><span class="mord mathit mtight" style="margin-right:0.05278em;">&#x3B2;</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span></span></span></span></li>
+<li>monotonicity: the set of entailed sentences can only increase as information is added to the knowledge base. $ if KB then KB $</li>
+<li><p>unit clause, where clause is a disjunction of literals: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mrow><msub><mi>l</mi><mn>1</mn></msub><mo>&#x2228;</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo>&#x2228;</mo><msub><mi>l</mi><mi>k</mi></msub><mo separator="true">,</mo><msub><mi>m</mi><mn>1</mn></msub><mo>&#x2228;</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo>&#x2228;</mo><msub><mi>m</mi><mi>n</mi></msub></mrow><mrow><msub><mi>l</mi><mn>1</mn></msub><mo>&#x2228;</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo>&#x2228;</mo><msub><mi>l</mi><mrow><mi>i</mi><mo>&#x2212;</mo><mn>1</mn></mrow></msub><mo>&#x2228;</mo><msub><mi>l</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>&#x2228;</mo><msub><mi>m</mi><mn>1</mn></msub><mo>&#x2228;</mo><mo>&#x2228;</mo><msub><mi>m</mi><mrow><mi>j</mi><mo>&#x2212;</mo><mn>1</mn></mrow></msub><mo>&#x2228;</mo><msub><mi>m</mi><mrow><mi>j</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>&#x2228;</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo>&#x2228;</mo><msub><mi>m</mi><mi>n</mi></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{l_1 \vee ... \vee l_k , m_1 \vee ... \vee m_n}{l_1 \vee ... \vee l_{i-1} \vee l_{i+1} \vee m_1 \vee \vee m_{j-1} \vee m_{j+1} \vee ... \vee m_n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.9322159999999999em;"></span><span class="strut bottom" style="height:1.4745359999999998em;vertical-align:-0.5423199999999999em;"></span><span class="base textstyle uncramped"><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.3449999999999999em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.01968em;">l</span><span class="msupsub"><span class="vlist"><span style="top:0.143em;margin-right:0.07142857142857144em;margin-left:-0.01968em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin mtight">&#x2228;</span><span class="mord mathrm mtight">.</span><span class="mord mathrm mtight">.</span><span class="mord mathrm mtight">.</span><span class="mbin mtight">&#x2228;</span><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.01968em;">l</span><span class="msupsub"><span class="vlist"><span style="top:0.14300000000000002em;margin-right:0.07142857142857144em;margin-left:-0.01968em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle cramped mtight"><span class="mord scriptscriptstyle cramped mtight"><span class="mord mathit mtight">i</span><span class="mbin mtight">&#x2212;</span><span class="mord mathrm mtight">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin mtight">&#x2228;</span><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.01968em;">l</span><span class="msupsub"><span class="vlist"><span style="top:0.14300000000000002em;margin-right:0.07142857142857144em;margin-left:-0.01968em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle cramped mtight"><span class="mord scriptscriptstyle cramped mtight"><span class="mord mathit mtight">i</span><span class="mbin mtight">+</span><span class="mord mathrm mtight">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin mtight">&#x2228;</span><span class="mord mtight"><span class="mord mathit mtight">m</span><span class="msupsub"><span class="vlist"><span style="top:0.143em;margin-right:0.07142857142857144em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin mtight">&#x2228;</span><span class="mord mtight">&#x2228;</span><span class="mord mtight"><span class="mord mathit mtight">m</span><span class="msupsub"><span class="vlist"><span style="top:0.14300000000000002em;margin-right:0.07142857142857144em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle cramped mtight"><span class="mord scriptscriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span><span class="mbin mtight">&#x2212;</span><span class="mord mathrm mtight">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin mtight">&#x2228;</span><span class="mord mtight"><span class="mord mathit mtight">m</span><span class="msupsub"><span class="vlist"><span style="top:0.14300000000000002em;margin-right:0.07142857142857144em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle cramped mtight"><span class="mord scriptscriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span><span class="mbin mtight">+</span><span class="mord mathrm mtight">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin mtight">&#x2228;</span><span class="mord mathrm mtight">.</span><span class="mord mathrm mtight">.</span><span class="mord mathrm mtight">.</span><span class="mbin mtight">&#x2228;</span><span class="mord mtight"><span class="mord mathit mtight">m</span><span class="msupsub"><span class="vlist"><span style="top:0.143em;margin-right:0.07142857142857144em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle cramped mtight"><span class="mord mathit mtight">n</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.44610799999999995em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.01968em;">l</span><span class="msupsub"><span class="vlist"><span style="top:0.143em;margin-right:0.07142857142857144em;margin-left:-0.01968em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin mtight">&#x2228;</span><span class="mord mathrm mtight">.</span><span class="mord mathrm mtight">.</span><span class="mord mathrm mtight">.</span><span class="mbin mtight">&#x2228;</span><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.01968em;">l</span><span class="msupsub"><span class="vlist"><span style="top:0.15122857142857138em;margin-right:0.07142857142857144em;margin-left:-0.01968em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mpunct mtight">,</span><span class="mord mtight"><span class="mord mathit mtight">m</span><span class="msupsub"><span class="vlist"><span style="top:0.143em;margin-right:0.07142857142857144em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin mtight">&#x2228;</span><span class="mord mathrm mtight">.</span><span class="mord mathrm mtight">.</span><span class="mord mathrm mtight">.</span><span class="mbin mtight">&#x2228;</span><span class="mord mtight"><span class="mord mathit mtight">m</span><span class="msupsub"><span class="vlist"><span style="top:0.143em;margin-right:0.07142857142857144em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle cramped mtight"><span class="mord mathit mtight">n</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span></span></span></span></p></li>
+<li>conjunctive normal form:A sentence expressed as a conjunction of clauses</li>
+<li><p>Resolution Algorithm: <figure class="highlight livescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> PL-Resolution(KB, a) returns <span class="literal">true</span> <span class="keyword">or</span> <span class="literal">false</span></div><div class="line">  clauses = the set <span class="keyword">of</span> clauses <span class="keyword">in</span> the CNF representation <span class="keyword">of</span> KB <span class="keyword">and</span> <span class="keyword">not</span> a</div><div class="line">  <span class="keyword">new</span> = {}</div><div class="line">  <span class="keyword">loop</span> <span class="keyword">do</span> </div><div class="line">    <span class="keyword">for</span> each Ci, Cj <span class="keyword">in</span> clauses <span class="keyword">do</span> </div><div class="line">      resolvents = PL-Resolution(Ci, Cj)</div><div class="line">      If resolvents contains the empty clause <span class="keyword">return</span> <span class="literal">true</span></div><div class="line">      <span class="keyword">new</span> = <span class="keyword">new</span> U resolvents</div><div class="line">    <span class="keyword">if</span> <span class="keyword">new</span> belongs <span class="keyword">to</span> clauses <span class="keyword">then</span> <span class="keyword">return</span> <span class="literal">false</span></div><div class="line">    clauses = clauses U <span class="keyword">new</span></div></pre></td></tr></table></figure></p></li>
 </ul>
-
 <h2 id="horn-clauses">Horn clauses</h2>
-
 <h3 id="forward-chaining">Forward chaining</h3>
 
-    </div>
+                
+
+                <hr>
+                
+                <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/amazon-ceo-letter-2016/" data-toggle="tooltip" data-placement="top" title="Amazon CEO letter 2016">&larr; Previous Post</a>
+                        </li>
+                    
+                    
+                        <li class="next">
+                            <a href="/intro-to-xpath/" data-toggle="tooltip" data-placement="top" title="Intro to xpath">Next Post &rarr;</a>
+                        </li>
+                    
+                </ul>
+
+                
+                
+                
+
+                
+                
+                
+
+                
+                
+                    <div class="comment">
+                        <div id="disqus_thread" class="disqus-thread"></div>
+                    </div>
+                
+                
+            </div>
+            
+            
+            
 
     
-    
-<div class="post-copyright">
-  <p class="copyright-item">
-    <span class="item-title">文章作者</span>
-    <span class="item-content">cixuuz</span>
-  </p>
-  <p class="copyright-item">
-    <span class="item-title">上次更新</span>
-    <span class="item-content">2017-04-16</span>
-  </p>
-  
-  <p class="copyright-item">
-    <span class="item-title">许可协议</span>
-    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
-  </p>
-</div>
-
-    
-    
-
-    <footer class="post-footer">
-      <div class="post-tags">
-          
-          <a href="/tags/ai/">AI</a>
-          
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#knowledge-base"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">knowledge base</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#generic-kb-based-agent"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Generic KB-Based Agent</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#logic"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">logic</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#propositional-logic"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Propositional logic:</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#truth-tables-model-checking"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">Truth tables (model checking)</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#theorem-proving"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">Theorem proving</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#horn-clauses"><span class="toc-nav-number">4.3.</span> <span class="toc-nav-text">Horn clauses</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#forward-chaining"><span class="toc-nav-number">4.3.1.</span> <span class="toc-nav-text">Forward chaining</span></a></li></ol></li></ol></li></ol>
+        
         </div>
-
-      
-      <nav class="post-nav">
-        
-          <a class="prev" href="/post/amazon-ceo-letter-2016/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">Amazon CEO letter 2016</span>
-            <span class="prev-text nav-mobile">上一篇</span>
-          </a>
-        
-          <a class="next" href="/post/intro-to-xpath/">
-            <span class="next-text nav-default">Intro to xpath</span>
-            <span class="prev-text nav-mobile">下一篇</span>
-            <i class="iconfont icon-right"></i>
-          </a>
-      </nav>
-    </footer>
-  </article>
-        </div>
-        
-  
-
-  
-
-  
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="social-links">
-      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
-      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
-      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
-      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
-      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
-      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
-      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
-      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
-      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
-      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
-      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
-      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
-      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
-  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
-</div>
-
-<div class="copyright">
-  <span class="power-by">
-    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
-  </span>
-  <span class="division">|</span>
-  <span class="theme-info">
-    主题 - 
-    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
-  </span>
-
-  
-
-  <span class="copyright-year">
-    &copy; 
+      </aside>
     
-      2016 - 
-    2018
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">cixuuz</span>
-  </span>
-</div>
-    </footer>
 
-    <div class="back-to-top" id="back-to-top">
-      <i class="iconfont icon-up"></i>
+                
+            
+            <div class="
+                col-lg-4 col-lg-offset-1
+                col-md-2 col-md-offset-1
+                sidebar-container">
+
+                
+                
+                <section>
+                    
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#AI" title="AI">AI</a>
+                        
+                    </div>
+                </section>
+                
+
+                
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="http://zhyoulun.com/" target="_blank">Youlun</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
     </div>
-  </div>
-  
-<script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
-<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
-  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
-<script type="text/javascript" src="/dist/even.min.js?v=2.7.0"></script>
+</article>
 
 
+
+
+
+<script type="text/javascript">
+     
+    var disqus_shortname = "cixuuz";
+    var disqus_identifier = "http://cixuuz.github.io/ai-logical-agents/";
+    var disqus_url = "http://cixuuz.github.io/ai-logical-agents/";
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+
+
+
+
+
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: 'ℬ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+     
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    
+    
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+                
+                
+
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/cixuuz">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://www.linkedin.com/in/chent">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Chet 2017 
+                    <br>
+                    Theme by <a href="http://huangxuan.me">Hux</a> 
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span> 
+                    re-Ported by <a href="http://beantech.org">BeanTech</a> | 
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="91px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=YenYuHsuan&repo=hexo-theme-beantech&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script src="/js/jquery.min.js"></script>
+
+
+<script src="/js/bootstrap.min.js"></script>
+
+
+<script src="/js/hux-blog.min.js"></script>
+
+
+
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        async("http://cixuuz.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+<script>
+    
+    var _gaId = 'UA-93897188-1';
+    var _gaDomain = 'cixuuz.github.io';
+
+    
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+
+
+
+
+
+
+
+
+	<a id="rocket" href="#top" class=""></a>
+	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+
+<img src="http://cixuuz.github.io/img/icon_wechat.png" width="0" height="0" />
 
 
 </body>
+
 </html>

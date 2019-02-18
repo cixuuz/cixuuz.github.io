@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Chen Tong</title>
+  <title>Chen Tong&#39;s Ideas and Writings</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,60 +16,42 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="cixuuz" />
-  <meta name="description" content="Hugo theme even example site." />
-  <meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="Chen Tong" /><meta name="description" content="Hugo theme even example site." /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.32.1" />
+<meta name="generator" content="Hugo 0.54.0 with even 4.0.0" />
 
 
-<link rel="canonical" href="http://localhost:1313/" />
-<link href="http://localhost:1313/index.xml" rel="alternate" type="application/rss+xml" title="Chen Tong" />
-  <link href="http://localhost:1313/index.xml" rel="feed" type="application/rss+xml" title="Chen Tong" />
-
+<link rel="canonical" href="https://cixuuz.github.io/" />
+  <link href="https://cixuuz.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Chen Tong&#39;s Ideas and Writings" />
+  <link href="https://cixuuz.github.io/index.xml" rel="feed" type="application/rss+xml" title="Chen Tong&#39;s Ideas and Writings" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="icon" href="/favicon.ico" />
 <link rel="manifest" href="/manifest.json">
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-
-
-
-<link href="/dist/even.min.css?v=2.7.0" rel="stylesheet">
-<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
-
-<meta property="og:title" content="Chen Tong" />
+<meta property="og:title" content="Chen Tong&#39;s Ideas and Writings" />
 <meta property="og:description" content="Hugo theme even example site." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="http://localhost:1313/" />
+<meta property="og:url" content="https://cixuuz.github.io/" />
 
+<meta property="og:updated_time" content="2017-10-18T00:00:00&#43;00:00"/>
 
-
-<meta property="og:updated_time" content="2017-09-22T00:00:00&#43;00:00"/>
-
-
-
-
-
-
-
-
-
-
-<meta itemprop="name" content="Chen Tong">
+<meta itemprop="name" content="Chen Tong&#39;s Ideas and Writings">
 <meta itemprop="description" content="Hugo theme even example site.">
 
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Chen Tong"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Chen Tong&#39;s Ideas and Writings"/>
 <meta name="twitter:description" content="Hugo theme even example site."/>
 
 <!--[if lte IE 9]>
@@ -103,8 +85,6 @@
         <li class="mobile-menu-item">Tags</li>
       </a><a href="/categories/">
         <li class="mobile-menu-item">Categories</li>
-      </a><a href="/about/">
-        <li class="mobile-menu-item">About</li>
       </a>
   </ul>
 </nav>
@@ -124,8 +104,6 @@
         <a class="menu-item-link" href="/tags/">Tags</a>
       </li><li class="menu-item">
         <a class="menu-item-link" href="/categories/">Categories</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/about/">About</a>
       </li>
   </ul>
 </nav>
@@ -134,268 +112,124 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          
-  <section id="posts" class="posts">
-    
-    
-    
-      <article class="post">
+          <section id="posts" class="posts">
+    <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/python-pandas/">python pandas</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/system_design_web_crawler/">System Design - Web Crawler</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2017-09-22 </span>
-      
+      <span class="post-time"> 2017-10-18 </span>
       
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      aggragate in pandas https://pythonforbiologists.com/when-to-use-aggregatefiltertransform-in-pandas/
+      Guideline: The Crawler Service processes each page link by doing the following in a loop: 1. Takes the top ranked page link to crawl 2. Checks crawled_links in the NoSQL Database for an entry with a similar page signature 3. If we have a similar page, reduces the priority of the page link 1. This prevents us from getting into a cycle; Continue 2. Else, crawls the link - Adds a job to the Reverse Index Service queue to generate a reverse index - Adds a job to the Document Service queue to generate a static title and snippet - Generates the page signature - Removes the link from links_to_crawl in the NoSQL Database - Inserts the page link and signature to crawled_links in the NoSQL Database
     </div>
     <div class="read-more">
-      <a href="/post/python-pandas/" class="read-more-link">阅读更多</a>
+      <a href="/post/system_design_web_crawler/" class="read-more-link">Read more..</a>
     </div>
   </div>
 </article>
 
-    
-      <article class="post">
+    <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/java-jvm/">JVM</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/lcs_1017/">leetcode summary 10/17</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2017-09-21 </span>
-      
+      <span class="post-time"> 2017-10-17 </span>
       
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      make a JVM
+      33. Search in Rotated Sorted Array https://leetcode.com/problems/search-in-rotated-sorted-array/discuss/ 
+341. Flatten Nested List Iterator  generator, sepecific to this question stack, interative https://leetcode.com/problems/flatten-nested-list-iterator/discuss/  155. Min Stack https://discuss.leetcode.com/topic/7020/java-accepted-solution-using-one-stack
     </div>
     <div class="read-more">
-      <a href="/post/java-jvm/" class="read-more-link">阅读更多</a>
+      <a href="/post/lcs_1017/" class="read-more-link">Read more..</a>
     </div>
   </div>
 </article>
 
-    
-      <article class="post">
+    <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/distributed_system/">Path to Distributed System</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/lcs_1016/">leetcode summary 10/16</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2017-09-21 </span>
-      
+      <span class="post-time"> 2017-10-16 </span>
       
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      Google papers(GFS/BigTable/Spanner/F1)
-Consensus algorithms(Raft/Paxos)
-Distributed computing sys (spark/dremel/presto)
-newSql(tiDB)
+       138. Copy List with Random Pointer  301. Remove Invalid Parentheses  
     </div>
     <div class="read-more">
-      <a href="/post/distributed_system/" class="read-more-link">阅读更多</a>
+      <a href="/post/lcs_1016/" class="read-more-link">Read more..</a>
     </div>
   </div>
 </article>
 
-    
-      <article class="post">
+    <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/spark-install/">install spark</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/lcs_1015/">leetcode summary 10/15</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2017-09-21 </span>
-      
+      <span class="post-time"> 2017-10-15 </span>
       
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      install spark https://www.davidadrian.cc/posts/2017/08/how-to-spark-cluster/
+       692. Top K Frequent Words  Python3 sorting using functools.total_ordering, implements eq and le   98. Validate Binary Search Tree  121. Best Time to Buy and Sell Stock  get min price before current price   122. Best Time to Buy and Sell Stock II  123. Best Time to Buy and Sell Stock III 188. Best Time to Buy and Sell Stock IV  309. Best Time to Buy and Sell Stock with Cooldown  
     </div>
     <div class="read-more">
-      <a href="/post/spark-install/" class="read-more-link">阅读更多</a>
+      <a href="/post/lcs_1015/" class="read-more-link">Read more..</a>
     </div>
   </div>
 </article>
 
-    
-      <article class="post">
+    <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/sql-newsql/">newSQL</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/lcs_1014/">leetcode summary 10/14</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2017-09-21 </span>
-      
+      <span class="post-time"> 2017-10-14 </span>
       
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      newSQL
+       76. Minimum Window Substring  242. Valid Anagram  sort hashmap   139. Word Break  memo s[i:] dp   49. Group Anagrams  387. First Unique Character in a String  283. Move Zeroes  
     </div>
     <div class="read-more">
-      <a href="/post/sql-newsql/" class="read-more-link">阅读更多</a>
+      <a href="/post/lcs_1014/" class="read-more-link">Read more..</a>
     </div>
   </div>
 </article>
 
-    
-      <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/performance_reviews/">Performance_reviews</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2017-09-15 </span>
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      How do Individual Contributors Get Stuck?
-    </div>
-    <div class="read-more">
-      <a href="/post/performance_reviews/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
-    
-      <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/ds_summary/">Data Science Path</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2017-09-13 </span>
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Machine Learning Machine Learning Supervised Learning Classification (qualitative) K-NN Logistic Regression Neural Networks error analysis skewed data F1 score = 2PR/(P+R) accuracy precision recall learning curve SVM Kernal Parameters C sigma Regression (quantitative) Linear Regression validation sensitivity compactness Ensemble Learning decrease variance (bagging), bias (boosting), or improve predictions (stacking). The basic motivation of sequential methods is to exploit the dependence between the base learners. The basic motivation of parallel methods
-    </div>
-    <div class="read-more">
-      <a href="/post/ds_summary/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
-    
-      <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/ds_metrics/">Metrics selection</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2017-09-13 </span>
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Definitions  A type I error occurs when the null hypothesis (H0) is true, but is rejected. Also known as false positive, where positive means rejection of a null hypothesis.
- A type II error occurs when the null hypothesis is false, but erroneously fails to be rejected. Also called as false negative, where negative refers to retaining a null hypothesis.
- TPR (True Positive Rate) = # True positives / # positives = Recall = \( TP \over (TP+FN) \)
-    </div>
-    <div class="read-more">
-      <a href="/post/ds_metrics/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
-    
-      <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/english-preview/">English Creating a New Theme</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2017-08-31 </span>
-      <div class="post-category">
-          
-            <a href="/categories/english/"> English </a>
-          
-        </div>
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      <h2 id="introduction">Introduction</h2>
-
-<p>This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&rsquo;t cover using CSS to style your theme.</p>
-
-<p></p>
-    </div>
-    <div class="read-more">
-      <a href="/post/english-preview/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
-    
-      <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/japanese-preview/">日本語 敬語体系</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2017-08-30 </span>
-      <div class="post-category">
-          
-            <a href="/categories/%E6%97%A5%E6%9C%AC%E8%AA%9E/"> 日本語 </a>
-          
-        </div>
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      <blockquote>
-<p>日本語の敬語体系は、一般に、大きく尊敬語・謙譲語・丁寧語に分類される。文化審議会国語分科会は、2007年2月に「敬語の指針」を答申し、これに丁重語および美化語を含めた5分類を示している。</p>
-</blockquote>
-
-<h1 id="尊敬語">尊敬語</h1>
-
-<p>尊敬語は、動作の主体を高めることで、主体への敬意を表す言い方である。動詞に「お（ご）～になる」を付けた形、また、助動詞「（ら）れる」を付けた形などが用いられる。たとえば、動詞「取る」の尊敬形として、「（先生が）お取りになる」「（先生が）取られる」などが用いられる。</p>
-
-<p></p>
-    </div>
-    <div class="read-more">
-      <a href="/post/japanese-preview/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
-    
-  </section>
+    </section>
   
   <nav class="pagination">
-      <a class="prev" href="/">
+    <a class="prev" href="/">
         <i class="iconfont icon-left"></i>
-        <span class="prev-text">上一页</span>
+        <span class="prev-text">Prev</span>
       </a>
-    
-      <a class="next" href="/page/3/">
-        <span class="next-text">下一页</span>
+    <a class="next" href="/page/3/">
+        <span class="next-text">Next</span>
         <i class="iconfont icon-right"></i>
       </a>
   </nav>
-
         </div>
         
+
       </div>
     </main>
 
     <footer id="footer" class="footer">
       <div class="social-links">
-      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="mailto:nychent@gmail.com" class="iconfont icon-email" title="email"></a>
       <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
       <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
       <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
@@ -408,16 +242,18 @@ newSql(tiDB)
       <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
       <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
       <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
-  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+      <a href="http://localhost:1313" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="http://localhost:1313" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://cixuuz.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
 </div>
 
 <div class="copyright">
   <span class="power-by">
-    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
   </span>
   <span class="division">|</span>
   <span class="theme-info">
-    主题 - 
+    Theme - 
     <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
   </span>
 
@@ -425,13 +261,12 @@ newSql(tiDB)
 
   <span class="copyright-year">
     &copy; 
-    
-      2016 - 
-    2018
+    2017 - 
+    2019
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>
-    <span class="author">cixuuz</span>
+    <span class="author">Chen Tong</span>
   </span>
 </div>
     </footer>
@@ -441,11 +276,14 @@ newSql(tiDB)
     </div>
   </div>
   
-<script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
-<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
-  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
-<script type="text/javascript" src="/dist/even.min.js?v=2.7.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
 
 
 

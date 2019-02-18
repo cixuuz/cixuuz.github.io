@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Finance on Chen Tong</title>
-    <link>http://localhost:1313/tags/finance/</link>
-    <description>Recent content in Finance on Chen Tong</description>
+    <title>finance on Chen Tong&#39;s Ideas and Writings</title>
+    <link>https://cixuuz.github.io/tags/finance/</link>
+    <description>Recent content in finance on Chen Tong&#39;s Ideas and Writings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 25 Apr 2017 11:23:18 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/finance/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://cixuuz.github.io/tags/finance/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Types of Financial Statements</title>
-      <link>http://localhost:1313/post/four-types-financial-statements/</link>
+      <link>https://cixuuz.github.io/post/four-types-financial-statements/</link>
       <pubDate>Tue, 25 Apr 2017 11:23:18 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/four-types-financial-statements/</guid>
+      <guid>https://cixuuz.github.io/post/four-types-financial-statements/</guid>
       <description>From
 Statement of Financial Position Statement of Financial Position, also known as the Balance Sheet, presents the financial position of an entity at a given date. It is comprised of the following three elements:
 Assets: Something a business owns or controls (e.g. cash, inventory, plant and machinery, etc) Liabilities: Something a business owes to someone (e.g. creditors, bank loans, etc) Equity: What the business owes to its owners. This represents the amount of capital that remains in the business after its assets are used to pay off its outstanding liabilities.</description>

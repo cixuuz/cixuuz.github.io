@@ -1,208 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>JSON是一种格式，基于文本，优于轻量，用于交换数据 - Chen Tong</title>
-  <meta name="renderer" content="webkit" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword"  content="data">
+    <link rel="shortcut icon" href="/img/ironman-draw.png">
+    
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <title>
+        
+          JSON是一种格式，基于文本，优于轻量，用于交换数据 - cixuuz
+        
+    </title>
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="canonical" href="http://cixuuz.github.io/2017-03-30-json/">
 
-<meta name="theme-color" content="#f8f5ec" />
-<meta name="msapplication-navbutton-color" content="#f8f5ec">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
 
+     
+    <link rel="stylesheet" href="/css/beantech.min.css">
+    
+    
+    <link rel="stylesheet" href="/css/highlight.css">
 
-<meta name="author" content="cixuuz" />
-  <meta name="description" content="JSON是一种格式，基于文本，优于轻量，用于交换数据 规范 http://json.org/ object {} { members } members pair pair , members pair string : value array [] [ elements ] elements value value , elements value string number object array true false null string &amp;rdquo;&amp;rdquo; &amp;rdquo; chars &amp;ldquo; chars char char chars" />
+    <link rel="stylesheet" href="/css/widget.css">
 
-  <meta name="keywords" content="Hugo, theme, even" />
+    <link rel="stylesheet" href="/css/rocket.css">
 
+    <link rel="stylesheet" href="/css/signature.css">
 
+    <link rel="stylesheet" href="/css/toc.css">
 
-
-
-
-<meta name="generator" content="Hugo 0.32.1" />
-
-
-<link rel="canonical" href="http://localhost:1313/post/2017-03-30-json/" />
-
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="icon" href="/favicon.ico" />
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-
-
-
-
+    
+    
+    
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
 
-
-<link href="/dist/even.min.css?v=2.7.0" rel="stylesheet">
-<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
-
-<meta property="og:title" content="JSON是一种格式，基于文本，优于轻量，用于交换数据" />
-<meta property="og:description" content="JSON是一种格式，基于文本，优于轻量，用于交换数据 规范 http://json.org/ object {} { members } members pair pair , members pair string : value array [] [ elements ] elements value value , elements value string number object array true false null string &rdquo;&rdquo; &rdquo; chars &ldquo; chars char char chars" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/post/2017-03-30-json/" />
+    
 
 
+    
+    
+    
 
-<meta property="article:published_time" content="2017-03-30T16:05:06&#43;00:00"/>
-
-<meta property="article:modified_time" content="2017-03-30T16:05:06&#43;00:00"/>
-
-
-
-
-
-
-
-
-
-
-
-<meta itemprop="name" content="JSON是一种格式，基于文本，优于轻量，用于交换数据">
-<meta itemprop="description" content="JSON是一种格式，基于文本，优于轻量，用于交换数据 规范 http://json.org/ object {} { members } members pair pair , members pair string : value array [] [ elements ] elements value value , elements value string number object array true false null string &rdquo;&rdquo; &rdquo; chars &ldquo; chars char char chars">
-
-
-<meta itemprop="datePublished" content="2017-03-30T16:05:06&#43;00:00" />
-<meta itemprop="dateModified" content="2017-03-30T16:05:06&#43;00:00" />
-<meta itemprop="wordCount" content="114">
-
-
-
-<meta itemprop="keywords" content="" />
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="JSON是一种格式，基于文本，优于轻量，用于交换数据"/>
-<meta name="twitter:description" content="JSON是一种格式，基于文本，优于轻量，用于交换数据 规范 http://json.org/ object {} { members } members pair pair , members pair string : value array [] [ elements ] elements value value , elements value string number object array true false null string &rdquo;&rdquo; &rdquo; chars &ldquo; chars char char chars"/>
-
-<!--[if lte IE 9]>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
-<![endif]-->
-
-<!--[if lt IE 9]>
-  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-<![endif]-->
-
+    
+    <script></script>
 </head>
-<body>
-  <div id="mobile-navbar" class="mobile-navbar">
-  <div class="mobile-header-logo">
-    <a href="/" class="logo">Even</a>
-  </div>
-  <div class="mobile-navbar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
-<nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list">
-    <a href="/">
-        <li class="mobile-menu-item">Home</li>
-      </a><a href="/post/">
-        <li class="mobile-menu-item">Archives</li>
-      </a><a href="/tags/">
-        <li class="mobile-menu-item">Tags</li>
-      </a><a href="/categories/">
-        <li class="mobile-menu-item">Categories</li>
-      </a><a href="/about/">
-        <li class="mobile-menu-item">About</li>
-      </a>
-  </ul>
+
+
+
+<body ontouchstart="">
+	
+
+<style type="text/css">
+    header.intro-header{
+        
+            background-image: url('null')
+             
+        
+    }
+    
+</style>
+
+<header class="intro-header" >
+    
+    <div id="signature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                        </div>
+                        <h1>JSON是一种格式，基于文本，优于轻量，用于交换数据</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            Posted by Chet on
+                            2017-03-30
+                        </span>
+                    </div>
+                
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+	
+    
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">cixuuz</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">about</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archive/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
 </nav>
-  <div class="container" id="mobile-panel">
-    <header id="header" class="header">
-        <div class="logo-wrapper">
-  <a href="/" class="logo">Even</a>
-</div>
-
-<nav class="site-navbar">
-  <ul id="menu" class="menu">
-    <li class="menu-item">
-        <a class="menu-item-link" href="/">Home</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/post/">Archives</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/tags/">Tags</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/categories/">Categories</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/about/">About</a>
-      </li>
-  </ul>
-</nav>
-    </header>
-
-    <main id="main" class="main">
-      <div class="content-wrapper">
-        <div id="content" class="content">
-          <article class="post">
+<script>
     
-    <header class="post-header">
-      <h1 class="post-title">JSON是一种格式，基于文本，优于轻量，用于交换数据</h1>
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
 
-      <div class="post-meta">
-        <span class="post-time"> 2017-03-30 </span>
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
         
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
         
-        
-      </div>
-    </header>
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
 
     
     
-<div class="post-toc" id="post-toc">
-  <h2 class="post-toc-title">文章目录</h2>
-  
-  <div class="post-toc-content always-active">
-    
-  </div>
-</div>
 
-    
-    <div class="post-content">
-      <ul>
-<li><a href="https://segmentfault.com/a/1190000008832185">JSON是一种格式，基于文本，优于轻量，用于交换数据</a></li>
-<li>规范 <a href="http://json.org/">http://json.org/</a></li>
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <ul>
+<li><a href="https://segmentfault.com/a/1190000008832185" target="_blank" rel="external">JSON&#x662F;&#x4E00;&#x79CD;&#x683C;&#x5F0F;&#xFF0C;&#x57FA;&#x4E8E;&#x6587;&#x672C;&#xFF0C;&#x4F18;&#x4E8E;&#x8F7B;&#x91CF;&#xFF0C;&#x7528;&#x4E8E;&#x4EA4;&#x6362;&#x6570;&#x636E;</a></li>
+<li>&#x89C4;&#x8303; http://json.org/</li>
 <li>object
-
 <ul>
 <li>{}</li>
 <li>{ members }</li>
 </ul></li>
 <li>members
-
 <ul>
 <li>pair</li>
 <li>pair , members</li>
 </ul></li>
 <li>pair
-
 <ul>
 <li>string : value</li>
 </ul></li>
 <li>array
-
 <ul>
 <li>[]</li>
 <li>[ elements ]</li>
 </ul></li>
 <li>elements
-
 <ul>
 <li>value</li>
 <li>value , elements</li>
 </ul></li>
 <li>value
-
 <ul>
 <li>string</li>
 <li>number</li>
@@ -213,70 +235,56 @@
 <li>null</li>
 </ul></li>
 <li>string
-
 <ul>
-<li>&rdquo;&rdquo;</li>
-<li>&rdquo; chars &ldquo;</li>
+<li>&#x201C;&#x201D;</li>
+<li>&quot; chars &quot;</li>
 </ul></li>
 <li>chars
-
 <ul>
 <li>char</li>
 <li>char chars</li>
 </ul></li>
 <li>char
-
 <ul>
-<li>any-Unicode-character-except-&ldquo;-or--or-control-character</li>
-<li>\&rdquo;</li>
-<li><br /></li>
-<li>\/</li>
-<li>\b</li>
-<li>\f</li>
-<li>\n</li>
-<li>\r</li>
-<li>\t</li>
-<li>\u four-hex-digits</li>
+<li>any-Unicode-character-except-&#x201C;-or--or-control-character</li>
+<li>&quot;</li>
+<li>\</li>
+<li>/</li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li>our-hex-digits</li>
 </ul></li>
 <li>number
-
 <ul>
 <li>int</li>
 <li>int frac</li>
 <li>int exp</li>
 <li>int frac exp</li>
 </ul></li>
-
-<li><p>int</p>
-
+<li>int
 <ul>
 <li>digit</li>
 <li>digit1-9 digits</li>
 <li>-digit</li>
 <li>-digit1-9 digits</li>
 </ul></li>
-
-<li><p>frac </p>
-
+<li>frac&#xA0;
 <ul>
 <li>[0]. digits</li>
 </ul></li>
-
-<li><p>exp</p>
-
+<li>exp
 <ul>
 <li>e digits</li>
 </ul></li>
-
-<li><p>digits</p>
-
+<li>digits
 <ul>
 <li>digit</li>
 <li>digit digits</li>
 </ul></li>
-
-<li><p>e</p>
-
+<li>e
 <ul>
 <li>e</li>
 <li>e+</li>
@@ -287,115 +295,295 @@
 </ul></li>
 </ul>
 
-    </div>
+                
+
+                <hr>
+                
+                <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/2017-03-30-python-profiling/" data-toggle="tooltip" data-placement="top" title="python profiling and optimize">&larr; Previous Post</a>
+                        </li>
+                    
+                    
+                        <li class="next">
+                            <a href="/2017-03-28-All-about-hardware/" data-toggle="tooltip" data-placement="top" title="SSD vs HDD的性能对比.讲解了为什么SSD的读写性能高于HDD">Next Post &rarr;</a>
+                        </li>
+                    
+                </ul>
+
+                
+                
+                
+
+                
+                
+                
+
+                
+                
+                    <div class="comment">
+                        <div id="disqus_thread" class="disqus-thread"></div>
+                    </div>
+                
+                
+            </div>
+            
+            
+            
 
     
-    
-<div class="post-copyright">
-  <p class="copyright-item">
-    <span class="item-title">文章作者</span>
-    <span class="item-content">cixuuz</span>
-  </p>
-  <p class="copyright-item">
-    <span class="item-title">上次更新</span>
-    <span class="item-content">2017-03-30</span>
-  </p>
-  
-  <p class="copyright-item">
-    <span class="item-title">许可协议</span>
-    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
-  </p>
-</div>
-
-    
-    
-
-    <footer class="post-footer">
-      
-
-      
-      <nav class="post-nav">
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
         
-          <a class="prev" href="/post/2017-03-30-python-profiling/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">python profiling and optimize</span>
-            <span class="prev-text nav-mobile">上一篇</span>
-          </a>
+          <ol class="nav">none</ol>
         
-          <a class="next" href="/post/2017-03-28-all-about-hardware/">
-            <span class="next-text nav-default">SSD vs HDD的性能对比.讲解了为什么SSD的读写性能高于HDD</span>
-            <span class="prev-text nav-mobile">下一篇</span>
-            <i class="iconfont icon-right"></i>
-          </a>
-      </nav>
-    </footer>
-  </article>
         </div>
-        
-  
-
-  
-
-  
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="social-links">
-      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
-      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
-      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
-      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
-      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
-      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
-      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
-      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
-      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
-      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
-      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
-      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
-      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
-  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
-</div>
-
-<div class="copyright">
-  <span class="power-by">
-    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
-  </span>
-  <span class="division">|</span>
-  <span class="theme-info">
-    主题 - 
-    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
-  </span>
-
-  
-
-  <span class="copyright-year">
-    &copy; 
+      </aside>
     
-      2016 - 
-    2018
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">cixuuz</span>
-  </span>
-</div>
-    </footer>
 
-    <div class="back-to-top" id="back-to-top">
-      <i class="iconfont icon-up"></i>
+                
+            
+            <div class="
+                col-lg-4 col-lg-offset-1
+                col-md-2 col-md-offset-1
+                sidebar-container">
+
+                
+                
+                <section>
+                    
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                    </div>
+                </section>
+                
+
+                
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="http://zhyoulun.com/" target="_blank">Youlun</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
     </div>
-  </div>
-  
-<script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
-<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
-  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
-<script type="text/javascript" src="/dist/even.min.js?v=2.7.0"></script>
+</article>
 
 
+
+
+
+<script type="text/javascript">
+     
+    var disqus_shortname = "cixuuz";
+    var disqus_identifier = "http://cixuuz.github.io/2017-03-30-json/";
+    var disqus_url = "http://cixuuz.github.io/2017-03-30-json/";
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+
+
+
+
+
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: 'ℬ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+     
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    
+    
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+                
+                
+
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/cixuuz">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://www.linkedin.com/in/chent">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Chet 2017 
+                    <br>
+                    Theme by <a href="http://huangxuan.me">Hux</a> 
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span> 
+                    re-Ported by <a href="http://beantech.org">BeanTech</a> | 
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="91px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=YenYuHsuan&repo=hexo-theme-beantech&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script src="/js/jquery.min.js"></script>
+
+
+<script src="/js/bootstrap.min.js"></script>
+
+
+<script src="/js/hux-blog.min.js"></script>
+
+
+
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        async("http://cixuuz.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+<script>
+    
+    var _gaId = 'UA-93897188-1';
+    var _gaDomain = 'cixuuz.github.io';
+
+    
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+
+
+
+
+
+
+
+
+	<a id="rocket" href="#top" class=""></a>
+	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+
+<img src="http://cixuuz.github.io/img/icon_wechat.png" width="0" height="0" />
 
 
 </body>
+
 </html>

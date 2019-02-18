@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Chen Tong</title>
+  <title>Chen Tong&#39;s Ideas and Writings</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,60 +16,42 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="cixuuz" />
-  <meta name="description" content="Hugo theme even example site." />
-  <meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="Chen Tong" /><meta name="description" content="Hugo theme even example site." /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.32.1" />
+<meta name="generator" content="Hugo 0.54.0 with even 4.0.0" />
 
 
-<link rel="canonical" href="http://localhost:1313/" />
-<link href="http://localhost:1313/index.xml" rel="alternate" type="application/rss+xml" title="Chen Tong" />
-  <link href="http://localhost:1313/index.xml" rel="feed" type="application/rss+xml" title="Chen Tong" />
-
+<link rel="canonical" href="https://cixuuz.github.io/" />
+  <link href="https://cixuuz.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Chen Tong&#39;s Ideas and Writings" />
+  <link href="https://cixuuz.github.io/index.xml" rel="feed" type="application/rss+xml" title="Chen Tong&#39;s Ideas and Writings" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="icon" href="/favicon.ico" />
 <link rel="manifest" href="/manifest.json">
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-
-
-
-<link href="/dist/even.min.css?v=2.7.0" rel="stylesheet">
-<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
-
-<meta property="og:title" content="Chen Tong" />
+<meta property="og:title" content="Chen Tong&#39;s Ideas and Writings" />
 <meta property="og:description" content="Hugo theme even example site." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="http://localhost:1313/" />
+<meta property="og:url" content="https://cixuuz.github.io/" />
 
+<meta property="og:updated_time" content="2017-06-25T00:00:00&#43;00:00"/>
 
-
-<meta property="og:updated_time" content="2017-04-05T19:03:18&#43;00:00"/>
-
-
-
-
-
-
-
-
-
-
-<meta itemprop="name" content="Chen Tong">
+<meta itemprop="name" content="Chen Tong&#39;s Ideas and Writings">
 <meta itemprop="description" content="Hugo theme even example site.">
 
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Chen Tong"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Chen Tong&#39;s Ideas and Writings"/>
 <meta name="twitter:description" content="Hugo theme even example site."/>
 
 <!--[if lte IE 9]>
@@ -103,8 +85,6 @@
         <li class="mobile-menu-item">Tags</li>
       </a><a href="/categories/">
         <li class="mobile-menu-item">Categories</li>
-      </a><a href="/about/">
-        <li class="mobile-menu-item">About</li>
       </a>
   </ul>
 </nav>
@@ -124,8 +104,6 @@
         <a class="menu-item-link" href="/tags/">Tags</a>
       </li><li class="menu-item">
         <a class="menu-item-link" href="/categories/">Categories</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/about/">About</a>
       </li>
   </ul>
 </nav>
@@ -134,96 +112,124 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          
-  <section id="posts" class="posts">
-    
-    
-    
-      <article class="post">
+          <section id="posts" class="posts">
+    <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/2017-04-05-remote-debug-using-pycharm-on-aws-ec2/">remote debug using pycharm on AWS ec2</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/lc_180/">178. Rank Scores</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2017-04-05 </span>
-      
+      <span class="post-time"> 2017-06-25 </span>
       
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      http://www.jianshu.com/p/9b362cdee2ab
+      178. Rank Scores Solution 1 SELECT Score, @rank := @rank + (@prev &lt;&gt; (@prev := Score)) Rank FROM Scores, (SELECT @rank := 0, @prev := -1) init ORDER BY Score desc solution 2 SELECT Score, (SELECT COUNT(DISTINCT Score) FROM Scores as s1 WHERE s1.Score &gt;= s2.Score) As rank FROM Scores as s2 ORDER BY rank; 一直不知道还能这么嵌套写法 Summary
     </div>
     <div class="read-more">
-      <a href="/post/2017-04-05-remote-debug-using-pycharm-on-aws-ec2/" class="read-more-link">阅读更多</a>
+      <a href="/post/lc_180/" class="read-more-link">Read more..</a>
     </div>
   </div>
 </article>
 
-    
-      <article class="post">
+    <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/2017-03-31-python-tips/">python tips</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/ai-learning-from-obs/">AI: Learning from observations</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2017-03-31 </span>
-      
+      <span class="post-time"> 2017-05-07 </span>
       
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      https://zhuanlan.zhihu.com/p/26099601 2).函数的传值到底是值传递还是引用传递，要分情况 a.不可变参数用值传递： 像整数和字符串这样的不可变对象，是通过拷贝进行传递的，因为你无论
+      Decision tree learning Problem: decide whether to wait for a table at a restaurant, based on the following attributes:
+ Alternate: is there an alternative restaurant nearby? Bar: is there a comfortable bar area to wait in? Fri/Sat: is today Friday or Saturday? Hungry: are we hungry? Patrons: number of people in the restaurant (None, Some, Full) Price: price range ($, $$, $$$) Raining: is it raining outside? Reservation: have we made a reservation?
     </div>
     <div class="read-more">
-      <a href="/post/2017-03-31-python-tips/" class="read-more-link">阅读更多</a>
+      <a href="/post/ai-learning-from-obs/" class="read-more-link">Read more..</a>
     </div>
   </div>
 </article>
 
-    
-      <article class="post">
+    <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/2017-03-30-python-profiling/">python profiling and optimize</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/ai-constraint-satisfaction-problem/">AI: Constraint Satisfaction Problems</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2017-03-30 </span>
-      
+      <span class="post-time"> 2017-05-07 </span>
       
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      profiling python {% codeblock &ldquo;commandline profiling&rdquo; %} python -m cProfile -s tottime your_program.py {% endcodeblock %} 优化 np random 比原生函数快四倍 {% asset_img np1.png %} {% asset_img np2.png %} 需要记住的延迟数据 {% codeblock %} Latency Comparison Numbers L1 cache reference 0.5 ns Branch mispredict 5 ns L2 cache reference 7 ns 14x L1 cache Mutex lock/unlock
+      CSPs are a special kind of search problem  States defined by values of a fixed set of variables from domain Goal test defined by constraints on variable values acceptable solutions are complete and consistent binary CSP: relates two variables; constraint graph: nodes are variables, arc are constraits. Discrete variable(n) with finit domain(d): O(d^n) complete assignments Discrete variable with infinit domain need a constraint Varieties of constraints: involve one varible(unary), two(binary), three(higher-order)  Backtracking  depth-first search with one variable assigned at each level the basic uninformed algorithm for CSP  {% codeblock %} function BacktrackingSearch(csp) return solution or failure return Backtrack({}, csp)
     </div>
     <div class="read-more">
-      <a href="/post/2017-03-30-python-profiling/" class="read-more-link">阅读更多</a>
+      <a href="/post/ai-constraint-satisfaction-problem/" class="read-more-link">Read more..</a>
     </div>
   </div>
 </article>
 
-    
-  </section>
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/hardware-raid-principles/">RAID基本原理</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2017-05-07 </span>
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      RAID基本原理 RAID级别 读性能 写性能 空间利用率 最大能容忍的坏盘数 RAID0 单块盘的N倍 单块盘的N倍 100% 0 RAID1 单块盘的N倍 最慢磁盘的性能 1/N N-1 RAID2 不到单块
+    </div>
+    <div class="read-more">
+      <a href="/post/hardware-raid-principles/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/java-path/">Java path</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2017-05-07 </span>
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      本文转自w大 《第一阶段》筑基 如果你不知道什么是for/while lopp、不知道什么是list，建议你先上这门公开课： UDacity CS101：Intr
+    </div>
+    <div class="read-more">
+      <a href="/post/java-path/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
+    </section>
   
   <nav class="pagination">
-      <a class="prev" href="/page/15/">
+    <a class="prev" href="/page/15/">
         <i class="iconfont icon-left"></i>
-        <span class="prev-text">上一页</span>
+        <span class="prev-text">Prev</span>
       </a>
-    
-      <a class="next" href="/page/17/">
-        <span class="next-text">下一页</span>
+    <a class="next" href="/page/17/">
+        <span class="next-text">Next</span>
         <i class="iconfont icon-right"></i>
       </a>
   </nav>
-
         </div>
         
+
       </div>
     </main>
 
     <footer id="footer" class="footer">
       <div class="social-links">
-      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="mailto:nychent@gmail.com" class="iconfont icon-email" title="email"></a>
       <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
       <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
       <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
@@ -236,16 +242,18 @@
       <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
       <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
       <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
-  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+      <a href="http://localhost:1313" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="http://localhost:1313" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://cixuuz.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
 </div>
 
 <div class="copyright">
   <span class="power-by">
-    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
   </span>
   <span class="division">|</span>
   <span class="theme-info">
-    主题 - 
+    Theme - 
     <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
   </span>
 
@@ -253,13 +261,12 @@
 
   <span class="copyright-year">
     &copy; 
-    
-      2016 - 
-    2018
+    2017 - 
+    2019
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>
-    <span class="author">cixuuz</span>
+    <span class="author">Chen Tong</span>
   </span>
 </div>
     </footer>
@@ -269,11 +276,14 @@
     </div>
   </div>
   
-<script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
-<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
-  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
-<script type="text/javascript" src="/dist/even.min.js?v=2.7.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
 
 
 

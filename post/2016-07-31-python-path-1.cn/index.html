@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Python从小白到大白-Python也可以是函数式语言 - Chen Tong&#39;s Ideas and Writings</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Chen Tong" /><meta name="description" content="引言 按, 作为一个Python初学者, Python的格式化语法让众多编程小白追捧, 它的语法糖让代码变得简洁易读, 它的庞大开源库让它在各个领域都" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.54.0 with even 4.0.0" />
+
+
+<link rel="canonical" href="https://cixuuz.github.io/post/2016-07-31-python-path-1.cn/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Python从小白到大白-Python也可以是函数式语言" />
+<meta property="og:description" content="引言 按, 作为一个Python初学者, Python的格式化语法让众多编程小白追捧, 它的语法糖让代码变得简洁易读, 它的庞大开源库让它在各个领域都" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cixuuz.github.io/post/2016-07-31-python-path-1.cn/" />
+
+
+<meta itemprop="name" content="Python从小白到大白-Python也可以是函数式语言">
+<meta itemprop="description" content="引言 按, 作为一个Python初学者, Python的格式化语法让众多编程小白追捧, 它的语法糖让代码变得简洁易读, 它的庞大开源库让它在各个领域都">
+
+
+
+<meta itemprop="wordCount" content="1703">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Python从小白到大白-Python也可以是函数式语言"/>
+<meta name="twitter:description" content="引言 按, 作为一个Python初学者, Python的格式化语法让众多编程小白追捧, 它的语法糖让代码变得简洁易读, 它的庞大开源库让它在各个领域都"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Python从小白到大白-Python也可以是函数式语言</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 0001-01-01 </span>
+        <div class="post-category">
+            <a href="/categories/python/"> Python </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#引言">引言</a></li>
+<li><a href="#正文">正文</a>
+<ul>
+<li><a href="#lambda">Lambda</a></li>
+<li><a href="#map-filter-reduce">map filter reduce</a></li>
+</ul></li>
+<li><a href="#总结">总结</a></li>
+<li><a href="#reference">Reference</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<h1 id="引言">引言</h1>
+
+<p>按, 作为一个Python初学者, Python的格式化语法让众多编程小白追捧, 它的语法糖让代码变得简洁易读, 它的庞大开源库让它在各个领域都能发挥作用. 但我时常感受到这个门槛极低的语言远没有表面上看起来易懂易用. 在Python的学习之路上, 我也时常迷茫于自己是否真正掌握了这门语言. Stackoverflow上有一篇帖子很好地说明了Python的进阶之路, 于是我准备顺着这个思路写写各个要点.</p>
+
+<p>注: 本文主要参照Python 3.5官方文档</p>
+
+<p>根据这篇帖子, Python进阶之路: 从小白到大白.</p>
+
+<ol>
+<li><p>Discover list comprehensions</p></li>
+
+<li><p>Discover generators
+<a href="http://nychent.github.io/about-generator.cn/">generator漫谈</a> <a href="http://nychent.github.io/about-generator-2.cn/">更多方法</a> [优劣点(未完成)]()</p></li>
+
+<li><p>Incorporate <a href="https://docs.python.org/3/library/functions.html">map, reduce, filter, iter, range, xrange (在Python 3中已与range合并)</a> often into your code
+<a href="http://nychent.github.io/2016/07/31/python-path-1.cn.html">本文</a></p></li>
+
+<li><p>Discover Decorators</p></li>
+
+<li><p>Write recursive functions, a lot</p></li>
+
+<li><p>Discover itertools and functools</p></li>
+
+<li><p>Read Real World Haskell (read free online)</p></li>
+
+<li><p>Rewrite all your old Python code with tons of higher order functions, recursion, and whatnot.</p></li>
+
+<li><p>Annoy your cubicle mates every time they present you with a Python class. Claim it could be &ldquo;better&rdquo; implemented as a dictionary plus some functions. Embrace functional programming.</p></li>
+
+<li><p>Rediscover the Strategy pattern and then all those things from imperative code you tried so hard to forget after Haskell.</p></li>
+
+<li><p>Find a balance.</p></li>
+</ol>
+
+<h1 id="正文">正文</h1>
+
+<h2 id="lambda">Lambda</h2>
+
+<p>提到 map, reduce, filter, 首先需要了解的概念是lambda function. 这个概念源于如今火热的以Scala为代表的函数式编程(Functional Programming Languages). 那么lambda function与普通的function有什么区别呢? 我们来看一个例子:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-Python" data-lang="Python"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-Python" data-lang="Python"><span class="o">&gt;&gt;&gt;</span> <span class="c1"># function</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+<span class="o">...</span>     <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">f</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="mi">3</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="c1"># lambda expression</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">L</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">L</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="mi">3</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>按照<a href="https://docs.python.org/3/tutorial/controlflow.html?highlight=lambda#lambda-expressions">python document</a>, lambda是anonymous functions, 也就是说它没有函数名. 因此, 在文档中, 它也被称作是 expression, 而非函数. 另一个区别在于它的return 就是表达式本身, 在这个例子里是 x+y.</p>
+
+<p>lambda的一般形式是:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-Python" data-lang="Python"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-Python" data-lang="Python"><span class="k">lambda</span> <span class="n">argument_list</span> <span class="p">:</span> <span class="n">expression</span> <span class="n">using</span> <span class="n">arguments</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>lambda 也有两个特性:<br />
+1. lambda 是 expression 而非 statement.
+因此, lambda可以在任何地方使用, 如它可以作为 argument 的一部分:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">&gt;&gt;&gt; pairs = [(1, &#39;one&#39;), (2, &#39;two&#39;), (3, &#39;three&#39;), (4, &#39;four&#39;)]
+&gt;&gt;&gt; pairs.sort(key=lambda pair: pair[1])
+&gt;&gt;&gt; pairs
+[(4, &#39;four&#39;), (1, &#39;one&#39;), (3, &#39;three&#39;), (2, &#39;two&#39;)]</pre></td></tr></table>
+</div>
+</div>
+<ol>
+<li>lambda 主体部分是 expression.<br /></li>
+</ol>
+
+<p>lambda的expression和function中的return部分很像, 紧凑, 简洁. 但代价是无法写出更加通用的程序. 因此从语义的角度上说, lambda 仅仅是一种语法糖.</p>
+
+<h2 id="map-filter-reduce">map filter reduce</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">&gt;&gt;&gt; foo = [2, 18, 9, 22, 17, 24, 8, 12, 27]
+&gt;&gt;&gt; # map
+&gt;&gt;&gt; list(map(lambda x: x * 2, foo))
+[4, 36, 18, 44, 34, 48, 16, 24, 54]
+&gt;&gt;&gt; # filter
+&gt;&gt;&gt; list(filter(lambda x: x % 2 == 0, foo))
+[2, 18, 22, 24, 8, 12]
+&gt;&gt;&gt; # reduce
+&gt;&gt;&gt; import functools
+&gt;&gt;&gt; functools.reduce(lambda x, y: x + y,foo)
+139</pre></td></tr></table>
+</div>
+</div>
+<p>以上, 我们可以看出map, filter, reduce 都有两个arguments: function和list. 它们的形式如下:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-Python" data-lang="Python"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-Python" data-lang="Python"><span class="nb">map</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">seq</span><span class="p">)</span>
+<span class="nb">filter</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">seq</span><span class="p">)</span>
+<span class="nb">reduce</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">seq</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>这里的func，可以是lambda 也可以是function. 需要注意的是在Python 3 中, map和filter都是iterator, 因此, 我们需要list()将结果生成出来; 而reduce在Python3中被放到了<a href="https://docs.python.org/3/library/functools.html#module-functools">functools</a>包中.</p>
+
+<p>具体来说, map是将func应用到seq中的各个元素. 例子里, 对于list中的元素, 每个元素乘以2. 当然, 多个lists也是没有问题的.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">&gt;&gt;&gt; foo = [1, 2, 3]
+&gt;&gt;&gt; bar = [3, 2, 1]
+&gt;&gt;&gt; list(map(lambda x, y: x + y, foo, bar))
+[4, 4, 4]</pre></td></tr></table>
+</div>
+</div>
+<p>filter同样是将func应用到各元素, 并返回结果为<code>True</code>的元素. 通过filter可以很方便的取出一部分元素.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">&gt;&gt;&gt; foo = [2, 18, 9, 22, 17, 24, 8, 12, 27]
+&gt;&gt;&gt; list(filter(lambda x: x % 2, foo)) # find odds
+[9, 17, 27]
+&gt;&gt;&gt; list(filter(lambda x: x % 2 == 0, foo)) # find evens
+[2, 18, 22, 24, 8, 12]</pre></td></tr></table>
+</div>
+</div>
+<p>reduce 比较特殊, 它不断的将list中前两个元素拿出来当作程序的变量,最终返回一个值. 如图所示:
+<img src="http://i.imgur.com/WQK1AEu.png" alt="Imgur" />
+Source: <a href="http://www.python-course.eu/python3_lambda.php">http://www.python-course.eu/python3_lambda.php</a>
+由上图, 很自然的, 我们可以直接计算阶乘</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">&gt;&gt;&gt; functools.reduce(lambda x, y: x * y, range(1, 11))
+3628800</pre></td></tr></table>
+</div>
+</div>
+<h1 id="总结">总结</h1>
+
+<p>map, filter和reduce的作用在于将lambda或者function变成高阶(high-order) 函数. 虽然Python之父Guido van Rossum在<a href="http://www.artima.com/weblogs/viewpost.jsp?thread=98196">&ldquo;All Things Pythonic: The fate of reduce() in Python 3000&rdquo;</a>中曾说, 他放弃lambda, map(), filter() and reduce()的原因, 并希望远离Lisp(最早的函数式语言). 他的理由包括   :</p>
+
+<ol>
+<li>有很多其他的替代方案, 比如本系列第一部分 list comprehension</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">&gt;&gt;&gt; Celsius = [39.2, 36.5, 37.3, 37.8]
+&gt;&gt;&gt; # map
+&gt;&gt;&gt; list(map(lambda x: (float(9)/5)*x + 32, Celsius))
+[102.56, 97.7, 99.14, 100.03999999999999]
+&gt;&gt;&gt; # list comprehension
+&gt;&gt;&gt; [ ((float(9)/5)*x + 32) for x in Celsius ]
+[102.56, 97.7, 99.14, 100.03999999999999]</pre></td></tr></table>
+</div>
+</div>
+<ol>
+<li>List comprehension 更明确, 易于理解, 如上例<br /></li>
+<li>list comprehension和 &ldquo;filter, map, reduce and lambda&rdquo; 都可能违背了Python的宗旨 &ldquo;There should be one obvious way to solve a problem&rdquo; according to <a href="https://www.python.org/dev/peps/pep-0020/">The Zen of Python</a><br /></li>
+</ol>
+
+<p>Anyway, 以上这些functions都会节省我们的代码量, 可谓是码农的福音. 毕竟人生苦短, 我用Python.</p>
+
+<h1 id="reference">Reference</h1>
+
+<ol>
+<li><a href="http://www.secnetix.de/olli/Python/lambda_functions.hawk">http://www.secnetix.de/olli/Python/lambda_functions.hawk</a></li>
+<li><a href="http://www.python-course.eu/python3_lambda.php">http://www.python-course.eu/python3_lambda.php</a></li>
+<li><a href="https://docs.python.org/3/howto/functional.html?highlight=lambda">https://docs.python.org/3/howto/functional.html?highlight=lambda</a></li>
+</ol>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Chen Tong</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        0001-01-01
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/post/2016-06-18-about-generator-2.cn/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Python从小白到大白-Generator 漫谈 (续1)</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/2016-03-30-mathjax-with-jekyll/">
+            <span class="next-text nav-default">Rendering LaTex using MathJax with Jekyll</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:nychent@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="http://localhost:1313" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="http://localhost:1313" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://cixuuz.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Chen Tong</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
