@@ -45,7 +45,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://cixuuz.github.io/" />
 
-<meta property="og:updated_time" content="2017-08-08T00:00:00&#43;00:00"/>
+<meta property="og:updated_time" content="2017-08-12T00:00:00&#43;00:00"/>
 
 <meta itemprop="name" content="Chen Tong&#39;s Ideas and Writings">
 <meta itemprop="description" content="Hugo theme even example site.">
@@ -113,6 +113,25 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/lcs_0812/">lcs 08/12</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2017-08-12 </span>
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      297. Serialize and Deserialize Binary Tree  deque inherits from linkedlist(collection). represent separator and null as a String. string and char are not same. append complete subtree ex &ldquo;1,null,null,&rdquo;   105. Construct Binary Tree from Preorder and Inorder Traversal  recursive solution is straightforward. The only thing is that jump idx to find right start in inorder array. To speed up, we can cache inorder and index in the front.
+    </div>
+    <div class="read-more">
+      <a href="/post/lcs_0812/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/lc_102/">leetcode 102</a></h1>
@@ -192,25 +211,6 @@ Summary The LIMIT clause can be used to constrain the number of rows returned by
     </div>
     <div class="read-more">
       <a href="/post/lc_177/" class="read-more-link">Read more..</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/lc_178/">178. Rank Scores</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2017-06-25 </span>
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      178. Rank Scores Solution 1 SELECT Score, @rank := @rank + (@prev &lt;&gt; (@prev := Score)) Rank FROM Scores, (SELECT @rank := 0, @prev := -1) init ORDER BY Score desc solution 2 SELECT Score, (SELECT COUNT(DISTINCT Score) FROM Scores as s1 WHERE s1.Score &gt;= s2.Score) As rank FROM Scores as s2 ORDER BY rank; 一直不知道还能这么嵌套写法 Summary
-    </div>
-    <div class="read-more">
-      <a href="/post/lc_178/" class="read-more-link">Read more..</a>
     </div>
   </div>
 </article>

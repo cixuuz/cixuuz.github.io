@@ -6,10 +6,21 @@
     <description>Recent content on Chen Tong&#39;s Ideas and Writings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 04 Nov 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 17 Mar 2019 19:05:17 -0400</lastBuildDate>
     
 	<atom:link href="https://cixuuz.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Sync_a_fork</title>
+      <link>https://cixuuz.github.io/post/sync_a_fork/</link>
+      <pubDate>Sun, 17 Mar 2019 19:05:17 -0400</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/sync_a_fork/</guid>
+      <description>Its useful to sync a fork when contributing to open source project.
+Here is some tips: 1. make sure current folder is repo root. 2. add upstream link. Here, upstream could be any name git remote add upstream https://github.com/whoever/whatever.git 3. fetch content. ``git fetch upstream 4. goto your branch and merge (keep local changes) or rebase (do not keep) upstream branch.
+Reference: 1. https://stackoverflow.com/questions/7244321/how-do-i-update-a-github-forked-repository 2. https://help.github.com/en/articles/syncing-a-fork</description>
+    </item>
     
     <item>
       <title>leetcode summary 11/04</title>

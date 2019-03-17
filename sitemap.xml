@@ -3,6 +3,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://cixuuz.github.io/post/sync_a_fork/</loc>
+    <lastmod>2019-03-17T19:05:17-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://cixuuz.github.io/post/lcs_1104/</loc>
     <lastmod>2017-11-04T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -839,7 +846,7 @@
   
   <url>
     <loc>https://cixuuz.github.io/</loc>
-    <lastmod>2017-11-04T00:00:00+00:00</lastmod>
+    <lastmod>2019-03-17T19:05:17-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -894,7 +901,7 @@
   
   <url>
     <loc>https://cixuuz.github.io/post/</loc>
-    <lastmod>2017-11-04T00:00:00+00:00</lastmod>
+    <lastmod>2019-03-17T19:05:17-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>

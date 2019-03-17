@@ -115,6 +115,25 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/lc_178/">178. Rank Scores</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2017-06-25 </span>
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      178. Rank Scores Solution 1 SELECT Score, @rank := @rank + (@prev &lt;&gt; (@prev := Score)) Rank FROM Scores, (SELECT @rank := 0, @prev := -1) init ORDER BY Score desc solution 2 SELECT Score, (SELECT COUNT(DISTINCT Score) FROM Scores as s1 WHERE s1.Score &gt;= s2.Score) As rank FROM Scores as s2 ORDER BY rank; 一直不知道还能这么嵌套写法 Summary
+    </div>
+    <div class="read-more">
+      <a href="/post/lc_178/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/lc_180/">178. Rank Scores</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2017-06-25 </span>
@@ -186,25 +205,6 @@
     </div>
     <div class="read-more">
       <a href="/post/hardware-raid-principles/" class="read-more-link">Read more..</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/java-path/">Java path</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2017-05-07 </span>
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      本文转自w大 《第一阶段》筑基 如果你不知道什么是for/while lopp、不知道什么是list，建议你先上这门公开课： UDacity CS101：Intr
-    </div>
-    <div class="read-more">
-      <a href="/post/java-path/" class="read-more-link">Read more..</a>
     </div>
   </div>
 </article>
