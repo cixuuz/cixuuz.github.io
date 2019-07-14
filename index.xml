@@ -6,10 +6,20 @@
     <description>Recent content on Chen Tong&#39;s Ideas and Writings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 17 Mar 2019 19:05:17 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 14 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://cixuuz.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Bit Manipulation Summary</title>
+      <link>https://cixuuz.github.io/post/2019-07-14-bit-manipulation/</link>
+      <pubDate>Sun, 14 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cixuuz.github.io/post/2019-07-14-bit-manipulation/</guid>
+      <description>XOR operation: 1. a XOR 0 = a 2. a XOR a = 0 3. a XOR b XOR a = (a XOR a) XOR b = 0 XOR b = b
+Reference: 1. https://leetcode.com/articles/single-number/</description>
+    </item>
     
     <item>
       <title>Sync_a_fork</title>

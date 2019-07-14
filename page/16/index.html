@@ -115,6 +115,27 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/lc_177/">177. Nth Highest Salary</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2017-06-25 </span>
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      177. Nth Highest Salary
+Solution CREATE FUNCTION getNthHighestSalary(N INT) RETURNS INT BEGIN declare m int; set m = N - 1; RETURN ( # Write your MySQL query statement below. select distinct salary from Employee order by salary desc limit 1 offset m ); END
+Summary The LIMIT clause can be used to constrain the number of rows returned by the SELECT statement. LIMIT takes one or two numeric arguments, which must both be nonnegative integer constants (except when using prepared statements).
+    </div>
+    <div class="read-more">
+      <a href="/post/lc_177/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/lc_178/">178. Rank Scores</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2017-06-25 </span>
@@ -186,25 +207,6 @@
     </div>
     <div class="read-more">
       <a href="/post/ai-constraint-satisfaction-problem/" class="read-more-link">Read more..</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/hardware-raid-principles/">RAID基本原理</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2017-05-07 </span>
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      RAID基本原理 RAID级别 读性能 写性能 空间利用率 最大能容忍的坏盘数 RAID0 单块盘的N倍 单块盘的N倍 100% 0 RAID1 单块盘的N倍 最慢磁盘的性能 1/N N-1 RAID2 不到单块
-    </div>
-    <div class="read-more">
-      <a href="/post/hardware-raid-principles/" class="read-more-link">Read more..</a>
     </div>
   </div>
 </article>

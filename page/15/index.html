@@ -45,7 +45,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://cixuuz.github.io/" />
 
-<meta property="og:updated_time" content="2017-08-12T00:00:00&#43;00:00"/>
+<meta property="og:updated_time" content="2017-08-13T00:00:00&#43;00:00"/>
 
 <meta itemprop="name" content="Chen Tong&#39;s Ideas and Writings">
 <meta itemprop="description" content="Hugo theme even example site.">
@@ -113,6 +113,25 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/lcs_0813/">lcs 08/13</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2017-08-13 </span>
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      99. Recover Binary Search Tree  travese in order. The result should be sorted ascending. The misplaced larger element will be close to head, while the smaller one will be close to end. For example, 1 2 3 is the in order. But the wrong seq is like 3 2 1. Apparently, 3 &gt; 2 so 3 is the first node. 2 &gt; 1, so 1 is the second one.
+    </div>
+    <div class="read-more">
+      <a href="/post/lcs_0813/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/lcs_0812/">lcs 08/12</a></h1>
@@ -190,27 +209,6 @@ Summary There is a trick to print null when result is empty.
     </div>
     <div class="read-more">
       <a href="/post/lc_176/" class="read-more-link">Read more..</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/lc_177/">177. Nth Highest Salary</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2017-06-25 </span>
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      177. Nth Highest Salary
-Solution CREATE FUNCTION getNthHighestSalary(N INT) RETURNS INT BEGIN declare m int; set m = N - 1; RETURN ( # Write your MySQL query statement below. select distinct salary from Employee order by salary desc limit 1 offset m ); END
-Summary The LIMIT clause can be used to constrain the number of rows returned by the SELECT statement. LIMIT takes one or two numeric arguments, which must both be nonnegative integer constants (except when using prepared statements).
-    </div>
-    <div class="read-more">
-      <a href="/post/lc_177/" class="read-more-link">Read more..</a>
     </div>
   </div>
 </article>

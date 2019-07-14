@@ -115,6 +115,25 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/python-numpy/">Python Numpy</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2017-08-21 </span>
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      在 Numpy 中, 创建 2D Array 的默认方式是 &ldquo;C-type&rdquo; 以 row 为主在内存中排列, 而如果是 &ldquo;Fortran&rdquo; 的方式创建的, 就是以 column 为主在内存中排列. 1 2 col_major = np.zeros((10,10), order=&#39;C&#39;) # C-type row_major = np.zeros((10,10), order=&#39;F&#39;) # Fortran copy慢
+    </div>
+    <div class="read-more">
+      <a href="/post/python-numpy/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/database-bigtable-leveldb/">bigtable and leveldb</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2017-08-21 </span>
@@ -185,25 +204,6 @@
     </div>
     <div class="read-more">
       <a href="/post/mysql-high-availability/" class="read-more-link">Read more..</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/database-index/">database index</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2017-08-20 </span>
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      数据库索引与事务管理 B+ tree B+树是n叉排序树 hash index MySQL: innoDB以及MyISAM引擎，均不支持Hash索引
-    </div>
-    <div class="read-more">
-      <a href="/post/database-index/" class="read-more-link">Read more..</a>
     </div>
   </div>
 </article>
