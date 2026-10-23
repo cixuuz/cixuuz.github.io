@@ -2,6 +2,7 @@
 title: "lc_262"
 description: "select t2.day, round(ifnull(t1.c, 0) / t2.c, 2) as ‘cancellation rate’"
 date: "2017-07-30"
+draft: true
 ---
 
 #### 

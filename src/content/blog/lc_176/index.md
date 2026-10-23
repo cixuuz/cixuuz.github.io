@@ -2,6 +2,7 @@
 title: "176. Second Highest Salary"
 description: "176. Second Highest Salary"
 date: "2017-06-25"
+draft: true
 ---
 
 [176. Second Highest Salary](https://leetcode.com/problems/second-highest-salary/)

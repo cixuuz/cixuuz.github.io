@@ -2,6 +2,7 @@
 title: "lc_580"
 description: "select d.dept\\name, count(s.student\\id) as student\\number"
 date: "2017-07-30"
+draft: true
 ---
 
 #### 

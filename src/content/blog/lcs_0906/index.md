@@ -2,6 +2,7 @@
 title: "leetcode summary 09/06"
 description: "(no summary)"
 date: "2017-09-06"
+draft: true
 ---
 
 # 517 [Super Washing Machines](https://leetcode.com/problems/super-washing-machines/discuss/)

@@ -2,6 +2,7 @@
 title: "leetcode summary 08/22"
 description: "(no summary)"
 date: "2017-08-22"
+draft: true
 ---
 
 # 114. Flatten Binary Tree to Linked List

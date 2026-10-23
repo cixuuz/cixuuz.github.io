@@ -2,6 +2,7 @@
 title: "647. Palindromic Substrings"
 description: "2017-09-06"
 date: "2017-09-05"
+draft: true
 ---
 
 #### [Algorithm - leetcode](/post/algorithm_leetcode/)

@@ -2,6 +2,7 @@
 title: "lc_577"
 description: "select e.name, b.bonus"
 date: "2017-07-30"
+draft: true
 ---
 
 #### 

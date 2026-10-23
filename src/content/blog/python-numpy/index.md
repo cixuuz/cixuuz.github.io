@@ -2,6 +2,7 @@
 title: "Python Numpy"
 description: "(no summary)"
 date: "2017-08-21"
+draft: true
 ---
 
 - 在 Numpy 中, 创建 2D Array 的默认方式是 “C-type” 以 row 为主在内存中排列, 而如果是 “Fortran” 的方式创建的, 就是以 column 为主在内存中排列.

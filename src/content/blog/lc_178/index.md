@@ -2,6 +2,7 @@
 title: "178. Rank Scores"
 description: "178. Rank Scores"
 date: "2017-06-25"
+draft: true
 ---
 
 [178. Rank Scores](https://leetcode.com/problems/rank-scores/#/description)

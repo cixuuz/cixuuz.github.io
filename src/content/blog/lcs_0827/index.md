@@ -2,6 +2,7 @@
 title: "leetcode summary 08/27"
 description: "same with 51"
 date: "2017-08-27"
+draft: true
 ---
 
 # 51. N-Queens

@@ -2,6 +2,7 @@
 title: "lc_574"
 description: "select c2.name"
 date: "2017-07-30"
+draft: true
 ---
 
 #### 

@@ -2,6 +2,7 @@
 title: "RAID基本原理"
 description: "1. <https://en.wikipedia.org/wiki/Hammingcode"
 date: "2017-05-07"
+draft: true
 ---
 
 # [RAID基本原理](http://oserror.com/backend/raid-principle/)

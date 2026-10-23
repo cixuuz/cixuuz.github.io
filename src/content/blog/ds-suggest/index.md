@@ -2,6 +2,7 @@
 title: "Data Science: Suggestions and Resources"
 description: "Strictly speaking, there is no such thing as “data science” (see What is data science and what is it not? ). See also: Vardi, Science has only two legs:…"
 date: "2017-09-13"
+draft: true
 ---
 
 Strictly speaking, there is no such thing as “data science” (see What is data science and what is it not? ). See also: Vardi, Science has only two legs: <http://portal.acm.org/ft_gateway..>.

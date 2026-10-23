@@ -2,6 +2,7 @@
 title: "Bittiger cs101 notebook 1 - how to calculate"
 description: "1 HZ = 1 clock time"
 date: "2016-11-05"
+draft: true
 ---
 
 # CPU: central processing unit

@@ -2,6 +2,7 @@
 title: "177. Nth Highest Salary"
 description: "177. Nth Highest Salary"
 date: "2017-06-25"
+draft: true
 ---
 
 [177. Nth Highest Salary](https://leetcode.com/problems/nth-highest-salary)

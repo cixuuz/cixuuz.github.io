@@ -2,6 +2,7 @@
 title: "leetcode 102"
 description: "Pure math. Median definition is the median is used for dividing a set into two equal length subsets, that one subset is always greater than the other."
 date: "2017-08-08"
+draft: true
 ---
 
 # 4. Median of Two Sorted Arrays

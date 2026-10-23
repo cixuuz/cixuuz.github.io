@@ -2,6 +2,7 @@
 title: "leetcode summary 09/02 (10)"
 description: "[37,-34,-48,null,-100,-100,48,null,null,null,null,-54,null,-71,-22,null,null,null,8]"
 date: "2017-09-02"
+draft: true
 ---
 
 # 617. Merge Two Binary Trees

@@ -2,6 +2,7 @@
 title: "python tips"
 description: "https://zhuanlan.zhihu.com/p/26099601"
 date: "2017-03-31"
+draft: true
 ---
 
 https://zhuanlan.zhihu.com/p/26099601

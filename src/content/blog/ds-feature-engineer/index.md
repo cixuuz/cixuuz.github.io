@@ -2,6 +2,7 @@
 title: "feature engineer"
 description: "One of k encoding on an array of lenght k"
 date: "2017-09-26"
+draft: true
 ---
 
 # Onehot encoding

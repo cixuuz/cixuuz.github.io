@@ -2,6 +2,7 @@
 title: "Sync_a_fork"
 description: "Its useful to sync a fork when contributing to open source project."
 date: "2019-03-17"
+draft: true
 ---
 
 Its useful to sync a fork when contributing to open source project.

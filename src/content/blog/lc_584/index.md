@@ -2,6 +2,7 @@
 title: "lc_584"
 description: "select distinct name"
 date: "2017-07-30"
+draft: true
 ---
 
 #### 

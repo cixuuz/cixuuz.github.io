@@ -2,6 +2,7 @@
 title: "leetcode summary 08/24"
 description: "terminal case: null - True"
 date: "2017-08-24"
+draft: true
 ---
 
 # 250. Count Univalue Subtrees

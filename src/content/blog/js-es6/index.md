@@ -2,6 +2,7 @@
 title: "javascript es6"
 description: "(no summary)"
 date: "2017-08-20"
+draft: true
 ---
 
 [ES6](https://www.w3cvip.org/topics/47)

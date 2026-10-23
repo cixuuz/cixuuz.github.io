@@ -2,6 +2,7 @@
 title: "Mutation可能的问题"
 description: "因为类型是Mutation的，所以reference和copy就有了区别。如果是reference，那么可能会暴露数据本身，遭到恶意修改，引发安全的问题。下面是一段Java代码，其中有一个 Mutation引起的的bug："
 date: "2018-01-29"
+draft: true
 ---
 
 因为类型是Mutation的，所以reference和copy就有了区别。如果是reference，那么可能会暴露数据本身，遭到恶意修改，引发安全的问题。下面是一段Java代码，其中有一个 Mutation引起的的bug：

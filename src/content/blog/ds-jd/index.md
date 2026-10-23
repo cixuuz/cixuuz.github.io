@@ -2,6 +2,7 @@
 title: "Data Scientist Job Description Notes"
 description: "PhD in Computer Science, Computational Linguistics, or related field preferred, or Master’s degree with 2+ years’ of relevant industry experience"
 date: "2017-09-03"
+draft: true
 ---
 
 PhD in Computer Science, Computational Linguistics, or related field preferred, or Master’s degree with 2+ years’ of relevant industry experience

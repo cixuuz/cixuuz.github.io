@@ -2,6 +2,7 @@
 title: "System Design - TinyURL"
 description: "Base10, Base62"
 date: "2017-10-12"
+draft: true
 ---
 
 # Two methods

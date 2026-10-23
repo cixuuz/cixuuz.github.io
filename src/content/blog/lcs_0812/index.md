@@ -2,6 +2,7 @@
 title: "lcs 08/12"
 description: "(no summary)"
 date: "2017-08-12"
+draft: true
 ---
 
 # 297. Serialize and Deserialize Binary Tree

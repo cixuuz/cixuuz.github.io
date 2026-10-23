@@ -2,6 +2,7 @@
 title: "Airflow Configuration Notes"
 description: "sudo apt-get update"
 date: "2017-07-30"
+draft: true
 ---
 
 # enter instance

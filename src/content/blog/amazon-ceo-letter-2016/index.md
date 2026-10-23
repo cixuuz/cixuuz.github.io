@@ -2,6 +2,7 @@
 title: "Amazon CEO letter 2016"
 description: "To our shareowners: This year, Amazon became the fastest company ever to reach $100 billion in annual sales. Also this year, Amazon Web Services is reaching…"
 date: "2018-01-20"
+draft: true
 ---
 
 [转载](https://www.sec.gov/Archives/edgar/data/1018724/000119312516530910/d168744dex991.htm)

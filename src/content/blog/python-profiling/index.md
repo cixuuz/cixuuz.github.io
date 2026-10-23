@@ -2,6 +2,7 @@
 title: "python profiling and optimize"
 description: "commandline profiling"
 date: "2017-03-30"
+draft: true
 ---
 
 # [profiling python](https://toucantoco.com/back/2017/01/16/python-performance-optimization.html)
